@@ -10,4 +10,9 @@ $ ->
       item.parents("section").addClass("active")
       item.addClass("active")
 
+  $(".top-bar-section a").each (index, el) =>
+    if el.attributes.href.value == window.location.pathname
+      item = $(el)
+      item.parents("li").addClass("active")
+
   $(document).foundation()

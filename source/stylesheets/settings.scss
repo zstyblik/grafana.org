@@ -1,0 +1,30 @@
+@import "../../bower_components/foundation/scss/foundation/functions";
+
+
+$primary-color: #0099CC;
+// @blue:                  #33B5E5;
+// @blueDark:              #0099CC;
+// @green:                 #669900;
+// @red:                   #CC0000;
+// @yellow:                #ECBB13;
+// @orange:                #FF8800;
+// @pink:                  #FF4444;
+// @purple:                #9933CC;
+
+$topbar-bg: #222;
+
+$topbar-height: 80px;
+
+$topbar-link-color: #fff;
+$topbar-link-color-hover: #fff;
+$topbar-link-color-active: #fff;
+$topbar-link-color-active-hover: #fff;
+$topbar-link-weight: normal;
+$topbar-link-font-size: rem-calc(15);
+$topbar-link-hover-lightness: 10%; // Darken by 10%
+$topbar-link-bg-hover: #333;
+$topbar-link-bg-active: transparent;
+$topbar-link-bg-active-hover: scale-color($topbar-link-bg-hover, $lightness: 10%);
+// $topbar-link-font-family: $body-font-family;
+
+$topbar-button-font-size: 1.75rem;
