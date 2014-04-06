@@ -1,0 +1,54 @@
+.row
+  .large-9.columns
+    h1 Download
+    p 
+      'The easiest way to get started using InfluxDB is to head over to 
+      a href="http://play.influxdb.org" play.influxdb.org
+      '  where you can create a database and start writing data and exploring it through the administrative interface in seconds. There's no signup required. It's an open sandbox for you to play in.
+
+    markdown:
+      ## OS X
+
+      Automatic installation on OS X 10.6 and higher is supported through [Homebrew](http://brew.sh/).
+
+    pre.highlight.bash
+      code
+        | brew update
+          brew install influxdb
+
+    h2 Ubuntu & Debian
+    p Debian users can install by downloading the package and installing it like this:
+    pre.highlight.bash
+      code
+        | # for 64-bit systems
+          wget http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb
+          sudo dpkg -i influxdb_latest_amd64.deb
+
+          # for 32-bit systems
+          wget http://s3.amazonaws.com/influxdb/influxdb_latest_i386.deb
+          sudo dpkg -i influxdb_latest_i386.deb
+
+    h2 RedHat & CentOS
+    p RedHat and CentOS users can install by downloading and installing the rpm like this:
+    pre.highlight.bash
+      code
+        | # for 64-bit systems
+          wget http://s3.amazonaws.com/influxdb/influxdb-latest-1.x86_64.rpm
+          sudo rpm -ivh influxdb-latest-1.x86_64.rpm
+
+          # for 32-bit systems
+          wget http://s3.amazonaws.com/influxdb/influxdb-latest-1.i686.rpm
+          sudo rpm -ivh influxdb-latest-1.i686.rpm
+
+    h2 All Versions
+    p Here's a list of all the available builds and versions that we've released.
+    ul#file_list
+
+coffee:
+  $("#file_list").html("")
+  $.get 'http://s3.amazonaws.com/influxdb', (response) ->
+    items = response.getElementsByTagName("Contents")
+    for tag in items
+      fileName = tag.getElementsByTagName("Key")[0].textContent
+      if fileName.indexOf("logs/") == -1
+        $("#file_list").append("<li><a href='http://s3.amazonaws.com/influxdb/" + fileName + "'>" + fileName + "</a></li>")

@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+
+    title == data.page.title || "Grafana - Open Source Time Series, Metrics, and Analytics Database"
+
+    == stylesheet_link_tag "normalize", "foundation", "all", "highlighting"
+    == stylesheet_link_tag "http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"
+    == stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css"
+
+    == javascript_include_tag  "all"
+
+  body class="#{page_classes}"
+    = partial "layouts/nav"
+
+    section.main
+      == yield
+
+    = partial "layouts/analytics"
+
+    a href="https://github.com/influxdb/influxdb"
+      img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"
