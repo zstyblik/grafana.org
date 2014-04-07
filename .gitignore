@@ -13,7 +13,7 @@
 # Ignore Sass' cache
 /.sass-cache
 
-/bower_components
+bower_components
 
 # Ignore .DS_store file
 .DS_Store
