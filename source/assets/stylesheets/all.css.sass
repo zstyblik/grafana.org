@@ -75,6 +75,11 @@ header
 .tweets
   background: #EEE
   padding: 1rem 0
+  .row
+    padding-bottom: 1.5rem
+  .row:not(:first-child)
+    padding-top: 1.5rem
+    border-top: 1px solid white
 
 .tweet
   display: table
@@ -84,9 +89,11 @@ header
     color: black
   a, p
     font-size: 0.9rem
+  p
+    margin-bottom: 0.5rem
 
 .tweet:not(:last-child)
-  border-right: 1px solid #AAA
+  border-right: 1px solid #DDD
 
 .tweet-header
   display: table
@@ -101,19 +108,14 @@ header
   padding-right: 0.5rem
 
 .tweet-line-wrapper
-  position: relative
-  width: 40px
-  height: 0
-  margin: 0 auto
+  background: #666
 
 .tweet-line
-  padding: 0.5rem 1rem
-  color: white
-  border-radius: 16px
   margin: 0 auto
-  position: absolute
-  top: -23px
-  background: $dark-hero-bg
+  width: 200px
+  padding: 0.4rem 1rem
+  margin: 0 auto
+  top: -25px
 
 main
   section
