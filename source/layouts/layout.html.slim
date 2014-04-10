@@ -9,7 +9,7 @@ html
 
     title == data.page.title || "Grafana - Graphite and InfluxDB Dashboard and graph composer"
 
-    == stylesheet_link_tag "normalize", "foundation", "all", "highlighting"
+    == stylesheet_link_tag "all"
     == stylesheet_link_tag "http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"
     == stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css"
 
@@ -27,6 +27,16 @@ html
 
     section.main
       == yield
+
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
 
     = partial "layouts/analytics"
 

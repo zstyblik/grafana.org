@@ -14,6 +14,10 @@ header
       /     a.small.button href="test" Scripted dashboards
       /     a.small.button href="test" Annotations
       / h2 Learn why this new dashboard has quickly become the defacto standard of metrics dashboards!.
+.tweet-line-wrapper
+  .tweet-line
+    img src="/assets/images/twitter_blue.png" width="35" height="35"
+
 div.tweets
   .row
     .tweet.medium-4.columns
@@ -67,48 +71,46 @@ div.tweets
         .tweet-author
           <strong><a href="https://twitter.com/georgeb_/statuses/441589023942139904">George Brown</a></strong> <span>@georgeb_</span>
 
-
 main.padding-bottom-medium
-  section
+  section.features
+    .feature-header
+      .row.text-center
+        h3 Feature highlights
+
     .row.padding-bottom-medium.padding-top-medium
-      .large-4.columns.block
-        i.fa.fa-clock-o.bordered
-        h3 Time-Centric Functions
-        p Everything in InfluxDB is a time series that you can perform standard functions on like min, max, sum, count, mean, median, percentiles, and more.
-        a.button.tiny href="/docs/query_language/functions.html" Learn more &raquo;
+      .large-6.columns.feature-highlight
+        h3 Rich graphing
+        p Fast and flexible client side graps with a multitude of options.
+        ul
+          li Click and selection region to zoom
+          li Multiple Y-Axes
+          li Bars, Lines, Points
+          li Grid thresholds
+          li Y-axis formats (bytes, milliseconds, etc)
+          li Graphite PNG render option
+          li View or edit graph in fullscreen
 
-      .large-4.columns.block
-        i.fa.fa-tachometer.bordered
-        h3 Scalable Metrics
-        p Collect your data on any interval and compute rollups on the fly later. Track 100 metrics or 1 million &ndash; InfluxDB is designed to scale horizontally.
-        a.button.tiny href="/docs" Learn more &raquo;
+      .large-6.columns
+        a class="gallary-image" href="/assets/images/graph_style_editor.png" title="Style Editor" data-gallery="1"
+          img src="/assets/images/graph_style_editor_small.png" alt="Graph Editor"
 
-      .large-4.columns.block
-        i.fa.fa-exclamation.bordered
-        h3 Events
-        p InfluxDB's data model supports arbitrary event data. Just write in a hash of associated data and count events, uniques, or grouped columns on the fly.
-        a.button.tiny href="/docs" Learn more &raquo;
-
-  hr.padding-bottom-small
-  section
     .row.padding-bottom-medium.padding-top-medium
-      .large-4.columns.block
-        i.fa.fa-html5.bordered
-        h3 Native HTTP API
-        p Our built-in API makes it easy to read and write data from JavaScript. Build custom analytics frontends without writing a single line of server-side code.
-        a.button.tiny href="/docs/api/http.html" Learn more &raquo;
+      .large-6.columns
+        a class="gallary-image" href="/assets/images/edit_dashboards.png" title="Dashboard" data-gallery="1"
+          img src="/assets/images/edit_dashboards_small.png" alt="Dashboard example"
 
-      .large-4.columns.block
-        i.fa.fa-search.bordered
-        h3 Powerful Query Language
-        p A SQL-like query language designed for working with time series and analytics. Create and run queries without needing a programmer around.
-        a.button.tiny href="/docs/query_language" Learn more &raquo;
+      .large-6.columns.feature-highlight
+        h3 Dashboards creation
+        p Drag and drop panels, change row and panel width easily
+        ul
+          li Click and selection region to zoom
+          li Multiple Y-Axes
+          li Bars, Lines, Points
+          li Grid thresholds
+          li Y-axis formats (bytes, milliseconds, etc)
+          li Graphite PNG render option
 
-      .large-4.columns.block
-        i.fa.fa-bar-chart-o.bordered
-        h3 Built-in Explorer
-        p InfluxDB ships with a built-in interface for querying and visualizing your data. You can manage databases, users, and permissions, too.
-        a.button.tiny href="/docs/interfaces" Learn more &raquo;
+
 
 section.newsletter
   .row
