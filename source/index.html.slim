@@ -14,62 +14,8 @@ header
       /     a.small.button href="test" Scripted dashboards
       /     a.small.button href="test" Annotations
       / h2 Learn why this new dashboard has quickly become the defacto standard of metrics dashboards!.
-.tweet-line-wrapper
-  .tweet-line
-    img src="/assets/images/twitter_blue.png" width="35" height="35"
 
-div.tweets
-  .row
-    .tweet.medium-4.columns
-      .tweet-text
-        <p>GRAFANA!, up and running with a kick ass <a href="https://twitter.com/search?q=%23graphite&amp;src=hash">#graphite</a> dashboard replacement  in  less than 2h thx <a href="https://twitter.com/torkelo">@torkelo</a> <a href="https://twitter.com/search?q=%23devops&amp;src=hash">#devops</a> hero </p>
-      .tweet-header
-        .tweet-image
-          img src="https://pbs.twimg.com/profile_images/2229679072/portrait_bw_square_normal.png" alt="Jaime Gago"
-        .tweet-author
-          <strong><a href="https://twitter.com/JaimeGagoTech/statuses/446398708264239105">Jaime Gago</a></strong> <span>@JaimeGagoTech</span>
-    .tweet.medium-4.columns
-      .tweet-text
-        <p><a href="https://twitter.com/torkelo">@torkelo</a> Just discovered the best Graphite dashboard bar-none: Grafana. Simply awesome. Thanks Torkel! <a href="https://twitter.com/search?q=%23grafana&amp;src=hash">#grafana</a> <a href="https://twitter.com/search?q=%23graphite&amp;src=hash">#graphite</a></p>
-      .tweet-header
-        .tweet-image
-          img src="https://pbs.twimg.com/profile_images/2551510272/n5cbxovnevlkhnmdl06u_normal.jpeg" alt="Chris Madden"
-        .tweet-author
-          <strong><a href="https://twitter.com/dutchiechris/statuses/442936085292019712">Chris Madden</a></strong> <span>@dutchiechris</span>
-    .tweet.medium-4.columns
-      .tweet-text
-        <p>Just came across <a href="http://grafana.org">grafana.org</a> by <a href="https://twitter.com/torkelo">@torkelo</a>, pretty sure this is THE best thing ever. <a href="https://twitter.com/search?q=%23grafana&amp;src=hash">#grafana</a> <a href="https://twitter.com/search?q=%23graphite&amp;src=hash">#graphite</a></p>
-      .tweet-header
-        .tweet-image
-          img src="https://pbs.twimg.com/profile_images/378800000567631900/c9dcd912c4323e2315490fecc8f9b5a9_normal.jpeg" alt="George Brown"
-        .tweet-author
-          <strong><a href="https://twitter.com/georgeb_/statuses/441589023942139904">George Brown</a></strong> <span>@georgeb_</span>
-
-  .row
-    .tweet.medium-4.columns
-      .tweet-text
-        <p>GRAFANA!, up and running with a kick ass <a href="https://twitter.com/search?q=%23graphite&amp;src=hash">#graphite</a> dashboard replacement  in  less than 2h thx <a href="https://twitter.com/torkelo">@torkelo</a> <a href="https://twitter.com/search?q=%23devops&amp;src=hash">#devops</a> hero </p>
-      .tweet-header
-        .tweet-image
-          img src="https://pbs.twimg.com/profile_images/2229679072/portrait_bw_square_normal.png" alt="Jaime Gago"
-        .tweet-author
-          <strong><a href="https://twitter.com/JaimeGagoTech/statuses/446398708264239105">Jaime Gago</a></strong> <span>@JaimeGagoTech</span>
-    .tweet.medium-4.columns
-      .tweet-text
-        <p><a href="https://twitter.com/torkelo">@torkelo</a> Just discovered the best Graphite dashboard bar-none: Grafana. Simply awesome. Thanks Torkel! <a href="https://twitter.com/search?q=%23grafana&amp;src=hash">#grafana</a> <a href="https://twitter.com/search?q=%23graphite&amp;src=hash">#graphite</a></p>
-      .tweet-header
-        .tweet-image
-          img src="https://pbs.twimg.com/profile_images/2551510272/n5cbxovnevlkhnmdl06u_normal.jpeg" alt="Chris Madden"
-        .tweet-author
-          <strong><a href="https://twitter.com/dutchiechris/statuses/442936085292019712">Chris Madden</a></strong> <span>@dutchiechris</span>
-    .tweet.medium-4.columns
-      .tweet-text
-        <p>Just came across <a href="http://grafana.org">grafana.org</a> by <a href="https://twitter.com/torkelo">@torkelo</a>, pretty sure this is THE best thing ever. <a href="https://twitter.com/search?q=%23grafana&amp;src=hash">#grafana</a> <a href="https://twitter.com/search?q=%23graphite&amp;src=hash">#graphite</a></p>
-      .tweet-header
-        .tweet-image
-          img src="https://pbs.twimg.com/profile_images/378800000567631900/c9dcd912c4323e2315490fecc8f9b5a9_normal.jpeg" alt="George Brown"
-        .tweet-author
-          <strong><a href="https://twitter.com/georgeb_/statuses/441589023942139904">George Brown</a></strong> <span>@georgeb_</span>
+= partial "layouts/_tweets"
 
 main.padding-bottom-medium
   section.features
@@ -78,11 +24,12 @@ main.padding-bottom-medium
         h3 Feature highlights
 
     .row.padding-bottom-medium.padding-top-medium
+
       .large-6.columns.feature-highlight
         h3 Rich graphing
-        p Fast and flexible client side graps with a multitude of options.
+        p Fast and flexible client side graphs with a multitude of options.
         ul
-          li Click and selection region to zoom
+          li Click and select region to zoom
           li Multiple Y-Axes
           li Bars, Lines, Points
           li Grid thresholds
@@ -90,38 +37,96 @@ main.padding-bottom-medium
           li Graphite PNG render option
           li View or edit graph in fullscreen
 
-      .large-6.columns
-        a class="gallary-image" href="/assets/images/graph_style_editor.png" title="Style Editor" data-gallery="1"
-          img src="/assets/images/graph_style_editor_small.png" alt="Graph Editor"
+      .large-6.columns.padding-top-medium
+        a class="gallary-image" href="/assets/images/graphing_showcase1.png" title="Style Editor" data-gallery="1"
+          img src="/assets/images/graphing_showcase1.png" alt="Graph Editor"
 
     .row.padding-bottom-medium.padding-top-medium
-      .large-6.columns
-        a class="gallary-image" href="/assets/images/edit_dashboards.png" title="Dashboard" data-gallery="1"
-          img src="/assets/images/edit_dashboards_small.png" alt="Dashboard example"
-
-      .large-6.columns.feature-highlight
+      .large-6.columns.feature-highlight.right
         h3 Dashboards creation
-        p Drag and drop panels, change row and panel width easily
+        p Drag and drop panels, change row and panel width easily.
         ul
-          li Click and selection region to zoom
-          li Multiple Y-Axes
-          li Bars, Lines, Points
-          li Grid thresholds
-          li Y-axis formats (bytes, milliseconds, etc)
-          li Graphite PNG render option
+          li Fast dashboards search on title, or tags
+          li Templated dashboards
+          li Scripted dashboards
+          li Save / Load from ElasticSearch
+          li Save / Load from gist
+          li Save / Load from json file
+      .large-6.columns.padding-top-medium
+        a class="gallary-image" href="/assets/images/dashboard_example.png" title="Dashboard" data-gallery="1"
+          img src="/assets/images/dashboard_example.png" alt="Dashboard example"
 
     .row.padding-bottom-medium.padding-top-medium
       .large-6.columns.feature-highlight
         h3 Graphite target editor
         p
-          | Click on the graph title to open any graph in edit mode. Edit mode quickly fills the entire page with
-          | a clear view of the graph being edited. Grafana includes a built in target parser, it can help with
-          | syntax errors but most importantly it can visualize the expression in other ways. For example unwrap the method calls and presents
-          | the inner metric expression as a series of clickable segments followed by a chain of functions.
+          | Grafana includes a built in Graphite target parser that takes writing graphite metric expressions
+          |  to a whole new level. Expressions are easier to read and faster to edit than ever.
+        ul
+          li Click on any metric segment to change it
+          li Quickly add functions (search, typeahead)
+          li Click on a function parameter to change it
+          li Move function order to the left or right
+          li Link to function documentation
 
       .large-6.columns
         a class="gallary-image" href="/assets/images/graph_editor.png" title="Dashboard" data-gallery="1"
           img src="/assets/images/graph_editor_small.jpg" alt="Dashboard example"
+
+    .row.padding-bottom-medium.padding-top-medium
+      .large-6.columns.feature-highlight.right
+        h3 Video demo
+        p
+          | This video will introduce you to the Grafana interface and some of the core features
+      .large-6.columns
+        iframe width="513" height="317" src="//www.youtube.com/embed/OUvJamHeMpw?vq=hd1080" frameborder="0" allowfullscreen="1"
+
+    .row.padding-bottom-medium.padding-top-medium
+      .large-6.columns.feature-highlight
+        h3 Templated dashboards
+        p
+          | Any metric path can be replaced with a templated section. This allows you to create
+          |  generic dashboards that can quickly be changed to show stats for a specific cluster, server,
+          |  application or experiment.
+
+      .large-6.columns
+        a class="gallary-image" href="/assets/images/templated_dashboard.png" title="Templated Dashboard" data-gallery="1"
+          img src="/assets/images/templated_dashboard.png" alt="Templated Dashboard"
+
+    .row.padding-bottom-medium.padding-top-medium
+      .large-6.columns.feature-highlight.right
+        h3 Annotations
+        p
+          | Annotate graphs with rich events from different data sources
+
+      .large-6.columns
+        a class="gallary-image" href="/assets/images/annotated_graph2.png" title="Annotated graph" data-gallery="1"
+          img src="/assets/images/annotated_graph2.png" alt="Annotated graph"
+
+    .row.padding-bottom-medium.padding-top-medium
+      .large-6.columns.feature-highlight
+        h3 Dark and Light theme
+        p
+          | If you do not prefer the default dark theme you can switch to a light theme.
+
+      .large-6.columns
+        a class="gallary-image" href="/assets/images/dashboard_example1_white.png" title="White theme" data-gallery="1"
+          img src="/assets/images/dashboard_example1_white.png" alt="White theme"
+
+    .row.padding-bottom-medium.padding-top-medium
+      .large-6.columns.feature-highlight.right
+        h3 InfluxDB & datasource options
+        p
+          | You can define multiple graphite servers or InfluxDB server and switch between them.
+          |  It is even possible to show graphs from different data sources &amp; servers on the same
+          | dashboard.
+
+      .large-6.columns
+        a class="gallary-image" href="/assets/images/InfluxDB.png" title="InfluxDB query editor" data-gallery="1"
+          img src="/assets/images/InfluxDB.png" alt="Annotated graph"
+
+
+
 
 
 
