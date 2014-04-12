@@ -1,21 +1,7 @@
 require 'slim'
 
-set :site_title, "InfluxDB - Open Source Time Series, Metrics, and Analytics Database"
-set :site_url, "http://influxdb.org"
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
-# With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
+set :site_title, "Grafana"
+set :site_url, "http://grafana.org"
 
 page "/feed.xml", :layout => false
 

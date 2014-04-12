@@ -1,7 +1,8 @@
 header
   .row
     .large-12.columns
-      //img.center src="/assets/images/logo_transparent_400x.png" width="300px"
+      img src="/assets/images/logo_transparent_400x.png" width="300px"
+      //img src="/assets/images/hero_bg.png"
       h1 A beautiful, easy to use and feature rich metrics dashboard and graph editor for Graphite & InfluxDB.
       br
       //h2.center Learn more
@@ -18,7 +19,7 @@ header
 = partial "layouts/_tweets"
 
 main.padding-bottom-medium
-  section.features
+  section.features#features
     .feature-header
       .row.text-center
         h3 Feature highlights
@@ -77,7 +78,7 @@ main.padding-bottom-medium
       .large-6.columns.feature-highlight.right
         h3 Video demo
         p
-          | This video will introduce you to the Grafana interface and some of the core features
+          | This video will introduce you to the Grafana interface and some of the core features.
       .large-6.columns
         iframe width="513" height="317" src="//www.youtube.com/embed/OUvJamHeMpw?vq=hd1080" frameborder="0" allowfullscreen="1"
 
@@ -97,7 +98,7 @@ main.padding-bottom-medium
       .large-6.columns.feature-highlight.right
         h3 Annotations
         p
-          | Annotate graphs with rich events from different data sources
+          | Annotate graphs with rich events from different data sources.
 
       .large-6.columns
         a class="gallary-image" href="/assets/images/annotated_graph2.png" title="Annotated graph" data-gallery="1"
@@ -119,24 +120,37 @@ main.padding-bottom-medium
         p
           | You can define multiple graphite servers or InfluxDB server and switch between them.
           |  It is even possible to show graphs from different data sources &amp; servers on the same
-          | dashboard.
+          |  dashboard.
 
       .large-6.columns
         a class="gallary-image" href="/assets/images/InfluxDB.png" title="InfluxDB query editor" data-gallery="1"
           img src="/assets/images/InfluxDB.png" alt="Annotated graph"
 
 
+footer
+  section.newsletter
+    .row
+      h3.text-center Get notified of new releases!
+    .row
+      .large-6.columns.push-3
+        .form action="http://errplane.us5.list-manage.com/subscribe/post?u=4d17b6adac2728b1ea6e4926b&amp;id=08af34971b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+          .row.collapse
+            .small-10.columns
+              input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"
+            .small-2.columns
+              input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button postfix"
 
-
-
-
-section.newsletter
-  .row
-    .large-8.push-2.columns
-      h3 Subscribe to our newsletter for updates!
-      form action="http://errplane.us5.list-manage.com/subscribe/post?u=4d17b6adac2728b1ea6e4926b&amp;id=08af34971b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-        .row.collapse
-          .small-10.columns
-            input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"
-          .small-2.columns
-            input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button postfix"
+  .row.text-center
+    ul.footer-social
+      li
+        i.fa.fa-github
+        | <a href="http://twitter.com/grafana">issue tracker</a> on Github
+      li
+        i.fa.fa-comment
+        | <a href="http://twitter.com/grafana">#grafana</a> on freenode
+      li
+        i.fa.fa-twitter
+        | <a href="http://twitter.com/grafana">@grafana</a> on Twitter
+      li
+        i.fa.fa-envelope
+        | <a href="mailto:torkel@grafana.org">email</a>
