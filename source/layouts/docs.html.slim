@@ -1,56 +1,45 @@
-doctype html
-html
-  head
-    meta charset="utf-8"
+- wrap_layout :layout do
 
-    /! Always force latest IE rendering engine or request Chrome Frame
-    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+  section role="main"
+    .feature-header
+        .row
+          .large-8.medium-8.columns.push-4
+            h3
+              | &nbsp;
+    .row
+      .large-4.medium-4.columns
+        .sidebar
+          nav
+            ul.side-nav
+              li.heading Getting Started
+              li= link_to "Introduction", "/docs"
 
-    /! Use title if it's in the page YAML frontmatter
-    title == data.page.title || "Grafana Documentation"
+              li.divider
 
-    == stylesheet_link_tag "all"
-    == javascript_include_tag  "all"
+              li.heading Installation
+              li= link_to "HTTP API", "/docs/api/http.html"
+              li= link_to "Protobuf API", "/docs/api/protobuf.html"
 
-  body class="#{page_classes}"
-    = partial "layouts/nav"
+              li.divider
 
-    section role="main"
-      .row
-        .large-4.medium-4.columns
-          .sidebar
-            nav
-              ul.side-nav
-                li.heading Getting Started
-                li= link_to "Introduction", "/docs"
+              li.heading Dashboards
+              li= link_to "Overview", "/docs/query_language/"
+              li= link_to "Functions", "/docs/query_language/functions.html"
+              li= link_to "Continuous Queries", "/docs/query_language/continuous_queries.html"
 
-                li.divider
+              li.divider
 
-                li.heading Installation
-                li= link_to "HTTP API", "/docs/api/http.html"
-                li= link_to "Protobuf API", "/docs/api/protobuf.html"
+              li.heading Graph editor
+              li= link_to "Overview", "/docs/interfaces/"
+              li= link_to "Custom Interfaces", "/docs/interfaces/custom.html"
 
-                li.divider
+              li.divider
 
-                li.heading Dashboards
-                li= link_to "Overview", "/docs/query_language/"
-                li= link_to "Functions", "/docs/query_language/functions.html"
-                li= link_to "Continuous Queries", "/docs/query_language/continuous_queries.html"
-
-                li.divider
-
-                li.heading Graph editor
-                li= link_to "Overview", "/docs/interfaces/"
-                li= link_to "Custom Interfaces", "/docs/interfaces/custom.html"
-
-                li.divider
-
-                li.heading Annotations
-                li= link_to "JavaScript", "/docs/libraries/javascript.html"
+              li.heading Annotations
+              li= link_to "JavaScript", "/docs/libraries/javascript.html"
 
 
-            a.button.download.expand href="/download" style="margin-bottom: 0;" Download Grafana
-        .large-8.medium-8.columns
-          == yield
+          a.button.download.expand href="/download" style="margin-bottom: 0;" Download Grafana
+      .large-8.medium-8.columns
+        == yield
 
-    = partial "layouts/analytics"
