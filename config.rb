@@ -22,7 +22,7 @@ activate :livereload
 activate :syntax
 
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => true
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
