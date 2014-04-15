@@ -7,13 +7,13 @@ title: Grafana Documentation
 Grafana is a frontend for Graphite and InfluxDB with powerfull visualization features for time series data.
 You will need either a Graphite or InfluxDB server for Grafana to be of any use.
 
-Grafana is a client side application that runs in your browser. It is very easy to install and setup. It currently has
-one optional external dependency and that is [Elasticsearch](http://www.elasticsearch.org/). Elasticsearch is used to
-store, load and search for dashboards. But you can use Grafana without it.
+It is very easy to install and configure Grafana as it is a client side application that runs in your browser.
+It currently has one optional external dependency and that is [Elasticsearch](http://www.elasticsearch.org/).
+Elasticsearch is used to store, load and search for dashboards. But you can use Grafana without it.
 
 ## Download
 
-[Download](/download) the latest release. The release packages contain a subfolder, for example **grafana-1.5.3**. The
+[Download](/download) the latest release. The release package contain a subfolder, for example **grafana-1.5.3**. The
 contents of this folder should be hosted by a web server, for example nginx, apache, IIS. The standard release
 packages does not contain a web server to host Grafana.
 
@@ -28,7 +28,7 @@ This files contains global settings for your Grafana installation.
 `grafana_index`		Elasticsearch index name where dashboards are stored (optional / leave default).
 
 ### Multiple servers
-If you have multiple Graphite or InfluxDB server you need to specify them in **config.js**.
+If you have multiple Graphite or InfluxDB servers you need to specify them in **config.js**.
 
 Example:
 
