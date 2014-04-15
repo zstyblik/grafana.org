@@ -56,24 +56,18 @@ section.nav
   background: $primary-color
   margin-top: 1.4rem
 
-// background: #7d7e7d; /* Old browsers */
-// background: -moz-radial-gradient(center, ellipse cover, #7d7e7d 4%, #0e0e0e 100%); /* FF3.6+ */
-// background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(4%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
-// background: -webkit-radial-gradient(center, ellipse cover, #7d7e7d 4%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
-// background: -o-radial-gradient(center, ellipse cover, #7d7e7d 4%,#0e0e0e 100%); /* Opera 12+ */
-// background: -ms-radial-gradient(center, ellipse cover, #7d7e7d 4%,#0e0e0e 100%); /* IE10+ */
-// background: radial-gradient(ellipse at center, #7d7e7d 4%,#0e0e0e 100%); /* W3C */
-// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
 header
-  padding: 4rem 0 10rem
-  text-align: center
-  background: radial-gradient(ellipse at center, #444 0%, #333 20%, $dark-hero-bg 60%)
+  background: $dark-hero-bg
+
+  .hero-radial
+    padding: 4rem 0 0rem
+    text-align: center
+    padding-bottom: 1rem
 
   h1
     font-family: "PT Sans", sans-serif
     line-height: 1.0
-    font-size: 2rem
+    font-size: 1.9rem
     text-shadow: 1px 1px #999999
     color: white
     font-weight: 700
@@ -83,6 +77,9 @@ header
     color: white
     font-weight: 100
 
+  .hero-image
+    box-shadow: -2px -2px 10px #333
+
 .tweets
   background: #EEE
   border-bottom: 1px solid #DDD
@@ -91,7 +88,7 @@ header
       border-top: 1px solid white
 
 .tweet:nth-child(odd)
-  background: #F5F5F5
+  background: #F8F8F8
 
 .tweet
   padding: 1rem
