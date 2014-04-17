@@ -26,7 +26,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => tru
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
-set :images_dir, 'assets/images'
+set :images_dir, 'assets/img'
 
 configure :build do
   activate :minify_css
