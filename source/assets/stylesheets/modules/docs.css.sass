@@ -1,7 +1,7 @@
 body.docs
 
   .sidebar
-    background: #f1f1f1
+    background: #FAFAFA
     padding: 10px 20px
 
   .sidebar.fixed, [data-magellan-expedition]
@@ -17,11 +17,13 @@ body.docs
 
   .side-nav li a
     padding: 0.33333rem 0
-    .side-nav li a:hover
-      color: #004054
-      .side-nav li a:hover span
-        background: #dadada
-        color: black
+
+  .side-nav li a:hover
+    color: #004054
+
+  .side-nav li a:hover
+    background: #F1F1F1
+    color: black
 
   .side-nav .heading, .sidebar form
     padding: 2px 0px
@@ -66,26 +68,14 @@ body.docs
     -webkit-box-shadow: 0 0 0 !important
     box-shadow: 0 0 0 !important
 
-  .side-nav
-    display: block
-    margin: 0
-    padding: 0.77778rem 0
-    list-style-type: none
-    list-style-position: inside
-    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important
-    .side-nav li
-      margin: 0 0 0.38889rem 0
-      font-size: 0.77778rem
-      .side-nav li a
-        display: block
-        color: #008cba
-      .side-nav li.active > a:first-child
-        color: #4d4d4d
-        font-weight: normal
-        font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important
-      .side-nav li.divider
-        border-top: 1px solid
-        height: 0
-        padding: 0
-        list-style: none
-        border-top-color: #e6e6e6
+  .side-nav li.active > a:first-child
+    color: #008fba
+    background: rgba(0, 64, 84, 0.05)
+    font-weight: bold
+    //font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important
+  .side-nav li.divider
+    border-top: 1px solid
+    height: 0
+    padding: 0
+    list-style: none
+    border-top-color: #e6e6e6

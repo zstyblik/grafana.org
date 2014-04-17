@@ -66,7 +66,9 @@ when using basic auth **Access-Control-Allow-Origin** must not be set to a wildc
 **Access-Control-Allow-Credentials** must be specified. This looks like the following for Apache:
 
 ```html
-Header set Access-Control-Allow-Origin "http://mygrafana.com:5656"
+Header set Access-Control-Allow-Origin 		"http://mygrafana.com:5656"
+Header set Access-Control-Allow-Methods 	"GET, OPTIONS"
+Header set Access-Control-Allow-Headers 	"origin, authorization, accept"
 Header set Access-Control-Allow-Credentials true
 
 <Location />
