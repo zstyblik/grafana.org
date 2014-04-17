@@ -21,4 +21,8 @@ $ ->
     blueimp.Gallery($('.gallary-image'), options);
 
 
+  $('[data-download-button]').click (evt) ->
+    label = $(this).data('download-button')
+    ga('send', 'event', 'download', 'download', label);
+
   $(document).foundation()
