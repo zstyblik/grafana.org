@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - InfluxDB
+title: Docs - InfluxDB
 ---
 
 # InfluxDB

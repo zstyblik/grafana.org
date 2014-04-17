@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Introduction guide
+title: Docs - Introduction guide
 ---
 
 # Introduction guide

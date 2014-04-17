@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Performance
+title: Docs - Performance
 ---
 
 # Performance

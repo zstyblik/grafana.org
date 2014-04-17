@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Support
+title: Docs - Support
 ---
 
 # Support

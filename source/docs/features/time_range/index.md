@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Time range controls
+title: Docs - Time range controls
 ---
 
 # Time range controls

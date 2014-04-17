@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Search features
+title: Docs - Search features
 ---
 
 # Search features

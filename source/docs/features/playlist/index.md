@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Playlist
+title: Docs - Playlist
 ---
 
 # Playlist

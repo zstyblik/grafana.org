@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Installation
+title: Docs - Installation
 ---
 
 # Installation

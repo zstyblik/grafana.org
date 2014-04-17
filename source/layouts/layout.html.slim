@@ -7,7 +7,7 @@ html
     meta name="description" content="Grafana, the graphite dashboard frontend, editor and graph composer"
     meta name="keywords" content="Grafana,Graphite,Dashboard,Frontend,Metrics,Editor,Composer,InfluxDB"
 
-    title == data.page.title || "Grafana - Graphite and InfluxDB Dashboard and graph composer"
+    title == "Grafana - " + (data.page.title || "Graphite and InfluxDB Dashboard and graph composer")
 
     == stylesheet_link_tag "all"
     == stylesheet_link_tag "http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"

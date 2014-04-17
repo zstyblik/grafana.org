@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Export and Import
+title: Docs - Export and Import
 ---
 
 # Export and Import

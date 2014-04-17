@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Scripted dashboards
+title: Docs - Scripted dashboards
 ---
 
 # Scripted Dashboards

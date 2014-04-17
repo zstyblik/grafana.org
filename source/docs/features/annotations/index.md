@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Annotations
+title: Docs - Annotations
 ---
 
 # Annotations

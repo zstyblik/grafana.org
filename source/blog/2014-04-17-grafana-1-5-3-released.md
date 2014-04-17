@@ -1,5 +1,5 @@
 ---
-title: Grafana - Blog - Grafana 1.5.3 released.
+title: Grafana 1.5.3 released.
 author: Torkel Ödegaard
 published_on: April 17, 2014
 ---

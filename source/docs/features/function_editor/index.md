@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Function Editor
+title: Docs - Function Editor
 ---
 
 # Function editor

@@ -1,5 +1,5 @@
 ---
-title: Grafana Docs - Templated dashboards
+title: Docs - Templated dashboards
 ---
 
 # Templated Dashboards
