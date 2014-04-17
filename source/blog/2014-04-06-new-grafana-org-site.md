@@ -1,5 +1,5 @@
 ---
-title: New website
+title: Grafana - Blog New website
 author: Torkel Ödegaard
 published_on: April 17, 2014
 ---
