@@ -51,6 +51,8 @@ datasources: {
  },
 ```
 
+You can switch datasources in the Metrics tab in the graphite panel.
+
 ### Basic authentication
 If your graphite or Elasticsearch server has basic authentication you can specify the username and password in the url.
 For example `"http://admin:secret@my.graphite.com"`
