@@ -37,6 +37,39 @@
 
 .row
   .columns.medium-12
+    h2 1.5.3 (2014-04-17)
+.row
+  .columns.medium-3
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.5.3.tar.gz" data-download-button="1.5.3.tar.gz"
+      i.fa.fa-download
+      |  TAR
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.5.3.zip" data-download-button="1.5.3.zip"
+      i.fa.fa-download
+      |  ZIP
+
+.row
+  .columns.large-9
+    markdown:
+      **New Features and improvements**
+
+      - Add support for async scripted dashboards [(Issue 274)](https://github.com/torkelo/grafana/issues/274)
+      - More graphite function definitions
+      - Text panel now accepts html (for links to other dashboards, etc) [(Issue 236)](https://github.com/torkelo/grafana/issues/236)
+      - Graphite errors are now much easier to see and troubleshoot with the new inspector [(Issue 265)](https://github.com/torkelo/grafana/issues/265)
+      - Use influxdb aliases to distinguish between multiple columns [(Issue 283)](https://github.com/torkelo/grafana/issues/283)
+      - Browser page title is now Grafana - {{dashboard title}} [(Issue 294)](https://github.com/torkelo/grafana/issues/294)
+      - Disable auto refresh after zooming in, refresh will be restored when you change time range back to relative [(Issue 282)](https://github.com/torkelo/grafana/issues/282)
+
+      **Fixes**
+
+      - Correction to ms axis formater, now formats days correctly. [(Issue 189)](https://github.com/torkelo/grafana/issues/189)
+      - Css fix for Firefox and using top menu dropdowns in panel fullscren / edit mode [(Issue 106)](https://github.com/torkelo/grafana/issues/106)
+      - Fix for Text panel, now changes take effect directly [(Issue 251)](https://github.com/torkelo/grafana/issues/251)
+      - Fix when adding functions without params that did not cause graph to update [(Issue 267)](https://github.com/torkelo/grafana/issues/267)
+
+.row
+  .columns.medium-12
     h2 1.5.2 (2014-03-24)
 .row
   .columns.medium-3
