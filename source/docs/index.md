@@ -1,5 +1,5 @@
 ---
-title: Grafana Documentation
+title: Grafana Docs - Installation
 ---
 
 # Installation
@@ -13,7 +13,7 @@ Elasticsearch is used to store, load and search for dashboards. But you can use 
 
 ## Download
 
-[Download](/download) the latest release. The release package contain a subfolder, for example **grafana-1.5.3**. The
+[Download](/download) the latest release. The release package contain a subfolder, for example **grafana-1.5.0**. The
 contents of this folder should be hosted by a web server, for example nginx, apache, IIS. The standard release
 packages does not contain a web server to host Grafana.
 
@@ -21,16 +21,39 @@ packages does not contain a web server to host Grafana.
 In your chosen Grafana install location, locate the file **config.sample.js** and copy or rename it to **config.js**.
 This files contains global settings for your Grafana installation.
 
-`graphiteUrl`			Graphite url, needs to be accessable from your browser.
+`graphiteUrl`     Graphite url, needs to be accessable from your browser.
 
-`elasticsearch`  	Elasticsearch url, needs to be accessable from your browser.
+`elasticsearch`   Elasticsearch url, needs to be accessable from your browser.
 
-`grafana_index`		Elasticsearch index name where dashboards are stored (optional / leave default).
+`grafana_index`   Elasticsearch index name where dashboards are stored (optional / leave default).
 
 ### Multiple servers
-If you have multiple Graphite or InfluxDB servers you need to specify them in **config.js**.
+If you have multiple Graphite or InfluxDB servers you need to specify them in **config.js**. In this case comment out the
+setting graphiteUrl and use the datasources property instead.
 
-Example:
+```javascript
+datasources: {
+  data_center_us: {
+    default: true,
+    type: 'graphite',
+    url: 'http://<graphite_url>'
+  },
+  data_center_eu: {
+    type: 'graphite',
+    url: 'http://<graphite_url>'
+  },
+  influx_db: {
+    type: 'influxdb',
+    url: 'http://<your_influx_db_server>:8086/db/<db_name>',
+    username: 'test',
+    password: 'test',
+  }
+ },
+```
+
+### Basic authentication
+If your graphite or Elasticsearch server has basic authentication you can specify the username and password in the url.
+For example `"http://admin:secret@my.graphite.com"`
 
 ### Timezone
 The graphite-web application has a `TIME_ZONE` setting defined in `local_settings.py`. If this time zone differs from
@@ -59,16 +82,16 @@ Header set Access-Control-Allow-Headers "origin, authorization, accept"
 ```
 
 Note that using `"*"` leaves your graphite instance quite open so you might want to consider
-using `"http://my.graphite.com"` in place of `"*"`
+using `"http://my.grafana.com"` in place of `"*"`
 
 If your Graphite web is proteced by basic authentication, you have to enable the HTTP verb OPTIONS. Take note that
 when using basic auth **Access-Control-Allow-Origin** must not be set to a wildcard, also the header
 **Access-Control-Allow-Credentials** must be specified. This looks like the following for Apache:
 
 ```html
-Header set Access-Control-Allow-Origin 		"http://mygrafana.com:5656"
-Header set Access-Control-Allow-Methods 	"GET, OPTIONS"
-Header set Access-Control-Allow-Headers 	"origin, authorization, accept"
+Header set Access-Control-Allow-Origin    "http://mygrafana.com:5656"
+Header set Access-Control-Allow-Methods   "GET, OPTIONS"
+Header set Access-Control-Allow-Headers   "origin, authorization, accept"
 Header set Access-Control-Allow-Credentials true
 
 <Location />
