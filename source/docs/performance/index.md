@@ -4,7 +4,7 @@ title: Docs - Performance
 
 # Performance
 
-If you are using graphite 0.9.12 or bellow and are experiencing slow loading times, especially for long time range range queries
+If you are using graphite 0.9.12 or bellow and are experiencing slow loading times, especially for long time range queries
 there is a fix. The reason for slow performance is that graphites json render returns all data points for the time range. Even
 if you have a graph width of 500 pixels graphite could return 50 000 data points or even more.
 
