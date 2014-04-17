@@ -1,13 +1,7 @@
 ---
-title: Grafana is the future
+title: New website
 author: Torkel Ödegaard
-published_on: April 6, 2014
+published_on: April 17, 2014
 ---
 
-This is just a testasd asd
-
-asd
-
-- asd 2
-- second
-- third
+The new website is now live! Time to finish up the v1.6 release!

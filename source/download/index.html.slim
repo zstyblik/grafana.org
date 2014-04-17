@@ -64,7 +64,7 @@
   .columns.large-9
     markdown:
       #### New Features and improvements
-      - Support for second optional params for functions like aliasByNode [(Issue 167)](https://github.com/torkelo/grafana/issues/167). Read the wiki on the [Function Editor](https://github.com/torkelo/grafana/wiki/Graphite-Function-Editor) for more info.
+      - Support for second optional params for functions like aliasByNode [(Issue 167)](https://github.com/torkelo/grafana/issues/167). Read the docs on the [Function Editor](/docs/features/function_editor) for more info.
       - More functions added to InfluxDB query editor [(Issue 218)](https://github.com/torkelo/grafana/issues/218)
       - Filters can now be used inside other filters (templated segments) [(Issue 128)](https://github.com/torkelo/grafana/issues/128)
       - More graphite functions added
@@ -82,15 +82,15 @@
       For people who are find Grafana slow for large time spans or high resolution metrics. This is most likely due to graphite returning a large number of datapoints. The maxDataPoints parameter solves this issue. For maxDataPoints to work you need to run the latest graphite-web (some builds of 0.9.12 does not include this feature).
 
       Read this for more info:
-      [Performance for large time spans](https://github.com/torkelo/grafana/wiki/Performance-for-large-time-spans)
+      [Performance for large time spans](/docs/performance)
 
       ## 1.5.0 (2014-03-09)
       ### New Features and improvements
       - New function editor [video demo](http://youtu.be/I90WHRwE1ZM) [(Issue 178)](https://github.com/torkelo/grafana/issues/178)
       - Links to function documentation from function editor [(Issue 3)](https://github.com/torkelo/grafana/issues/3)
       - Reorder functions [(Issue 130)](https://github.com/torkelo/grafana/issues/130)
-      - [Initial support for InfluxDB](https://github.com/torkelo/grafana/wiki/InfluxDB) as metric datasource (#103), need feedback!
-      - [Dashboard playlist](https://github.com/torkelo/grafana/wiki/Dashboard-playlist) [(Issue 36)](https://github.com/torkelo/grafana/issues/36)
+      - [Initial support for InfluxDB](/docs/features/influxdb) as metric datasource (#103), need feedback!
+      - [Dashboard playlist](/docs/features/playlist) [(Issue 36)](https://github.com/torkelo/grafana/issues/36)
       - When adding aliasByNode smartly set node number [(Issue 175)](https://github.com/torkelo/grafana/issues/175)
       - Support graphite identifiers with embedded colons [(Issue 173)](https://github.com/torkelo/grafana/issues/173)
       - Typeahead & autocomplete when adding new function [(Issue 164)](https://github.com/torkelo/grafana/issues/164)
@@ -105,8 +105,8 @@
 
       ## 1.4.0 (2014-02-21)
       ### New Features
-      - #44 Annotations! Required a lot of work to get right. Read wiki article for more info. Supported annotations data sources are graphite metrics and graphite events. Support for more will be added in the future!
-      - #35 Support for multiple graphite servers! (Read wiki article for more)
+      - #44 Annotations! Required a lot of work to get right. Read docs article for more info. Supported annotations data sources are graphite metrics and graphite events. Support for more will be added in the future!
+      - #35 Support for multiple graphite servers! (Read docs article for more)
       - #116 Back to dashboard link in top menu to easily exist full screen / edit mode.
       - #114, #97 Legend values now use the same y axes formatter
       - #77 Improvements and polish to the light theme
@@ -123,7 +123,7 @@
 
       # 1.3.0 (2014-02-13)
       ### New features or improvements
-      - #86 Dashboard tags and search (see wiki article for details)
+      - #86 Dashboard tags and search (see docs search article)
       - #54 Enhancement to filter / template. "Include All" improvement
       - #82 Dashboard search result sorted in alphabetical order
 
@@ -187,16 +187,3 @@
       # 1.0.0 (2014-01-19)
 
       First public release
-
-
-
-    ul#file_list
-
-coffee:
-  $("#file_list").html("")
-  $.get 'http://s3.amazonaws.com/influxdb', (response) ->
-    items = response.getElementsByTagName("Contents")
-    for tag in items
-      fileName = tag.getElementsByTagName("Key")[0].textContent
-      if fileName.indexOf("logs/") == -1
-        $("#file_list").append("<li><a href='http://s3.amazonaws.com/influxdb/" + fileName + "'>" + fileName + "</a></li>")
