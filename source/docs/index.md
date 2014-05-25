@@ -4,7 +4,7 @@ title: Docs - Installation
 
 # Installation
 
-Grafana is a frontend for Graphite and InfluxDB with powerfull visualization features for time series data.
+Grafana is a frontend for [Graphite](http://graphite.readthedocs.org/en/latest/) and [InfluxDB](http://influxdb.org) with powerfull visualization features for time series data.
 You will need either a Graphite or InfluxDB server for Grafana to be of any use.
 
 It is very easy to install and configure Grafana as it is a client side application that runs in your browser.
