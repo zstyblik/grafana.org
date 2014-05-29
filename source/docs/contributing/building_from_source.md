@@ -29,3 +29,7 @@ Grafana uses nodejs and grunt as a build system for javascript, less compilation
 ### create optimized, minified build
  - grunt build   (or grunt release to get zip/tar files)
 
+
+## Create a pull requests
+
+Before or after your create a pull requests, sign the [contributor license aggrement](http://localhost:4567/docs/contributing/cla.html).
