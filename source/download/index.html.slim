@@ -41,6 +41,43 @@ title: Download
 
 .row
   .columns.medium-12
+    h2 1.5.4 (2014-05-13)
+.row
+  .columns.medium-3
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.5.4.tar.gz" data-download-button="1.5.4.tar.gz"
+      i.fa.fa-download
+      |  TAR
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.5.4.zip" data-download-button="1.5.4.zip"
+      i.fa.fa-download
+      |  ZIP
+
+.row
+  .columns.large-9
+    markdown:
+      **New features and improvements**
+
+      - InfluxDB enhancement: support for multiple hosts (with retries) and raw queries [(Issue 318)](https://github.com/grafana/grafana/issues/318), thx @toddboom
+      - Added rounding for graphites from and to time range filters
+        for very short absolute ranges [(Issue 320)](https://github.com/grafana/grafana/issues/320)
+      - Increased resolution for graphite datapoints (maxDataPoints), now equal to panel pixel width. (Closes [#5](https://github.com/grafana/grafana/issues/5))
+      - Improvement to influxdb query editor, can now add where clause and alias ([Issue 331](https://github.com/grafana/grafana/issues/331), thanks @mavimo)
+      - New config setting for graphite datasource to control if json render request is POST or GET [(Issue 345)](https://github.com/grafana/grafana/issues/345)
+      - Unsaved changes warning feature ([Issue 324](https://github.com/grafana/grafana/issues/324))
+      - Improvement to series toggling, CTRL+MouseClick on series name will now hide all others [(Issue 350)](https://github.com/grafana/grafana/issues/350)
+
+      **Changes**
+
+      - Graph default setting for Y-Min changed from zero to auto scalling (will not effect existing dashboards). [(Issue 386)](https://github.com/grafana/grafana/issues/386) - thx @kamaradclimber
+
+      **Fixes**
+
+      - Fixes to filters and "All" option. It now never uses "*" as value, but all options in a {node1, node2, node3} expression ([Issue 228](https://github.com/grafana/grafana/issues/228), [Issue 359](https://github.com/grafana/grafana/issues/359))
+      - Fix for InfluxDB query generation with columns containing dots or dashes ([Issue 369](https://github.com/grafana/grafana/issues/369), [Issue 348](https://github.com/grafana/grafana/issues/348)) - Thanks to @jbripley
+
+
+.row
+  .columns.medium-12
     h2 1.5.3 (2014-04-17)
 .row
   .columns.medium-3
@@ -57,20 +94,20 @@ title: Download
     markdown:
       **New Features and improvements**
 
-      - Add support for async scripted dashboards [(Issue 274)](https://github.com/torkelo/grafana/issues/274)
+      - Add support for async scripted dashboards [(Issue 274)](https://github.com/grafana/grafana/issues/274)
       - More graphite function definitions
-      - Text panel now accepts html (for links to other dashboards, etc) [(Issue 236)](https://github.com/torkelo/grafana/issues/236)
-      - Graphite errors are now much easier to see and troubleshoot with the new inspector [(Issue 265)](https://github.com/torkelo/grafana/issues/265)
-      - Use influxdb aliases to distinguish between multiple columns [(Issue 283)](https://github.com/torkelo/grafana/issues/283)
-      - Browser page title is now Grafana - {{dashboard title}} [(Issue 294)](https://github.com/torkelo/grafana/issues/294)
-      - Disable auto refresh after zooming in, refresh will be restored when you change time range back to relative [(Issue 282)](https://github.com/torkelo/grafana/issues/282)
+      - Text panel now accepts html (for links to other dashboards, etc) [(Issue 236)](https://github.com/grafana/grafana/issues/236)
+      - Graphite errors are now much easier to see and troubleshoot with the new inspector [(Issue 265)](https://github.com/grafana/grafana/issues/265)
+      - Use influxdb aliases to distinguish between multiple columns [(Issue 283)](https://github.com/grafana/grafana/issues/283)
+      - Browser page title is now Grafana - {{dashboard title}} [(Issue 294)](https://github.com/grafana/grafana/issues/294)
+      - Disable auto refresh after zooming in, refresh will be restored when you change time range back to relative [(Issue 282)](https://github.com/grafana/grafana/issues/282)
 
       **Fixes**
 
-      - Correction to ms axis formater, now formats days correctly. [(Issue 189)](https://github.com/torkelo/grafana/issues/189)
-      - Css fix for Firefox and using top menu dropdowns in panel fullscren / edit mode [(Issue 106)](https://github.com/torkelo/grafana/issues/106)
-      - Fix for Text panel, now changes take effect directly [(Issue 251)](https://github.com/torkelo/grafana/issues/251)
-      - Fix when adding functions without params that did not cause graph to update [(Issue 267)](https://github.com/torkelo/grafana/issues/267)
+      - Correction to ms axis formater, now formats days correctly. [(Issue 189)](https://github.com/grafana/grafana/issues/189)
+      - Css fix for Firefox and using top menu dropdowns in panel fullscren / edit mode [(Issue 106)](https://github.com/grafana/grafana/issues/106)
+      - Fix for Text panel, now changes take effect directly [(Issue 251)](https://github.com/grafana/grafana/issues/251)
+      - Fix when adding functions without params that did not cause graph to update [(Issue 267)](https://github.com/grafana/grafana/issues/267)
 
 .row
   .columns.medium-12
@@ -86,15 +123,15 @@ title: Download
       |  ZIP
 
 / ## vNext
-/ - Text panel now accepts html (for links to other dashboards, etc) [(Issue 236)](https://github.com/torkelo/grafana/issues/236)
-/ - Fix for Text panel, now changes take effect directly [(Issue 251)](https://github.com/torkelo/grafana/issues/251)
-/ - Fix when adding functions without params that did not cause graph to update [(Issue 267)](https://github.com/torkelo/grafana/issues/267)
-/ - Graphite errors are now much easier to see and troubleshoot with the new inspector [(Issue 265)](https://github.com/torkelo/grafana/issues/265)
-/ - Use influxdb aliases to distinguish between multiple columns [(Issue 283)](https://github.com/torkelo/grafana/issues/283)
-/ - Correction to ms axis formater, now formats days correctly. [(Issue 189)](https://github.com/torkelo/grafana/issues/189)
-/ - Css fix for Firefox and using top menu dropdowns in panel fullscren / edit mode [(Issue 106)](https://github.com/torkelo/grafana/issues/106)
-/ - Browser page title is now Grafana - {{dashboard title}} [(Issue 294)](https://github.com/torkelo/grafana/issues/294)
-/ - Disable auto refresh zooming in (every time you change to an absolute time range), refresh will be restored when you change time range back to relative [(Issue 282)](https://github.com/torkelo/grafana/issues/282)
+/ - Text panel now accepts html (for links to other dashboards, etc) [(Issue 236)](https://github.com/grafana/grafana/issues/236)
+/ - Fix for Text panel, now changes take effect directly [(Issue 251)](https://github.com/grafana/grafana/issues/251)
+/ - Fix when adding functions without params that did not cause graph to update [(Issue 267)](https://github.com/grafana/grafana/issues/267)
+/ - Graphite errors are now much easier to see and troubleshoot with the new inspector [(Issue 265)](https://github.com/grafana/grafana/issues/265)
+/ - Use influxdb aliases to distinguish between multiple columns [(Issue 283)](https://github.com/grafana/grafana/issues/283)
+/ - Correction to ms axis formater, now formats days correctly. [(Issue 189)](https://github.com/grafana/grafana/issues/189)
+/ - Css fix for Firefox and using top menu dropdowns in panel fullscren / edit mode [(Issue 106)](https://github.com/grafana/grafana/issues/106)
+/ - Browser page title is now Grafana - {{dashboard title}} [(Issue 294)](https://github.com/grafana/grafana/issues/294)
+/ - Disable auto refresh zooming in (every time you change to an absolute time range), refresh will be restored when you change time range back to relative [(Issue 282)](https://github.com/grafana/grafana/issues/282)
 / - More graphite functions
 
 .row
@@ -102,17 +139,17 @@ title: Download
     markdown:
       **New Features and improvements**
 
-      - Support for second optional params for functions like aliasByNode [(Issue 167)](https://github.com/torkelo/grafana/issues/167). Read the docs on the [Function Editor](/docs/features/function_editor) for more info.
-      - More functions added to InfluxDB query editor [(Issue 218)](https://github.com/torkelo/grafana/issues/218)
-      - Filters can now be used inside other filters (templated segments) [(Issue 128)](https://github.com/torkelo/grafana/issues/128)
+      - Support for second optional params for functions like aliasByNode [(Issue 167)](https://github.com/grafana/grafana/issues/167). Read the docs on the [Function Editor](/docs/features/function_editor) for more info.
+      - More functions added to InfluxDB query editor [(Issue 218)](https://github.com/grafana/grafana/issues/218)
+      - Filters can now be used inside other filters (templated segments) [(Issue 128)](https://github.com/grafana/grafana/issues/128)
       - More graphite functions added
 
       **Fixes**
 
-      - Float arguments now work for functions like scale [(Issue 223)](https://github.com/torkelo/grafana/issues/223)
+      - Float arguments now work for functions like scale [(Issue 223)](https://github.com/grafana/grafana/issues/223)
       - Fix for graphite function editor, the graph & target was not updated after adding a function and leaving default params as is #191
 
-      The zip files now contains a sub folder with project name and version prefix. [(Issue 209)](https://github.com/torkelo/grafana/issues/209)
+      The zip files now contains a sub folder with project name and version prefix. [(Issue 209)](https://github.com/grafana/grafana/issues/209)
 
       ## 1.5.1 (2014-03-10)
       **Fixes**
@@ -127,23 +164,23 @@ title: Download
       ## 1.5.0 (2014-03-09)
       **New Features and improvements**
 
-      - New function editor [video demo](http://youtu.be/I90WHRwE1ZM) [(Issue 178)](https://github.com/torkelo/grafana/issues/178)
-      - Links to function documentation from function editor [(Issue 3)](https://github.com/torkelo/grafana/issues/3)
-      - Reorder functions [(Issue 130)](https://github.com/torkelo/grafana/issues/130)
+      - New function editor [video demo](http://youtu.be/I90WHRwE1ZM) [(Issue 178)](https://github.com/grafana/grafana/issues/178)
+      - Links to function documentation from function editor [(Issue 3)](https://github.com/grafana/grafana/issues/3)
+      - Reorder functions [(Issue 130)](https://github.com/grafana/grafana/issues/130)
       - [Initial support for InfluxDB](/docs/features/influxdb) as metric datasource (#103), need feedback!
-      - [Dashboard playlist](/docs/features/playlist) [(Issue 36)](https://github.com/torkelo/grafana/issues/36)
-      - When adding aliasByNode smartly set node number [(Issue 175)](https://github.com/torkelo/grafana/issues/175)
-      - Support graphite identifiers with embedded colons [(Issue 173)](https://github.com/torkelo/grafana/issues/173)
-      - Typeahead & autocomplete when adding new function [(Issue 164)](https://github.com/torkelo/grafana/issues/164)
+      - [Dashboard playlist](/docs/features/playlist) [(Issue 36)](https://github.com/grafana/grafana/issues/36)
+      - When adding aliasByNode smartly set node number [(Issue 175)](https://github.com/grafana/grafana/issues/175)
+      - Support graphite identifiers with embedded colons [(Issue 173)](https://github.com/grafana/grafana/issues/173)
+      - Typeahead & autocomplete when adding new function [(Issue 164)](https://github.com/grafana/grafana/issues/164)
       - More graphite function definitions
-      - Make "ms" axis format include hour, day, weeks, month and year [(Issue 149)](https://github.com/torkelo/grafana/issues/149)
-      - Microsecond axis format [(Issue 146)](https://github.com/torkelo/grafana/issues/146)
-      - Specify template paramaters in URL [(Issue 123)](https://github.com/torkelo/grafana/issues/123)
+      - Make "ms" axis format include hour, day, weeks, month and year [(Issue 149)](https://github.com/grafana/grafana/issues/149)
+      - Microsecond axis format [(Issue 146)](https://github.com/grafana/grafana/issues/146)
+      - Specify template paramaters in URL [(Issue 123)](https://github.com/grafana/grafana/issues/123)
 
       **Fixes**
 
-      - Basic Auth fix [(Issue 152)](https://github.com/torkelo/grafana/issues/152)
-      - Fix to annotations with graphite source & null values [(Issue 138)](https://github.com/torkelo/grafana/issues/138)
+      - Basic Auth fix [(Issue 152)](https://github.com/grafana/grafana/issues/152)
+      - Fix to annotations with graphite source & null values [(Issue 138)](https://github.com/grafana/grafana/issues/138)
 
       ## 1.4.0 (2014-02-21)
       **New Features**
