@@ -21,37 +21,45 @@ packages does not contain a web server to host Grafana.
 In your chosen Grafana install location, locate the file **config.sample.js** and copy or rename it to **config.js**.
 This files contains global settings for your Grafana installation.
 
-`graphiteUrl`     Graphite url, needs to be accessable from your browser.
 
-`elasticsearch`   Elasticsearch url, needs to be accessable from your browser.
-
-`grafana_index`   Elasticsearch index name where dashboards are stored (optional / leave default).
-
-### Multiple servers
-If you have multiple Graphite or InfluxDB servers you need to specify them in **config.js**. In this case comment out the
-setting graphiteUrl and use the datasources property instead.
+### datasources
+The datasources property defines your metric backends. You can specify mulitple.
 
 ```javascript
 datasources: {
-  data_center_us: {
+  'Graphite-EU': {
     default: true,
     type: 'graphite',
-    url: 'http://<graphite_url>'
+    url: 'http://my_graphite_server:8080'
   },
-  data_center_eu: {
-    type: 'graphite',
-    url: 'http://<graphite_url>'
-  },
-  influx_db: {
+  'InfluxDB-US': {
     type: 'influxdb',
-    url: 'http://<your_influx_db_server>:8086/db/<db_name>',
+    url: 'http://my_influxdb_server:8086/db/<db_name>',
     username: 'test',
     password: 'test',
-  }
+  },
+  'OpenTSDB-TEST': {
+    type: 'opentsdb',
+    url: "http://my_opentsdb_server:4242"
+  },
  },
 ```
 
-You can switch datasources in the Metrics tab in the graphite panel.
+You can switch datasources in the Metrics tab in the graph panel while in edit mode.
+
+### Dashboard save/load
+```javascript
+    // elasticsearch url
+    // used for storing and loading dashboards, optional
+    // For Basic authentication use: http://username:password@domain.com:9200
+    elasticsearch: "http://my_elastic_server:9200",
+
+    // default start dashboard
+    default_route: '/dashboard/file/default.json',
+
+    // Elasticsearch index for storing dashboards
+    grafana_index: "grafana-dash",
+```
 
 ### Basic authentication
 If your graphite or Elasticsearch server has basic authentication you can specify the username and password in the url.

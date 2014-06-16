@@ -29,3 +29,16 @@ When you add a InfluxDB query you can specify series name (can be regex), value 
 select [[func]]([[column]]) from [[series]] where [[timeFilter]] group by time([[interval]]) order asc
 ```
 
+## InfluxDB Filters & Templated queries
+
+![](animated_gifs/influxdb_templated_query.gif)
+
+
+Use a distinct influxdb query in the filter query input box:
+
+```sql
+select distinct(host) from app.status
+```
+
+
+
