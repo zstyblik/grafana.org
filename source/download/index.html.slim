@@ -41,6 +41,35 @@ title: Download
 
 .row
   .columns.medium-12
+    h2 1.6.1 (2014-06-24)
+.row
+  .columns.medium-3
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.6.1.tar.gz" data-download-button="1.6.1.tar.gz"
+      i.fa.fa-download
+      |  TAR
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.6.1.zip" data-download-button="1.6.1.zip"
+      i.fa.fa-download
+      |  ZIP
+
+.row
+  .columns.large-9
+    markdown:
+      **New features or improvements**
+
+      - Ability to set y min/max for right y-axis (RR [#519](https://github.com/grafana/grafana/issues/519), Closes [#360](https://github.com/grafana/grafana/issues/360)) - thx @acedrew
+
+      **Fixes**
+
+      - Fixes regex InfluxDB queries intoduced in 1.6.0 (PR [#500](https://github.com/grafana/grafana/issues/500))
+      - Bug in when using % sign in legends (aliases), fixed by removing url decoding of metric names (Fixes [#506](https://github.com/grafana/grafana/issues/506))
+      - Series names and column name typeahead cache fix (Fixes [#522](https://github.com/grafana/grafana/issues/522))
+      - Fixed influxdb issue with raw query that caused wrong value column detection (Fixes [#504](https://github.com/grafana/grafana/issues/504))
+      - Default property that marks which datasource is default in config.js is now optional (Fixes [#526](https://github.com/grafana/grafana/issues/526))
+      - Auto-refresh caused 2 refreshes (and hence mulitple queries) each time (at least in firefox) (Fixes [#342](https://github.com/grafana/grafana/issues/342))
+
+.row
+  .columns.medium-12
     h2 1.6.0 (2014-06-16)
 .row
   .columns.medium-3
@@ -57,28 +86,28 @@ title: Download
     markdown:
       **New features and improvements**
 
-      - Row editing and adding new panel is now a lot quicker and easier with the new row menu (Issue [#475](http://github.com/grafana/grafana/issues/475))
-      - New datasource! Initial support for [OpenTSDB](/docs/features/opentsdb) (PR [#211](http://github.com/grafana/grafana/issues/211)) - thx @mpage
-      - Improvement and polish to the OpenTSDB query editor (Issue [#492](http://github.com/grafana/grafana/issues/492))
-      - Influxdb group by support (Issue [#441](http://github.com/grafana/grafana/issues/441)) thx @piis3
-      - Improvement to InfluxDB query editor and function/value column selection (Issue [#473](http://github.com/grafana/grafana/issues/473))
-      - Initial support for filtering (templated queries) for InfluxDB (PR [#375](http://github.com/grafana/grafana/issues/375)) - thx @mavimo
-      - New Y-axis formater for metric values that represent seconds (Issue [#427](http://github.com/grafana/grafana/issues/427)) - thx @jippi
-      - Allow special characters in serie names (influxdb datasource), PR [#390](http://github.com/grafana/grafana/issues/390) - thx  @majst01
-      - Refactoring of filterSrv (Issue [#428](http://github.com/grafana/grafana/issues/428)), thx @Tetha
-      - New config for playlist feature. Set playlist_timespan to set default playlist interval (Issue [#445](http://github.com/grafana/grafana/issues/445)) - thx @rmca
-      - New graphite function definition added isNonNull (PR [#461](http://github.com/grafana/grafana/issues/461)), - thx @tmonk42
-      - New InfluxDB function difference add to function dropdown (PR [#455](http://github.com/grafana/grafana/issues/455))
-      - Added parameter to keepLastValue graphite function definition (default 100), Closes [#459](http://github.com/grafana/grafana/issues/459)
+      - Row editing and adding new panel is now a lot quicker and easier with the new row menu (Issue [#475](https://github.com/grafana/grafana/issues/475))
+      - New datasource! Initial support for [OpenTSDB](/docs/features/opentsdb) (PR [#211](https://github.com/grafana/grafana/issues/211)) - thx @mpage
+      - Improvement and polish to the OpenTSDB query editor (Issue [#492](https://github.com/grafana/grafana/issues/492))
+      - Influxdb group by support (Issue [#441](https://github.com/grafana/grafana/issues/441)) thx @piis3
+      - Improvement to InfluxDB query editor and function/value column selection (Issue [#473](https://github.com/grafana/grafana/issues/473))
+      - Initial support for filtering (templated queries) for InfluxDB (PR [#375](https://github.com/grafana/grafana/issues/375)) - thx @mavimo
+      - New Y-axis formater for metric values that represent seconds (Issue [#427](https://github.com/grafana/grafana/issues/427)) - thx @jippi
+      - Allow special characters in serie names (influxdb datasource), PR [#390](https://github.com/grafana/grafana/issues/390) - thx  @majst01
+      - Refactoring of filterSrv (Issue [#428](https://github.com/grafana/grafana/issues/428)), thx @Tetha
+      - New config for playlist feature. Set playlist_timespan to set default playlist interval (Issue [#445](https://github.com/grafana/grafana/issues/445)) - thx @rmca
+      - New graphite function definition added isNonNull (PR [#461](https://github.com/grafana/grafana/issues/461)), - thx @tmonk42
+      - New InfluxDB function difference add to function dropdown (PR [#455](https://github.com/grafana/grafana/issues/455))
+      - Added parameter to keepLastValue graphite function definition (default 100), Closes [#459](https://github.com/grafana/grafana/issues/459)
       - improved asset (css/js) build pipeline, added revision to css and js. Will remove issues related
-        to the browser cache when upgrading grafana and improve load performance (Fixes [#418](http://github.com/grafana/grafana/issues/418))
-      - Partial support for url encoded metrics when using Graphite datasource (PR [#327](http://github.com/grafana/grafana/issues/327)) - thx @axe-felix
+        to the browser cache when upgrading grafana and improve load performance (Fixes [#418](https://github.com/grafana/grafana/issues/418))
+      - Partial support for url encoded metrics when using Graphite datasource (PR [#327](https://github.com/grafana/grafana/issues/327)) - thx @axe-felix
 
 
       **Changes**
 
       - Graphite panel is now renamed graph (Existing dashboards will still work)
-      - Add panel icon and Row edit button is replaced by the Row edit menu (Issue [#475](http://github.com/grafana/grafana/issues/475))
+      - Add panel icon and Row edit button is replaced by the Row edit menu (Issue [#475](https://github.com/grafana/grafana/issues/475))
       - New graphs now have a default empty query
       - Add Row button now creates a row with default height of 250px (no longer opens dashboard settings modal)
       - Clean up of config.sample.js, graphiteUrl removed (still works, but depricated, removed in future)
@@ -86,16 +115,16 @@ title: Download
 
       **Fixes**
 
-      - Graphite query lexer change, can now handle regex parameters for aliasSub function (Fixes [#126](http://github.com/grafana/grafana/issues/126))
+      - Graphite query lexer change, can now handle regex parameters for aliasSub function (Fixes [#126](https://github.com/grafana/grafana/issues/126))
       - Filter option loading when having muliple nested filters now works better.
-        Options are now reloaded correctly and there are no multiple renders/refresh inbetween ([#447](http://github.com/grafana/grafana/issues/447)),
+        Options are now reloaded correctly and there are no multiple renders/refresh inbetween ([#447](https://github.com/grafana/grafana/issues/447)),
         After an option is changed and a nested template param is also reloaded, if the current value
-        exists after the options are reloaded the current selected value is kept (Closes [#447](http://github.com/grafana/grafana/issues/447), Closes [#412](http://github.com/grafana/grafana/issues/412))
-      - Legend Current value did not display when value was zero, Fixes [#460](http://github.com/grafana/grafana/issues/460)
-      - Fix to series toggling bug that caused annotations to be hidden when toggling (hiding) series. Fixes [#328](http://github.com/grafana/grafana/issues/328)
-      - Fix for graphite function selection menu that some times draws outside screen. It now displays upward (Fixes [#293](http://github.com/grafana/grafana/issues/293))
+        exists after the options are reloaded the current selected value is kept (Closes [#447](https://github.com/grafana/grafana/issues/447), Closes [#412](https://github.com/grafana/grafana/issues/412))
+      - Legend Current value did not display when value was zero, Fixes [#460](https://github.com/grafana/grafana/issues/460)
+      - Fix to series toggling bug that caused annotations to be hidden when toggling (hiding) series. Fixes [#328](https://github.com/grafana/grafana/issues/328)
+      - Fix for graphite function selection menu that some times draws outside screen. It now displays upward (Fixes [#293](https://github.com/grafana/grafana/issues/293))
       - Fix for exclusive series toggling (hold down CTRL, SHIFT or META key) and left click a series for exclusive toggling
-        CTRL does not work on MAC OSX but SHIFT or META should (depending on browser) (Closes [#350](http://github.com/grafana/grafana/issues/350), Fixes #472)
+        CTRL does not work on MAC OSX but SHIFT or META should (depending on browser) (Closes [#350](https://github.com/grafana/grafana/issues/350), Fixes #472)
 
 .row
   .columns.medium-12
