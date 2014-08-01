@@ -1,0 +1,2 @@
+byzanz-record -c --delay=3 --x=6 --y=102 --duration=3 --height=500 --width=1270 source/assets/img/animated_gifs/new_dashboard.gif
+
