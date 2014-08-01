@@ -24,9 +24,5 @@ $ ->
   $('[data-download-button]').click (evt) ->
     label = $(this).data('download-button')
     ga('send', 'event', 'download', 'download', label)
-    callback = ->
-      window.location.href = '/donate'
-    setTimeout callback, 2000
-
 
   $(document).foundation()

@@ -4,80 +4,125 @@ title: Docs - Installation
 
 # Installation
 
-Grafana is a frontend for [Graphite](http://graphite.readthedocs.org/en/latest/) and [InfluxDB](http://influxdb.org) with powerfull visualization features for time series data.
-You will need either a Graphite or InfluxDB server for Grafana to be of any use.
-
-It is very easy to install and configure Grafana as it is a client side application that runs in your browser.
-Besides Graphite or InfluxDB, it only has one optional external dependency and that is [Elasticsearch](http://www.elasticsearch.org/).
-Elasticsearch is used to store, load and search for dashboards. But you can use Grafana without it.
+Grafana is a frontend for [Graphite](http://graphite.readthedocs.org/en/latest/), [InfluxDB](http://influxdb.org)
+and [OpenTSDB](http://opentsdb.net) with powerfull visualization features for time series data.
+You will need either a Graphite, InfluxDB or OpenTSDB server for Grafana to be of any use.
 
 ## Download
 
-[Download](/download) the latest release. The release package contain a subfolder, for example **grafana-1.5.0**. The
+[Download](/download) the latest release. The release package contain a subfolder, for example **grafana-1.7.0**. The
 contents of this folder should be hosted by a web server, for example nginx, apache, IIS. The standard release
 packages does not contain a web server to host Grafana.
+
+### Dependencies
+There are no dependencies, Grafana is a client side application that runs in your browser. It only needs a time series store
+where it can fetch metrics. If you use InfluxDB Grafana can use it to store dashboards.
+If you use Graphite or OpenTSDB you can use Elasticsearch to store dashboards or just use json files stored on disk.
 
 ## Configuration
 In your chosen Grafana install location, locate the file **config.sample.js** and copy or rename it to **config.js**.
 This files contains global settings for your Grafana installation.
 
 
-### datasources
-The datasources property defines your metric backends. You can specify mulitple.
+### Datasources
+The datasources property defines your metric, annotation and dashboard storage backends.
 
+- You can specify multiple datasources.
+- default: true    marks it as the default metric source (if you have multiple)
+- grafanaDB: true  marks it for use as dashboard storage (applicable for InfluxDB & Elasticsearch)
+
+### InfluxDB example setup
 ```javascript
 datasources: {
-  'Graphite-EU': {
-    default: true,
-    type: 'graphite',
-    url: 'http://my_graphite_server:8080'
-  },
-  'InfluxDB-US': {
+  'eu-metrics': {
     type: 'influxdb',
     url: 'http://my_influxdb_server:8086/db/<db_name>',
     username: 'test',
     password: 'test',
   },
-  'OpenTSDB-TEST': {
-    type: 'opentsdb',
-    url: "http://my_opentsdb_server:4242"
+  'grafana': {
+    type: 'influxdb',
+    url: 'http://my_influxdb_server:8086/db/grafana',
+    username: 'test',
+    password: 'test',
+    grafanaDB: true
   },
- },
+},
 ```
+In the above example you see two InfluxDB datasources, one for metrics and a seperate used for dashboard storage. You can use the same InfluxDB
+database for both. But it is probably a good idea to keep them seperate. The InfluxDB databases need to exist, grafana does not create
+them.
 
-You can switch datasources in the Metrics tab in the graph panel while in edit mode.
+### Graphite & Elasticsearch setup example
 
-### Dashboard save/load
 ```javascript
-    // elasticsearch url
-    // used for storing and loading dashboards, optional
-    // For Basic authentication use: http://username:password@domain.com:9200
-    elasticsearch: "http://my_elastic_server:9200",
-
-    // default start dashboard
-    default_route: '/dashboard/file/default.json',
-
-    // Elasticsearch index for storing dashboards
-    grafana_index: "grafana-dash",
+datasources: {
+  graphite: {
+    type: 'graphite',
+    url: "http://my.graphite.server.com:8080",
+  },
+  elasticsearch: {
+    type: 'elasticsearch',
+    url: "http://my.elastic.server.com:9200",
+    index: 'grafana-dash',
+    grafanaDB: true,
+  }
+},
 ```
+If you use Graphite you need Elasticsearch if you want to store & search dashboards. You can also use json and scripted dashboards if
+you really do not want to setup Elasticsearch.
+
+### OpenTSDB & Elasticsearch setup example
+
+```javascript
+datasources: {
+  opentsdb: {
+    type: 'opentsdb',
+    url: "http://my.opentsdb.server.com:4242",
+  },
+  elasticsearch: {
+    type: 'elasticsearch',
+    url: "http://my.elastic.server.com:9200",
+    index: 'grafana-dash',
+    grafanaDB: true,
+  }
+},
+```
+#
 
 ### Basic authentication
-If your graphite or Elasticsearch server has basic authentication you can specify the username and password in the url.
+If your Graphite or Elasticsearch server has basic authentication you can specify the username and password in the url.
 For example `"http://admin:secret@my.graphite.com"`
 
-### Timezone
-The graphite-web application has a `TIME_ZONE` setting defined in `local_settings.py`. If this time zone differs from
-your users local browser time then absolute time ranges and hence zoom will not work correctly. Use Grafana's
-`timezoneOffset` settings to correct this issue.
+## Global configuration options
 
-Example. If your graphite-web `TIME_ZONE` is set to _America/New___York_ then set `timezoneOffset` to **"-0500"**
-for UTC-5 hours.
+```javascript
+// specify the limit for dashboard search results
+search: {
+  max_results: 20
+},
 
-`timezoneOffset` should be set to the UTC offset of your graphite-web time zone. If your
-graphite-web timezone is configured for **UTC** then specify **"0000"** as the value for timezoneOffset.
+// default start dashboard
+default_route: '/dashboard/file/default.json',
 
-If set correctly Grafana will use the timezoneOffset setting to translate your local time zone to the correct local
-time for your graphite-web installation.
+// set to false to disable unsaved changes warning
+unsaved_changes_warning: true,
+
+// set the default timespan for the playlist feature
+// Example: "1m", "1h"
+playlist_timespan: "1m",
+
+// If you want to specify password before saving, please specify it bellow
+// The purpose of this password is not security, but to stop some users from accidentally changing dashboards
+admin: {
+  password: ''
+},
+
+// Add your own custom pannels
+plugins: {
+  panels: []
+}
+```
 
 ## Graphite server config
 If you haven't used an alternative dashboard for graphite before you need to enable CORS (Cross Origin Resource Sharing).
