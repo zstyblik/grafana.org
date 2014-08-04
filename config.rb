@@ -29,7 +29,6 @@ set :markdown,
     :prettify => true,
     :with_toc_data => true
 
-
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/img'

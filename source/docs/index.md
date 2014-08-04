@@ -91,7 +91,7 @@ datasources: {
 Please view [this page](/docs/features/opentsdb) for detailes on how to configure OpenTSDB to work with Grafana.
 
 ### Basic authentication
-If your Graphite or Elasticsearch server has basic authentication you can specify the username and password in the url.
+If your Graphite or Elasticsearch server require basic authentication you can specify the username and password in the url.
 For example `"http://admin:secret@my.graphite.com"`
 
 ## Global configuration options
@@ -157,4 +157,22 @@ Header set Access-Control-Allow-Credentials true
       require valid-user
     </LimitExcept>
 </Location>
+```
+
+For nginx:
+
+```javascript
+auth_basic            "Restricted";
+auth_basic_user_file  /path/to/my/htpasswd/file;
+
+if ($http_origin ~* (https?://[^/]*\.somedomain\.com(:[0-9]+)?)) {  #Test if request is from allowed domain, you can use multiple if
+    set $cors "true";                                               #statements to allow multiple domains, simply setting $cors to true in each one.
+}
+
+if ($cors = 'true') {
+    add_header  Access-Control-Allow-Origin $http_origin;           #this mirrors back whatever domain the request came from as authorized, as
+    add_header  "Access-Control-Allow-Credentials" "true";          #as long as it matches one of your if statements
+    add_header  "Access-Control-Allow-Methods" "GET, OPTIONS";
+    add_header  "Access-Control-Allow-Headers" "Authorization, origin, accept";
+}
 ```

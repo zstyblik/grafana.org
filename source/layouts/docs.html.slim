@@ -7,8 +7,9 @@
           ul.side-nav
             li.heading Installation
             li= link_to "Installation", "/docs"
-            li= link_to "Configuration", "/docs#toc_3"
+            li= link_to "Configuration", "/docs#configuration"
             li= link_to "Performance", "/docs/performance"
+            li= link_to "Troubleshooting", "/docs/troubleshooting"
             li= link_to "Support", "/docs/support"
 
             li.divider
@@ -40,6 +41,6 @@
             li= link_to "Function editor", "/docs/videos/function_editor"
 
         a.button.download.expand href="/download" style="margin-bottom: 0;" Download Grafana
-    .large-8.medium-8.columns
+    .large-8.medium-8.columns.image-shadows
       == yield
 
