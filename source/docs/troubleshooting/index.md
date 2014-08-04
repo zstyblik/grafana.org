@@ -4,8 +4,7 @@ title: Docs - Troubleshooting
 # Troubleshooting
 
 This page is dedicated to helping you solve any problem you have getting Grafana to work. Please review it before
-open a new github issue or asking a question in #grafana on freenode.
-
+opening a new github issue or asking a question in #grafana on freenode.
 
 - [General connection issues](#general-connection-issues)
 - [Graphite connection issues](#graphite-connection-issues)

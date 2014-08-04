@@ -1,7 +1,7 @@
 - wrap_layout :layout do
 
   .row
-    .large-4.medium-4.columns
+    .large-3.medium-3.columns
       .sidebar
         nav
           ul.side-nav
@@ -16,16 +16,21 @@
 
             li.heading Feature guides
             li= link_to "Getting Started", "/docs/features/intro"
+            li= link_to "Charts", "/docs/features/charts"
             li= link_to "Annotations", "/docs/features/annotations"
             li= link_to "Time range controls", "/docs/features/time_range"
             li= link_to "Search features", "/docs/features/search"
             li= link_to "Templated dashboards", "/docs/features/templated_dashboards"
             li= link_to "Scripted dashboards", "/docs/features/scripted_dashboards"
             li= link_to "Playlist", "/docs/features/playlist"
-            li= link_to "Function editor", "/docs/features/function_editor"
+            li= link_to "Export & Import", "/docs/features/export_import"
+
+            li.divider
+
+            li.heading Metric queries
+            li= link_to "Graphite", "/docs/features/graphite"
             li= link_to "InfluxDB", "/docs/features/influxdb"
             li= link_to "OpenTSDB", "/docs/features/opentsdb"
-            li= link_to "Export & Import", "/docs/features/export_import"
 
             li.divider
 
@@ -41,6 +46,6 @@
             li= link_to "Function editor", "/docs/videos/function_editor"
 
         a.button.download.expand href="/download" style="margin-bottom: 0;" Download Grafana
-    .large-8.medium-8.columns.image-shadows
+    .medium-9.columns.image-shadows
       == yield
 

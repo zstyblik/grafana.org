@@ -16,4 +16,4 @@ Do not hesitate to open a new issue with a question, bug report or an idea for i
 User feedback and involvement is paramount to making a product better so please take the time and create an issue.
 
 # Paid support
-If you wish to get paid support please contact this [email address](mailto:contact@grafana.org)
+If you wish to get paid support please [contact us](mailto:contact@grafana.org).

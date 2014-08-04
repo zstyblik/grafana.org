@@ -88,7 +88,7 @@ datasources: {
   }
 },
 ```
-Please view [this page](/docs/features/opentsdb) for detailes on how to configure OpenTSDB to work with Grafana.
+Please view [this page](/docs/features/opentsdb) for details on how to configure OpenTSDB to work with Grafana.
 
 ### Basic authentication
 If your Graphite or Elasticsearch server require basic authentication you can specify the username and password in the url.
