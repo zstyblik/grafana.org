@@ -47,7 +47,7 @@ really needed. The question is how to finance it.
 
 If you want me to come talk about Grafana, application metrics, build measure learn or Graphite.
 Please email me at [torkel@grafana.org](mailto:contact@grafana.org). I live in Stockholm Sweden so
-travel could be an issue, but I am flexible and avaiable :)
+travel could be an issue, but I am flexible and available :)
 
 Cheers & keep on graphing!<br>
 Torkel
