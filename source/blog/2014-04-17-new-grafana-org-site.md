@@ -1,5 +1,5 @@
 ---
-title: New website
+Title: New website
 author: Torkel Ödegaard
 published_on: April 17, 2014
 ---
