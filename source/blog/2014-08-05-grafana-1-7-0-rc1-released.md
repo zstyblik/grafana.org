@@ -27,7 +27,7 @@ The documentation has also seen an overhaul with many improvements and additions
 and a new [Troubleshooting](/docs/troubleshooting) guide for example.
 
 ### Fixes and small additions
-There are a number of more small improvements and fixes in this release. It also has a number of architectural improvements
+There are also a number of small improvements and fixes in this release. It also has a number of architectural improvements
 that will make future features and additions easier to implement and manage. Check the changelog on the [download page](/download)
 for a complete list.
 
