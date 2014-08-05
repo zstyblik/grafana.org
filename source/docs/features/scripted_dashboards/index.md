@@ -27,12 +27,12 @@ if(!_.isUndefined(ARGS.name)) {
 for (var i = 0; i < rows; i++) {
 
   dashboard.rows.push({
-    title: 'Chart',
+    title: 'Scripted Graph ' + i,
     height: '300px',
     panels: [
       {
         title: 'Events',
-        type: 'graphite',
+        type: 'graph',
         span: 12,
         fill: 1,
         linewidth: 2,

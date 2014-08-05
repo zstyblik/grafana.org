@@ -1,8 +1,11 @@
 ---
-title: Docs - Charts
+title: Docs - Graphing
 ---
 
-# Charts
+# Graphing
+
+The main panel for in Grafana is simply named Graph. It provides a very rich set of graphing options.
+
 <img src="/assets/img/docs/graph_overview.png" class="no-shadow">
 
 ### Axes, Grid & Legend options

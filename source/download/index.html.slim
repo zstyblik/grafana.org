@@ -38,6 +38,57 @@ title: Download
         | Open a browser and build your first dashboard. <br/>
         |  Read the&nbsp;
         a href="/docs/features/intro" intro guide.
+.row
+  .columns.medium-12
+    h2 1.7.0-rc1 (2014-08-05)
+.row
+  .columns.medium-3
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.7.0-rc1.tar.gz" data-download-button="1.7.0-rc1.tar.gz"
+      i.fa.fa-download
+      |  TAR
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.7.0-rc1.zip" data-download-button="1.7.0-rc1.zip"
+      i.fa.fa-download
+      |  ZIP
+
+.row
+  .columns.large-12
+    markdown:
+      **New features or improvements**
+
+      - [Issue #394](https://github.com/grafana/grafana/issues/394). InfluxDB: Annotation support
+      - [Issue #633](https://github.com/grafana/grafana/issues/633). InfluxDB: InfluxDB can now act as a datastore for dashboards
+      - [Issue #525](https://github.com/grafana/grafana/issues/525). InfluxDB: Enhanced series aliasing (legend names) with pattern replacements
+      - [Issue #610](https://github.com/grafana/grafana/issues/610). InfluxDB: Support for InfluxdB v0.8 list series response schemea (series typeahead)
+      - [Issue #584](https://github.com/grafana/grafana/issues/584). InfluxDB: Support for alias & alias patterns when using raw query mode
+      - [Issue #201](https://github.com/grafana/grafana/issues/201). Annotations: Elasticsearch datasource support
+      - [Issue #344](https://github.com/grafana/grafana/issues/344). Annotations: Annotations can now be fetched from non default datasources
+      - [Issue #266](https://github.com/grafana/grafana/issues/266). Graphite: New option cacheTimeout to override graphite default memcache timeout
+      - [Issue #606](https://github.com/grafana/grafana/issues/606). General: New global option in config.js to specify admin password (useful to hinder users from accidentally making changes)
+      - [Issue #631](https://github.com/grafana/grafana/issues/631). Search: max_results config.js option & scroll in search results (To show more or all dashboards)
+      - [Issue #511](https://github.com/grafana/grafana/issues/511). Text panel: Allow [[..]] filter notation in all text panels (markdown/html/text)
+      - [Issue #136](https://github.com/grafana/grafana/issues/136). Chart: New legend display option "Align as table"
+      - [Issue #556](https://github.com/grafana/grafana/issues/556). Chart: New legend display option "Right side", will show legend to the right of the graph
+      - [Issue #604](https://github.com/grafana/grafana/issues/604). Chart: New axis format, 'bps' (SI unit in steps of 1000) useful for network gear metics
+      - [Issue #626](https://github.com/grafana/grafana/issues/626). Chart: Downscale y axis to more precise unit, value of 0.1 for seconds format will be formated as 100 ms. Thanks @kamaradclimber
+      - [Issue #618](https://github.com/grafana/grafana/issues/618). OpenTSDB: Series alias option to override metric name returned from opentsdb. Thanks @heldr
+
+      **Documentation**
+
+      - [Issue #635](https://github.com/grafana/grafana/issues/635). Docs for features and changes in v1.7, new troubleshooting guide, new Getting started guide, improved install & config guide.
+
+      **Changes**
+
+      - [Issue #536](https://github.com/grafana/grafana/issues/536). Graphite: Use of unix epochs for Graphite from/to for absolute time ranges. Makes timezoneOffset setting obsolete.
+      - [Issue #641](https://github.com/grafana/grafana/issues/536). General: Dashboard save temp copy feature settings moved from dashboard to config.js, default is enabled, and ttl to 30 days
+      - [Issue #532](https://github.com/grafana/grafana/issues/532). Schema: Dashboard schema changes, "Unsaved changes" should not appear for schema changes. All changes are backward compatible with old schema.
+
+      **Fixes**
+
+      - [Issue #545](https://github.com/grafana/grafana/issues/545). Chart: Fix formatting negative values (axis formats, legend values)
+      - [Issue #460](https://github.com/grafana/grafana/issues/460). Chart: Fix for max legend value when max value is zero
+      - [Issue #628](https://github.com/grafana/grafana/issues/628). Filtering: Fix for nested filters, changing a child filter could result in infinite recursion in some cases
+      - [Issue #528](https://github.com/grafana/grafana/issues/528). Graphite: Fix for graphite expressions parser failure when metric expressions starts with curly brace segment
 
 .row
   .columns.medium-12
@@ -53,7 +104,7 @@ title: Download
       |  ZIP
 
 .row
-  .columns.large-9
+  .columns.large-12
     markdown:
       **New features or improvements**
 

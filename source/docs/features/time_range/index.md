@@ -1,8 +1,8 @@
 ---
 title: Docs - Time range controls
 ---
-
 # Time range controls
+
 
 ![](docs/time_range_controls.png)
 
