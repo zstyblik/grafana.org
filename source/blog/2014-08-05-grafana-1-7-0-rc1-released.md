@@ -6,7 +6,7 @@ published_on: August 5, 2014
 
 New release today! v1.7.0-rc1 is now available for [download](/download).
 
-This is big release with a many new features and improvements. There are also a large number
+This is a big release with a many new features and improvements. There are also a large number
 of architectural changes (hence the release candidate status).
 
 ### Release highlights
