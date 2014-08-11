@@ -26,6 +26,7 @@ set :markdown,
     :fenced_code_blocks => true,
     :smartypants => true,
     :tables => true,
+    :no_intra_emphasis => true,
     :prettify => true,
     :with_toc_data => true
 
