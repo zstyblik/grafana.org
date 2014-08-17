@@ -12,7 +12,6 @@ With scripted dashboards you can dynamically create your dashboards using javasc
 If you open scripted.js you can see how it reads url paramters from ARGS variable and then adds rows and panels.
 
 ```javascript
-
 var rows = 1;
 var seriesName = 'argName';
 
@@ -49,4 +48,6 @@ for (var i = 0; i < rows; i++) {
   });
 
 }
+
+return dashboard;
 ```
