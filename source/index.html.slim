@@ -8,21 +8,21 @@ header
 
     img.hero-image src="/assets/img/start_page_bg.png"
 
-.feature-header
+.sponsor-header
+  .row.text-center
+    h3 Project Sponsors
   .row
-    .small-6.columns.text-center
-      h3 Testimonials
-    .small-6.columns.text-center
-      h3 Sponsors
+    .medium-3.columns.text-center
+    .medium-9.columns
+      a href="http://www.squarespace.com" target="_blank"
+        img src="/assets/img/sponsors/squarespace.png" width="250"
+      a href="http://www.dreamhost.com" target="_blank"
+        img src="/assets/img/sponsors/dreamhost.png" width="220"
+  .row.text-center
+    h3
+      img src="/assets/img/twitter_blue.png" width="25" height="25"
+      | &nbsp;&nbsp;Testimonials&nbsp;&nbsp;
+      img src="/assets/img/twitter_blue.png" width="25" height="25"
 
-div.sponsors
-  .row
-    .small-6.columns
-      = partial "layouts/_tweets"
-    .small-6.columns
-      div.sponsor
-        a href="http://www.dreamhost.com" target="_blank"
-          img src="/assets/img/sponsors/dreamhost.png" width="280"
-
-
+= partial "layouts/_tweets"
 = partial "features/_features"
