@@ -16,7 +16,7 @@ dashboard that highlights some of the new features.
 #### 1) Mixed graph styling
 
 You can override any display setting for a specific series using the series name or a regex pattern. Mix bars with lines, or disable
-stacking for the right y-axis series, or any combination you can think of!
+stacking for the right y-axis or any combination you can think of!
 
 ![](blog/mixed_styles.png)
 
@@ -137,7 +137,7 @@ enter edit mode for this "patch" process to work.
 for more details
 
 A full share feature, where you can share a panel or dashboard with the current time range did not
-make for this release. But will be coming.
+make it for this release. But will be coming.
 
 #### 7) Documentation
 
