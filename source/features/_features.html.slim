@@ -23,7 +23,21 @@ main
           img src="/assets/img/graphing_showcase1.png" alt="Graph Editor"
 
     .row.padding-bottom-medium.padding-top-medium
+
       .large-6.columns.feature-highlight.right
+        h3 Mixed styling
+        ul
+          li Full control for how each series should be drawn
+          li Mix lines, bars and points
+          li Mix stacked series with isolated series
+
+      .large-6.columns.padding-top-medium
+        a class="gallary-image" href="/assets/img/blog/mixed_styles.png" title="Style Editor" data-gallery="1"
+          img src="/assets/img/blog/mixed_styles.png" alt="Graph Editor"
+
+
+    .row.padding-bottom-medium.padding-top-medium
+      .large-6.columns.feature-highlight
         h3 Dashboards
         p Drag and drop panels, change row and panel width easily.
         ul
@@ -38,10 +52,10 @@ main
           img src="/assets/img/dashboard_example.png" alt="Dashboard example"
 
     .row.padding-bottom-medium.padding-top-medium
-      .large-6.columns.feature-highlight
-        h3 Graphite target editor
+      .large-6.columns.feature-highlight.right
+        h3 Graphite query editor
         p
-          | Grafana includes a built in Graphite target parser that takes writing graphite metric expressions
+          | Grafana includes a built in Graphite query parser that takes writing graphite metric expressions
           |  to a whole new level. Expressions are easier to read and faster to edit than ever.
         ul
           li Click on any metric segment to change it
@@ -49,30 +63,48 @@ main
           li Click on a function parameter to change it
           li Move function order to the left or right
           li Direct link to Graphite function documentation
-
       .large-6.columns
-        a class="gallary-image" href="/assets/img/graph_editor.png" title="Dashboard" data-gallery="1"
-          img src="/assets/img/graph_editor_small.jpg" alt="Dashboard example"
-
-    .row.padding-bottom-medium.padding-top-medium
-      .large-6.columns.feature-highlight.right
-        h3 Video demo
-        p
-          | This video will introduce you to the Grafana interface and some of the core features.
-      .large-6.columns
-        iframe width="513" height="317" src="//www.youtube.com/embed/OUvJamHeMpw?vq=hd1080" frameborder="0" allowfullscreen="1"
+        a class="gallary-image" href="/assets/img/docs/graphite_query_editor_new.png" title="Dashboard" data-gallery="1"
+          img src="/assets/img/docs/graphite_query_editor_new.png" alt="Dashboard example"
 
     .row.padding-bottom-medium.padding-top-medium
       .large-6.columns.feature-highlight
+        h3 InfluxDB query editor
+        ul
+          li Series name and column auto complete
+          li Automatic handling of group by time
+          li Options for fill(0) and fill(null)
+          li Alias patterns for short readable series names
+      .large-6.columns
+        a class="gallary-image" href="/assets/img/docs/influxdb_query_editor.png" title="Dashboard" data-gallery="1"
+          img src="/assets/img/docs/influxdb_query_editor.png" alt="Dashboard example"
+
+    .row.padding-bottom-medium.padding-top-medium
+      .large-6.columns.feature-highlight.right
         h3 Templated dashboards
         p
-          | Any metric path can be replaced with a templated section. This allows you to create
+          | Any metric path can be replaced with a template variable. This allows you to create
           |  generic dashboards that can quickly be changed to show stats for a specific cluster, server,
           |  application or experiment.
+        ul
 
       .large-6.columns
-        a class="gallary-image" href="/assets/img/templated_dashboard.png" title="Templated Dashboard" data-gallery="1"
-          img src="/assets/img/templated_dashboard.png" alt="Templated Dashboard"
+        a class="gallary-image" href="/assets/img/docs/templated_dashboard.png" title="Templated Dashboard" data-gallery="1"
+          img src="/assets/img/docs/templated_dashboard.png" alt="Templated Dashboard"
+
+    .row.padding-bottom-medium.padding-top-medium
+      .large-6.columns.feature-highlight
+        h3 Templated queries
+        ul
+          li Variables values can be fetched metric key query
+          li Interval variables, like 10min, 1h, 1d
+          li Use variable in metric path
+          li Use variables in graph titles
+          li Use variable as function parameter
+
+      .large-6.columns
+        a class="gallary-image" href="/assets/img/docs/templated_dashboard_graphite.png" title="Templated Dashboard" data-gallery="1"
+          img src="/assets/img/docs/templated_dashboard_graphite.png" alt="Templated Dashboard"
 
     .row.padding-bottom-medium.padding-top-medium
       .large-6.columns.feature-highlight.right
@@ -80,6 +112,10 @@ main
         p
           | Annotate graphs with rich events from different data sources. Hover over events shows you the
           |  full event metadata.
+        ul
+          li Fetch annotations from Elasticsearch
+          li Fetch annotations from Graphite Events and Metrics
+          li Fetch annotations from InfluxDB
 
       .large-6.columns
         a class="gallary-image" href="/assets/img/annotated_graph2.png" title="Annotated graph" data-gallery="1"
@@ -97,12 +133,12 @@ main
 
     .row.padding-bottom-medium.padding-top-medium
       .large-6.columns.feature-highlight.right
-        h3 InfluxDB & datasource options
+        h3 Multiple data sources
         p
           | You can define multiple graphite servers or <a href="http://influxdb.org" target="_blank">InfluxDB</a> servers and switch between them.
           |  It is even possible to show graphs from different data sources &amp; servers on the same
           |  dashboard.
 
       .large-6.columns
-        a class="gallary-image" href="/assets/img/InfluxDB.png" title="InfluxDB query editor" data-gallery="1"
-          img src="/assets/img/InfluxDB.png" alt="Annotated graph"
+        a class="gallary-image" href="/assets/img/docs/nice_dashboard.png" title="Nice dashboard" data-gallery="1"
+          img src="/assets/img/docs/nice_dashboard.png" alt="Nice dashboard"
