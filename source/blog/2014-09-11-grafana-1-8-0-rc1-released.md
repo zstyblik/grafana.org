@@ -49,6 +49,8 @@ and auto value, where the interval is calculated based on the time range.
 
 ![](blog/graphite_func_variables.png)
 
+![](docs/template_variable_interval.png)
+
 **Template variable selection**<br>
 When selecting template variables you now get a text box and and auto complete dropdown. Useful when you have many posible values for
 a variable.
