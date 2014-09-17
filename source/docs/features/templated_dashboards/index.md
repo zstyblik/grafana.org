@@ -9,7 +9,7 @@ you to create variables that can be used in your metric queries, series names an
 create generic dashboards that can quickly be changed to show graphs for different servers or metrics.
 
 ### Screencast - Templated Graphite Queries
-<iframe width="560" height="315" src="//www.youtube.com/embed/FhNUrueWwOk?list=PLDGkOdUX1Ujo3wHw9-z5Vo12YLqXRjzg2" frameborder="0" allowfullscreen></iframe>
+<iframe width="561" height="315" src="//www.youtube.com/embed/FhNUrueWwOk?list=PLDGkOdUX1Ujo3wHw9-z5Vo12YLqXRjzg2" frameborder="0" allowfullscreen></iframe>
 
 <br>
 ### Screencast - Templated InfluxDB Queries
