@@ -41,10 +41,40 @@ title: Download
 
 .row
   .columns.medium-12
+    h2 1.8.0 (2014-09-22)
+.row
+  .columns.medium-12
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.8.0.tar.gz" data-download-button="1.8.0.tar.gz"
+      i.fa.fa-download
+      |  TAR
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.8.0.zip" data-download-button="1.8.0.zip"
+      i.fa.fa-download
+      |  ZIP
+
+.row
+  .columns.large-12
+    markdown:
+      Read this [blog post](http://grafana.org/blog/2014/09/11/grafana-1-8-0-rc1-released.html) for an overview of all improvements and new features.
+
+      **Fixes**
+
+      - [Issue #802](https://github.com/grafana/grafana/issues/802). Annotations: Fix when using InfluxDB datasource
+      - [Issue #795](https://github.com/grafana/grafana/issues/795). Chrome: Fix for display issue in chrome beta & chrome canary when entering edit mode
+      - [Issue #818](https://github.com/grafana/grafana/issues/818). Graph: Added percent y-axis format
+      - [Issue #828](https://github.com/grafana/grafana/issues/828). Elasticsearch: saving new dashboard with title equal to slugified url would cause it to be deleted.
+      - [Issue #830](https://github.com/grafana/grafana/issues/830). Annotations: Fix for elasticsearch annotations and mapping nested fields
+
+      For full changelog for 1.8.0 see RC1 release notes below.
+  hr
+= partial "layouts/_newsletter"
+.row
+  hr
+  .columns.medium-12
     h2 1.8.0-rc1 (2014-09-12)
 .row
   .columns.medium-12
-    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.8.0-rc1.tar.gz" data-download-button="1.8.0-rc1.tar.gz"
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.8.0-rc1.tar.gz" data-download-button="1.118.0-rc1.tar.gz"
       i.fa.fa-download
       |  TAR
     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -163,9 +193,6 @@ title: Download
       strange behavior in InfluxDB shard creation. Considor using InfluxDB as dashboard storage experimental until clear guidance on this
       issue exists. If you have Shard retention rules that would be applied to the grafana dashboard series there is a possibility of
       losing dashboards depending on retention policy.
-  hr
-
-= partial "layouts/_newsletter"
 
 .row
   .columns.medium-12
