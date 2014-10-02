@@ -19,6 +19,10 @@ There are no dependencies, Grafana is a client side application that runs in you
 where it can fetch metrics. If you use InfluxDB Grafana can use it to store dashboards.
 If you use Graphite or OpenTSDB you can use Elasticsearch to store dashboards or just use json files stored on disk.
 
+### Provisioning
+If you prefer to install grafana via Puppet, Ansible, Docker or Chef. [This page](/docs/provisioning) has compiled a
+list of repositories for different provisioning systems
+
 ## Configuration
 In your chosen Grafana install location, locate the file **config.sample.js** and copy or rename it to **config.js**.
 This files contains global settings for your Grafana installation.
