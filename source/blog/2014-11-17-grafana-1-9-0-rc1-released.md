@@ -29,7 +29,15 @@ A multitude of options makes this panel pretty flexible.
 * Control font size
 * Adding a panel link makes the whole panel act as a link to another dashboard
 
-#### 2) Fill below to
+#### 2) Share panel feature
+Click on panel title area (anywhere works, does not need to be the title text) to open the
+new panel menu. Click on the ``share`` button to open the new share dialog. In this dialog
+you get a URL to that panel with the current time range and any template variables
+embedded in the URL.
+
+![](blog/panel_menu.png)
+
+#### 3) Fill below to
 An new series specific style has been added in this release that is very
 useful when visualizing max/min as shadow behind an average.
 
@@ -42,7 +50,7 @@ Example:
 
 ![](blog/fillbelow_to_option.png)
 
-#### 3) Other graph features & enhancements
+#### 4) Other graph features & enhancements
 
 * Shared tooltip option, shows every series when hovering
 * Toggle legend from panel menu
@@ -52,7 +60,7 @@ Example:
 
 ![](animated_gifs/legend_features.gif)
 
-#### 4) Panel links
+#### 5) Panel links
 In the General tab you can now add links to other dashboards or absolute links
 to other web apps. These links can then be accessed from the panel menu. Links
 to other dashboards will preserve the current time range.
