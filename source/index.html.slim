@@ -1,3 +1,4 @@
+.banner-screenshot
 header
   .row
     .large-12.columns
@@ -6,23 +7,26 @@ header
         br
         = partial "layouts/github_stars"
 
-    img.hero-image src="/assets/img/start_page_bg.png"
+.sponsor-wrapper
+  .sponsor-header
+    .row.text-center
+    .row
+      .large-2.columns
+        h3 Sponsors
+      .large-8.columns.end.text-center
+        a href="http://www.squarespace.com" target="_blank"
+          img src="/assets/img/sponsors/squarespace.png" width="220"
+        a href="http://www.dreamhost.com" target="_blank"
+          img src="/assets/img/sponsors/dreamhost.png" width="200"
 
-.sponsor-header
-  .row.text-center
-    h3 Project Sponsors
+.used-by
   .row
-    .medium-3.columns.text-center
-    .medium-9.columns
-      a href="http://www.squarespace.com" target="_blank"
-        img src="/assets/img/sponsors/squarespace.png" width="250"
-      a href="http://www.dreamhost.com" target="_blank"
-        img src="/assets/img/sponsors/dreamhost.png" width="220"
-  .row.text-center
-    h3
-      img src="/assets/img/twitter_blue.png" width="25" height="25"
-      | &nbsp;&nbsp;Testimonials&nbsp;&nbsp;
-      img src="/assets/img/twitter_blue.png" width="25" height="25"
+    .medium-2.columns
+      h3 Used by
+    .medium-8.columns.used-by-images.end
+      img src="/assets/img/sponsors/netapp.png" width="100"
+      img src="/assets/img/sponsors/virtual_instruments.png" width="100"
 
 = partial "layouts/_tweets"
+
 = partial "features/_features"

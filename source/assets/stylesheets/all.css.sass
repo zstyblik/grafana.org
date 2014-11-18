@@ -57,9 +57,12 @@ section.nav
 
 header
   background: $dark-hero-bg
+  background-image: url('/assets/img/banner_screenshot3.jpg')
+  height: 30rem
+  background-position: center 35%
 
   .hero-radial
-    padding: 2.5rem 0 2.5rem
+    padding: 10rem 0 2.5rem
     text-align: center
 
   h1
@@ -78,13 +81,6 @@ header
   .hero-image
     padding-top: 0.5rem
     box-shadow: -3px -3px 20px #444
-
-.sponsors
-  background: #EEE
-
-.sponsor
-  padding-top: 2rem
-  text-align: center
 
 .tweets
   background: #EEE
@@ -118,23 +114,46 @@ header
   display: table-cell
   vertical-align: middle
 
+.banner-screenshot
+
 .tweet-image
   display: table-cell
   vertical-align: middle
   padding-right: 0.5rem
 
+.sponsor-wrapper
+  border-top: 1px solid black
+  border-bottom: 1px solid black
+  box-shadow: 0px 2px 2px #444
+  position: relative
+  z-index: 100
+
 .sponsor-header
-  padding: 0.8rem 0.5rem
-  background: $dark-hero-bg
+  background: #191919
+  border-top: 1px solid #333
+  border-bottom: 1px solid #333
+  padding: 0.5rem 0.4rem
   h3
-    color: #f1f1f1
-    font-size: 1.4rem
-    margin-bottom: 0
-  h5
-    line-height: 2rem
-    color: #f1f1f1
+    color: #C1C1C1
+    font-size: 1.1rem
+    padding-top: 1.5rem
   a
     padding-right: 1.5rem
+
+.used-by
+  border-bottom: 1px solid #AAA
+  background: $dark-hero-bg
+  box-shadow: 0px 2px 3px #999
+  position: relative
+  z-index: 100
+  padding: 2rem
+  h3
+    font-size: 1.1rem
+    color: #C1C1C1
+  img
+    margin-right: 1.5rem
+  .used-by-images
+    text-align: center
 
 .feature-header
   padding: 0.7rem
