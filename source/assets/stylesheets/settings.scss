@@ -36,7 +36,14 @@ $topbar-link-hover-lightness: 10%; // Darken by 10%
 $topbar-link-bg-hover: #333;
 $topbar-link-bg-active: transparent;
 $topbar-link-bg-active-hover: scale-color($topbar-link-bg-hover, $lightness: 10%);
-$topbar-link-padding: rem-calc(20);
+$topbar-link-padding: 18px;
+
+
 // $topbar-link-font-family: $body-font-family;
 
 $topbar-button-font-size: 1.75rem;
+
+$topbar-breakpoint: 51; // Change to 9999px for always mobile layout
+$topbar-media-query: "only screen and (min-width: 53em)";
+
+
