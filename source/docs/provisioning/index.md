@@ -18,7 +18,7 @@ system. These are not maintained by any core Grafana team member and might be ou
 
 ### Docker
 
-* [github.com/kamon-io/docker-grafana-graphite](https://github.com/kamon-io/docker-grafana-graphit://github.com/kamon-io/docker-grafana-graphite)
+* [github.com/kamon-io/docker-grafana-graphite](https://github.com/kamon-io/docker-grafana-graphite)
 * [github.com/kamon-io/docker-grafana-influxdb](https://github.com/kamon-io/docker-grafana-influxdb)
 * [github.com/tutumcloud/tutum-docker-grafana](https://github.com/tutumcloud/tutum-docker-grafana)
 * [github.com/mingfang/docker-grafana](https://github.com/mingfang/docker-grafana)
