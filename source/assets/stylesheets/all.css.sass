@@ -8,6 +8,7 @@
 @import "../bower_components/foundation/scss/foundation"
 
 @import "modules/docs"
+@import "modules/landing_page"
 @import "modules/highlighting"
 @import "vendor/blueimp-gallery.min"
 
@@ -55,37 +56,6 @@ section.nav
   font-weight: bold
   border-radius: 2px
 
-header
-  background: $dark-hero-bg
-
-  .hero-radial
-    padding: 2.5rem 0 2.5rem
-    text-align: center
-
-  h1
-    font-family: "PT Sans", sans-serif
-    line-height: 1.0
-    font-size: 1.9rem
-    text-shadow: 1px 1px #999999
-    color: white
-    font-weight: 700
-  h2
-    font-family: "PT Sans", sans-serif
-    font-size: 20px
-    color: white
-    font-weight: 100
-
-  .hero-image
-    padding-top: 0.5rem
-    box-shadow: -3px -3px 20px #444
-
-.sponsors
-  background: #EEE
-
-.sponsor
-  padding-top: 2rem
-  text-align: center
-
 .tweets
   background: #EEE
   border-bottom: 1px solid #DDD
@@ -122,19 +92,6 @@ header
   display: table-cell
   vertical-align: middle
   padding-right: 0.5rem
-
-.sponsor-header
-  padding: 0.8rem 0.5rem
-  background: $dark-hero-bg
-  h3
-    color: #f1f1f1
-    font-size: 1.4rem
-    margin-bottom: 0
-  h5
-    line-height: 2rem
-    color: #f1f1f1
-  a
-    padding-right: 1.5rem
 
 .feature-header
   padding: 0.7rem
@@ -186,6 +143,10 @@ footer
 
 .hero-social
   padding-top: 0.5rem
+  .github-social
+    iframe
+      margin-right: 0.5rem
+    margin-right: 2rem
 
 .splitter
   background-position: center bottom
@@ -227,18 +188,18 @@ pre
       margin-bottom: 0
 
 body.blog
-  section
-    h2
-      line-height: 1.2em
-      margin-bottom: 0
-    h4.subheader
+  .main
+    section
+      h2
+        line-height: 1.2em
+        margin-bottom: 0
 
-    p#twitter
-      margin-top: 4px
-      text-align: right
+      p#twitter
+        margin-top: 4px
+        text-align: right
 
-    ul
-      margin-left: 20px
+      ul
+        margin-left: 20px
 
 .install-steps
   padding-bottom: rem-calc(20)
@@ -257,5 +218,4 @@ body.blog
 .image-shadows
   img:not(.no-shadow)
     box-shadow: 2px 2px 10px #666
-
 
