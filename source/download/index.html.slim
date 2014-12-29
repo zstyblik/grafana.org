@@ -41,6 +41,37 @@ title: Download
 
 .row
   .columns.medium-12
+    h2 1.9.1 (2014-12-28)
+.row
+  .columns.medium-12
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.9.1.tar.gz" data-download-button="1.9.1.tar.gz"
+      i.fa.fa-download
+      |  TAR
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="http://grafanarel.s3.amazonaws.com/grafana-1.9.1.zip" data-download-button="1.9.1.zip"
+      i.fa.fa-download
+      |  ZIP
+
+.row
+  .columns.large-12
+    markdown:
+      **Enhancements**
+
+      - [Issue #1028](https://github.com/grafana/grafana/issues/1028). Graph: New legend option ``hideEmtpy`` to hide series with only null values from legend
+      - [Issue #1242](https://github.com/grafana/grafana/issues/1242). OpenTSDB: Downsample query field now supports interval template variable
+      - [Issue #1126](https://github.com/grafana/grafana/issues/1126). InfluxDB: Support more than 10 series name segments when using alias ``$number`` patterns
+
+      **Fixes**
+
+      - [Issue #1251](https://github.com/grafana/grafana/issues/1251). Graph: Fix for y axis and scaled units (GiB etc) caused rounding, for example 400 GiB instead of 378 GiB
+      - [Issue #1199](https://github.com/grafana/grafana/issues/1199). Graph: fix for series tooltip when one series is hidden/disabled
+      - [Issue #1207](https://github.com/grafana/grafana/issues/1207). Graphite: movingAverage / movingMedian parameter type impovement, now handles int and interval parameter
+
+  hr
+= partial "layouts/_newsletter"
+
+.row
+  .columns.medium-12
     h2 1.9.0 (2014-12-02)
 .row
   .columns.medium-12
@@ -126,8 +157,6 @@ title: Download
       - [Issue #925](https://github.com/grafana/grafana/issues/925). Graph: bar width calculation fix for some edge cases (bars would render on top of each other)
       - [Issue #505](https://github.com/grafana/grafana/issues/505). Graph: fix for second y axis tick unit labels wrapping on the next line
       - [Issue #987](https://github.com/grafana/grafana/issues/987). Dashboard: Collapsed rows became invisible when hide controls was enabled
-  hr
-= partial "layouts/_newsletter"
 
 .row
   hr
