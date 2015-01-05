@@ -14,9 +14,13 @@ section.nav
         ul.right
           li= link_to "Features", "/features"
           li= link_to "Docs", "/docs"
+          li= link_to "Community", "/community"
           li= link_to "Blog", "/blog"
           li= link_to "Live demo", "http://play.grafana.org", target: :blank
-          li= link_to "GitHub project", "https://github.com/grafana/grafana", target: :blank
+          li
+            <a href="https://github.com/grafana/grafana" target="_blank" title="Go to github repository">
+              <i class="fa fa-github"></i>
+            </a
 
           li.has-form
             a.button#top-bar-button href="/download" Download
