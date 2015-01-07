@@ -1,7 +1,7 @@
 ---
 title: Grafana one year anniversary and plans for 2015
 author: Torkel Ödegaard
-published_on: January 7, 2015
+published_on: January 8, 2015
 ---
 
 
@@ -53,12 +53,14 @@ for Grafana was really amazing. There is going to be another Monitorama in June 
 At the time (winter/spring 2014) I was working full time as an independent contractor. By the end of April I
 decided that I wanted to work on Grafana full time after the summer. I had some savings in my company
 that would last me a year on a low salary so I figured that it could be fun year working on open source.
-I also planned to explore options to commercialize Grafana or seek sponsorships.
+I also planned to explore options to commercialize Grafana or seek sponsorships. Summer went and so did autumn.
+I had a blast working on Grafana full time, releasing some pretty big improvements in v1.7 and v1.8. User
+adoption kept on growing, as did user feedback and contributions. I also managed to get some sponsors!
 
 ### Contributions and Sponsorships
 A special thanks to all who have contributed to Gafana during last year in terms of pull request contributions,
 feedback on github and IRC. A special thanks goes to Grafana’s sponsors: Squarespace, Dreamhost and Demonware
-for helping support full time work on Grafana.
+for helping support full the time work on Grafana.
 
 ### Grafana in 2015
 When I started working on Grafana full time I also started working on a Grafana backend.
@@ -68,10 +70,10 @@ I did not spend much time on this backend as there was so much I wanted to get d
 so it never saw the light of day in 2014.
 
 ### Raintank
-There are no longer any plans for a closed source or commercial version of grafana. The backend powered version
+There are no longer any plans for a closed source or commercial version of Grafana. The backend powered version
 will be 100% open source. What is making this possible is Grafana’s sponsors and a company I am co-founding
-together with with Raj Dutt (founder of Voxel) and Anthony Woods. The company is called Raintaink and
-will focus on build and providing a SaaS platform around open source metric and monitoring solutions
+together with with Raj Dutt (founder of Voxel) and Anthony Woods. The company is called [Raintaink](http://raintank.io) and
+will focus on building and providing a SaaS platform around open source metric and monitoring solutions
 (Grafana is one among them). This SaaS platform will be completely open source.
 
 We have assembled a great team with a lot of engineering and design talent that will, among many other things,
@@ -84,28 +86,33 @@ be a standalone build for users who prefer the pure frontend nature of Grafana. 
 has been redesigned slighly to work in both standalone and backend mode. In backend mode it will utilize the backend
 for saving and searching dashboards, as well as a number of views that will be enabled (login, admin, etc).
 
-Grafana 2.0 is currently not ready for a alpha or beta. But the code is now public here.
-It is written in Go and if you want to be involved in testing and and contributing check it out!
-
-Plans for the initial Grafana 2.0 release includes:
+The features that the backend will enable in Grafana 2.0 will initially be:
 
 - Integrated dashboard & user database (sqlite3)
 - Can also use mysql or postgres as database
-- Multi-tenant user accounts and authentication
-- User/password authentication
-- Github OAuth
-- Google OAuth
-- LDAP authentication
+- Multi-tenant user accounts and authorization
+ - User & password
+ - Github OAuth
+ - Google OAuth
+ - LDAP integration
 - Server side rendering of panels to PNG images
 - Easy admin UI for data sources (can also be configured via config file)
 - Integrated data source http proxy for all datasources (to work around CORS issues)
+- HTTP API
+- Migration script for dashboards stored in Elasticsearch or InfluxDB
 
 This is the very basic set that we are aiming for right now. There will probably be a lot of enhancements in the
 existing dashboard and panel features and the initial release will be quickly followed by more advanced features
 like integration with hipchat, slack & hubot and eventually alerting.
 
+Grafana 2.0 is currently not ready for a alpha or beta. But the code and a preview version will
+be made public shorty, hopefully within 2-3 weeks.
+
 #### Other news
 
-- Grafana 1.9.1 was released during two weeks ago (in case you missed this)
+- Grafana 1.9.1 was released two weeks ago (in case you missed this)
+- Grafana now has a user and developer mailing list. [Subscribe here](https://groups.io/org/groupsio/grafana)
 - Graphite 0.9.13-pre1 has been released! [Read the release notes](http://graphite.readthedocs.org/en/latest/releases/0_9_13.html).
+- The [Grafana plugins](https://github.com/grafana/grafana-plugins) repository has seen some activity lately with updates for the KairosDB datasource and a basic implementation
+for an Atlas data source (the Netflix metrics db).
 
