@@ -1,7 +1,7 @@
 ---
-title: Grafana one year anniversary and plans for 2015
+title: Grafana 2.0, the future, and raintank
 author: Torkel Ödegaard
-published_on: January 8, 2015
+published_on: January 13, 2015
 ---
 
 
@@ -60,7 +60,7 @@ and contributions. I also managed to get some sponsors!
 
 ### Contributions and Sponsorships
 A special thanks to all who have contributed to Gafana during last year in terms of pull request contributions,
-feedback on github and IRC. A special thanks goes to Grafana’s sponsors: Squarespace, Dreamhost and Demonware
+feedback on github and IRC. A special thanks goes to Grafana’s sponsors: [Squarespace](http://www.squarespace.com), [Dreamhost](https://www.dreamhost.com/) and [Demonware](http://www.demonware.net/)
 for helping support full the time work on Grafana.
 
 ### Grafana in 2015
