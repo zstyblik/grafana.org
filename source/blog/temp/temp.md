@@ -50,7 +50,7 @@ The reaction to my talk and from the many attendees that came up to me to expres
 for Grafana was really amazing. There is going to be another Monitorama in June 2015, see you there!
 
 ### Full time work
-By the end of April I was itching to work on Grafana full time. There was just many potential
+By the end of April I was itching to work on Grafana full time. There were so many potential
 improvements and so little time. So I decided to quit my contracting work after the summer and start
 working on Grafana full time. I had some savings in my company that would last me about a year so I figured
 that it could be fun year working on open source. I also planned to explore options to commercialize
