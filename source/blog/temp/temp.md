@@ -13,7 +13,7 @@ Grafana has now been in development for a little over one year. The first commit
 It started just as a late night hack trying to get Graphite to work with the histogram panel in Kibana.
 I had just started using Kibana at work and fell instantly in love with it. It was just so awesome at
 analyzing logs and its beautiful dark UI made it easy to build dashboards without having to manually
-edit json files. Something most alternative Graphite dashboards required.
+edit json files. Something that many alternative Graphite dashboards required.
 
 My late night Kibana + Graphite hack worked so well that I quickly started imagining my dream Graphite
 dashboard and graph composer and spent almost all of Christmas 2013 working non stop on realizing those
@@ -31,7 +31,7 @@ I am most proud of the Graphite expression and function editor.
   </h4>
 </div>
 
-I did not really expect much when I first released Grafana 1.0 on January 19. There was such a plethora of
+I did not really expect much when I first released Grafana 1.0 on January 19th. There was such a plethora of
 other Graphite dashboards, so who would care about yet another one? Boy was I wrong. The reaction was really
 amazing. That evening after the first release Grafana went “mini” viral within the Graphite community and
 my phone buzzed constantly for about 40 minutes from all the retweets!
@@ -50,12 +50,13 @@ The reaction to my talk and from the many attendees that came up to me to expres
 for Grafana was really amazing. There is going to be another Monitorama in June 2015, see you there!
 
 ### Full time work
-At the time (winter/spring 2014) I was working full time as an independent contractor. By the end of April I
-decided that I wanted to work on Grafana full time after the summer. I had some savings in my company
-that would last me a year on a low salary so I figured that it could be fun year working on open source.
-I also planned to explore options to commercialize Grafana or seek sponsorships. Summer went and so did autumn.
-I had a blast working on Grafana full time, releasing some pretty big improvements in v1.7 and v1.8. User
-adoption kept on growing, as did user feedback and contributions. I also managed to get some sponsors!
+By the end of April I was itching to work on Grafana full time. There was just many potential
+improvements and so little time. So I decided to quit my contracting work after the summer and start
+working on Grafana full time. I had some savings in my company that would last me about a year so I figured
+that it could be fun year working on open source. I also planned to explore options to commercialize
+Grafana or seek sponsorships. Summer went and so did autumn. I had a blast working on Grafana full time,
+releasing some pretty big improvements in v1.7 and v1.8. User adoption kept on growing, as did user feedback
+and contributions. I also managed to get some sponsors!
 
 ### Contributions and Sponsorships
 A special thanks to all who have contributed to Gafana during last year in terms of pull request contributions,
@@ -83,14 +84,14 @@ accelerate Gafana development and strengthen the open source monitoring communit
 So the good news is that there will NOT be any splintering of the Grafana user community into Pro/Enterprise
 users and OSS users. There will just be one open source Grafana codebase and variant. There will continue to
 be a standalone build for users who prefer the pure frontend nature of Grafana. The Grafana frontend architecture
-has been redesigned slighly to work in both standalone and backend mode. In backend mode it will utilize the backend
+has been slighly redesigned to work in both standalone and backend mode. In backend mode it will utilize the backend
 for saving and searching dashboards, as well as a number of views that will be enabled (login, admin, etc).
 
 The features that the backend will enable in Grafana 2.0 will initially be:
 
 - Integrated dashboard & user database (sqlite3)
 - Can also use mysql or postgres as database
-- Multi-tenant user accounts and authorization
+- Multi-tenant user accounts and authorization (can be disabled)
  - User & password
  - Github OAuth
  - Google OAuth
@@ -103,7 +104,7 @@ The features that the backend will enable in Grafana 2.0 will initially be:
 
 This is the very basic set that we are aiming for right now. There will probably be a lot of enhancements in the
 existing dashboard and panel features and the initial release will be quickly followed by more advanced features
-like integration with hipchat, slack & hubot and eventually alerting.
+like integration with hipchat, slack & hubot, user preferences and eventually alerting.
 
 Grafana 2.0 is currently not ready for a alpha or beta. But the code and a preview version will
 be made public shorty, hopefully within 2-3 weeks.
@@ -114,5 +115,5 @@ be made public shorty, hopefully within 2-3 weeks.
 - Grafana now has a user and developer mailing list. [Subscribe here](https://groups.io/org/groupsio/grafana)
 - Graphite 0.9.13-pre1 has been released! [Read the release notes](http://graphite.readthedocs.org/en/latest/releases/0_9_13.html).
 - The [Grafana plugins](https://github.com/grafana/grafana-plugins) repository has seen some activity lately with updates for the KairosDB datasource and a basic implementation
-for an Atlas data source (the Netflix metrics db).
+for an Atlas datasource (the Netflix metrics db).
 
