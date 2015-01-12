@@ -19,12 +19,9 @@ html
 
     == javascript_include_tag  "all"
 
-    meta property="og:title" content="Grafana - The Graphite dashboard frontend, editor and graph composer"
+    meta property="og:title" content=(data.page.title || "The Graphite dashboard frontend, editor and graph composer")
     meta property="og:site_name" content="Grafana.org"
     meta property="og:type" content="website"
-    meta property="og:url" content="http://grafana.org"
-    meta property="og:image" content="http://grafana.org/assets/img/edit_dashboards.png"
-    meta property="og:description" content="A unique graphite dashboard aimed to be a general purpose dashboard that looks nice and makes it easy to construct and edit dashboards through the UI. It also contains an advanced and unique graph editor and graphite target expression / function editor. Other notible features are fast client side rendering, select to zoom in, multiple y-axes and graph templating."
 
   body class="#{page_classes}"
     = partial "layouts/nav"
