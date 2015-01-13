@@ -73,7 +73,7 @@ so it never saw the light of day in 2014.
 ### Raintank
 There are no longer any plans for a closed source or commercial version of Grafana. The backend powered version
 will be 100% open source. What is making this possible is Grafana’s sponsors and a company I am co-founding
-together with with Raj Dutt (founder of Voxel) and Anthony Woods. The company is called [Raintaink](http://raintank.io) and
+together with Raj Dutt (founder of Voxel) and Anthony Woods. The company is called [Raintank](http://raintank.io) and
 will focus on building and providing a SaaS platform around open source metric and monitoring solutions
 (Grafana is one among them). This SaaS platform will be completely open source.
 
