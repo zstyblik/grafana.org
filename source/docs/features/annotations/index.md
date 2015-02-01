@@ -28,7 +28,7 @@ Grafana supports many data sources for annotation.
 ## InfluxDB Annotations
 ![](influxdb/influxdb_annotation.png)
 
-For InfluxDB you need to enter a query like in the above screenshot. You need to have the ```where [[timeFilter]]``` part.
+For InfluxDB you need to enter a query like in the above screenshot. You need to have the ```where $timeFilter``` part.
 If you only select one column you will not need to enter anything in the column mapping fields.
 If you have multiple columns you need to specify which column should be treated as title, tags and text column.
 
