@@ -26,8 +26,8 @@ docker run -i -p 3000:3000 grafana/grafana:develop
 ```
 
 There are no offical binary packages yet as there is still some work that needs
-to be done before a beta release can be made. But before that anyone that has time to checkout
-what we have done so far please submit feedback and bug reports on github!
+to be done before a beta release can be made. If you want to help please checkout out the develop branch
+or try the docker image and submit feedback and bug reports on github!
 
 There is no updated documentation for Granfana 2.0, that is one of the items we will work on
 in the run up to a beta release.
@@ -53,7 +53,7 @@ Currently the PNG rendering feature is a just a simple link in the share panel d
 ### User & Account model
 
 To support SaaS and larger Grafana installations we have added a User and Account model similar to
-how Google Analytics has implemented this. Dashboards, data sources, etc are not tight to a specific user
+how Google Analytics has implemented this. Dashboards, data sources, etc are not tied to a specific user
 but to an Account, users are linked to accounts with a specific Role (Admin, Editor, Viewer).
 
 To simplify smaller Grafana setups you can configure Grafana to be in a single account mode where new user
@@ -77,7 +77,7 @@ on all the UI mockups and navigation alternatives we explored read this
 on customer experiance on at [Raintank](http://raintank.io).
 
 ### Dashboard list panel
-There is currently one new panel in Grafana 2.0 that can show the current users starred dashboards as well
+There is currently one new panel in Grafana 2.0 that can show the current user's starred dashboards as well
 as a list of dashboards based on search query or dashboard tags.
 
 ![](blog/dashlist_panel_1.png)
