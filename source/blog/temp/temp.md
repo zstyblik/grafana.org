@@ -4,9 +4,17 @@ author: Torkel Ödegaard
 published_on: February 10, 2015
 ---
 
+As some of you already know, at least those who read the previous blog post [on the future of Grafana](http://grafana.org/blog/2015/01/12/grafana2-the-future-and-raintank.html),
+we have been working on a backend for the Grafana 2.0 release. A backend is really essential if Grafana is to be able
+to expand its capabilities to support alerting, PNG rendering of panels, and of course user managment and authentication.
+A backend will also make it easier to install and get started with Grafana as you will no longer need to learn how to
+configure nginx or deal with complex CORS issues for Graphite or OpenTSDB. Something that
+many new users struggle with when setting up Grafana for the first time.
+
+Grafana 2.0 has been long in the making but has seen accelerated progress in the last two months
+thanks to the great team at [Raintank](http://raintank.io).
 
 ![](blog/Grafana2_Preview_1.png)
-
 
 ## Code & Docker image
 The Grafana 2.0 backend and frontend changes are now public in the [develop](https://github.com/grafana/grafana/tree/develop)
@@ -65,7 +73,8 @@ of sidebars and collapsable top top navbars.
 The above animated gif shows the sidebar we ended up with, as well as the new dashboard search dropdown.
 We will continue to refine and polish this solution. For more on the creative process and details
 on all the UI mockups and navigation alternatives we explored read this
-[blog post by Matt Toback](https://blog.raintank.io/raintank-has-designs-on-capacity/).
+[blog post by Matt Toback](https://blog.raintank.io/raintank-has-designs-on-capacity/). Matt is lead
+on customer experiance on at [Raintank](http://raintank.io).
 
 ### Dashboard list panel
 There is currently one new panel in Grafana 2.0 that can show the current users starred dashboards as well
