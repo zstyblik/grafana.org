@@ -26,7 +26,8 @@ docker run -i -p 3000:3000 grafana/grafana:develop
 ```
 
 There are no offical binary packages yet as there is still some work that needs
-to be done before a beta release can be made. If you want to help please checkout out the develop branch
+to be done before a beta release can be made. Grafana 2.0 is not ready for
+production use yet. If you want to help please checkout out the develop branch
 or try the docker image and submit feedback and bug reports on github!
 
 There is no updated documentation for Granfana 2.0, that is one of the items we will work on
