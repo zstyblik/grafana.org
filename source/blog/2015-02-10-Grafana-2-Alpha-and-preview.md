@@ -73,7 +73,7 @@ of sidebars and collapsable top top navbars.
 The above animated gif shows the sidebar we ended up with, as well as the new dashboard search dropdown.
 We will continue to refine and polish this solution. For more on the creative process and details
 on all the UI mockups and navigation alternatives we explored read this
-[blog post by Matt Toback](https://blog.raintank.io/raintank-has-designs-on-capacity/). Matt is lead
+[blog post by Matt Toback](https://blog.raintank.io/ux-the-long-road-to-the-shortest-path). Matt is lead
 on customer experiance on at [Raintank](http://raintank.io).
 
 ### Dashboard list panel
