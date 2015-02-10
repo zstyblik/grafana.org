@@ -38,7 +38,7 @@ This preview is automatically updated after each successful commit & build of th
 
 ## The backend
 
-The backend is written in Go and defaults to an embedded sqlite3 database so there is not dependency on
+The backend is written in Go and defaults to an embedded sqlite3 database so there is no dependency on
 Elasticsearch for dashboards storage. If you are already using InfluxDB or Elasticsearch for dashboard
 storage there is an import feature under the account page where you can import your existing dashboards.
 
@@ -74,7 +74,7 @@ The above animated gif shows the sidebar we ended up with, as well as the new da
 We will continue to refine and polish this solution. For more on the creative process and details
 on all the UI mockups and navigation alternatives we explored read this
 [blog post by Matt Toback](https://blog.raintank.io/ux-the-long-road-to-the-shortest-path). Matt is lead
-on customer experiance on at [Raintank](http://raintank.io).
+on customer experiance at [Raintank](http://raintank.io).
 
 ### Dashboard list panel
 There is currently one new panel in Grafana 2.0 that can show the current user's starred dashboards as well
