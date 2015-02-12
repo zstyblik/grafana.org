@@ -12,7 +12,8 @@ configure nginx or deal with complex CORS issues for Graphite or OpenTSDB. Somet
 many new users struggle with when setting up Grafana for the first time.
 
 Grafana 2.0 has been long in the making but has seen accelerated progress in the last two months
-thanks to the great team at [Raintank](http://raintank.io).
+thanks to my collegues at [Raintank](http://raintank.io), where we are working on building a nextgen open source
+infrastructure monitoring platform.
 
 ![](blog/Grafana2_Preview_1.png)
 
