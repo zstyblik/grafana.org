@@ -4,15 +4,9 @@ title: Docs - Performance
 
 # Performance
 
-If you are using graphite 0.9.12 or bellow and are experiencing slow loading times, especially for long time range queries
-there is a fix. The reason for slow performance is that graphite's json API returns all data points for the time range. Even
-if you have a graph width of 500 pixels graphite could return 50 000 data points or even more.
+Graphite 0.9.13 adds a much needed feature to the json rendering API that is very important for Grafana. If you are experiance slow
+load & rendering times for large time ranges then it is most likely caused by running Graphite 0.9.12 or lower. The latest version
+of Graphite adds a maxDataPoints parameter to the json render API, without this feature Graphite can return hundreds of thousands of data points per graph, which
+can hang your browser. Be sue to upgrade to [0.9.13](http://graphite.readthedocs.org/en/latest/releases/0_9_13.html).
 
-There was feature in graphite web (https://github.com/graphite-project/graphite-web/pull/334) that added maxDataPoints
-that makes json queries A LOT faster for large time spans. It did not get merged into 0.9.12 branch before release.
 
-If you are using large time spans and experience bad performance. Update graphite web to latest from this branch (https://github.com/graphite-project/graphite-web/tree/0.9.x)
-
-Alternative if you use 0.9.12 you can update just render/views.py with this https://github.com/graphite-project/graphite-web/blob/0.9.x/webapp/graphite/render/views.py, and render/attime.py with https://github.com/graphite-project/graphite-web/blob/0.9.x/webapp/graphite/render/attime.py
-
-With this fix you can switch from short 5 hour time spans to months with very quick loading times!
