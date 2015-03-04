@@ -1,6 +1,7 @@
 {
   "name": "PROJECT_NAME",
   "dependencies": {
-    "foundation": "~5.4.0"
+    "foundation": "~5.4.0",
+    "lodash": "~3.3.1"
   }
 }

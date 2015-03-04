@@ -1,0 +1,53 @@
+---
+title: Builds
+---
+
+.row
+  .large-12.columns
+    br
+
+    markdown:
+       ## Install from package instructions
+
+       On Ubuntu or Debian download the .deb file and execute this command
+
+       ```
+         sudo dpkg -i grafana_[the version you downloaded].deb
+       ```
+
+       On Redhat or Centos download the .rpm file and execute this command
+
+       ```
+         sudo rpm -Uvh grafana_[the version you downloaded].rpm
+       ```
+
+       The install will do the following
+
+        - Install binaries and frontend files under `/opt/grafana/versions/<version>`
+        - Symlink dir `/opt/grafana/current` to `/opt/grafana/versions/<version>`
+        - Symlink `/etc/init.d/grafana` to `/opt/grafana/current/scripts/init.sh`
+        - Add config file to `/etc/opt/grafana/grafana.ini` , this is where you specify your config settings
+        - Default configuration is in `/opt/grafana/current/conf/defaults.ini`, do not modify that file
+        - The default configuration specifies log file at `/var/log/grafana/grafana.log`
+        - The default configuration specifies sqlite3 db at `/opt/grafana/data/grafana.db`
+        - Start grafana by `sudo service grafana start`
+        - This will start grafana process as the `grafana` user (created in .deb install)
+        - Default http port is `3000`
+
+       There is also a generic linux tar file which you can extract and run grafana directly
+       from the folder it extracts to.  This file does not contain any setup scripts (for init.d, etc).
+
+    h2 Builds
+
+    table id="ci-builds"
+      tr
+        th OS
+        th Download link
+        th Build date
+
+
+
+script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"
+script src="/assets/javascripts/builds.js"
+
+

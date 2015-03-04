@@ -2,6 +2,7 @@
 #= require vendor/custom.modernizr
 #= require vendor/foundation.min
 #= require vendor/blueimp-gallery.min
+#= require vendor/lodash.js
 #= require_self
 
 $ ->
