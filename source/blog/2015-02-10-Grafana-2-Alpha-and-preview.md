@@ -31,7 +31,7 @@ to be done before a beta release can be made. Grafana 2.0 is not ready for
 production use yet. If you want to help please checkout out the develop branch
 or try the docker image and submit feedback and bug reports on github!
 
-There is no updated documentation for Granfana 2.0, that is one of the items we will work on
+There is no updated documentation for Grafana 2.0, that is one of the items we will work on
 in the run up to a beta release.
 
 You can also try out a preview build on [play.grafana.org/v2](http://play.grafana.org/v2), login with
