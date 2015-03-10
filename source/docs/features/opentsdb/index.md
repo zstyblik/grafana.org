@@ -1,5 +1,6 @@
 ---
 title: Docs - OpenTSDB
+redirect: http://docs.grafana.org/datasources/opentsdb
 ---
 
 ## OpenTSDB configuration

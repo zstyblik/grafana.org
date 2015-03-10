@@ -1,5 +1,6 @@
 ---
 title: Docs - Getting started
+redirect: http://docs.grafana.org/guides/gettingstarted
 ---
 
 # Getting started

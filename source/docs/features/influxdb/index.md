@@ -1,5 +1,6 @@
 ---
 title: Docs - InfluxDB
+redirect: http://docs.grafana.org/datasources/influxdb
 ---
 
 # InfluxDB

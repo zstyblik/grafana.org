@@ -1,5 +1,6 @@
 ---
 title: Docs - Graphing
+redirect: http://docs.grafana.org/reference/graph
 ---
 
 # Graphing

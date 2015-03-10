@@ -1,5 +1,6 @@
 ---
 title: Docs - Time range controls
+redirect: http://docs.grafana.org/reference/timerange
 ---
 # Time range controls
 

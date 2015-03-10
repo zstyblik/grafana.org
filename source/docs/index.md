@@ -1,5 +1,6 @@
 ---
 title: Docs - Installation
+redirect: http://docs.grafana.org/installation
 ---
 
 # Installation

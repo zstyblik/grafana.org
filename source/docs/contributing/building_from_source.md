@@ -1,5 +1,6 @@
 ---
 title: Building from source
+redirect: http://docs.grafana.org/project/building_from_source
 ---
 
 # Building from source

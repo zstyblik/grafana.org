@@ -1,5 +1,6 @@
 ---
 title: Docs - Search features
+redirect: http://docs.grafana.org/reference/search
 ---
 
 # Search features

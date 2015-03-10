@@ -1,5 +1,6 @@
 ---
 title: Docs - Templated dashboards
+redirect: http://docs.grafana.org/reference/templating
 ---
 
 # Templated Dashboards

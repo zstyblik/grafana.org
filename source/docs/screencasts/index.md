@@ -1,5 +1,6 @@
 ---
 title: Docs - Screencasts
+redirect: http://docs.grafana.org/guides/screencasts
 ---
 
 # Screencasts

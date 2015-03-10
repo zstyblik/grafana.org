@@ -1,5 +1,6 @@
 ---
 title: Docs - Annotations
+redirect: http://docs.grafana.org/reference/annotations
 ---
 
 # Annotations

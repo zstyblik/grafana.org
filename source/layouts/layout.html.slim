@@ -6,6 +6,10 @@ html
 
     title == "Grafana - " + (data.page.title || "Graphite and InfluxDB Dashboard and graph composer")
 
+    - if data.page.redirect
+      meta http-equiv="refresh" content="0; url=#{data.page.redirect}"
+      link rel="canonical" href="#{data.page.redirect}"
+
     meta name="author" content="Torkel Ödegaard"
     meta name="viewport" content="width=device-width, initial-scale=1"
     meta name="description" content="Grafana, the graphite dashboard frontend, editor and graph composer"
@@ -26,6 +30,7 @@ html
 
   body class="#{page_classes}"
     = partial "layouts/nav"
+
 
     section.main
       == yield

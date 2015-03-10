@@ -1,5 +1,6 @@
 ---
 title: Docs - Playlist
+redirect: http://docs.grafana.org/reference/playlist
 ---
 
 # Playlist

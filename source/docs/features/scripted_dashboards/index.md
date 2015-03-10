@@ -1,5 +1,6 @@
 ---
 title: Docs - Scripted dashboards
+redirect: http://docs.grafana.org/reference/scripting
 ---
 
 # Scripted Dashboards

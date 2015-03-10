@@ -1,5 +1,6 @@
 ---
 title: Docs - Function Editor
+redirect: http://docs.grafana.org/datasources/graphite
 ---
 
 # Graphite

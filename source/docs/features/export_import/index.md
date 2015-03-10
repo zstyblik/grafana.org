@@ -1,5 +1,6 @@
 ---
 title: Docs - Export and Import
+redirect: http://docs.grafana.org/reference/export_import
 ---
 
 # Export and Import

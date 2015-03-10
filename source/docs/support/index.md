@@ -1,5 +1,6 @@
 ---
 title: Docs - Support
+redirect: http://docs.grafana.org/
 ---
 
 # Support

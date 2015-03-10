@@ -1,5 +1,6 @@
 ---
 title: Docs - Performance
+redirect: http://docs.grafana.org/installation/performance
 ---
 
 # Performance

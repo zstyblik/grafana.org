@@ -1,5 +1,6 @@
 ---
 title: Docs - Install via provisioning
+redirect: http://docs.grafana.org/installation/provisioning
 ---
 
 # Provisioning

@@ -1,5 +1,6 @@
 ---
 title: Docs - Troubleshooting
+redirect: http://docs.grafana.org/installation/troubleshooting
 ---
 # Troubleshooting
 
