@@ -5,4 +5,7 @@ javascript:
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-47280256-1', 'grafana.org');
-  ga('send', 'pageview');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview', {
+   'page': location.pathname + location.search  + location.hash,
+  });
