@@ -102,12 +102,12 @@ latency, network traffic or storage.
 ![](http://docs.grafana.org/img/v2/dashlist_starred.png)
 
 There is one new panel in Grafana v2.0 and that is the `Dashboard list` panel. This panel can show the current
-signed in user's starred dashboards or dashboards based on a custom searchbased on search strings or tags.
+signed in user's starred dashboards or dashboards based on a custom search (keyword or tags).
 
 ### Data Source proxy & admin views
 
 Data sources in Grafana v2.0 are NOT defined in a config file but added through the UI. The backend can also
-handle proxying data source metric requests which meens that it is a lot easier to get started using Grafana with
+handle proxying data source metric requests which means that it is a lot easier to get started using Grafana with
 Graphite or OpenTSDB without having to spend time with nginx CORS (Cross origin resource sharing) work arounds.
 
 > **Note** For InfluxDB users: The data source proxy feature will
