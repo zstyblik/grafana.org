@@ -42,7 +42,12 @@ var buildFetcher = function() {
       tr.append('<td>' + type + '</td>');
       tr.append('<td>' + link + '</td>');
       tr.append('<td>' + file.date.toLocaleString() + '</td>');
-      $('#ci-builds').append(tr);
+
+      if (file.key.indexOf('latest') !== -1) {
+        $('#ci-latest').append(tr);
+      } else {
+        $('#ci-builds').append(tr);
+      }
     });
   });
 

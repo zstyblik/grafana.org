@@ -14,7 +14,7 @@ title: Download
       .row.text-center.install-step-icon
         i.fa.fa-download
       .row.text-center.install-step-text
-        | Download and unzip the latest release
+        | Download and install the latest release
 
   .medium-4.columns
     .panel.radius.install-step data-equalizer-watch="1"
@@ -25,8 +25,7 @@ title: Download
       .row.install-step-text.text-center
         | Copy the extracted folder to a web server. </br>
         | Read the&nbsp;
-        a href="/docs" install guide
-        |  for config help.
+        a href="http://docs.grafana.org/installation" installation guide
 
   .medium-4.columns
     .panel.radius.install-step data-equalizer-watch="1"
@@ -37,7 +36,43 @@ title: Download
       .row.text-center.install-step-text
         | Open a browser and build your first dashboard. <br/>
         |  Read the&nbsp;
-        a href="/docs/features/intro" intro guide.
+        a href="http://docs.grafana.org/v2.0/guides/gettingstarted" getting started guide.
+
+.row
+  .columns.medium-12
+    h2 2.0.0-Beta1 (2015-03-30)
+.row
+  .columns.medium-12
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana_2.0.0-beta1_amd64.deb" data-download-button="2.0.0-beta1.deb"
+      i.fa.fa-download
+      |  DEB (Ubuntu/Debian 64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana-2.0.0_beta1-1.x86_64.rpm" data-download-button="2.0.0-beta1.rpm"
+      i.fa.fa-download
+      |  RPM (Redhat/Centos 64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana-2.0.0-beta1.x86_64.tar.gz" data-download-button="2.0.0-beta1.tar.gz"
+      i.fa.fa-download
+      |  TAR (Linux 64bit)
+
+.row
+  .columns.large-12
+    markdown:
+      Grafana 2.0 is different from previous Grafana releases. It now comes with its own backend server. All dashboards
+      are backward compatible. The [migrating guide](http://docs.grafana.org/v2.0/installation/migrating_to2/)
+      will guide you in how to import your existing dashboards.
+
+      - [What's New in Grafana 2.0](http://docs.grafana.org/v2.0/guides/whats-new-in-v2/)
+      - [Installation guide](http://docs.grafana.org/v2.0/installation/)
+      - [Migrating from 1.x to 2.x](http://docs.grafana.org/v2.0/installation/migrating_to2/)
+      - [Changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+
+      The Grafana backend is written in Go and distributed via binary packages. If your platform is not supported by the above
+      download packages, check the [Building from source](http://docs.grafana.org/v2.0/project/building_from_source/) guide.
+
+  hr
+= partial "layouts/_newsletter"
+
 
 .row
   .columns.medium-12
@@ -66,9 +101,6 @@ title: Download
       - [Issue #1251](https://github.com/grafana/grafana/issues/1251). Graph: Fix for y axis and scaled units (GiB etc) caused rounding, for example 400 GiB instead of 378 GiB
       - [Issue #1199](https://github.com/grafana/grafana/issues/1199). Graph: fix for series tooltip when one series is hidden/disabled
       - [Issue #1207](https://github.com/grafana/grafana/issues/1207). Graphite: movingAverage / movingMedian parameter type impovement, now handles int and interval parameter
-
-  hr
-= partial "layouts/_newsletter"
 
 .row
   .columns.medium-12
