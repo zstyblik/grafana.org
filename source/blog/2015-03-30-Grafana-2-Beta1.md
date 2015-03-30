@@ -157,19 +157,6 @@ Organizations via a role. That role can be:
 
 There are currently no permissions on individual dashboards.
 
-<section class="newsletter">
-  <form action="http://grafana.us8.list-manage.com/subscribe/post?u=2aeb5711db2aececc990be536&amp;id=5585d37ecc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-    <row class="collapse">
-      <div class="medium-10 columns">
-        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address">
-      </div>
-      <div class="medium-2 columns">
-        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button postfix">
-      </div>
-    </row>
-  </form>
-</section>
-
 ## Documentation
 The documentation site has been updated. You can still access v1.9 docs via the version selector. The documentation
 now live in the [main grafana repository](https://github.com/grafana/grafana/tree/master/docs). If you spot a mistake in
@@ -186,4 +173,18 @@ Please report any issues you have on [github](https://github.com/grafana/grafana
 * [Dreamhost](http://www.dreamhost.com)
 * [Demonware](http://www.demonware.net)
 * [Mediamath](https://developer.mediamath.com/OpenSource)
+
+<section class="newsletter">
+  <form action="http://grafana.us8.list-manage.com/subscribe/post?u=2aeb5711db2aececc990be536&amp;id=5585d37ecc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+    <row class="collapse">
+      <div class="medium-10 columns">
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address">
+      </div>
+      <div class="medium-2 columns">
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button postfix">
+      </div>
+    </row>
+  </form>
+</section>
+
 
