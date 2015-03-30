@@ -173,7 +173,7 @@ There are currently no permissions on individual dashboards.
 ## Documentation
 The documentation site has been updated. You can still access v1.9 docs via the version selector. The documentation
 now live in the [main grafana repository](https://github.com/grafana/grafana/tree/master/docs). If you spot a mistake in
-the docs or feel like you want to improve it, do not hesitate to submit a PR.
+the docs or want to improve it, do not hesitate to submit a PR.
 
 The documentation has partly been updated for 2.0, we will continuing to work on docs in the coming days and weeks.
 
