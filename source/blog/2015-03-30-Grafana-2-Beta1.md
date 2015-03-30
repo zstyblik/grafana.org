@@ -13,7 +13,7 @@ more than for previous upgrades. Dashboards are 100% backward compatible.
 We provide `deb`, `rpm` and regular binary tar packages for download. If your platform is not included, check the [Building from source](http://docs.grafana.org/v2.0/project/building_from_source/)
 guide.
 
-- [Download](http://localhost:4567/download)
+- [Download](http://grafana.org/download)
 - [Installation guide](http://docs.grafana.org/v2.0/installation/)
 - [Migrating from 1.x to 2.x](http://docs.grafana.org/v2.0/installation/migrating_to2/)
 
