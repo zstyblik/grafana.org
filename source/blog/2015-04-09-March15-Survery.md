@@ -4,7 +4,9 @@ author: Torkel Ödegaard
 published_on: April 9, 2015
 ---
 
-<img src="/assets/img/blog/grafana_survey_results800.png" class="no-shadow">
+<a href="https://infogr.am/grafana_user_survey_mar2015">
+  <img src="/assets/img/blog/grafana_survey_results800.png" class="no-shadow">
+</a>
 
 On March 1st 2015, we asked the Grafana community for a favor. We published a public
 survey to solicit feedback on the current state of the product to better understand how
