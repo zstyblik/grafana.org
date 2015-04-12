@@ -14,7 +14,8 @@ title: Download
       .row.text-center.install-step-icon
         i.fa.fa-download
       .row.text-center.install-step-text
-        | Download and install the latest release
+        | Read the&nbsp;
+        a href="http://docs.grafana.org/installation" installation guide
 
   .medium-4.columns
     .panel.radius.install-step data-equalizer-watch="1"
@@ -23,9 +24,8 @@ title: Download
       .row.text-center.install-step-icon
         i.fa.fa-cogs
       .row.install-step-text.text-center
-        | Copy the extracted folder to a web server. </br>
         | Read the&nbsp;
-        a href="http://docs.grafana.org/installation" installation guide
+        a href="http://docs.grafana.org/installation/configuration" configuration guide
 
   .medium-4.columns
     .panel.radius.install-step data-equalizer-watch="1"
@@ -34,9 +34,85 @@ title: Download
       .row.text-center.install-step-icon
         i.fa.fa-signal
       .row.text-center.install-step-text
-        | Open a browser and build your first dashboard. <br/>
         |  Read the&nbsp;
         a href="http://docs.grafana.org/v2.0/guides/gettingstarted" getting started guide.
+
+
+.row
+  .columns.medium-12
+    p
+     | Looking for the lastest builds of master / vNext? You find them on the &nbsp;
+     a href="/download/builds.html" Builds Page.
+
+.row
+  .columns.medium-12
+    h2 2.0.0-Beta3 (2015-04-12)
+  .columns.medium-12
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana_2.0.0-beta3_amd64.deb" data-download-button="2.0.0-beta3.deb"
+      i.fa.fa-download
+      |  DEB (Ubuntu / Debian 64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana-2.0.0_beta3-1.x86_64.rpm" data-download-button="2.0.0-beta3.rpm"
+      i.fa.fa-download
+      |  RPM (Fedora / RHEL  64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana-2.0.0-beta3.x86_64.tar.gz" data-download-button="2.0.0-beta3.tar.gz"
+      i.fa.fa-download
+      |  Binary TAR (Linux 64bit)
+
+.row
+  .columns.large-12.markdown
+    markdown:
+      ### Changes and fixes since beta1:
+
+       **RPM / DEB Package changes (to follow HFS)**
+
+      - binary name changed to grafana-server
+      - does not install to `/opt/grafana` any more, installs to `/usr/share/grafana`
+      - binary to `/usr/sbin/grafana-server`
+      - init.d script improvements, renamed to `/etc/init.d/grafana-server`
+      - added default file with environment variables, `/etc/default/grafana-server` (deb/ubuntu)
+       `/etc/sysconfig/grafana-server` (centos/redhat)
+      - added systemd service file
+      - data directory is now by default `/var/lib/grafana`
+      - no symlinking of directories (versions etc)
+      - For more info see [Issue #1758](https://github.com/grafana/grafana/issues/1758).
+
+      **Config breaking change (setting rename)**
+
+      - `[log] root_path` has changed to `[paths] logs`
+
+      **Enhancements**
+
+      - [Issue #1701](https://github.com/grafana/grafana/issues/1701). Share modal: Override UI theme via URL param for Share link, rendered panel, or embedded panel
+      - [Issue #1660](https://github.com/grafana/grafana/issues/1660). OAuth: Specify allowed email address domains for google or and github oauth logins
+
+      **Fixes**
+
+      - [Issue #1649](https://github.com/grafana/grafana/issues/1649). HTTP API: grafana /render calls nows with api keys
+      - [Issue #1667](https://github.com/grafana/grafana/issues/1667). Datasource proxy & session timeout fix (casued 401 Unauthorized error after a while)
+      - [Issue #1707](https://github.com/grafana/grafana/issues/1707). Unsaved changes: Do not show for snapshots, scripted and file based dashboards
+      - [Issue #1703](https://github.com/grafana/grafana/issues/1703). Unsaved changes: Do not show for users with role `Viewer`
+      - [Issue #1675](https://github.com/grafana/grafana/issues/1675). Data source proxy: Fixed issue with Gzip enabled and data source proxy
+      - [Issue #1681](https://github.com/grafana/grafana/issues/1681). MySQL session: fixed problem using mysql as session store
+      - [Issue #1671](https://github.com/grafana/grafana/issues/1671). Data sources: Fixed issue with changing default data source (should not require full page load to take effect, now fixed)
+      - [Issue #1685](https://github.com/grafana/grafana/issues/1685). Search: Dashboard results should be sorted alphabetically
+      - [Issue #1673](https://github.com/grafana/grafana/issues/1673). Basic auth: Fixed issue when using basic auth proxy infront of Grafana
+
+      Grafana 2.0 is different from previous Grafana releases. It now comes with its own backend server. All dashboards
+      are backward compatible. The [migrating guide](http://docs.grafana.org/v2.0/installation/migrating_to2/)
+      will guide you in how to import your existing dashboards.<br><br>
+
+      - [What's New in Grafana 2.0](http://docs.grafana.org/v2.0/guides/whats-new-in-v2/)
+      - [Installation guide](http://docs.grafana.org/v2.0/installation/)
+      - [Migrating from 1.x to 2.x](http://docs.grafana.org/v2.0/installation/migrating_to2/)
+      - [Changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+
+      The Grafana backend is written in Go and distributed via binary packages. If your platform is not supported by the above
+      download packages, check the [Building from source](http://docs.grafana.org/v2.0/project/building_from_source/) guide.
+      <br><br>
+  hr
+= partial "layouts/_newsletter"
 
 .row
   .columns.medium-12
@@ -58,21 +134,7 @@ title: Download
 .row
   .columns.large-12
     markdown:
-      Grafana 2.0 is different from previous Grafana releases. It now comes with its own backend server. All dashboards
-      are backward compatible. The [migrating guide](http://docs.grafana.org/v2.0/installation/migrating_to2/)
-      will guide you in how to import your existing dashboards.
-
-      - [What's New in Grafana 2.0](http://docs.grafana.org/v2.0/guides/whats-new-in-v2/)
-      - [Installation guide](http://docs.grafana.org/v2.0/installation/)
-      - [Migrating from 1.x to 2.x](http://docs.grafana.org/v2.0/installation/migrating_to2/)
-      - [Changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
-
-      The Grafana backend is written in Go and distributed via binary packages. If your platform is not supported by the above
-      download packages, check the [Building from source](http://docs.grafana.org/v2.0/project/building_from_source/) guide.
-
-  hr
-= partial "layouts/_newsletter"
-
+     - [Changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
 
 .row
   .columns.medium-12
