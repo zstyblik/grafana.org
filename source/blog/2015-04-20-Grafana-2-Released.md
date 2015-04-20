@@ -4,6 +4,8 @@ author: Torkel Ödegaard
 published_on: April 20, 2015
 ---
 
+![](blog/grafana_2_stable_post.png)
+
 Grafana 2.0 stable is now released and available for download.
 
 We provide `deb`, `rpm` and generic binary tar packages for download as well as APT and YUM
