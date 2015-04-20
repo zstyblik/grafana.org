@@ -24,7 +24,7 @@ guide.
 
 ## New Grafana screencast episodes
 
-To acompany this release there are now 5 new screencast episodes.
+To accompany this release there are now 5 new screencast episodes.
 
 - [Episode 3 - What's New In Grafana 2.0](https://www.youtube.com/watch?v=FC13uhFRsVw&list=PLDGkOdUX1Ujo3wHw9-z5Vo12YLqXRjzg2&index=3)
 - [Episode 4 - Installation & Configuration on Ubuntu / Debian](https://www.youtube.com/watch?v=JY22EBOR9hQ&list=PLDGkOdUX1Ujo3wHw9-z5Vo12YLqXRjzg2&index=4)
