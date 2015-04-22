@@ -44,6 +44,49 @@ title: Download
      a href="/download/builds.html" Builds Page.
 
 .row
+
+  .columns.medium-12
+    h2 2.0.2 (2015-04-22)
+  .columns.medium-12
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana_2.0.2_amd64.deb" data-download-button="2.0.2.deb"
+      i.fa.fa-download
+      |  DEB (Ubuntu / Debian 64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana-2.0.2-1.x86_64.rpm" data-download-button="2.0.2.rpm"
+      i.fa.fa-download
+      |  RPM (Fedora / RHEL  64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana-2.0.2.linux-x64.tar.gz" data-download-button="2.0.2.linux.tar"
+      i.fa.fa-download
+      |  Binary TAR (Linux 64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-2.0.2.windows-x64.zip" data-download-button="2.0.2.windows.zip"
+      i.fa.fa-download
+      |  Binary ZIP (Windows 64bit)
+
+.row
+  .columns.large-12.markdown
+    markdown:
+      **Fixes:**
+
+      - [Issue #1832](https://github.com/grafana/grafana/issues/1832). Graph + Legend Table: Fix for zero height graph when having many series
+      - [Issue #1846](https://github.com/grafana/grafana/issues/1846). Snapshots: Fixed issue with snapshoting dashboards with an interval template variable
+      - [Issue #1848](https://github.com/grafana/grafana/issues/1848). Panel timeshift: You can now use panel timeshift without a relative time override
+
+      Links:
+
+      - [What's New in Grafana 2.0](http://docs.grafana.org/v2.0/guides/whats-new-in-v2/)
+      - [Installation guide](http://docs.grafana.org/v2.0/installation/)
+      - [Migrating from 1.x to 2.x](http://docs.grafana.org/v2.0/installation/migrating_to2/)
+      - [Changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+
+      If your platform is not supported by the above download packages, check the [Building from source](http://docs.grafana.org/v2.0/project/building_from_source/) guide.
+      <br><br>
+  hr
+
+= partial "layouts/_newsletter"
+
+.row
   .columns.medium-12
     h2 2.0.1 (2015-04-20)
   .columns.medium-12
@@ -77,22 +120,6 @@ title: Download
       - [Issue #1734](https://github.com/grafana/grafana/issues/1734). Support for unicode / international characters in dashboard title (improved slugify)
       - [Issue #1782](https://github.com/grafana/grafana/issues/1782). Github OAuth: Now works with Github for Enterprise, thanks @williamjoy
       - [Issue #1780](https://github.com/grafana/grafana/issues/1780). Dashboard snapshot: Should not require login to view snapshot, Fixes #1780
-
-      Grafana 2.0 is different from previous Grafana releases. It now comes with its own backend server. All dashboards
-      are backward compatible. The [migrating guide](http://docs.grafana.org/v2.0/installation/migrating_to2/)
-      will guide you in how to import your existing dashboards.<br><br>
-
-      - [What's New in Grafana 2.0](http://docs.grafana.org/v2.0/guides/whats-new-in-v2/)
-      - [Installation guide](http://docs.grafana.org/v2.0/installation/)
-      - [Migrating from 1.x to 2.x](http://docs.grafana.org/v2.0/installation/migrating_to2/)
-      - [Changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
-
-      The Grafana backend is written in Go and distributed via binary packages. If your platform is not supported by the above
-      download packages, check the [Building from source](http://docs.grafana.org/v2.0/project/building_from_source/) guide.
-      <br><br>
-  hr
-
-= partial "layouts/_newsletter"
 
 .row
   .columns.medium-12
