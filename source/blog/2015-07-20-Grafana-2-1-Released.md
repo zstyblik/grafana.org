@@ -179,3 +179,4 @@ Grafana 2.1 gives you even more flexibility customizing how individual panels re
     </row>
   </form>
 </section>
+
