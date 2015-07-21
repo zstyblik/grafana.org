@@ -7,7 +7,7 @@ published_on: July 20, 2015
 <img class="no-shadow" src="/assets/img/blog/new-in-grafana-v2-1.png" alt="what's new in Grafana 2.1"/>
 
 We've been working to implement many of the features you've requested since the release of 2.0 and are excited to announce Grafana 2.1 is now available.
-More dynamic dashboards, an improved authentication engine and new data source support only scratches the surface - <a href="http://localhost:4567/download">Download Grafana 2.1 now</a>, or dive in to see what's new below. 
+More dynamic dashboards, an improved authentication engine and new data source support only scratches the surface - <a href="http://localhost:4567/download">Download Grafana 2.1 now</a>, or dive in to see what's new below.
 
 - - -
 
@@ -34,7 +34,7 @@ More dynamic dashboards, an improved authentication engine and new data source s
   <div class="large-4 columns">
   <h3><strong>Repeating Rows and Panels</strong></h3>
   <p>It’s now possible to create a Dashboard that automatically adds (and removes) both Rows and Panels based on which template variables you have selected.
-  Any Row or Any Panel can be configured to repeat (duplicate itself) based on the Multi-Value Template variables selected.</p>
+  any Row or any Panel can be configured to repeat (duplicate itself) based on the Multi-Value Template variables selected.</p>
   </div>
 </div>
 
@@ -78,20 +78,14 @@ New authentication methods add numerous options to manage users, roles and organ
 <h3><strong>User Authentication Utilizing Headers</strong></h3>
 <p>You can now authenticate utilizing a header (eg. X-Authenticated-User, or X-WEBAUTH-USER). Useful in situations with reverse proxies.</p>
 
-
-
-
-
 <div class="row" style="margin-bottom:20px;">
   <div class="large-8 columns">
     <h3><strong>New “Read-only Editor” User Role</strong></h3>
-    <p>There is a new User role available in this version of Grafana: “Read-only Editor”. This role disables the query editor for the user and puts him in a read-only sandbox of sorts.</p>
-  </div>
-  <div class="large-4 columns">
-    <blockquote><strong>Note:</strong> Even with this role assigned, Read-only Editors still have access to ALL metrics from that Datasource. This is not a way to achieve a true multitenant segregated environment with Grafana.</blockquote>
+    <p>There is a new User role available in this version of Grafana: “Read-only Editor”. This role behaves just like the Viewer role does in Grafana 2.0. That is you can edit graphs and queries but no save dashboards.
+    The Viewer role has been modified in Grafana 2.1 so that users assigned this role can no longer edit panels.
+    </p>
   </div>
 </div>
-
 
 - - -
 <br/>
@@ -100,8 +94,11 @@ New authentication methods add numerous options to manage users, roles and organ
 
 <div class="row" style="margin-bottom:20px;">
   <div class="large-4 columns">
-    <h3><strong>Improved InfluxDB 0.9 Support</strong></h3>
-    <p>We continue to make progress on fully supporting InfluxDB 0.9, but it has proven to be a bit of a moving target. This Grafana release brings a much improved query editor for InfluxDB 0.9</p>
+    <h3><strong>InfluxDB 0.9 Support</strong></h3>
+    <p>
+      Grafana 2.1 now comes with full support for InfluxDB 0.9. There is a much improved query editor designed for the
+      new features InfluxDB 0.9 enables.
+    </p>
   </div>
   <div class="large-8 columns">
     <img class="no-shadow" src="/assets/img/blog/influx-query.gif" style="margin-top:10px;"/>
@@ -119,10 +116,9 @@ New authentication methods add numerous options to manage users, roles and organ
   </div>
 </div>
 
-
-
 ### **New Data Source: KairosDB**
-Experimental support for the KairosDB is now shipping in Grafana. Thank you to <a href="https://github.com/espenfjo" target="_blank">espenfjo</a> for their hard work in getting it to this point.
+Cassandra backed time series database KairosDB is now supported in Grafana out of the box. Thank you to
+<a href="https://github.com/masaori335" target="_blank">masaori335</a> for their hard work in getting it to this point.
 
 - - -
 <br/>
@@ -136,7 +132,7 @@ Grafana 2.1 gives you even more flexibility customizing how individual panels re
   </div>
 <div class="large-4 columns">
   <h3><strong>Graph Panel</strong></h3>
-    <p>Keeping large numbers of metrics in a dashboard visually organized can be confusing. In Grafana 2.1, you can now define series color using regex and variables.</p>   
+    <p>Keeping large numbers of metrics in a dashboard visually organized can be confusing. In Grafana 2.1, you can now define series color using regex and variables.</p>
   </div>
 </div>
 
@@ -148,10 +144,10 @@ Grafana 2.1 gives you even more flexibility customizing how individual panels re
   </div>
 <div class="large-4 columns">
   <h3><strong>Series Style Override</strong></h3>
-    <p>New series style override, negative-y transform and stack groups.</p>   
+    <p>New series style override, negative-y transform and stack groups.</p>
   </div>
 </div>
-  
+
 
 <br/>
 
