@@ -38,6 +38,7 @@ We're excited about this release, and want to share some of the highlights:
   </div>
   <div class="large-4 columns">
   <h3><strong>Repeating Rows and Panels</strong></h3>
+
   <p>It’s now possible to create a Dashboard that automatically adds (or removes) both Rows and Panels based on which template variables you have selected.
   Any Row or Any Panel can be configured to repeat (duplicate itself) based on the Multi-Value Template variables selected.</p>
   </div>
@@ -83,10 +84,6 @@ New authentication methods add numerous options to manage users, roles and organ
 <h3><strong>User Authentication Utilizing Headers</strong></h3>
 <p>You can now authenticate utilizing a header (eg. X-Authenticated-User, or X-WEBAUTH-USER). This can be useful in situations where Grafana is deployed behind a reverse proxy server.</p>
 
-
-
-
-
 <div class="row" style="margin-bottom:20px;">
   <div class="large-8 columns">
     <h3><strong>New “Read-only Editor” User Role</strong></h3>
@@ -97,7 +94,6 @@ New authentication methods add numerous options to manage users, roles and organ
   </div>
 </div>
 
-
 - - -
 <br/>
 
@@ -105,6 +101,7 @@ New authentication methods add numerous options to manage users, roles and organ
 
 <div class="row" style="margin-bottom:20px;">
   <div class="large-4 columns">
+
     <h3><strong>Improved InfluxDB 0.9 Support</strong></h3>
     <p>We continue to make progress on fully supporting InfluxDB 0.9, but it has proven to be a bit of a moving target. This Grafana release brings a much improved query editor for InfluxDB 0.9 that better supports the current Influx 0.9 query API. We will continue to evolve and improve support for InfluxDB 0.9.</p>
   </div>
@@ -124,9 +121,8 @@ New authentication methods add numerous options to manage users, roles and organ
   </div>
 </div>
 
-
-
 ### **New Data Source: KairosDB**
+
 Experimental support for the KairosDB is now shipping in Grafana. Big THANKS! Go to <a href="https://github.com/masaori335" target="_blank">Masaori Koshiba</a> and <a href="https://github.com/espenfjo" target="_blank">Espen Fjellvær Olsen</a> for their hard work in making this happen. 
 
 - - -
@@ -141,7 +137,7 @@ Grafana 2.1 gives you even more flexibility customizing how individual panels re
   </div>
 <div class="large-4 columns">
   <h3><strong>Graph Panel</strong></h3>
-    <p>Keeping large numbers of metrics in a dashboard visually organized can be confusing. In Grafana 2.1, you can now define series color using regex and variables.</p>   
+    <p>Keeping large numbers of metrics in a dashboard visually organized can be confusing. In Grafana 2.1, you can now define series color using regex and variables.</p>
   </div>
 </div>
 
@@ -153,14 +149,14 @@ Grafana 2.1 gives you even more flexibility customizing how individual panels re
   </div>
 <div class="large-4 columns">
   <h3><strong>Series Style Override</strong></h3>
-    <p>New series style override, negative-y transform and stack groups.</p>   
+    <p>New series style override, negative-y transform and stack groups.</p>
   </div>
 </div>
 <br/>
 
 - - -
 
-### <a href="http://localhost:4567/download">Download Grafana 2.1 now</a>
+### <a href="http://grafana.org/download">Download Grafana 2.1 now</a>
 
 - - -
 <br/>
