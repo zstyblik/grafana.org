@@ -6,18 +6,13 @@ published_on: July 20, 2015
 
 <img class="no-shadow" src="/assets/img/blog/new-in-grafana-v2-1.png" alt="what's new in Grafana 2.1"/>
 
-We've been working to implement many of the features you've requested since the release of 2.0, and are excited to announce the release of Grafana 2.1 today. We recommend that all Grafana users upgrade to this release.
-Grafana 2.1 brings improvements in three core areas: dashboarding, authentication, and data sources. 
-As with every Grafana release, there is a whole slew of new features, enhancements, and bug fixes. To see everyting that's been added to Grafana 2.1 head over to the <a href="https://github.com/grafana/grafana/issues?page=4&q=milestone%3A2.1+is%3Aclosed" target="_blank">2.1 milestone issues section</a>.
-
-<a href="http://grafana.org/download/" target="_blank">Download Grafana 2.1 now</a>
-
-We're excited about this release, and want to share some of the highlights:
+We've been working to implement many of the features you've requested since the release of 2.0 and are excited to announce Grafana 2.1 is now available.
+More dynamic dashboards, an improved authentication engine and new data source support only scratches the surface - <a href="http://localhost:4567/download">Download Grafana 2.1 now</a>, or dive in to see what's new below.
 
 - - -
 
 ## More Dynamic Dashboards
-<p>The Templating system is one of the most powerful and well-used features of Grafana. The 2.1 release takes Templating to a whole new level, making Dashboards more dynamic than ever before.</p>
+<p>The Templating system is one of the most powerful and well-used features of Grafana. The 2.1 release brings numerous improvements that make Dashboards more dynamic than ever before.</p>
 
 <div class="row" style="margin-bottom:20px;">
   <div class="large-8 columns">
@@ -26,7 +21,7 @@ We're excited about this release, and want to share some of the highlights:
   <div class="large-4 columns">
   <h3><strong>Multi-Value Template Select</strong></h3>
   <p>Multi-Value Select allows for the selection of multiple template variables.
-  These variables can then be used in any Panel to make them more dynamic, and give you the perfect view of your data.
+  These variables can be used in any Panel to make them more dynamic, and automatically show only the desired data.
   Multi-Value Select is also a basis for enabling Repeating Rows and Repeating Panels.</p>
   </div>
 </div>
@@ -38,9 +33,8 @@ We're excited about this release, and want to share some of the highlights:
   </div>
   <div class="large-4 columns">
   <h3><strong>Repeating Rows and Panels</strong></h3>
-
-  <p>It’s now possible to create a Dashboard that automatically adds (or removes) both Rows and Panels based on which template variables you have selected.
-  Any Row or Any Panel can be configured to repeat (duplicate itself) based on the Multi-Value Template variables selected.</p>
+  <p>It’s now possible to create a Dashboard that automatically adds (and removes) both Rows and Panels based on which template variables you have selected.
+  any Row or any Panel can be configured to repeat (duplicate itself) based on the Multi-Value Template variables selected.</p>
   </div>
 </div>
 
@@ -51,16 +45,16 @@ We're excited about this release, and want to share some of the highlights:
     <img class="no-shadow" src="/assets/img/blog/dashboard_nav.png" />
   </div>
   <div class="large-4 columns">
-  <h3><strong>Dashboard Links and Navigation</strong></h3>
-  <p>To support better navigation between Dashboarads, it's now possible to create custom and dynamic links from individual Panels to appropriate Dashboards.</p><p>You also have the ability to create flexible top-level links on any given Dashboard thanks to the new Dashboard navigation bar feature.</p>
+  <h3><strong>Dashboard Links</strong></h3>
+  <p>To support better navigation between Dashboarads, it is possible to create custom and dynamic links from individual Panels to appropriate Dashboards.</p><p>You also have the ability to create a powerful and flexible top-level dashboard menu.</p>
   </div>
 </div>
 <br/>
 
 <div class="row" style="margin-bottom:20px;">
   <div class="large-8 columns">
-    <h3><strong>Better Local Dashboard Support</strong></h3>
-    <p>Grafana can now index Dashboards saved locally as JSON from a given directory. These dashboards will now show up alongside Dashboards that are stored in the database.</p>
+    <h3><strong>Better local Dashboard Support</strong></h3>
+    <p>Grafana can now index Dashboards saved locally as JSON from a given directory.</p>
   </div>
   <div class="large-4 columns">
     <blockquote><strong>Note:</strong> Saving local dashboards back to the folder is not supported; this feature is meant for statically generated JSON dashboards.</blockquote>
@@ -74,36 +68,37 @@ We're excited about this release, and want to share some of the highlights:
 New authentication methods add numerous options to manage users, roles and organizations. Grafana 2.1 also includes a "Read-only Editor" role which disables the query editor for that user.
 
 <h3><strong>LDAP Support</strong></h3>
-<p>This highly requested feature now allows your Grafana instance to authenticate against your existing LDAP-compatible directory servers. You can also specify mappings between LDAP group memberships and Grafana Organization user roles. This feature is still under active development.</p>
+<p>This highly requested feature now allows your Grafana users to login with their LDAP credentials. You can also specify mappings between LDAP group memberships and Grafana Organization user roles.</p>
 
 
 <h3><strong>Basic Authentication Support</strong></h3>
-<p>You can now authenticate against the Grafana API utilizing a simple username and password with basic HTTP authentication. This can be useful for provisioning and config management systems that need to utilize the API without having to create an API key first.</p>
+<p>You can now authenticate against the Grafana API utilizing a simple username and password with basic HTTP authentication. This can be useful for provisioning and config management systems that need to utilize the API without having to create an API key.</p>
 
 
 <h3><strong>User Authentication Utilizing Headers</strong></h3>
-<p>You can now authenticate utilizing a header (eg. X-Authenticated-User, or X-WEBAUTH-USER). This can be useful in situations where Grafana is deployed behind a reverse proxy server.</p>
+<p>You can now authenticate utilizing a header (eg. X-Authenticated-User, or X-WEBAUTH-USER). Useful in situations with reverse proxies.</p>
 
 <div class="row" style="margin-bottom:20px;">
   <div class="large-8 columns">
     <h3><strong>New “Read-only Editor” User Role</strong></h3>
-    <p>There is a new User role available in this version of Grafana: “Read-only Editor”. This role behaves just like the Viewer role does in Grafana 2.0. That is, you can edit graphs and queries but not save dashboards. The Viewer role has been modified in Grafana 2.1 so that users assigned this role can no longer edit panels.</p>
-  </div>
-  <div class="large-4 columns">
-    <blockquote><strong>WARNING</strong> Even with this role assigned, Read-only Editors still have access to ALL metrics from a particular Datasource. This is not a way to achieve a true multitenant segregated environment with Grafana. Please do not use this feature to share sensitive data between multiple untrusted Read-only Editors.</blockquote>
+    <p>There is a new User role available in this version of Grafana: “Read-only Editor”. This role behaves just like the Viewer role does in Grafana 2.0. That is you can edit graphs and queries but no save dashboards.
+    The Viewer role has been modified in Grafana 2.1 so that users assigned this role can no longer edit panels.
+    </p>
   </div>
 </div>
 
 - - -
 <br/>
 
-##Improved Data Source Support
+##Improved data source support
 
 <div class="row" style="margin-bottom:20px;">
   <div class="large-4 columns">
-
-    <h3><strong>Improved InfluxDB 0.9 Support</strong></h3>
-    <p>We continue to make progress on fully supporting InfluxDB 0.9, but it has proven to be a bit of a moving target. This Grafana release brings a much improved query editor for InfluxDB 0.9 that better supports the current Influx 0.9 query API. We will continue to evolve and improve support for InfluxDB 0.9.</p>
+    <h3><strong>InfluxDB 0.9 Support</strong></h3>
+    <p>
+      Grafana 2.1 now comes with full support for InfluxDB 0.9. There is a much improved query editor designed for the
+      new features InfluxDB 0.9 enables.
+    </p>
   </div>
   <div class="large-8 columns">
     <img class="no-shadow" src="/assets/img/blog/influx-query.gif" style="margin-top:10px;"/>
@@ -122,8 +117,8 @@ New authentication methods add numerous options to manage users, roles and organ
 </div>
 
 ### **New Data Source: KairosDB**
-
-Experimental support for the KairosDB is now shipping in Grafana. Big THANKS! Go to <a href="https://github.com/masaori335" target="_blank">Masaori Koshiba</a> and <a href="https://github.com/espenfjo" target="_blank">Espen Fjellvær Olsen</a> for their hard work in making this happen. 
+Cassandra backed time series database KairosDB is now supported in Grafana out of the box. Thank you to
+<a href="https://github.com/masaori335" target="_blank">masaori335</a> for their hard work in getting it to this point.
 
 - - -
 <br/>
@@ -152,11 +147,25 @@ Grafana 2.1 gives you even more flexibility customizing how individual panels re
     <p>New series style override, negative-y transform and stack groups.</p>
   </div>
 </div>
+
+
 <br/>
 
-- - -
+<div class="row" style="margin-bottom:20px;">
+  <div class="large-8 columns">
+  <h3><strong>String Values in Singlestat Panels</strong></h3>
+  <p>Now support string values - read more about <a href="http://docs.grafana.org/reference/singlestat/">Singlestat Panels</a></p>
+  </div>
+</div>
 
-### <a href="http://grafana.org/download">Download Grafana 2.1 now</a>
+
+- - -
+<br/>
+
+## Even More Features and Enhancements
+We've only skimmed the surface with the features listed above. To see everyting that's been added to Grafana 2.1 head over to the <a href="https://github.com/grafana/grafana/issues?page=4&q=milestone%3A2.1+is%3Aclosed" target="_blank">issues section</a>.
+
+### <a href="http://localhost:4567/download">Download Grafana 2.1 now</a>
 
 - - -
 <br/>
@@ -179,4 +188,5 @@ Grafana 2.1 gives you even more flexibility customizing how individual panels re
     </row>
   </form>
 </section>
+
 
