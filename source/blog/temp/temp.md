@@ -19,166 +19,108 @@ We're excited about this release, and want to share some of the highlights:
 - - -
 
 ## More Dynamic Dashboards
-<p>
 The Templating system is one of the most powerful and well-used features of Grafana.
-The 2.1 release takes Templating to a whole new level, making Dashboards more dynamic than ever before.</p>
+The 2.1 release brings numerous improvements that make dashboards more dynamic than ever before.
 
-<div class="row" style="margin-bottom:20px;">
-  <div class="large-8 columns">
-    <img class="no-shadow" src="/assets/img/blog/multi-select.gif" />
-  </div>
-  <div class="large-4 columns">
-  <h3><strong>Multi-Value Template Variables</strong></h3>
-  <p>
-    A template variable with Multi-Value enabled allows for the selection of multiple values selected at the
-    same time. These variables can then be used in any Panel to make them more dynamic, and to give you the perfect view of
-    your data. Multi-Value variables is also enabling the new Row repeat and Panel repeat feature described below.</p>
-  </div>
-</div>
+### Multi-Value Template Variables
+A template variable with Multi-Value enabled allows for the selection of multiple values selected at the
+same time. These variables can then be used in any Panel to make them more dynamic, and to give you the perfect view of
+your data. Multi-Value variables is also enabling the new Row repeat and Panel repeat feature described below.
 
+![Multi-Value Select](/assets/img/blog/multi-select.gif "Multi-Value Select")
+<br/><br/>
 
-<div class="row" style="margin-bottom:20px;">
-  <div class="large-8 columns">
-    <img class="no-shadow" src="/assets/img/blog/panel-row-repeat.gif" />
-  </div>
-  <div class="large-4 columns">
-  <h3><strong>Repeating Rows and Panels</strong></h3>
-  <p>
-    It’s now possible to create a Dashboard that automatically adds (or removes) both Rows and Panels based
-    on selected variable values. Any row or any panel can be configured to repeat (duplicate itself) based
-    on a multi-value template variable.</p>
-  </div>
-</div>
+### Repeating Rows and Panels
+It’s now possible to create a Dashboard that automatically adds (or removes) both Rows and Panels based
+on selected variable values. Any row or any panel can be configured to repeat (duplicate itself) based
+on a multi-value template variable.</p>
 
+![Repeating Rows and Panels](/assets/img/blog/panel-row-repeat.gif "Repeating Rows and Panels")
+<br/><br/>
 
-<div class="row" style="margin-bottom:20px;">
-  <div class="large-8 columns">
-    <img class="no-shadow" src="/assets/img/blog/panel-link.png" /><br/><br/>
-    <img class="no-shadow" src="/assets/img/blog/dashboard_nav.png" />
-  </div>
-  <div class="large-4 columns">
-  <h4><strong>Dashboard Links and Navigation</strong></h3>
-  <p>To support better navigation between Dashboarads, it's now possible to create custom and dynamic links from individual Panels to appropriate Dashboards.</p>
-  <p>You also have the ability to create flexible top-level links on any given Dashboard thanks to the new Dashboard navigation bar feature.</p>
-  </div>
-</div>
-<br/>
+### Dashboard Links & Navigation
+To support better navigation between Dashboarads, it's now possible to create custom and dynamic links from individual
+Panels to appropriate Dashboards. You also have the ability to create flexible top-level links on any
+given Dashboard thanks to the new Dashboard navigation bar feature.
 
-<div class="row" style="margin-bottom:20px;">
-  <div class="large-8 columns">
-    <h3><strong>Better Local Dashboard Support</strong></h3>
-    <p>
-      Grafana can now index Dashboards saved locally as JSON from a given directory.
-      These dashboards will now show up alongside Dashboards that are stored in the database.
-    </p>
-  </div>
-  <div class="large-4 columns">
-    <blockquote><strong>Note:</strong> Saving local dashboards back to the folder is not supported; this feature is meant for statically generated JSON dashboards.</blockquote>
-  </div>
-</div>
+![Dashboard Links](/assets/img/blog/panel-link.png "Dashboard Links")
+<br/><br/>
+
+### Better local Dashboard support
+Grafana can now index Dashboards saved locally as JSON from a given directory.
+
+> ***Note:*** Saving local dashboards back the folder is not supported; this feature is meant for statically generated JSON dashboards.
 
 - - -
-<br/>
 
 ## New Authentication Options
 New authentication methods add numerous options to manage users, roles and organizations.
 Grafana 2.1 also includes a "Read-only Editor" role.
 
-<h3><strong>LDAP Support</strong></h3>
-<p>
-  This highly requested feature now allows your Grafana instance to authenticate against your existing
-  LDAP-compatible directory servers. You can also specify mappings between LDAP group memberships
-  and Grafana Organization user roles.
-</p>
+### LDAP support
+This highly requested feature now allows your Grafana users to login with their LDAP credentials.
+You can also specify mappings between LDAP group memberships and Grafana Organization user roles.
 
-<h3><strong>Basic Authentication Support</strong></h3>
-<p>
-  You can now authenticate against the Grafana API utilizing a simple username and password
-  with basic HTTP authentication. This can be useful for provisioning and config management
-  systems that need to utilize the API without having to create an API key first.
-</p>
+### Basic Auth Support
+You can now authenticate against the Grafana API utilizing a simple username and password with basic HTTP authentication.
+
+> ***Note:*** This can be useful for provisioning and config management systems that need
+> to utilize the API without having to create an API key.
 
 
-<h3><strong>Auth Proxy support</strong></h3>
-<p>You can now authenticate utilizing a header (eg. X-Authenticated-User, or X-WEBAUTH-USER). This can be useful
-in situations where Grafana is deployed behind a reverse proxy server.</p>
+### Auth Proxy Support
+You can now authenticate utilizing a header (eg. X-Authenticated-User, or X-WEBAUTH-USER)
 
-<div class="row" style="margin-bottom:20px;">
-  <div class="large-8 columns">
-    <h3><strong>New “Read-only Editor” User Role</strong></h3>
-    <p>There is a new User role available in this version of Grafana: “Read-only Editor”. This role behaves just like the Viewer role does in Grafana 2.0. That is, you can edit graphs and queries but not save dashboards. The Viewer role has been modified in Grafana 2.1 so that users assigned this role can no longer edit panels.</p>
-  </div>
-</div>
+> ***Note:*** this can be useful in situations with reverse proxies.
+
+
+### New “Read-only Editor” User Role
+There is a new User role available in this version of Grafana: “Read-only Editor”. This role behaves just
+like the Viewer role does in Grafana 2.0.  That is you can edit graphs and queries but no save dashboards.
+The Viewer role has been modified in Grafana 2.1 so that users assigned this role can no longer edit panels.
 
 - - -
-<br/>
 
-## Improved Data Source Support
+## Data source Improvements
 
-<div class="row" style="margin-bottom:20px;">
-  <div class="large-4 columns">
+### InfluxDB 0.9 Support
+Grafana 2.1 now comes with full support for InfluxDB 0.9. There is a new query editor designed from the start
+for the new features InfluxDB 0.9 enables.
 
-    <h3><strong>InfluxDB 0.9 Support</strong></h3>
-    <p>
-      Grafana 2.1 now comes with full support for InfluxDB 0.9. There is a much improved query editor designed from the start
-      for the new features InfluxDB 0.9 enables.
-    </p>
-  </div>
-  <div class="large-8 columns">
-    <img class="no-shadow" src="/assets/img/blog/influx-query.gif" style="margin-top:10px;"/>
-  </div>
-</div>
+![InfluxDB Support](/assets/img/blog/influx-query.gif "InfluxDB Support")
+<br/><br/>
 
 
-<div class="row" style="margin-bottom:20px;">
-  <div class="large-8 columns">
-    <h3><strong>OpenTSDB Data Source Improvements</strong></h3>
-    <p>
-      Grafana OpenTSDB data source now supports template variable values queries. This means you can create
-      template variables that fetches the values from OpenTSDB (for example metric names, tag names, or tag values).
-      The query editor is also enhanced to limiting tags by metric.
-    </p>
-  </div>
-  <div class="large-4 columns">
-    <blockquote><strong>Note:</strong> OpenTSDB config option <code>tsd.core.meta.enable_realtime_ts</code> must enabled for OpenTSDB lookup api).</blockquote>
-  </div>
-</div>
+### OpenTSDB Data Source improvements
+Grafana OpenTSDB data source now supports template variable values queries. This means you can create
+template variables that fetches the values from OpenTSDB (for example metric names, tag names, or tag values).
+The query editor is also enhanced to limiting tags by metric.
 
-### **New Data Source: KairosDB**
+> ***Note:*** OpenTSDB config option tsd.core.meta.enable_realtime_ts must enabled for OpenTSDB lookup api)
 
+### New Data Source: KairosDB
 The Cassandra backed time series database KairosDB is now supported in Grafana out of the box. Thank you to
 <a href="https://github.com/masaori335" target="_blank">masaori335</a> for his hard work in getting it to this point.
 
 - - -
-<br/>
 
 ## Panel Improvements
-Grafana 2.1 gives you even more flexibility customizing how individual panels render. Overriding the colors of specific series using regular expressions, changing how series stack, and allowing string values will help you better understand your data at a glance.
 
-<div class="row" style="margin-bottom:20px;">
-  <div class="large-8 columns">
-    <img class="no-shadow" src="/assets/img/blog/regex_color.gif" />
-  </div>
-<div class="large-4 columns">
-  <h3><strong>Graph Panel</strong></h3>
-    <p>Keeping large numbers of metrics in a dashboard visually organized can be confusing. In Grafana 2.1, you can now define series color using regex and variables.</p>
-  </div>
-</div>
+Grafana 2.1 gives you even more flexibility customizing how individual panels render.
+Overriding the colors of specific series using regular expressions, changing how series stack,
+and allowing string values will help you better understand your data at a glance.
 
+### Graph Panel
+Define series color using regex rule
+![Define series color using regex rule  ](/assets/img/blog/regex_color.gif "Define series color using regex rule  ")
 
-<div class="row" style="margin-bottom:20px;">
-  <div class="large-8 columns">
-    <img class="no-shadow" src="/assets/img/blog/negative-y.png" /><br/><br/>
-    <img class="no-shadow" src="/assets/img/blog/negative-y-form.png" />
-  </div>
-<div class="large-4 columns">
-  <h3><strong>Series Style Override</strong></h3>
-    <p>New series style override, negative-y transform and stack groups.</p>
-  </div>
-</div>
-<br/>
+New series style override, negative-y transform and stack groups
+![Negative-y Transform](/assets/img/blog/negative-y.png "Negative-y Transform")
 
-- - -
+![Negative-y Transform](/assets/img/blog/negative-y-form.png "Negative-y Transform")
+
+### Singlestat Panel
+Now support string values - read more about [Singlestat Panels](../reference/singlestat.md)- - -
 
 ### <a href="http://grafana.org/download">Download Grafana 2.1 now</a>
 
