@@ -9,8 +9,7 @@ published_on: July 20, 2015
 We've been working to implement many of the features you've requested since the release of 2.0, and are
 excited to announce the release of Grafana 2.1 today. We recommend that all Grafana users upgrade to this release.
 Grafana 2.1 brings improvements in three core areas: dashboarding, authentication, and data sources.
-As with every Grafana release, there is a whole slew of new features, enhancements, and bug fixes. To see everyting
-that's been added to Grafana 2.1 head over to the <a href="https://github.com/grafana/grafana/issues?page=4&q=milestone%3A2.1+is%3Aclosed" target="_blank">2.1 milestone issues section</a>.
+As with every Grafana release, there is a whole slew of new features, enhancements, and bug fixes.
 
 <a href="http://grafana.org/download/" target="_blank">Download Grafana 2.1 now</a>
 
@@ -133,6 +132,10 @@ the values shown in the hover tooltip.
 ### Singlestat Panel
 Now support string values. Useful for time series database like InfluxDB that supports
 string values.
+
+### Changelog
+For a detailed list and link to github issues for everything included in the 2.1 release please
+view the [CHANGELOG.md]("https://github.com/grafana/grafana/blob/master/CHANGELOG.md") file.
 
 - - -
 
