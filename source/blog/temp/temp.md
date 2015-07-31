@@ -95,7 +95,7 @@ for the new features InfluxDB 0.9 enables.
 
 <br/>
 
-### OpenTSDB Data Source improvements
+### OpenTSDB Improvements
 Grafana OpenTSDB data source now supports template variable values queries. This means you can create
 template variables that fetches the values from OpenTSDB (for example metric names, tag names, or tag values).
 The query editor is also enhanced to limiting tags by metric.
