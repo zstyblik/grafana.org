@@ -1,7 +1,7 @@
 ---
 title: Grafana 2.1 Released
 author: Torkel Ödegaard
-published_on: July 20, 2015
+published_on: August 4, 2015
 ---
 
 <img class="no-shadow" src="/assets/img/blog/new-in-grafana-v2-1.png" alt="what's new in Grafana 2.1"/>
@@ -140,6 +140,7 @@ view the [CHANGELOG.md]("https://github.com/grafana/grafana/blob/master/CHANGELO
 - - -
 
 ### <a href="http://grafana.org/download">Download Grafana 2.1 now</a>
+### <a href="http://play.grafana.org/dashboard/db/new-features-in-v2-1">Demo dashboard for Grafana 2.1 features</a>
 
 - - -
 <br/>

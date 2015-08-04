@@ -42,6 +42,55 @@ title: Download
     p
      | Looking for the latest builds of master / vNext? You find them on the &nbsp;
      a href="/download/builds.html" Builds Page.
+.row
+
+  .columns.medium-12
+    h2 2.1.0 (2015-08-04)
+  .columns.medium-12
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana_2.1.0_amd64.deb" data-download-button="2.0.2.deb"
+      i.fa.fa-download
+      |  DEB (Ubuntu / Debian 64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana-2.1.0-1.x86_64.rpm" data-download-button="2.0.2.rpm"
+      i.fa.fa-download
+      |  RPM (Fedora / RHEL  64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana-2.1.0.linux-x64.tar.gz" data-download-button="2.0.2.linux.tar"
+      i.fa.fa-download
+      |  Binary TAR (Linux 64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-2.1.0.windows-x64.zip" data-download-button="2.0.2.windows.zip"
+      i.fa.fa-download
+      |  Binary ZIP (Windows 64bit)
+
+.row
+  .columns.large-12.markdown
+    markdown:
+      This upgrade brings many new authentication options, full support for InfluxDB 0.9, more dynamic dashboards via repeated
+      panels and much much more.
+      <br>
+      <br>
+
+      Links:
+
+      - [What's New in Grafana 2.1](http://docs.grafana.org/v2.1/guides/whats-new-in-v2-1)
+      - [Installation guide](http://docs.grafana.org/v2.1/installation/)
+      - [Migrating from 1.x to 2.x](http://docs.grafana.org/v2.1/installation/migrating_to2/)
+      - [Changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+
+      **Breaking changes**
+
+      - User role 'Viewer' are now prohibited from entering edit mode (and doing other transient dashboard edits). A new role `Read Only Editor` will replace the old Viewer behavior. [Issue #1826](https://github.com/grafana/grafana/issues/1826).
+      - Datasource HTTP api breaking change, ADD datasource is now POST /api/datasources/, update is now PUT /api/datasources/:id
+      <br>
+
+      If your platform is not supported by the above download packages, check the [Building from source](http://docs.grafana.org/v2.0/project/building_from_source/) guide.
+      <br>
+      <br>
+  hr
+
+= partial "layouts/_newsletter"
+
 
 .row
 
@@ -82,9 +131,6 @@ title: Download
 
       If your platform is not supported by the above download packages, check the [Building from source](http://docs.grafana.org/v2.0/project/building_from_source/) guide.
       <br><br>
-  hr
-
-= partial "layouts/_newsletter"
 
 .row
   .columns.medium-12
