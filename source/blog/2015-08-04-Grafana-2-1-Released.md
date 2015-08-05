@@ -104,7 +104,8 @@ The query editor is also enhanced to limiting tags by metric.
 
 ### New Data Source: KairosDB
 The Cassandra backed time series database KairosDB is now supported in Grafana out of the box. Thank you to
-<a href="https://github.com/masaori335" target="_blank">masaori335</a> for his hard work in getting it to this point.
+<a href="https://github.com/masaori335" target="_blank">masaori335</a> for his hard work in getting it to this point. Also thanks
+to [Remi Dettai](https://github.com/rdettai) for the initial implementation of the KairosDB data source plugin.
 
 - - -
 
