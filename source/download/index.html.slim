@@ -42,6 +42,58 @@ title: Download
     p
      | Looking for the latest builds of master / vNext? You find them on the &nbsp;
      a href="/download/builds.html" Builds Page.
+
+.row
+
+  .columns.medium-12
+    h2 2.1.1 (2015-08-11)
+  .columns.medium-12
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana_2.1.1_amd64.deb" data-download-button="2.1.1.deb"
+      i.fa.fa-download
+      |  DEB (Ubuntu / Debian 64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana-2.1.1-1.x86_64.rpm" data-download-button="2.1.1.rpm"
+      i.fa.fa-download
+      |  RPM (Fedora / RHEL  64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/builds/grafana-2.1.1.linux-x64.tar.gz" data-download-button="2.1.1.linux.tar"
+      i.fa.fa-download
+      |  Binary TAR (Linux 64bit)
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    a.button.success.small href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-2.1.1.windows-x64.zip" data-download-button="2.1.1.windows.zip"
+      i.fa.fa-download
+      |  Binary ZIP (Windows 64bit)
+
+.row
+  .columns.large-12.markdown
+    markdown:
+      Patch release for 2.1 that fixes some minor bugs and adds some minor enhancement. <br><br>
+
+      - [What's New in Grafana 2.1](http://docs.grafana.org/v2.1/guides/whats-new-in-v2-1)
+      - [Installation guide](http://docs.grafana.org/v2.1/installation/)
+      - [Migrating from 1.x to 2.x](http://docs.grafana.org/v2.1/installation/migrating_to2/)
+      - [Changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+
+      **Enhancements**
+
+      - [Issue #2477](https://github.com/grafana/grafana/issues/2477). InfluxDB(0.9): Added more condition operators (`<`, `>`, `<>`, `!~`), thx @thuck
+      - [Issue #2483](https://github.com/grafana/grafana/issues/2484). InfluxDB(0.9): Use $col as option in alias patterns, thx @thuck
+
+      **Fixes**
+
+      - [Issue #2443](https://github.com/grafana/grafana/issues/2443). Templating: Fix for buggy repeat row behavior when combined with with repeat panel due to recent change before 2.1 release
+      - [Issue #2442](https://github.com/grafana/grafana/issues/2442). Templating: Fix text panel when using template variables in text in in repeated panel
+      - [Issue #2446](https://github.com/grafana/grafana/issues/2446). InfluxDB: Fix for using template vars inside alias field (InfluxDB 0.9)
+      - [Issue #2460](https://github.com/grafana/grafana/issues/2460). SinglestatPanel: Fix to handle series with no data points
+      - [Issue #2461](https://github.com/grafana/grafana/issues/2461). LDAP: Fix for ldap users with empty email address
+      - [Issue #2484](https://github.com/grafana/grafana/issues/2484). Graphite: Fix bug when using series ref (#A-Z) and referenced series is hidden in query editor.
+      - [Issue #1896](https://github.com/grafana/grafana/issues/1896). Postgres: Dashboard search is now case insensitive when using Postgres
+
+  hr
+
+= partial "layouts/_newsletter"
+
+
 .row
 
   .columns.medium-12
