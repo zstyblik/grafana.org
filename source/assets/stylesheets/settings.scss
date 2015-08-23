@@ -29,7 +29,9 @@ $h6-font-size: 1rem;
 // @pink:                  #FF4444;
 // @purple:                #9933CC;
 
-$topbar-bg: #111;
+$grafana-top-nav-bg: rgba(0, 0, 0, 0.4);
+$topbar-bg: transparent;
+$topbar-dropdown-bg: transparent;
 
 $topbar-height: 80px;
 
