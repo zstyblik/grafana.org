@@ -2,41 +2,52 @@ header
   .row
     .large-12.columns
       .hero-radial
-        h1 Grafana is the leading open source graph and <br> dashboard composer for visualizing time series metrics
+        h1 Grafana is the leading open source graph and <br> dashboard composer for visualizing time series metrics.
         br
         = partial "layouts/github_stars"
+        br
+        h1 6400+ Github stars can't be wrong.
+        br
+        .button-wrapper
+          a.button.large-button href="/download" Download the Latest Version
+
 
 .sponsor-wrapper
-  .sponsor-header
-    .row.text-center
-    .row
-      .medium-2.columns
-        h3 Sponsors
-      .medium-8.columns.end.text-center
-        a.squarespace href="http://www.squarespace.com" target="_blank"
-          img src="/assets/img/sponsors/squarespace.png"
-        a.dreamhost href="http://www.dreamhost.com" target="_blank"
-          img src="/assets/img/sponsors/dreamhost.png"
-        a.demonware href="http://www.demonware.net" target="_blank"
-          img src="/assets/img/sponsors/demonware.png"
-        a.mediamath href="https://developer.mediamath.com/OpenSource" target="_blank"
-          img src="/assets/img/sponsors/mediamath.png"
-
-.used-by
   .row
-    .medium-2.columns
-      h3 Used by
-    .medium-8.columns.used-by-images.end
-      img src="/assets/img/sponsors/opentable.png" width="90"
-      img src="/assets/img/sponsors/vimeo.png" width="75"
-      img src="/assets/img/sponsors/netvibes.png" width="110"
-      img src="/assets/img/sponsors/netapp.png" width="110"
-      img src="/assets/img/sponsors/sensio_labs.png" width="48"
-      img src="/assets/img/sponsors/nsone.png" width="110"
-      img src="/assets/img/sponsors/virtual_instruments.png" width="100"
-      img src="/assets/img/sponsors/rackspace_logo.png" width="110"
-      img src="/assets/img/sponsors/ted.png" width="60"
+    .medium-12.columns.end.text-center
+      h3 Proudly Sponsored By:
+      a.squarespace href="http://www.squarespace.com" target="_blank"
+        img src="/assets/img/sponsors/logo_squarespace.gif"
+      a.dreamhost href="http://www.dreamhost.com" target="_blank"
+        img src="/assets/img/sponsors/logo_dreamhost.gif"
+      a.demonware href="http://www.demonware.net" target="_blank"
+        img src="/assets/img/sponsors/logo_demonware.gif"
+      a.mediamath href="https://developer.mediamath.com/OpenSource" target="_blank"
+        img src="/assets/img/sponsors/logo_mediamath.gif"
+
+
+.main-content
+  .row
+    .medium-12.columns
+      h1.special.text-center Grafana provides a powerful and elegant way to create, explore, and share dashboards and data with your team and the world.
+      br
+      p Grafana is most commonly used for visualizing time series data for <strong>Internet infrastructure</strong> and <strong>application analytics</strong> but many use it in other domains including <strong>industrial sensors</strong>, <strong>home automation</strong>, <srong>weather</strong>, and <strong>process control</strong>.
+
+      p Grafana features pluggable panels and data sources allowing easy extensibility and a variety of panels, including fully featured graph panels with rich visualization options. There is currently support for <a href="#">Graphite</a>, <a href="#">InfluxDB</a>, <a href="#">OpenTSDB</a> and <a href="#">KairosDB</a>, and support for <a href="#">SQL</a> is on the roadmap.
+      br
+
+
+.row
+  .medium-12.columns.end.text-center
+    .used-by
+      h3 Thousands visualize their data with Grafana, including:
+
+      img src="/assets/img/sponsors/logo_rackspace.gif"
+      img src="/assets/img/sponsors/logo_bbcnews.gif"
+      img src="/assets/img/sponsors/logo_ted.gif"
+      img src="/assets/img/sponsors/logo_opentable.gif"
+      img src="/assets/img/sponsors/logo_nsone.gif"
+      img src="/assets/img/sponsors/logo_vimeo.gif"
 
 //= partial "layouts/_tweets"
-
-= partial "features/_features"
+//= partial "features/_features"

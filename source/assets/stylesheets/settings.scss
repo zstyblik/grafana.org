@@ -29,7 +29,7 @@ $h6-font-size: 1rem;
 // @pink:                  #FF4444;
 // @purple:                #9933CC;
 
-$grafana-top-nav-bg: rgba(0, 0, 0, 0.4);
+$grafana-top-nav-bg: rgba(0, 0, 0, 0.6);
 $topbar-bg: transparent;
 $topbar-dropdown-bg: transparent;
 
@@ -54,5 +54,3 @@ $topbar-button-font-size: 1.75rem;
 
 $topbar-breakpoint: 51; // Change to 9999px for always mobile layout
 $topbar-media-query: "only screen and (min-width: 53em)";
-
-
