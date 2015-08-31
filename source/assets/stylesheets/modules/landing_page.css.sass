@@ -1,11 +1,17 @@
 @import "settings"
 
+
 header
   background: $dark-hero-bg
   background-image: url('/assets/img/v2/home_hero_bg.jpg')
-  min-height: 35rem
+  min-height: 41rem
   background-position: center 35%
   background-size: cover
+  @media (min-width: 670px) // hide mask on mobile
+    -webkit-mask: url(/assets/img/hero_mask.svg) no-repeat bottom
+    mask: url(/assets/img/hero_mask.svg) no-repeat 50% 50%
+    -webkit-mask-size: cover
+    mask-size: cover
 
   .hero-radial
     padding: 7rem 0 2.5rem
@@ -26,12 +32,9 @@ header
     font-weight: 100
 
 .sponsor-wrapper
-  // border-top: 1px solid black
-  // border-bottom: 1px solid black
-  // box-shadow: 0px 2px 3px #111
-  // position: relative
-  // z-index: 100
   margin-bottom: 40px
+  @media (min-width: 670px) // since mask is hidden at this breakpoint - nudge the logos back down
+    margin-top: -100px
 
   h3
     color: #161616
