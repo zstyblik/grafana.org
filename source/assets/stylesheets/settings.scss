@@ -11,6 +11,7 @@ $row-width: rem-calc(1148);
 $dark-hero-bg: #1f1f1f;
 $features-banner-bg: #0099CC;
 
+
 $h1-font-size: rem-calc(32);
 $h2-font-size: rem-calc(25);
 $h3-font-size: rem-calc(20);
@@ -18,18 +19,18 @@ $h4-font-size: rem-calc(17);
 $h5-font-size: rem-calc(15);
 $h6-font-size: 1rem;
 
-//$primary-color: #0099CC;
-//$primary-color: #0099CC;
-// @blue:                  #33B5E5;
-// @blueDark:              #0099CC;
-// @green:                 #669900;
-// @red:                   #CC0000;
-// @yellow:                #ECBB13;
-// @orange:                #FF8800;
-// @pink:                  #FF4444;
-// @purple:                #9933CC;
+$tertiary-color: gray;
+$primary-color: #008CBA;
+$secondary-color: #e7e7e7;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
 
-$topbar-bg: #111;
+$grafana-top-nav-bg: rgba(0, 0, 0, 0.6);
+$topbar-bg: transparent;
+$topbar-dropdown-bg: transparent;
+$topbar-dropdown-bg: transparent;
 
 $topbar-height: 80px;
 
@@ -52,5 +53,3 @@ $topbar-button-font-size: 1.75rem;
 
 $topbar-breakpoint: 51; // Change to 9999px for always mobile layout
 $topbar-media-query: "only screen and (min-width: 53em)";
-
-
