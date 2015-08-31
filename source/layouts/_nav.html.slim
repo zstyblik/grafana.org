@@ -5,7 +5,7 @@ section.nav
       ul.title-area
         li.name
           a href="/"
-            img src="/assets/img/logo_transparent_200x75.png" class="no-shadow" width="150px"
+            img src="/assets/img/logo_new_transparent_200x46.png" class="no-shadow" width="150px"
         li.toggle-topbar.menu-icon
           a href="#"
             span
@@ -16,7 +16,8 @@ section.nav
           li= link_to "Docs", "http://docs.grafana.org"
           li= link_to "Community", "/community/"
           li= link_to "Blog", "/blog/"
-          li= link_to "Live demo", "http://play.grafana.org", target: :blank
+          li.has-form
+            a.button#top-bar-demo-button href="http://play.grafana.org" target="_blank" Live Demo
           li
             <a href="https://github.com/grafana/grafana" target="_blank" title="Go to github repository">
               <i class="fa fa-fw fa-github"></i>
