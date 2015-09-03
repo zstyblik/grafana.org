@@ -3,15 +3,16 @@
 
 header
   background: $dark-hero-bg
-  background-image: url('/assets/img/v2/home_hero_bg.jpg')
-  min-height: 41rem
-  background-position: center 35%
-  background-size: cover
   @media (min-width: 670px) // hide mask on mobile
-    -webkit-mask: url(/assets/img/hero_mask.svg) no-repeat bottom
-    mask: url(/assets/img/hero_mask.svg) no-repeat 50% 50%
+    -webkit-mask: url(/assets/img/v2/hero_mask.svg) no-repeat bottom
+    mask: url(/assets/img/v2/hero_mask.svg) no-repeat 50% 50%
     -webkit-mask-size: cover
     mask-size: cover
+    min-height: 43rem
+  background-image: url(/assets/img/v2/home_hero_bg.jpg)
+  background-position: center 35%
+  background-repeat: no-repeat
+  background-size: cover
 
   .hero-radial
     padding: 7rem 0 2.5rem
@@ -34,7 +35,7 @@ header
 .sponsor-wrapper
   margin-bottom: 40px
   @media (min-width: 670px) // since mask is hidden at this breakpoint - nudge the logos back down
-    margin-top: -100px
+    margin-top: -110px
 
   h3
     color: #161616

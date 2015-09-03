@@ -104,23 +104,44 @@ section.nav
   padding-right: 0.5rem
 
 
+.testMe 
+  background-image: url(/assets/img/v2/testimonial_mask_top.svg)
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
 
 .testimonial-wrapper
-  background-size: cover
-  background-position: 0 50%
-  background-repeat: no-repeat
-  min-height: 300px
 
   &.red
-    background-image: url(/assets/img/testimonial_bg_red.jpg)
+    background-image: url(/assets/img/v2/testimonial_bg_red.jpg)
+    background-size: cover
+    background-position: 0 50%
+    background-repeat: no-repeat
+    min-height: 300px
   &.teal
-    background-image: url(/assets/img/testimonial_bg_teal.jpg)
+    background-image: url(/assets/img/v2/testimonial_bg_teal.jpg)
+    background-size: cover
+    background-position: 0 50%
+    background-repeat: no-repeat
+    min-height: 300px
   &.rt-blue
-    background-image: url(/assets/img/testimonial_bg_rt_blue.jpg)
+    background-image: url(/assets/img/v2/testimonial_bg_rt_blue.jpg)
+    background-size: cover
+    background-position: 0 50%
+    background-repeat: no-repeat
+    min-height: 300px
   &.grey
-    background-image: url(/assets/img/testimonial_bg_grey.jpg)  
+    background-image: url(/assets/img/v2/testimonial_bg_grey.jpg)
+    background-size: cover
+    background-position: 0 50%
+    background-repeat: no-repeat
+    min-height: 300px  
   &.dk-grey
-    background-image: url(/assets/img/testimonial_bg_dk_grey.jpg)  
+    background-image: url(/assets/img/v2/testimonial_bg_dk_grey.jpg)
+    background-size: cover
+    background-position: 0 50%
+    background-repeat: no-repeat
+    min-height: 300px  
 
 
   .testimonial
@@ -128,7 +149,7 @@ section.nav
     margin: 0 auto
     width: auto
     @media (min-width: 600px) // hide quote element on mobile
-      background-image: url(/assets/img/left_quote.png), url(/assets/img/right_quote.png)
+      background-image: url(/assets/img/v2/left_quote.png), url(/assets/img/v2/right_quote.png)
       background-repeat: no-repeat
       background-size: 140px
       background-position: 0 -25px, 100% 107%
@@ -151,19 +172,37 @@ section.nav
   .testimonial:after
     content: ""
     @media (min-width: 600px)
-      background: url(/assets/img/right_quote.png) repeat
+      background: url(/assets/img/v2/right_quote.png) repeat
       background-size: 140px
       background-position: right 
 
 
-.feature-header
-  padding: 0.7rem
-  background: $features-banner-bg
-  background-image: url(/assets/img/graph_trans_bg2.png)
-  background-position: 0 50%
-  h3
+.feature-header, .community-header
+  background: $dark-hero-bg
+  @media (min-width: 670px) // hide mask on mobile
+    -webkit-mask: url(/assets/img/v2/hero_mask.svg) no-repeat bottom
+    mask: url(/assets/img/hero_mask.svg) no-repeat 50% 50%
+    -webkit-mask-size: cover
+    mask-size: cover
+    height: 12rem
+  @media (min-width: 900px) // hide mask on mobile
+    height: 15rem
+  @media (min-width: 1200px) // hide mask on mobile
+    height: 16rem
+
+  background-image: url(/assets/img/v2/interior_header_bg.jpg)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  //padding: 0.7rem
+  //background: $features-banner-bg
+  //background-image: url(/assets/img/graph_trans_bg2.png)
+  //background-position: 0 50%
+  h2
+    margin-top: 100px
+    margin-bottom: 20px
     color: #f1f1f1
-    font-size: 1.6rem
+    font-size: 2.0rem
 
 section.features
   .feature-highlight
@@ -227,7 +266,7 @@ footer
   background-color: #698395
 
 body
-  background-image: url(/assets/img/grid_bg.png)
+  background-image: url(/assets/img/v2/grid_bg.png)
   background-position: top
   background-repeat: repeat
 

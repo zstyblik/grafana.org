@@ -39,13 +39,13 @@ $topbar-link-color: #fff;
 $topbar-link-color-hover: #fff;
 $topbar-link-color-active: #fff;
 $topbar-link-color-active-hover: #fff;
-$topbar-link-weight: normal;
-$topbar-link-font-size: rem-calc(16);
+$topbar-link-weight: 500; // was normal TRW
+$topbar-link-font-size: rem-calc(14); // was 16 so that it didn't wrap at smaller screen sizes TRW
 $topbar-link-hover-lightness: 10%; // Darken by 10%
 $topbar-link-bg-hover: #333;
 $topbar-link-bg-active: transparent;
 $topbar-link-bg-active-hover: scale-color($topbar-link-bg-hover, $lightness: 10%);
-$topbar-link-padding: 18px;
+$topbar-link-padding: 15px; // was 18 so that it didn't wrap at smaller screen sizes TRW
 
 
 // $topbar-link-font-family: $body-font-family;
