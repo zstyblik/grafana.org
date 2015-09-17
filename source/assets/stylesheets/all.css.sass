@@ -181,6 +181,7 @@ section.nav
   position: relative
   z-index: 2
   background: $dark-hero-bg
+  overflow: visible
   @media (min-width: 900px) // hide mask on mobile
     height: 15rem
     margin-bottom: 50px
@@ -214,21 +215,20 @@ section.nav
 
   &:before,
   &:after
+    right: 0
     z-index: 1
 
   &:before
     @media (min-width: 900px)
-      right: 0
-      width: 105%
-      height: 111%
+      width: 100%
+      height: 108%
       background: #003a99
       opacity: .11
 
   &:after
     @media (min-width: 900px)
-      right: -2%
-      width: 106%
-      height: 110%
+      width: 104%
+      height: 107%
       background: #994400
       opacity: .11
 
