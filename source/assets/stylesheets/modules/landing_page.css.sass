@@ -3,16 +3,59 @@
 
 header
   background: $dark-hero-bg
-  @media (min-width: 670px) // hide mask on mobile
-    -webkit-mask: url(/assets/img/v2/hero_mask.svg) no-repeat bottom
-    mask: url(/assets/img/v2/hero_mask.svg) no-repeat 50% 50%
-    -webkit-mask-size: cover
-    mask-size: cover
-    min-height: 43rem
-  background-image: url(/assets/img/v2/home_hero_bg.jpg)
-  background-position: center 35%
-  background-repeat: no-repeat
-  background-size: cover
+  position: relative
+  overflow: visible
+  z-index: 10
+  @media (min-width: 670px)
+    margin-bottom: 80px
+
+  > .row
+    position: relative
+    z-index: 50
+
+  .header-bg,
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    @media (min-width: 670px) // hide mask on mobile
+      -webkit-mask: url(/assets/img/v2/hero_mask.svg) no-repeat bottom
+      mask: url(/assets/img/v2/hero_mask.svg) no-repeat 50% 50%
+      -webkit-mask-size: cover
+      mask-size: cover
+
+  .header-bg
+    right: 0
+    left: 0
+    height: 100%
+    background-image: url(/assets/img/v2/home_hero_bg.jpg)
+    background-position: center 35%
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: 2
+    @media (min-width: 670px) // hide mask on mobile
+      height: 130%
+
+  &:before,
+  &:after
+    right: 0
+    width: 105%
+    z-index: 1
+
+  &:before
+    @media (min-width: 670px)
+      width: 105%
+      height: 135%
+      background: #003a99
+      opacity: .11
+
+  &:after
+    @media (min-width: 670px)
+      width: 105%
+      height: 132%
+      background: #994400
+      opacity: .11
 
   .hero-radial
     padding: 7rem 0 2.5rem
@@ -34,8 +77,6 @@ header
 
 .sponsor-wrapper
   margin-bottom: 40px
-  @media (min-width: 670px) // since mask is hidden at this breakpoint - nudge the logos back down
-    margin-top: -110px
 
   h3
     color: #161616
@@ -75,7 +116,7 @@ header
   a
     font-weight: bold
 
-.special 
+.special
   color: $primary-color
   font-weight: bold
   font-size: 2rem

@@ -31,7 +31,7 @@ section.nav
   z-index: 20
   background-color: $grafana-top-nav-bg
 
-  
+
 .button-wrapper
   border-radius: $global-radius
   border: solid 1px $primary-color
@@ -56,7 +56,7 @@ section.nav
   margin-top: 1.1rem
   font-weight: normal
   border-radius: $global-radius
-  border: 1px solid $tertiary-color 
+  border: 1px solid $tertiary-color
 
 .top-bar-section
   .fa-github
@@ -104,7 +104,7 @@ section.nav
   padding-right: 0.5rem
 
 
-.testMe 
+.testMe
   background-image: url(/assets/img/v2/testimonial_mask_top.svg)
   background-position: center
   background-size: cover
@@ -135,13 +135,13 @@ section.nav
     background-size: cover
     background-position: 0 50%
     background-repeat: no-repeat
-    min-height: 300px  
+    min-height: 300px
   &.dk-grey
     background-image: url(/assets/img/v2/testimonial_bg_dk_grey.jpg)
     background-size: cover
     background-position: 0 50%
     background-repeat: no-repeat
-    min-height: 300px  
+    min-height: 300px
 
 
   .testimonial
@@ -154,7 +154,7 @@ section.nav
       background-size: 140px
       background-position: 0 -25px, 100% 107%
 
-    p 
+    p
       padding: 40px 25%
       margin: 0
       font-size: 1.6rem
@@ -174,30 +174,64 @@ section.nav
     @media (min-width: 600px)
       background: url(/assets/img/v2/right_quote.png) repeat
       background-size: 140px
-      background-position: right 
+      background-position: right
 
 
 .feature-header, .community-header
+  position: relative
+  z-index: 2
   background: $dark-hero-bg
-  @media (min-width: 670px) // hide mask on mobile
-    -webkit-mask: url(/assets/img/v2/hero_mask.svg) no-repeat bottom
-    mask: url(/assets/img/hero_mask.svg) no-repeat 50% 50%
-    -webkit-mask-size: cover
-    mask-size: cover
-    height: 12rem
+  overflow: visible
   @media (min-width: 900px) // hide mask on mobile
     height: 15rem
+    margin-bottom: 50px
+    background: transparent
   @media (min-width: 1200px) // hide mask on mobile
     height: 16rem
 
-  background-image: url(/assets/img/v2/interior_header_bg.jpg)
-  background-position: center
-  background-repeat: no-repeat
-  background-size: cover
-  //padding: 0.7rem
-  //background: $features-banner-bg
-  //background-image: url(/assets/img/graph_trans_bg2.png)
-  //background-position: 0 50%
+  > .row
+    position: relative
+    z-index: 50
+
+  .header-bg,
+  &:before,
+  &:after
+    position: absolute
+    top: 0
+    content: ''
+    @media (min-width: 900px) // hide mask on mobile
+      -webkit-mask: url(/assets/img/v2/hero_mask.svg) no-repeat bottom
+      mask: url(/assets/img/hero_mask.svg) no-repeat 50% 50%
+      -webkit-mask-size: cover
+      mask-size: cover
+
+  .header-bg
+    bottom: 0
+    width: 100%
+    background-image: url(/assets/img/v2/interior_header_bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+  &:before,
+  &:after
+    right: 0
+    z-index: 1
+
+  &:before
+    @media (min-width: 900px)
+      width: 100%
+      height: 108%
+      background: #003a99
+      opacity: .11
+
+  &:after
+    @media (min-width: 900px)
+      width: 104%
+      height: 107%
+      background: #994400
+      opacity: .11
+
   h2
     margin-top: 100px
     margin-bottom: 20px
@@ -228,7 +262,7 @@ footer
       text-shadow: 0px 0px 10px #000
       color: white
       font-weight: normal
-      margin-bottom: 20px 
+      margin-bottom: 20px
 
   .footer-social
     font-size: 0.8rem
