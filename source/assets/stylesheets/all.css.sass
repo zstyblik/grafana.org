@@ -7,7 +7,6 @@
 @import "modules/highlighting"
 @import "vendor/blueimp-gallery.min"
 
-
 html
   -webkit-font-smoothing: antialiased
 
@@ -111,6 +110,10 @@ section.nav
   background-repeat: no-repeat
 
 .testimonial-wrapper
+  -webkit-mask: url(/assets/img/v2/testimonial_mask.svg) no-repeat bottom
+  mask: url(/assets/img/v2/testimonial_mask.svg) no-repeat 50% 50%
+  -webkit-mask-size: cover
+  mask-size: cover
 
   &.red
     background-image: url(/assets/img/v2/testimonial_bg_red.jpg)
