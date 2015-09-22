@@ -13,6 +13,21 @@ html
 h1
   margin-top: 20px
 
+.alpha
+  color: $primary-color
+  font-size: 2.1rem
+  font-weight: bold
+
+.beta
+  color: $secondary-color
+  font-size: 2.0rem
+  font-weight: bold
+  margin-bottom: 40px
+
+.gamma
+  color: #222222
+  font-weight: bold
+
 pre.highlight
   font-size: 15px
   background: #F1F1F1
@@ -62,52 +77,6 @@ section.nav
     font-size: 1.7em
     position: relative
     top: 0.1em
-
-
-
-.tweets
-  background: #EEE
-  border-bottom: 1px solid #DDD
-  .row:not(:first-child)
-    .tweet
-      border-top: 1px solid white
-
-.tweet:nth-child(odd)
-  background: #F8F8F8
-
-.tweet
-  padding: 1rem
-  display: table
-  font-size: 0.8rem
-  strong a
-    font-weight: bold
-    color: black
-  a, p
-    font-size: 0.9rem
-  p
-    margin-bottom: 0.5rem
-
-.tweet:not(:last-child)
-  border-right: 1px solid white
-
-.tweet-header
-  display: table
-
-.tweet-author
-  display: table-cell
-  vertical-align: middle
-
-.tweet-image
-  display: table-cell
-  vertical-align: middle
-  padding-right: 0.5rem
-
-
-.testMe
-  background-image: url(/assets/img/v2/testimonial_mask_top.svg)
-  background-position: center
-  background-size: cover
-  background-repeat: no-repeat
 
 .testimonial-wrapper
   -webkit-mask: url(/assets/img/v2/testimonial_mask.svg) no-repeat 50% 50%
@@ -167,6 +136,7 @@ section.nav
       color: #fff
 
     p.source
+      padding-top: 0
       font-size: 1.4rem
       font-weight: bold
       font-style: normal
@@ -281,7 +251,7 @@ footer
     right: 0
     left: 0
     height: 100%
-    background-image: url(/assets/img/v2/home_hero_bg.jpg)
+    background-image: url(/assets/img/v2/home_footer_bg.jpg)
     background-position: center 35%
     background-repeat: no-repeat
     background-size: cover
@@ -458,6 +428,43 @@ body.blog
     float: left
     top: -0.4em
     font-size: 1.6em
+
+.tweets
+  background: #EEE
+  border-bottom: 1px solid #DDD
+  .row:not(:first-child)
+    .tweet
+      border-top: 1px solid white
+
+.tweet:nth-child(odd)
+  background: #F8F8F8
+
+.tweet
+  padding: 1rem
+  display: table
+  font-size: 0.8rem
+  strong a
+    font-weight: bold
+    color: black
+  a, p
+    font-size: 0.9rem
+  p
+    margin-bottom: 0.5rem
+
+.tweet:not(:last-child)
+  border-right: 1px solid white
+
+.tweet-header
+  display: table
+
+.tweet-author
+  display: table-cell
+  vertical-align: middle
+
+.tweet-image
+  display: table-cell
+  vertical-align: middle
+  padding-right: 0.5rem
 
 .markdown
   p

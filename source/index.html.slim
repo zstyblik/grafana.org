@@ -6,7 +6,7 @@ header
         br
         = partial "layouts/github_stars"
         br
-        h1 6500 Github stars can't be wrong.
+        h1 6700 Github stars can't be wrong.
         br
         .button-wrapper
           a.button.large-button href="/download" Download the Latest Version
@@ -40,12 +40,11 @@ header
   .medium-12.columns.end.text-center
     .used-by
       h3 Thousands visualize their data with Grafana, including:
-      img src="/assets/img/sponsors/logo_rackspace.gif" width="148" height="63"
-      img src="/assets/img/sponsors/logo_bbcnews.gif" width="83" height="63"
-      img src="/assets/img/sponsors/logo_ted.gif" width="86" height="63"
-      img src="/assets/img/sponsors/logo_opentable.gif" width="86" height="63"
-      img src="/assets/img/sponsors/logo_nsone.gif" width="75" height="63"
-      img src="/assets/img/sponsors/logo_vimeo.gif" width="105" height="63"
+      img src="/assets/img/sponsors/logo_rackspace.gif"
+      img src="/assets/img/sponsors/logo_ted.gif"
+      img src="/assets/img/sponsors/logo_opentable.gif"
+      img src="/assets/img/sponsors/logo_nsone.gif"
+      img src="/assets/img/sponsors/logo_vimeo.gif"
 br
 
 .row
@@ -57,16 +56,17 @@ br
 br
 
 .row
-  h2.text-center Feature Highlights
+  .medium-12.columns.end.text-center
+    h2.beta Feature Highlights
 
   .medium-3.columns.text-center
-    h3 Rich Graphing
+    h3.gamma Rich Graphing
     p Fully-interactive, editible graphs. Multiple graph types to choose from.
 
-    h3 Mixed Styling
+    h3.gamma Mixed Styling
     p Draw your graphs how you want. Mix lines, points and  bars. Mix stacked w/ isolated series
 
-    h3 Themes
+    h3.gamma Themes
     p Ships with two themes. If you dodn’t like the default dark theme, switch to a light theme.
 
 
@@ -80,13 +80,13 @@ br
     img src="/assets/img/templated_queries.jpg" width="631" height="320"
 
   .medium-3.columns.text-center
-    h3 Templated Dashboards
+    h3.gamma Templated Dashboards
     p Any metric path can be replaced with a template variable.
 
-    h3 Templated Queries
+    h3.gamma Templated Queries
     p We put variables in your variables so you can variable your variables while you variable.
 
-    h3 Repeating Panels
+    h3.gamma Repeating Panels
     p Create a dashboards that automatically adds/removes rows and panels
 br
 br
@@ -94,22 +94,22 @@ br
 .row
   .medium-3.columns.text-center
     img src="/assets/img/icn_datasource.svg" width="100"
-    h3 Data Sources
+    h3.gamma Data Sources
     p Supports Graphite, InfluxDB, OpenTSDB and KairosDB out of the box. Or use the plug-in  functionality to add your own.
 
   .medium-3.columns.text-center
     img src="/assets/img/icn_auth.svg" width="100"
-    h3 Authentication
+    h3.gamma Authentication
     p Manage users, roles and organizations. through  LDAP, Basic Auth and Auth Proxy
 
   .medium-3.columns.text-center
     img src="/assets/img/icn_annotation.svg" width="100"
-    h3 Annotations
+    h3.gamma Annotations
     p Annotate graphs with rich events from datasouces including Elasticsearch, Graphite and InfluxDB
 
   .medium-3.columns.text-center
     img src="/assets/img/icn_snapshot.svg" width="100"
-    h3 Snapshot Sharing
+    h3.gamma Snapshot Sharing
     p Create and share a fully-interactive graphs in 1-click and share with only your team or the world.
 
 .row
@@ -118,12 +118,13 @@ br
 br
 br
 
-.testimonial-wrapper.red.testMe
+.testimonial-wrapper.teal.testMe
   .row
     .medium-12.columns
       .testimonial
-        p Curabitur laoreet rhoncus pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum a nibh non fermentum. Vivamus dictum scelerisque elit, quis mattis sapien aliquet id.
-        p.source - Jullian Stranger, Lead Engineer
+        p At NSONE, Grafana enables us to drill deeply into huge volumes of real-time network and infrastructure telemetry, about hundreds of systems spanning dozens of datacenters in our global DNS & traffic management network.  We live and breathe data and rely on Grafana to bring it to life.
+
+        p.source - Kristopher Beevers, CEO, NSONE 
 
 br
 br
