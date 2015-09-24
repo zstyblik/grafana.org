@@ -1,0 +1,18 @@
+
+@mixin hallow-button($bg)
+  background-color: transparent
+  border-style: solid
+  border-width: 1px
+  color: $bg
+
+button, .button
+
+  &.hallow
+    &.secondary
+      @include hallow-button($bg:$secondary-color)
+    &.success
+      @include hallow-button($bg:$success-color)
+
+
+
+
