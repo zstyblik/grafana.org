@@ -1,5 +1,5 @@
 
-@mixin hallow-button($bg)
+@mixin hollow-button($bg)
   background-color: transparent
   border-style: solid
   border-width: 1px
@@ -7,11 +7,11 @@
 
 button, .button
 
-  &.hallow
+  &.hollow
     &.secondary
-      @include hallow-button($bg:$secondary-color)
+      @include hollow-button($bg:$secondary-color)
     &.success
-      @include hallow-button($bg:$success-color)
+      @include hollow-button($bg:$success-color)
 
 
 

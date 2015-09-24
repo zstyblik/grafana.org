@@ -12,63 +12,98 @@ main
         ' get involved in many ways for example: provide feedback, contribute features or bugfixes,
         ' improve to the documentation, answer user questions and help adoption.
 
-      .large-12.columns.community-icons.padding-top-medium
-        .row.padding-bottom-medium
-            icon.fa.fa-exclamation-circle
-            p
-              'Log issues on
-              a href="https://github.com/grafana/grafana/issues" GitHub
-              '.
+  .row
+    .large-12.columns
+      h3.gamma.curated-header Upcoming Events & Meetups
+      br
+      h3.gamma GrafanaCon NYC, Oct 15, 2015, 5:00pm
 
-        .row.padding-bottom-medium
+  .row
+      .medium-8.columns
+        .panel.radius
+          a href="http://grafanacon.org" 
+            img src="/assets/img/v2/grafanaCon-announce.png"
+      
+      .medium-4.columns
+        h4.gamma Hosted by Squarespace
+        p 28 Mercer St. New York, NY 10013
+        hr
+        p
+          a.button.radius.large.expand href="http://grafanacon.org" Seating is Limited RSVP Now
+br  
+  .row
+    .large-12.columns  
+      <p>Please <a href="mailto:contact@grafana.org">email</a> if you know about an event or meetup related to Grafana
+br
+
+
+
+
+.curated-content
+  .row
+    .medium-4.columns.community-icons
+        h3.gamma.curated-header Get in Touch
+        br
+        .padding-bottom-medium
+          icon.fa.fa-exclamation-circle
+          p
+            'Log issues on
+            a href="https://github.com/grafana/grafana/issues" GitHub
+            '.
+
+        .padding-bottom-medium
             icon.fa.fa-github
             p
               'Check out the
               a href="https://github.com/grafana/grafana" source code
               '.
 
-        .row.padding-bottom-medium
+        .padding-bottom-medium
           icon.fa.fa-comments
           p
             'Join the
             a href="https://groups.io/org/groupsio/grafana" mailing list for users and developers
             '.
 
-        .row.padding-bottom-medium
+        .padding-bottom-medium
             icon.fa.fa-twitter
             p
               'Follow
               a href="https://twitter.com/grafana" @grafana
               '  on twitter.
 
-        .row.padding-bottom-medium
+        .padding-bottom-medium
             icon.fa.fa-google-plus
             p
               'The
               a href="https://plus.google.com/communities/102494554956731787258" Grafana community
               '  on Google Plus.
 
-        .row.padding-bottom-medium
+        .padding-bottom-medium
             icon.fa.fa-facebook-square
             p
               'Like the
               a href="https://www.facebook.com/grafana" Grafana Facebook Group
               '.
 
-        .row.padding-bottom-medium
+        .padding-bottom-medium
             icon.fa.fa-comment
             p
               'Chat on freenode in #grafana.
+    .medium-4.columns
+      h3.gamma.curated-header Recent Articles
+      = partial "layouts/_articles"
 
-  .row
-    .large-8.columns
-      h3 Upcoming Events & Meetups
-      ul
-        li
-          'None at the moment
-      <p>Please <a href="mailto:contact@grafana.org">email</a> if you know about an event or meetup related to Grafana
+    .medium-4.columns
+      h3.gamma.curated-header Recent Tweets
+      = partial "layouts/_tweets-new"
 
-      h3 Past Events & Meetups & Video links
+br 
+br
+
+.row
+    .large-12.columns
+      h3.gamma.curated-header Archived Events & Meetups & Video links
       ul
         li
           'December 3rd 2014, San Francisco Metric Meetup hosted by Rackespace.
@@ -86,3 +121,4 @@ main
           'May 7th 2014, Monitorama conference in Portland
           br
           'Torkel Ödegaard presenting on Grafana, <a href="http://vimeo.com/95316672">video of the presentation</a>.
+          
