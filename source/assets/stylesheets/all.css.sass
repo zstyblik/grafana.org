@@ -26,7 +26,7 @@ h1
   margin-bottom: 40px
 
 .gamma
-  color: #222222
+  color: #444
   font-weight: bold
 
 pre.highlight
@@ -78,7 +78,7 @@ section.nav
     position: relative
     top: 0.1em
 
-.testimonial-wrapper
+.testimonial-wrapper, .callout-wrapper
   -webkit-mask: url(/assets/img/v2/testimonial_mask.svg) no-repeat 50% 50%
   mask: url(/assets/img/v2/testimonial_mask.svg) no-repeat 50% 50%
   -webkit-mask-size: cover
@@ -134,7 +134,7 @@ section.nav
       font-size: 1.6rem
       font-weight: normal
       font-style: italic
-      line-height: 1.6
+      line-height: 1.5
       color: #fff
 
 
@@ -223,6 +223,19 @@ section.nav
     color: #f1f1f1
     font-size: 2.0rem
 
+.curated-content
+  h3
+    a 
+      line-height: 1.0em
+      margin-bottom: 20px
+      display: block
+
+.curated-header
+  display: block
+  border-bottom: 3px solid $secondary-color
+  padding-bottom: 10px
+
+
 section.features
   .feature-highlight
     li, p
@@ -230,7 +243,7 @@ section.features
     h3
       font-size: 2.1rem
   img
-    box-shadow: 2px 2px 10px #666
+    // box-shadow: 2px 2px 10px #666
 
 footer
   position: relative
