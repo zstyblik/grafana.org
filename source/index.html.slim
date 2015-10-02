@@ -1,38 +1,18 @@
 header
+  .header-bg
   .row
     .large-12.columns
       .hero-radial
         h1 The leading graph and dashboard composer for visualizing time series metrics.
-        .row
-          .large-6.columns.tsdb-list
-            .tsdb
-              i.fa.fa-database
-              span Graphite
-            .tsdb
-              i.fa.fa-database
-              span Elasticsearch
-            .tsdb
-              i.fa.fa-database
-              span Cloudwatch
-          .large-6.columns.tsdb-list
-            .tsdb
-              i.fa.fa-database
-              span Prometheus
-            .tsdb
-              i.fa.fa-database
-              span InfluxDB
-            .tsdb & More..
-        /br
-        /= partial "layouts/github_stars"
-        /br
-        /h1 6700 Github stars can't be wrong.
-        /br
+
+        = partial "layouts/github_stars"
+        br
+
         .button-wrapper
           a.button.large-button href="/download"
             span Download
             span.button-version
               | &nbsp;(Latest v2.1.3)
-  .header-bg
 
 .sponsor-wrapper
   .row
@@ -47,6 +27,7 @@ header
       a.mediamath href="https://developer.mediamath.com/OpenSource" target="_blank"
         img src="/assets/img/sponsors/logo_mediamath.gif" width="80" height="52"
 
+
 .intro
   .row
     .medium-12.columns
@@ -54,9 +35,9 @@ header
       br
       p Grafana is most commonly used for visualizing time series data for <strong>Internet infrastructure</strong> and <strong>application analytics</strong> but many use it in other domains including <strong>industrial sensors</strong>, <strong>home automation</strong>, <srong>weather</strong>, and <strong>process control</strong>.
 
-      p Grafana features pluggable panels and data sources allowing easy extensibility and a variety of panels, including fully featured graph panels with rich visualization options. There is currently support for <a href="#">Graphite</a>, <a href="#">InfluxDB</a>, <a href="#">OpenTSDB</a> and <a href="#">KairosDB</a>, and support for <a href="#">SQL</a> is on the roadmap.
-      br
+      p Grafana features pluggable panels and data sources allowing easy extensibility and a variety of panels, including fully featured graph panels with rich visualization options. There is built in support many of the most popular time series data sources.
 
+      = partial "layouts/tsdb-list"
 
 .row
   .medium-12.columns.end.text-center
