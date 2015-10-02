@@ -1,0 +1,177 @@
+@import "settings"
+
+.feature-header, .community-header
+  position: relative
+  z-index: 2
+  background: $dark-hero-bg
+  overflow: visible
+  @media (min-width: 900px) // hide mask on mobile
+    height: 15rem
+    margin-bottom: 50px
+    background: transparent
+  @media (min-width: 1200px) // hide mask on mobile
+    height: 16rem
+  @media (min-width: 1750px)
+    height: 20rem
+  @media (min-width: 2050px)
+    height: 22rem
+
+  > .row
+    position: relative
+    z-index: 50
+
+  .header-bg,
+  &:before,
+  &:after
+    position: absolute
+    top: 0
+    content: ''
+    @media (min-width: 900px) // hide mask on mobile
+      -webkit-mask: url(/assets/img/v2/hero_mask.svg) no-repeat bottom
+      mask: url(/assets/img/hero_mask.svg) no-repeat 50% 50%
+      -webkit-mask-size: cover
+      mask-size: cover
+
+  .header-bg
+    bottom: 0
+    width: 100%
+    background-image: url(/assets/img/v2/interior_header_bg.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+  &:before,
+  &:after
+    right: 0
+    z-index: 1
+
+  &:before
+    @media (min-width: 900px)
+      width: 100%
+      height: 108%
+      background: #003a99
+      opacity: .11
+
+  &:after
+    @media (min-width: 900px)
+      width: 104%
+      height: 107%
+      background: #994400
+      opacity: .11
+
+  h2
+    margin-top: 100px
+    margin-bottom: 20px
+    color: #f1f1f1
+    font-size: 2.0rem
+
+footer
+  position: relative
+  overflow: visible
+  color: white
+  font-size: 1.4rem
+
+  > .row
+    position: relative
+    z-index: 50
+
+  .footer-bg,
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    top: auto
+    bottom: 0
+    @media (min-width: 670px) // hide mask on mobile
+      -webkit-mask: url(/assets/img/v2/footer_mask.svg) no-repeat 50% 50%
+      mask: url(/assets/img/v2/footer_mask.svg) no-repeat 50% 50%
+      -webkit-mask-size: cover
+      mask-size: cover
+
+  .footer-bg
+    right: 0
+    left: 0
+    height: 100%
+    background-image: url(/assets/img/v2/home_footer_bg.jpg)
+    background-position: center 35%
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: 2
+    @media (min-width: 670px) // hide mask on mobile
+      height: 110%
+    @media (min-width: 1750px)
+      height: 135%
+    @media (min-width: 2050px)
+      height: 147%
+
+  &:before,
+  &:after
+    right: 0
+    bottom: 0
+    width: 105%
+    z-index: 1
+
+  &:before
+    @media (min-width: 670px)
+      bottom: 0
+      width: 105%
+      height: 120%
+      background: #003a99
+      opacity: .11
+    @media (min-width: 1750px)
+      width: 105%
+      height: 145%
+    @media (min-width: 2050px)
+      width: 104%
+      height: 152%
+
+  &:after
+    @media (min-width: 670px)
+      bottom: 0
+      width: 109%
+      height: 117%
+      background: #994400
+      opacity: .11
+    @media (min-width: 1750px)
+      width: 102%
+      height: 139%
+    @media (min-width: 2050px)
+      width: 102%
+      height: 151%
+
+  section.newsletter
+    position: relative
+    z-index: 50
+    padding: 1rem 0 0 0
+    text-align: center
+
+    h1
+      font-family: "Open Sans", sans-serif
+      line-height: 1.3
+      font-size: 1.9rem
+      text-shadow: 0px 0px 10px #000
+      color: white
+      font-weight: normal
+      margin-bottom: 20px
+
+  .footer-social
+    font-size: 0.8rem
+    display: inline-block
+    padding: 1rem 0 1rem 0
+    list-style: none
+    li
+      float: left
+      margin-right: 3rem
+    .fa
+      margin-right: 0.7rem
+      font-size: 1.3rem
+      position: relative
+      top: 2px
+  .copyright
+    font-size: 0.8rem
+    padding-bottom: 3rem
+    iframe
+      margin-left: 1rem
+      position: relative
+      top: 3px
+
