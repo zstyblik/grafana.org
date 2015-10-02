@@ -2,14 +2,36 @@ header
   .row
     .large-12.columns
       .hero-radial
-        h1 Grafana is the leading open source graph and dashboard composer for visualizing time series metrics.
-        br
-        = partial "layouts/github_stars"
-        br
-        h1 6700 Github stars can't be wrong.
-        br
+        h1 The leading graph and dashboard composer for visualizing time series metrics.
+        .row
+          .large-6.columns.tsdb-list
+            .tsdb
+              i.fa.fa-database
+              span Graphite
+            .tsdb
+              i.fa.fa-database
+              span Elasticsearch
+            .tsdb
+              i.fa.fa-database
+              span Cloudwatch
+          .large-6.columns.tsdb-list
+            .tsdb
+              i.fa.fa-database
+              span Prometheus
+            .tsdb
+              i.fa.fa-database
+              span InfluxDB
+            .tsdb & More..
+        /br
+        /= partial "layouts/github_stars"
+        /br
+        /h1 6700 Github stars can't be wrong.
+        /br
         .button-wrapper
-          a.button.large-button href="/download" Download the Latest Version
+          a.button.large-button href="/download"
+            span Download
+            span.button-version
+              | &nbsp;(Latest v2.1.3)
   .header-bg
 
 .sponsor-wrapper
@@ -51,7 +73,9 @@ br
   .medium-6.columns
     a.button.secondary.radius.pull-right href="http://play.grafana.org" target="_blank" Try the Live Demo
   .medium-6.columns
-    a.button.radius href="/download" Download the Latest Release
+    a.button.radius href="/download"
+      span Download the Latest Release
+
 br
 br
 
@@ -125,7 +149,7 @@ br
         p At NSONE, Grafana enables us to drill deeply into huge volumes of real-time network and infrastructure telemetry, about hundreds of systems spanning dozens of datacenters in our global DNS & traffic management network.  We live and breathe data and rely on Grafana to bring it to life.
 
         p.source – Kristopher Beevers, CEO, NSONE
-        p.source 
+        p.source
           img src="/assets/img/v2/logo_nsone-testimonial.png" width="100"
 
 br

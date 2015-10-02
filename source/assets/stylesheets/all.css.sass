@@ -4,6 +4,7 @@
 @import "../bower_components/foundation/scss/foundation"
 
 @import "modules/landing_page"
+@import "modules/testimonial"
 @import "modules/highlighting"
 @import "modules/buttons"
 @import "vendor/blueimp-gallery.min"
@@ -78,86 +79,6 @@ section.nav
     position: relative
     top: 0.1em
 
-.testimonial-wrapper, .callout-wrapper
-  -webkit-mask: url(/assets/img/v2/testimonial_mask.svg) no-repeat 50% 50%
-  mask: url(/assets/img/v2/testimonial_mask.svg) no-repeat 50% 50%
-  -webkit-mask-size: cover
-  mask-size: cover
-
-  &.red
-    background-image: url(/assets/img/v2/testimonial_bg_red.jpg)
-    background-size: cover
-    background-position: 0 50%
-    background-repeat: no-repeat
-    min-height: 300px
-  &.teal
-    background-image: url(/assets/img/v2/testimonial_bg_teal.jpg)
-    background-size: cover
-    background-position: 0 50%
-    background-repeat: no-repeat
-    min-height: 300px
-  &.rt-blue
-    background-image: url(/assets/img/v2/testimonial_bg_rt_blue.jpg)
-    background-size: cover
-    background-position: 0 50%
-    background-repeat: no-repeat
-    min-height: 300px
-  &.grey
-    background-image: url(/assets/img/v2/testimonial_bg_grey.jpg)
-    background-size: cover
-    background-position: 0 50%
-    background-repeat: no-repeat
-    min-height: 300px
-  &.dk-grey
-    background-image: url(/assets/img/v2/testimonial_bg_dk_grey.jpg)
-    background-size: cover
-    background-position: 0 50%
-    background-repeat: no-repeat
-    min-height: 300px
-
-
-  .testimonial
-    position: relative
-    margin: 0 auto
-    width: auto
-    @media (min-width: 600px) // hide quote element on mobile
-      background-image: url(/assets/img/v2/left_quote.png), url(/assets/img/v2/right_quote.png)
-      background-repeat: no-repeat
-      background-size: 140px
-      background-position: 0 -25px, 100% 107%
-
-    p
-      padding: 40px 5%
-      @media (min-width: 600px) // hide quote element on mobile
-        padding: 40px 25%
-      margin: 0
-      font-size: 1.6rem
-      font-weight: normal
-      font-style: italic
-      line-height: 1.5
-      color: #fff
-
-
-    .source
-      padding-top: 0
-      padding-bottom: 0
-      font-size: 1.4rem
-      font-weight: bold
-      font-style: normal
-      text-align: right
-
-      & img
-        padding-top: 10px
-        padding-bottom: 40px
-
-  .testimonial:after
-    content: ""
-    @media (min-width: 600px)
-      background: url(/assets/img/v2/right_quote.png) repeat
-      background-size: 140px
-      background-position: right
-
-
 .feature-header, .community-header
   position: relative
   z-index: 2
@@ -225,7 +146,7 @@ section.nav
 
 .curated-content
   h3
-    a 
+    a
       line-height: 1.0em
       margin-bottom: 20px
       display: block
