@@ -85,7 +85,7 @@ section.features.image-shadows
     .large-6.columns.feature-highlight
       h3 InfluxDB Support
       ul
-        li Rich editor with measurement, tag and tag value competion
+        li Rich editor with measurement, tag and tag value completion
         li Automatic handling of group by time
         li Templating queries for generic dashboards
         li Alias patterns for short readable series names
@@ -95,7 +95,7 @@ section.features.image-shadows
 
   .row.padding-bottom-medium.padding-top-medium
     .large-6.columns.feature-highlight.right
-      h3 Templating Variables
+      h3 Template Variables
       p
         | Define template variables that can be filled with values dynamically from your
         |  time series store. Use these variables in your metric queries to create
@@ -120,6 +120,37 @@ section.features.image-shadows
     .large-6.columns
       a class="gallary-image" href="/assets/img/features/repeating_panels.png" title="Reapting Panels Example" data-gallery="1"
         img src="/assets/img/features/repeating_panels.png" alt="Reapting Panels Example"
+
+  .row.padding-bottom-medium.padding-top-medium
+    .large-6.columns.feature-highlight.right
+      h3 Sharing
+      ul
+        li Share link to dashboard or fullscreen panel
+        li Automatically includes current time range and variables.
+        li Create a public or internal snapshot
+        li Panel server side render API makes chat integration possible
+    .large-6.columns
+      a class="gallary-image" href="/assets/img/features/sharing.png" title="Sharing" data-gallery="1"
+        img src="/assets/img/features/sharing.png" alt="Sharing"
+
+  .row.padding-bottom-medium.padding-top-medium
+    .large-6.columns.feature-highlight
+      h3 Authentication Options
+      img src="/assets/img/icn_auth.svg" width="100" class="no-shadow pull-right"
+      ul
+        li User / Password
+        li Google OAuth
+        li Github OAuth
+        li LDAP integration
+        li Auth proxy support
+        li Basic Auth & API Key Auth
+
+    .large-6.columns.feature-highlight
+      h3 Multi-tentant: Orgs & Users
+      i class="fa fa-users pull-right" style="font-size: 5em; padding-top: 0.1em; color: #444444"
+      p
+        | Grafana supports multi tenancy. Setup multiple organizations that
+        |  each can have their own admins, define their own data sources, dashboards and users.
 
   .row.padding-bottom-medium.padding-top-medium
     .large-6.columns.feature-highlight.right
