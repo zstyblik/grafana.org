@@ -1,0 +1,160 @@
+@import "settings"
+
+.startpage-splash
+  background: $dark-hero-bg
+  position: relative
+  overflow: visible
+  z-index: 10
+
+  &:before,
+  &:after
+    right: 0
+    width: 105%
+    z-index: 1
+
+  &:before
+    background: #003a99
+    opacity: .11
+
+  &:after
+    background: #994400
+    opacity: .11
+
+.startpage-splash-bg
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  height: 100%
+  background-image: url(/assets/img/v2/home_hero_bg.jpg)
+  background-position: center 35%
+  background-repeat: no-repeat
+  background-size: cover
+  z-index: 2
+
+.startpage-splash-content
+  position: relative
+  z-index: 50
+  padding: 6rem 0 2.5rem
+  text-align: center
+
+h1.startpage-splash-slogan
+  font-family: "Open Sans", sans-serif
+  margin: 0
+  padding: 2.5rem
+  line-height: 1.3
+  font-size: 2.2rem
+  text-shadow: 0px 0px 10px #000
+  color: white
+  font-weight: normal
+
+h2.startpage-splash-sub-slogan
+  font-family: "PT Sans", sans-serif
+  font-size: 1.2rem
+  color: white
+  font-weight: 100
+
+.sponsor-wrapper
+  margin-bottom: 40px
+
+  h3
+    color: #161616
+    font-size: 0.9rem
+    font-weight: bold
+    padding-top: 1.6rem
+    text-transform: uppercase
+
+  .squarespace
+    padding: 0 20px
+    display: inline-block
+
+  .dreamhost
+    padding: 0 20px
+    display: inline-block
+
+
+  .mediamath
+    padding: 0 20px
+    display: inline-block
+
+
+  .demonware
+    padding: 0 20px
+    display: inline-block
+
+.used-by
+  border-top: 3px solid $secondary-color
+  border-bottom: 3px solid $secondary-color
+  padding-bottom: 1rem
+  margin-bottom: 20px
+
+  h3
+    color: #999999
+    font-size: 0.9rem
+    font-weight: bold
+    padding-top: 1.6rem
+    text-transform: uppercase
+
+  img
+    padding: 0 40px
+
+  .used-by-images
+    text-align: center
+
+.button-wrapper
+  margin-top: 1rem
+  border-radius: $global-radius
+  border: solid 1px $primary-color
+  display: inline-block
+
+.button-version
+  font-size: 70%
+  opacity: $button-disabled-opacity
+
+@media #{$medium-up}
+
+  .startpage-splash
+    margin-bottom: 80px
+
+    &:before
+      width: 105%
+      height: 135%
+    &:after
+      width: 105%
+      height: 132%
+
+  .startpage-splash-bg
+    height: 130%
+
+  .startpage-splash-bg, .startpage-splash:before, .startpage-splash:after
+    content: ''
+    position: absolute
+    top: 0
+    -webkit-mask: url(/assets/img/v2/hero_mask.svg) no-repeat bottom
+    mask: url(/assets/img/v2/hero_mask.svg) no-repeat 50% 50%
+    -webkit-mask-size: cover
+    mask-size: cover
+
+@media #{$large-up}
+  .startpage-splash
+    &:before
+      width: 102%
+      height: 140%
+    &:after
+      width: 100%
+      height: 137%
+
+  .startpage-splash-bg
+    height: 135%
+
+@media #{$xxlarge-up}
+  .startpage-splash-bg
+    height: 143%
+
+  .startpage-splash
+    &:before
+      width: 101%
+      height: 148%
+    &:after
+      width: 100%
+      height: 145%
