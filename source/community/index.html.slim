@@ -1,10 +1,10 @@
-main
-  .community-header
-    .row
-      .large-12.columns
-        h2 Community
-    .header-bg
+.page-header
+  .page-header-bg
+  .row
+    .large-12.columns
+      h1 Community
 
+.page-content
   .row
     .large-12.columns
       p
@@ -21,104 +21,101 @@ main
   .row
       .medium-8.columns
         .panel.radius
-          a href="http://grafanacon.org" 
+          a href="http://grafanacon.org"
             img src="/assets/img/v2/grafanaCon-announce.png"
-      
+
       .medium-4.columns
         h4.gamma Hosted by Squarespace
         p 28 Mercer St. New York, NY 10013
         hr
         p
           a.button.radius.large.expand href="http://grafanacon.org" Seating is Limited RSVP Now
-br  
-  .row
-    .large-12.columns  
-      <p>Please <a href="mailto:contact@grafana.org">email</a> if you know about an event or meetup related to Grafana
-br
+  br
+    .row
+      .large-12.columns
+        <p>Please <a href="mailto:contact@grafana.org">email</a> if you know about an event or meetup related to Grafana
+  br
 
-
-
-
-.curated-content
-  .row
-    .medium-4.columns.community-icons
-        h3.gamma.curated-header Get in Touch
-        br
-        .padding-bottom-medium
-          icon.fa.fa-exclamation-circle
-          p
-            'Log issues on
-            a href="https://github.com/grafana/grafana/issues" GitHub
-            '.
-
-        .padding-bottom-medium
-            icon.fa.fa-github
+  .curated-content
+    .row
+      .medium-4.columns.community-icons
+          h3.gamma.curated-header Get in Touch
+          br
+          .padding-bottom-medium
+            icon.fa.fa-exclamation-circle
             p
-              'Check out the
-              a href="https://github.com/grafana/grafana" source code
+              'Log issues on
+              a href="https://github.com/grafana/grafana/issues" GitHub
               '.
 
-        .padding-bottom-medium
-          icon.fa.fa-comments
-          p
-            'Join the
-            a href="https://groups.io/org/groupsio/grafana" mailing list for users and developers
-            '.
+          .padding-bottom-medium
+              icon.fa.fa-github
+              p
+                'Check out the
+                a href="https://github.com/grafana/grafana" source code
+                '.
 
-        .padding-bottom-medium
-            icon.fa.fa-twitter
+          .padding-bottom-medium
+            icon.fa.fa-comments
             p
-              'Follow
-              a href="https://twitter.com/grafana" @grafana
-              '  on twitter.
-
-        .padding-bottom-medium
-            icon.fa.fa-google-plus
-            p
-              'The
-              a href="https://plus.google.com/communities/102494554956731787258" Grafana community
-              '  on Google Plus.
-
-        .padding-bottom-medium
-            icon.fa.fa-facebook-square
-            p
-              'Like the
-              a href="https://www.facebook.com/grafana" Grafana Facebook Group
+              'Join the
+              a href="https://groups.io/org/groupsio/grafana" mailing list for users and developers
               '.
 
-        .padding-bottom-medium
-            icon.fa.fa-comment
-            p
-              'Chat on freenode in #grafana.
-    .medium-4.columns
-      h3.gamma.curated-header Recent Articles
-      = partial "layouts/_article-links"
+          .padding-bottom-medium
+              icon.fa.fa-twitter
+              p
+                'Follow
+                a href="https://twitter.com/grafana" @grafana
+                '  on twitter.
 
-    .medium-4.columns
-      h3.gamma.curated-header Recent Tweets
-      = partial "layouts/_tweets-new"
+          .padding-bottom-medium
+              icon.fa.fa-google-plus
+              p
+                'The
+                a href="https://plus.google.com/communities/102494554956731787258" Grafana community
+                '  on Google Plus.
 
-br 
-br
+          .padding-bottom-medium
+              icon.fa.fa-facebook-square
+              p
+                'Like the
+                a href="https://www.facebook.com/grafana" Grafana Facebook Group
+                '.
 
-.row
-    .large-12.columns
-      h3.gamma.curated-header Archived Events & Meetups & Video links
-      ul
-        li
-          'December 3rd 2014, San Francisco Metric Meetup hosted by Rackespace.
-          br
-          'Torkel Ödegaard presenting on Grafana, <a href="http://vimeo.com/channels/sfmetricsmeetup/114585520">video of the presentation</a>.
-        li
-          'October 30th 2014, DevOps Exchange London
-          br
-          'Torkel Ödegaard presenting on Grafana, <a href="https://www.youtube.com/watch?v=tgdP1juFGVU">video of the presentation</a>.
-        li
-          'October 8th 2014, Monitoring NYC hosted by Squarespace
-          br
-          'Torkel Ödegaard presenting on Grafana, no video recording.
-        li
-          'May 7th 2014, Monitorama conference in Portland
-          br
-          'Torkel Ödegaard presenting on Grafana, <a href="http://vimeo.com/95316672">video of the presentation</a>.
-          
+          .padding-bottom-medium
+              icon.fa.fa-comment
+              p
+                'Chat on freenode in #grafana.
+      .medium-4.columns
+        h3.gamma.curated-header Recent Articles
+        = partial "layouts/_article-links"
+
+      .medium-4.columns
+        h3.gamma.curated-header Recent Tweets
+        = partial "layouts/_tweets-new"
+
+  br
+  br
+
+  .row
+      .large-12.columns
+        h3.gamma.curated-header Archived Events & Meetups & Video links
+        ul
+          li
+            'December 3rd 2014, San Francisco Metric Meetup hosted by Rackespace.
+            br
+            'Torkel Ödegaard presenting on Grafana, <a href="http://vimeo.com/channels/sfmetricsmeetup/114585520">video of the presentation</a>.
+          li
+            'October 30th 2014, DevOps Exchange London
+            br
+            'Torkel Ödegaard presenting on Grafana, <a href="https://www.youtube.com/watch?v=tgdP1juFGVU">video of the presentation</a>.
+          li
+            'October 8th 2014, Monitoring NYC hosted by Squarespace
+            br
+            'Torkel Ödegaard presenting on Grafana, no video recording.
+          li
+            'May 7th 2014, Monitorama conference in Portland
+            br
+            'Torkel Ödegaard presenting on Grafana, <a href="http://vimeo.com/95316672">video of the presentation</a>.
+

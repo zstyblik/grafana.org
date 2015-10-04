@@ -9,8 +9,8 @@ $body-font-style: normal;
 $row-width: rem-calc(1060); //1148
 
 $dark-hero-bg: #1f1f1f;
-$features-banner-bg: #0099CC;
 
+$features-banner-bg: #0099CC;
 
 $h1-font-size: rem-calc(32);
 $h2-font-size: rem-calc(25);
@@ -34,7 +34,6 @@ $topbar-dropdown-bg: transparent;
 $topbar-dropdown-bg: transparent;
 
 $topbar-height: 80px;
-
 $topbar-link-color: #fff;
 $topbar-link-color-hover: #fff;
 $topbar-link-color-active: #fff;
@@ -49,8 +48,6 @@ $topbar-link-padding: 15px; // was 18 so that it didn't wrap at smaller screen s
 
 
 // $topbar-link-font-family: $body-font-family;
-
 $topbar-button-font-size: 1.75rem;
-
 $topbar-breakpoint: 51; // Change to 9999px for always mobile layout
 $topbar-media-query: "only screen and (min-width: 53em)";

@@ -1,0 +1,105 @@
+@import "settings"
+
+.page-header
+  position: relative
+  z-index: 2
+  background: $dark-hero-bg
+  overflow: visible
+  padding-bottom: 1.0rem
+
+  &:before
+    width: 100%
+    height: 108%
+    background: #003a99
+    opacity: .11
+
+  &:before, &:after
+    right: 0
+    z-index: 1
+
+  h1
+    margin-top: 100px
+    margin-bottom: 0px
+    color: #f1f1f1
+    font-size: 2.0rem
+
+  h5
+    margin: 0
+    font-size: 1.0rem
+    color: $silver
+    font-style: italic
+    display: inline-block
+
+  #twitter
+    display: inline-block
+    margin: 0 1rem
+
+.page-header-bg
+  position: absolute
+  content: ''
+  top: 0
+  bottom: 0
+  width: 100%
+  background-image: url(/assets/img/v2/home_hero_bg.jpg)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.page-content
+  padding: 1rem 0
+
+  // @media (min-width: 900px) // hide mask on mobile
+  //   height: 15rem
+  //   margin-bottom: 50px
+  //   background: transparent
+  // @media (min-width: 1200px) // hide mask on mobile
+  //   height: 16rem
+  // @media (min-width: 1750px)
+  //   height: 20rem
+  // @media (min-width: 2050px)
+  //   height: 22rem
+  //
+  // > .row
+  //   position: relative
+  //   z-index: 50
+  //
+  // .header-bg,
+  // &:before,
+  // &:after
+  //   position: absolute
+  //   top: 0
+  //   content: ''
+  //   @media (min-width: 900px) // hide mask on mobile
+  //     -webkit-mask: url(/assets/img/v2/hero_mask_minor.svg) no-repeat bottom
+  //     mask: url(/assets/img/hero_mask_minor.svg) no-repeat 50% 50%
+  //     -webkit-mask-size: cover
+  //     mask-size: cover
+  //
+  // .header-bg
+  //   bottom: 0
+  //   width: 100%
+  //   background-image: url(/assets/img/v2/home_hero_bg.jpg)
+  //   background-position: center
+  //   background-repeat: no-repeat
+  //   background-size: cover
+  //
+  // &:before,
+  // &:after
+  //   right: 0
+  //   z-index: 1
+  //
+  // &:before
+  //   @media (min-width: 900px)
+  //     width: 100%
+  //     height: 108%
+  //     background: #003a99
+  //     opacity: .11
+  //
+  // &:after
+  //   @media (min-width: 900px)
+  //     width: 104%
+  //     height: 107%
+  //     background: #994400
+  //     opacity: .11
+
+
