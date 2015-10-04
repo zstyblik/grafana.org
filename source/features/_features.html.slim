@@ -1,159 +1,157 @@
-main
-  section.features
-    .page-header
-      .page-header-bg
-      .row
-        .large-12.columns
-          h1 Feature Highlights
+section.features.image-shadows
+  .page-header
+    .page-header-bg
+    .row
+      .large-12.columns
+        h1 Feature Highlights
 
-    .page-content.row
+  .page-content.row
 
-      .large-6.columns.feature-highlight
-        h3 Rich graphing
-        p Fast and flexible client side graphs with a multitude of options.
-        ul
-          li Click and select region to zoom
-          li Multiple Y-Axes
-          li Bars, Lines, Points
-          li Grid thresholds
-          li Y-axis formats (bytes, milliseconds, etc)
-          li Graphite PNG render option
-          li View or edit graph in fullscreen
+    .large-6.columns.feature-highlight
+      h3 Rich Graphing
+      p Fast and flexible client side graphs with a multitude of options.
+      ul
+        li Click and select region to zoom
+        li Multiple Y-Axes
+        li Bars, Lines, Points
+        li Thresholds, Logarimtic scales
+        li Y-axis formats (bytes, milliseconds, etc)
+        li View or edit graph in fullscreen
 
-      .large-6.columns.padding-top-medium
-        a class="gallary-image" href="/assets/img/docs/nice_dashboard.png" title="Rich graphing options" data-gallery="1"
-          img src="/assets/img/docs/nice_dashboard.png" alt="Rich graphing options"
+    .large-6.columns.padding-top-medium
+      a class="gallary-image" href="/assets/img/docs/nice_dashboard.png" title="Rich graphing options" data-gallery="1"
+        img src="/assets/img/docs/nice_dashboard.png" alt="Rich graphing options"
 
-    .row.padding-bottom-medium.padding-top-medium
+  .row.padding-bottom-medium.padding-top-medium
 
-      .large-6.columns.feature-highlight.right
-        h3 Mixed styling
-        ul
-          li Full control for how each series should be drawn
-          li Mix lines, bars and points
-          li Mix stacked series with isolated series
+    .large-6.columns.feature-highlight.right
+      h3 Graph Styling
+      ul
+        li Full control for how each series should be drawn
+        li Mix lines, bars and points
+        li Mix stacked series with isolated series
+        li Export any graph to PNG (via UI or HTTP API)
 
-      .large-6.columns.padding-top-medium
-        a class="gallary-image" href="/assets/img/blog/mixed_styles.png" title="Style Editor" data-gallery="1"
-          img src="/assets/img/blog/mixed_styles.png" alt="Graph Editor"
-
-
-    .row.padding-bottom-medium.padding-top-medium
-      .large-6.columns.feature-highlight
-        h3 Dashboards
-        p Drag and drop panels, change row and panel width easily.
-        ul
-          li Instant dashboard search based on title or tags
-          li Templated dashboards
-          li Scripted dashboards
-          li Dashboard playlist
-          li Save / Load from ElasticSearch
-          li Save / Load from json file
-      .large-6.columns.padding-top-medium
-        a class="gallary-image" href="/assets/img/dashboard_example.png" title="Dashboard" data-gallery="1"
-          img src="/assets/img/dashboard_example.png" alt="Dashboard example"
+    .large-6.columns.padding-top-medium
+      a class="gallary-image" href="/assets/img/blog/mixed_styles.png" title="Style Editor" data-gallery="1"
+        img src="/assets/img/blog/mixed_styles.png" alt="Graph Editor"
 
 
+  .row.padding-bottom-medium.padding-top-medium
+    .large-6.columns.feature-highlight
+      h3 Dashboards
+      p Drag and drop panels, change row and panel width easily.
+      ul
+        li Instant dashboard search based on title or tags
+        li Templated dashboards
+        li Scripted dashboards
+        li Dashboard playlists
 
-    .testimonial-wrapper.red
-      .row
-        .medium-12.columns
-          .testimonial
-            p At NSONE, Grafana enables us to drill deeply into huge volumes of real-time network and infrastructure telemetry, about hundreds of systems spanning dozens of datacenters in our global DNS & traffic management network.  We live and breathe data and rely on Grafana to bring it to life.
+    .large-6.columns.padding-top-medium
+      a class="gallary-image" href="/assets/img/dashboard_example.png" title="Dashboard" data-gallery="1"
+        img src="/assets/img/dashboard_example.png" alt="Dashboard example"
 
-            p.source – Kristopher Beevers, CEO, NSONE
-            p.source
-              img src="/assets/img/v2/logo_nsone-testimonial.png" width="100"
+  .testimonial-wrapper.red
+    .row
+      .medium-12.columns
+        .testimonial
+          p At NSONE, Grafana enables us to drill deeply into huge volumes of real-time network and infrastructure telemetry, about hundreds of systems spanning dozens of datacenters in our global DNS & traffic management network.  We live and breathe data and rely on Grafana to bring it to life.
+
+          p.source
+            | – Kristopher Beevers, CEO, NSONE
+          /p.source
+          /  img src="/assets/img/v2/logo_nsone-testimonial.png" width="100" class="no-shadow"
 
 
-    .row.padding-bottom-medium.padding-top-medium
-      .large-6.columns.feature-highlight.right
-        h3 Graphite query editor
-        p
-          | Grafana includes a built in Graphite query parser that takes writing graphite metric expressions
-          |  to a whole new level. Expressions are easier to read and faster to edit than ever.
-        ul
-          li Click on any metric segment to change it
-          li Quickly add functions (search, typeahead)
-          li Click on a function parameter to change it
-          li Move function order to the left or right
-          li Direct link to Graphite function documentation
-      .large-6.columns
-        a class="gallary-image" href="/assets/img/docs/graphite_query_editor_new.png" title="Dashboard" data-gallery="1"
-          img src="/assets/img/docs/graphite_query_editor_new.png" alt="Dashboard example"
+  .row.padding-bottom-medium.padding-top-medium
+    .large-6.columns.feature-highlight.right
+      h3 Graphite Support
+      p
+        | Grafana includes a built in Graphite query parser that takes writing graphite metric expressions
+        |  to a whole new level. Expressions are easier to read and faster to edit than ever.
+      ul
+        li Click on any metric segment to change it
+        li Quickly add functions (search, typeahead)
+        li Click on a function parameter to change it
+        li Move function order to the left or right
+        li Direct link to Graphite function documentation
+        li Rich templating support
+    .large-6.columns
+      a class="gallary-image" href="/assets/img/graphite/editor.png" title="Graphite Editor" data-gallery="1"
+        img src="/assets/img/graphite/editor.png" alt="Graphite Editor"
 
-    .row.padding-bottom-medium.padding-top-medium
-      .large-6.columns.feature-highlight
-        h3 InfluxDB query editor
-        ul
-          li Series name and column auto complete
-          li Automatic handling of group by time
-          li Options for fill(0) and fill(null)
-          li Alias patterns for short readable series names
-      .large-6.columns
-        a class="gallary-image" href="/assets/img/docs/influxdb_query_editor.png" title="Dashboard" data-gallery="1"
-          img src="/assets/img/docs/influxdb_query_editor.png" alt="Dashboard example"
+  .row.padding-bottom-medium.padding-top-medium
+    .large-6.columns.feature-highlight
+      h3 InfluxDB Support
+      ul
+        li Rich editor with measurement, tag and tag value competion
+        li Automatic handling of group by time
+        li Options for fill(0) and fill(null)
+        li Alias patterns for short readable series names
+    .large-6.columns
+      a class="gallary-image" href="/assets/img/docs/influxdb_query_editor.png" title="Dashboard" data-gallery="1"
+        img src="/assets/img/docs/influxdb_query_editor.png" alt="Dashboard example"
 
-    .row.padding-bottom-medium.padding-top-medium
-      .large-6.columns.feature-highlight.right
-        h3 Templated dashboards
-        p
-          | Any metric path can be replaced with a template variable. This allows you to create
-          |  generic dashboards that can quickly be changed to show stats for a specific cluster, server,
-          |  application or experiment.
-        ul
+  .row.padding-bottom-medium.padding-top-medium
+    .large-6.columns.feature-highlight.right
+      h3 Templated dashboards
+      p
+        | Any metric path can be replaced with a template variable. This allows you to create
+        |  generic dashboards that can quickly be changed to show stats for a specific cluster, server,
+        |  application or experiment.
+      ul
 
-      .large-6.columns
-        a class="gallary-image" href="/assets/img/docs/templated_dashboard.png" title="Templated Dashboard" data-gallery="1"
-          img src="/assets/img/docs/templated_dashboard.png" alt="Templated Dashboard"
+    .large-6.columns
+      a class="gallary-image" href="/assets/img/docs/templated_dashboard.png" title="Templated Dashboard" data-gallery="1"
+        img src="/assets/img/docs/templated_dashboard.png" alt="Templated Dashboard"
 
-    .row.padding-bottom-medium.padding-top-medium
-      .large-6.columns.feature-highlight
-        h3 Templated queries
-        ul
-          li Variables values defined with a metric key query
-          li Interval variables, like 10min, 1h, 1d
-          li Use variable in metric path
-          li Use variables in graph titles
-          li Use variable as a function parameter
+  .row.padding-bottom-medium.padding-top-medium
+    .large-6.columns.feature-highlight
+      h3 Templated queries
+      ul
+        li Variables values defined with a metric key query
+        li Interval variables, like 10min, 1h, 1d
+        li Use variable in metric path
+        li Use variables in graph titles
+        li Use variable as a function parameter
 
-      .large-6.columns
-        a class="gallary-image" href="/assets/img/docs/templated_dashboard_graphite.png" title="Templated Dashboard" data-gallery="1"
-          img src="/assets/img/docs/templated_dashboard_graphite.png" alt="Templated Dashboard"
+    .large-6.columns
+      a class="gallary-image" href="/assets/img/docs/templated_dashboard_graphite.png" title="Templated Dashboard" data-gallery="1"
+        img src="/assets/img/docs/templated_dashboard_graphite.png" alt="Templated Dashboard"
 
-    .row.padding-bottom-medium.padding-top-medium
-      .large-6.columns.feature-highlight.right
-        h3 Annotations
-        p
-          | Annotate graphs with rich events from different data sources. Hover over events shows you the
-          |  full event metadata.
-        ul
-          li Fetch annotations from Elasticsearch
-          li Fetch annotations from Graphite Events and Metrics
-          li Fetch annotations from InfluxDB
+  .row.padding-bottom-medium.padding-top-medium
+    .large-6.columns.feature-highlight.right
+      h3 Annotations
+      p
+        | Annotate graphs with rich events from different data sources. Hover over events shows you the
+        |  full event metadata.
+      ul
+        li Fetch annotations from Elasticsearch
+        li Fetch annotations from Graphite Events and Metrics
+        li Fetch annotations from InfluxDB
 
-      .large-6.columns
-        a class="gallary-image" href="/assets/img/annotated_graph2.png" title="Annotated graph" data-gallery="1"
-          img src="/assets/img/annotated_graph2.png" alt="Annotated graph"
+    .large-6.columns
+      a class="gallary-image" href="/assets/img/annotated_graph2.png" title="Annotated graph" data-gallery="1"
+        img src="/assets/img/annotated_graph2.png" alt="Annotated graph"
 
-    .row.padding-bottom-medium.padding-top-medium
-      .large-6.columns.feature-highlight
-        h3 Dark and Light theme
-        p
-          | If you do not prefer the default dark theme you can switch to a light theme.
+  .row.padding-bottom-medium.padding-top-medium
+    .large-6.columns.feature-highlight
+      h3 Dark and Light theme
+      p
+        | If you do not prefer the default dark theme you can switch to a light theme.
 
-      .large-6.columns
-        a class="gallary-image" href="/assets/img/dashboard_example1_white.png" title="White theme" data-gallery="1"
-          img src="/assets/img/dashboard_example1_white.png" alt="White theme"
+    .large-6.columns
+      a class="gallary-image" href="/assets/img/dashboard_example1_white.png" title="White theme" data-gallery="1"
+        img src="/assets/img/dashboard_example1_white.png" alt="White theme"
 
-    .row.padding-bottom-medium.padding-top-medium
-      .large-6.columns.feature-highlight.right
-        h3 Multiple data sources
-        p
-          | You can define multiple graphite servers or <a href="http://influxdb.org" target="_blank">InfluxDB</a> servers and switch between them.
-          |  It is even possible to show graphs from different data sources &amp; servers on the same
-          |  dashboard.
+  .row.padding-bottom-medium.padding-top-medium
+    .large-6.columns.feature-highlight.right
+      h3 Multiple data sources
+      p
+        | You can define multiple graphite servers or <a href="http://influxdb.org" target="_blank">InfluxDB</a> servers and switch between them.
+        |  It is even possible to show graphs from different data sources &amp; servers on the same
+        |  dashboard.
 
-      .large-6.columns
-        a class="gallary-image" href="/assets/img/docs/nice_dashboard.png" title="Nice dashboard" data-gallery="1"
-          img src="/assets/img/docs/nice_dashboard.png" alt="Nice dashboard"
+    .large-6.columns
+      a class="gallary-image" href="/assets/img/docs/nice_dashboard.png" title="Nice dashboard" data-gallery="1"
+        img src="/assets/img/docs/nice_dashboard.png" alt="Nice dashboard"
