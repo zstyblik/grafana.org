@@ -35,8 +35,8 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/img'
 
 configure :build do
-  # activate :minify_css
-  # activate :minify_javascript, :ignore => [/bower_components/]
+  activate :minify_css
+  activate :minify_javascript
   #
   # Enable cache buster
   # activate :asset_hash
