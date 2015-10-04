@@ -51,3 +51,13 @@ $topbar-link-padding: 15px; // was 18 so that it didn't wrap at smaller screen s
 $topbar-button-font-size: 1.75rem;
 $topbar-breakpoint: 51; // Change to 9999px for always mobile layout
 $topbar-media-query: "only screen and (min-width: 53em)";
+
+$header-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-weight: 600;
+$header-font-style: normal;
+$header-line-height: 1.4;
+$header-top-margin: .2rem;
+$header-bottom-margin: .5rem;
+$header-text-rendering: optimizeLegibility;
+
+

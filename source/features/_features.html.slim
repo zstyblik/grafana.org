@@ -30,7 +30,7 @@ section.features.image-shadows
         li Full control for how each series should be drawn
         li Mix lines, bars and points
         li Mix stacked series with isolated series
-        li Export any graph to PNG (via UI or HTTP API)
+        li Export any graph to png image (via UI or HTTP API)
 
     .large-6.columns.padding-top-medium
       a class="gallary-image" href="/assets/img/blog/mixed_styles.png" title="Style Editor" data-gallery="1"
@@ -46,6 +46,7 @@ section.features.image-shadows
         li Templated dashboards
         li Scripted dashboards
         li Dashboard playlists
+        li Create / Update HTTP API
 
     .large-6.columns.padding-top-medium
       a class="gallary-image" href="/assets/img/dashboard_example.png" title="Dashboard" data-gallery="1"
@@ -86,45 +87,46 @@ section.features.image-shadows
       ul
         li Rich editor with measurement, tag and tag value competion
         li Automatic handling of group by time
-        li Options for fill(0) and fill(null)
+        li Templating queries for generic dashboards
         li Alias patterns for short readable series names
     .large-6.columns
-      a class="gallary-image" href="/assets/img/docs/influxdb_query_editor.png" title="Dashboard" data-gallery="1"
-        img src="/assets/img/docs/influxdb_query_editor.png" alt="Dashboard example"
+      a class="gallary-image" href="/assets/img/influxdb/editor.png" title="InfluxDB Editor" data-gallery="1"
+        img src="/assets/img/influxdb/editor.png" alt="InfluxDB Query Editor"
 
   .row.padding-bottom-medium.padding-top-medium
     .large-6.columns.feature-highlight.right
-      h3 Templated dashboards
+      h3 Templating Variables
       p
-        | Any metric path can be replaced with a template variable. This allows you to create
-        |  generic dashboards that can quickly be changed to show stats for a specific cluster, server,
-        |  application or experiment.
+        | Define template variables that can be filled with values dynamically from your
+        |  time series store. Use these variables in your metric queries to create
+        |  generic and reusable dashboards.
       ul
+        li Set variable values via URL
+        li Use variables in metric queries
+        li Use variables in panel titles
+        li Use variables in function parameters
 
     .large-6.columns
-      a class="gallary-image" href="/assets/img/docs/templated_dashboard.png" title="Templated Dashboard" data-gallery="1"
-        img src="/assets/img/docs/templated_dashboard.png" alt="Templated Dashboard"
+      a class="gallary-image" href="/assets/img/features/templating_ex1.png" title="Templating" data-gallery="1"
+        img src="/assets/img/features/templating_ex1.png" alt="Templating"
 
   .row.padding-bottom-medium.padding-top-medium
     .large-6.columns.feature-highlight
-      h3 Templated queries
-      ul
-        li Variables values defined with a metric key query
-        li Interval variables, like 10min, 1h, 1d
-        li Use variable in metric path
-        li Use variables in graph titles
-        li Use variable as a function parameter
+      h3 Repeat Panels or Rows
+      p
+        | Use any panel or row as a template and make Grafana repeat it
+        |  for each selected value in a template variable.
 
     .large-6.columns
-      a class="gallary-image" href="/assets/img/docs/templated_dashboard_graphite.png" title="Templated Dashboard" data-gallery="1"
-        img src="/assets/img/docs/templated_dashboard_graphite.png" alt="Templated Dashboard"
+      a class="gallary-image" href="/assets/img/features/repeating_panels.png" title="Reapting Panels Example" data-gallery="1"
+        img src="/assets/img/features/repeating_panels.png" alt="Reapting Panels Example"
 
   .row.padding-bottom-medium.padding-top-medium
     .large-6.columns.feature-highlight.right
       h3 Annotations
       p
         | Annotate graphs with rich events from different data sources. Hover over events shows you the
-        |  full event metadata.
+        |  full event metadata and tags.
       ul
         li Fetch annotations from Elasticsearch
         li Fetch annotations from Graphite Events and Metrics
@@ -139,19 +141,20 @@ section.features.image-shadows
       h3 Dark and Light theme
       p
         | If you do not prefer the default dark theme you can switch to a light theme.
+        | This is an user preference that can be changed on the profile page.
 
     .large-6.columns
-      a class="gallary-image" href="/assets/img/dashboard_example1_white.png" title="White theme" data-gallery="1"
-        img src="/assets/img/dashboard_example1_white.png" alt="White theme"
+      a class="gallary-image" href="/assets/img/features/light_theme.png" title="Light theme" data-gallery="1"
+        img src="/assets/img/features/light_theme.png" alt="Light theme"
 
   .row.padding-bottom-medium.padding-top-medium
     .large-6.columns.feature-highlight.right
-      h3 Multiple data sources
+      h3 Mix and Match Data Sources
       p
-        | You can define multiple graphite servers or <a href="http://influxdb.org" target="_blank">InfluxDB</a> servers and switch between them.
-        |  It is even possible to show graphs from different data sources &amp; servers on the same
-        |  dashboard.
+        | You can define multiple data sources of different types switch between them.
+        |  It is even possible to show graphs from different data sources &amp; on the same
+        |  dashboard and in the same Graph!
 
     .large-6.columns
-      a class="gallary-image" href="/assets/img/docs/nice_dashboard.png" title="Nice dashboard" data-gallery="1"
-        img src="/assets/img/docs/nice_dashboard.png" alt="Nice dashboard"
+      a class="gallary-image" href="/assets/img/features/mixed_data.png" title="Mix data sources on the same dashboard or in the same graph!" data-gallery="1"
+        img src="/assets/img/features/mixed_data.png" alt="Mix data sources in the same dashboard or in the same graph!"
