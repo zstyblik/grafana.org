@@ -12,13 +12,6 @@ $dark-hero-bg: #1f1f1f;
 
 $features-banner-bg: #0099CC;
 
-$h1-font-size: rem-calc(32);
-$h2-font-size: rem-calc(25);
-$h3-font-size: rem-calc(20);
-$h4-font-size: rem-calc(17);
-$h5-font-size: rem-calc(15);
-$h6-font-size: 1rem;
-
 $tertiary-color: gray;
 $primary-color: #008CBA;
 $secondary-color: #ff7800;
@@ -60,3 +53,19 @@ $header-line-height: 1.4;
 $header-top-margin: .2rem;
 $header-bottom-margin: .5rem;
 $header-text-rendering: optimizeLegibility;
+
+$h1-font-size: rem-calc(40);
+$h2-font-size: rem-calc(32);
+$h3-font-size: rem-calc(23);
+$h4-font-size: rem-calc(20);
+$h5-font-size: rem-calc(15);
+$h6-font-size: 1rem;
+
+$h1-font-reduction: rem-calc(15) !default;
+$h2-font-reduction: rem-calc(10) !default;
+$h3-font-reduction: rem-calc(5) !default;
+$h4-font-reduction: rem-calc(5) !default;
+$h5-font-reduction: 0 !default;
+$h6-font-reduction: 0 !default;
+
+
