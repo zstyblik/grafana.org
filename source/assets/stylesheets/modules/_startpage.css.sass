@@ -1,22 +1,21 @@
 .startpage-splash
-  background: $dark-hero-bg
   position: relative
   overflow: visible
   z-index: 10
 
   &:before,
   &:after
-    right: 0
     width: 105%
+    right: 0
     z-index: 1
 
   &:before
-    background: #003a99
-    opacity: .11
+    background: $black
+    opacity: .09
 
   &:after
-    background: #994400
-    opacity: .11
+    background: $black
+    opacity: .09
 
 .startpage-splash-bg
   position: absolute
@@ -105,6 +104,7 @@ h2.startpage-splash-sub-slogan
 
 .button-wrapper
   margin-top: 1rem
+  margin-bottom: 3rem
   border-radius: $global-radius
   border: solid 1px $primary-color
   display: inline-block
@@ -120,26 +120,21 @@ h2.startpage-splash-sub-slogan
   h1.startpage-splash-slogan
     padding: 2.5rem
 
-  // .startpage-splash
-  //   margin-bottom: 80px
-  //
-  //   &:before
-  //     width: 105%
-  //     height: 135%
-  //   &:after
-  //     width: 105%
-  //     height: 132%
-  //
-  // .startpage-splash-bg
-  //   height: 130%
-  //
-  // .startpage-splash-bg, .startpage-splash:before, .startpage-splash:after
-  //   content: ''
-  //   position: absolute
-  //   top: 0
-    // -webkit-mask: url(/assets/img/v2/hero_mask.svg) no-repeat bottom
-    // -webkit-mask-size: cover
-    // mask-size: cover
+  .startpage-splash
+    &:before
+      width: 100%
+      height: 102%
+    &:after
+      width: 100%
+      height: 103.5%
+
+  .startpage-splash-bg, .startpage-splash:before, .startpage-splash:after
+    content: ''
+    position: absolute
+    top: 0
+    -webkit-mask: url(/assets/img/v2/hero_mask.svg) no-repeat bottom
+    -webkit-mask-size: cover
+    mask-size: cover
 
 @media #{$large-up}
   // .startpage-splash

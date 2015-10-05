@@ -1,4 +1,5 @@
 .page-footer
+  padding-top: 2rem
   position: relative
   overflow: visible
   color: white
@@ -16,55 +17,26 @@
   top: auto
   bottom: 0
 
+@media #{$medium-up}
+  .page-footer
+    &:before
+      width: 100%
+      height: 102%
+      background: black
+      opacity: .11
+    &:after
+      width: 100%
+      height: 104%
+      opacity: .11
+      background: black
 
-  // .footer-bg,
-  // &:before,
-  // &:after
-  //   content: ''
-  //   position: absolute
-  //   top: auto
-  //   bottom: 0
-  //   @media (min-width: 670px) // hide mask on mobile
-  //     -webkit-mask: url(/assets/img/v2/footer_mask.svg) no-repeat 50% 50%
-  //     mask: url(/assets/img/v2/footer_mask.svg) no-repeat 50% 50%
-  //     -webkit-mask-size: cover
-  //     mask-size: cover
-  //
-  //
-  // &:before,
-  // &:after
-  //   right: 0
-  //   bottom: 0
-  //   width: 105%
-  //   z-index: 1
-  //
-  // &:before
-  //   @media (min-width: 670px)
-  //     bottom: 0
-  //     width: 105%
-  //     height: 120%
-  //     background: #003a99
-  //     opacity: .11
-  //   @media (min-width: 1750px)
-  //     width: 105%
-  //     height: 145%
-  //   @media (min-width: 2050px)
-  //     width: 104%
-  //     height: 152%
-  //
-  // &:after
-  //   @media (min-width: 670px)
-  //     bottom: 0
-  //     width: 109%
-  //     height: 117%
-  //     background: #994400
-  //     opacity: .11
-  //   @media (min-width: 1750px)
-  //     width: 102%
-  //     height: 139%
-  //   @media (min-width: 2050px)
-  //     width: 102%
-  //     height: 151%
+  .footer-bg, .page-footer:before, .page-footer:after
+    content: ''
+    position: absolute
+    top: auto
+    bottom: 0
+    -webkit-mask: url(/assets/img/v2/hero_mask_btm.svg) no-repeat 50% 50%
+    -webkit-mask-size: cover
 
 section.newsletter
   position: relative
