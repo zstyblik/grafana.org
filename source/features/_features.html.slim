@@ -7,7 +7,7 @@ section.features.image-shadows
 
   .page-content.row
 
-    .large-6.columns.feature-highlight
+    .medium-6.columns.feature-highlight
       h2 Rich Graphing
       p Fast and flexible client side graphs with a multitude of options.
       ul
@@ -18,13 +18,13 @@ section.features.image-shadows
         li Y-axis formats (bytes, milliseconds, etc)
         li View or edit graph in fullscreen
 
-    .large-6.columns.padding-top-medium
+    .medium-6.columns.padding-top-medium
       a class="gallary-image" href="/assets/img/docs/nice_dashboard.png" title="Rich graphing options" data-gallery="1"
         img src="/assets/img/docs/nice_dashboard.png" alt="Rich graphing options"
 
   .row.padding-bottom-medium.padding-top-medium
 
-    .large-6.columns.feature-highlight.right
+    .medium-6.columns.feature-highlight.right
       h2 Graph Styling
       ul
         li Full control for how each series should be drawn
@@ -32,13 +32,13 @@ section.features.image-shadows
         li Mix stacked series with isolated series
         li Export any graph to png image (via UI or HTTP API)
 
-    .large-6.columns.padding-top-medium
+    .medium-6.columns.padding-top-medium
       a class="gallary-image" href="/assets/img/blog/mixed_styles.png" title="Style Editor" data-gallery="1"
         img src="/assets/img/blog/mixed_styles.png" alt="Graph Editor"
 
 
   .row.padding-bottom-medium.padding-top-medium
-    .large-6.columns.feature-highlight
+    .medium-6.columns.feature-highlight
       h2 Dashboards
       p Drag and drop panels, change row and panel width easily.
       ul
@@ -49,7 +49,7 @@ section.features.image-shadows
         li Create / Update HTTP API
         li Different panel types
 
-    .large-6.columns.padding-top-medium
+    .medium-6.columns.padding-top-medium
       a class="gallary-image" href="/assets/img/features/dashboard_ex1.png" title="Dashboard Example" data-gallery="1"
         img src="/assets/img/features/dashboard_ex1.png" alt="Dashboard Example"
 
@@ -66,7 +66,7 @@ section.features.image-shadows
 
 
   .row.padding-bottom-medium.padding-top-medium
-    .large-6.columns.feature-highlight.right
+    .medium-6.columns.feature-highlight.right
       h2 Graphite Support
       p
         | Grafana includes a built in Graphite query parser that takes writing graphite metric expressions
@@ -78,24 +78,26 @@ section.features.image-shadows
         li Move function order to the left or right
         li Direct link to Graphite function documentation
         li Rich templating support
-    .large-6.columns
+    .medium-6.columns
       a class="gallary-image" href="/assets/img/graphite/editor.png" title="Graphite Editor" data-gallery="1"
         img src="/assets/img/graphite/editor.png" alt="Graphite Editor"
 
   .row.padding-bottom-medium.padding-top-medium
-    .large-6.columns.feature-highlight
-      h2 InfluxDB Support
+    .medium-6.columns.feature-highlight
+      h2 Elasticsearch Support
       ul
-        li Rich editor with measurement, tag and tag value completion
-        li Automatic handling of group by time
-        li Templating queries for generic dashboards
+        li Rich query editor with automatic property name lookup
+        li Extract many types of metrics from documents like: Avg, Min, Max, Percentiles, Std Dev, etc.
+        li Group by multiple terms or filters
+        li Query only relevant indicies based on time pattern
         li Alias patterns for short readable series names
-    .large-6.columns
-      a class="gallary-image" href="/assets/img/influxdb/editor.png" title="InfluxDB Editor" data-gallery="1"
-        img src="/assets/img/influxdb/editor.png" alt="InfluxDB Query Editor"
+
+    .medium-6.columns
+      a class="gallary-image" href="/assets/img/features/elasticsearch_metrics_ex1.png" title="Elasticsearch example" data-gallery="1"
+        img src="/assets/img/features/elasticsearch_metrics_ex1.png" alt="Elasticsearch example"
 
   .row.padding-bottom-medium.padding-top-medium
-    .large-6.columns.feature-highlight.right
+    .medium-6.columns.feature-highlight.right
       h2 Template Variables
       p
         | Define template variables that can be filled with values dynamically from your
@@ -107,35 +109,35 @@ section.features.image-shadows
         li Use variables in panel titles
         li Use variables in function parameters
 
-    .large-6.columns
+    .medium-6.columns
       a class="gallary-image" href="/assets/img/features/templating_ex1.png" title="Templating" data-gallery="1"
         img src="/assets/img/features/templating_ex1.png" alt="Templating"
 
   .row.padding-bottom-medium.padding-top-medium
-    .large-6.columns.feature-highlight
+    .medium-6.columns.feature-highlight
       h2 Repeat Panels or Rows
       p
         | Use any panel or row as a template and make Grafana repeat it
         |  for each selected value in a template variable.
 
-    .large-6.columns
+    .medium-6.columns
       a class="gallary-image" href="/assets/img/features/repeating_panels.png" title="Reapting Panels Example" data-gallery="1"
         img src="/assets/img/features/repeating_panels.png" alt="Reapting Panels Example"
 
   .row.padding-bottom-medium.padding-top-medium
-    .large-6.columns.feature-highlight.right
+    .medium-6.columns.feature-highlight.right
       h2 Sharing
       ul
         li Share link to dashboard or fullscreen panel
         li Automatically includes current time range and variables.
         li Create a public or internal snapshot
-        li Panel server side render API makes chat integration possible
-    .large-6.columns
+        li Server side render API makes chat integration possible
+    .medium-6.columns
       a class="gallary-image" href="/assets/img/features/sharing.png" title="Sharing" data-gallery="1"
         img src="/assets/img/features/sharing.png" alt="Sharing"
 
   .row.padding-bottom-medium.padding-top-medium
-    .large-6.columns.feature-highlight
+    .medium-6.columns.feature-highlight
       h2 Authentication Options
       img src="/assets/img/icn_auth.svg" width="100" class="no-shadow pull-right"
       ul
@@ -146,7 +148,7 @@ section.features.image-shadows
         li Auth proxy support
         li Basic Auth & API Key Auth
 
-    .large-6.columns.feature-highlight
+    .medium-6.columns.feature-highlight
       h2 Multi-tentant: Orgs & Users
       i class="fa fa-users pull-right" style="font-size: 5em; padding-top: 0.1em; color: #444444"
       p
@@ -154,7 +156,21 @@ section.features.image-shadows
         |  each can have their own admins, define their own data sources, dashboards and users.
 
   .row.padding-bottom-medium.padding-top-medium
-    .large-6.columns.feature-highlight.right
+    .medium-6.columns.feature-highlight
+      h2 InfluxDB Support
+      ul
+        li Rich editor with measurement, tag and tag value completion
+        li Automatic handling of group by time
+        li Templating queries for generic dashboards
+        li Alias patterns for short readable series names
+
+    .medium-6.columns
+      a class="gallary-image" href="/assets/img/influxdb/editor.png" title="InfluxDB Editor" data-gallery="1"
+        img src="/assets/img/influxdb/editor.png" alt="InfluxDB Query Editor"
+
+
+  .row.padding-bottom-medium.padding-top-medium
+    .medium-6.columns.feature-highlight.right
       h2 Annotations
       p
         | Annotate graphs with rich events from different data sources. Hover over events shows you the
@@ -164,29 +180,47 @@ section.features.image-shadows
         li Fetch annotations from Graphite Events and Metrics
         li Fetch annotations from InfluxDB
 
-    .large-6.columns
+    .medium-6.columns
       a class="gallary-image" href="/assets/img/annotated_graph2.png" title="Annotated graph" data-gallery="1"
         img src="/assets/img/annotated_graph2.png" alt="Annotated graph"
 
   .row.padding-bottom-medium.padding-top-medium
-    .large-6.columns.feature-highlight
+    .medium-6.columns.feature-highlight
       h2 Dark and Light theme
       p
         | If you do not prefer the default dark theme you can switch to a light theme.
         | This is an user preference that can be changed on the profile page.
 
-    .large-6.columns
+    .medium-6.columns
       a class="gallary-image" href="/assets/img/features/light_theme.png" title="Light theme" data-gallery="1"
         img src="/assets/img/features/light_theme.png" alt="Light theme"
 
   .row.padding-bottom-medium.padding-top-medium
-    .large-6.columns.feature-highlight.right
+    .medium-6.columns.feature-highlight.right
       h2 Mix Data Sources
       ul
         li Add how many data sources you want
         li Mix different data sources on the same dashboard
         li Mix different data sources in the same graph
 
-    .large-6.columns
+    .medium-6.columns
       a class="gallary-image" href="/assets/img/features/mixed_data.png" title="Mix data sources on the same dashboard or in the same graph!" data-gallery="1"
         img src="/assets/img/features/mixed_data.png" alt="Mix data sources in the same dashboard or in the same graph!"
+
+  .row.padding-bottom-medium.padding-top-medium
+    .medium-6.columns.feature-highlight
+      h2 Quick time range selection
+      ul
+        li Time range dropdown with quick ranges
+        li Supports local and UTC time
+        li Auto refresh intervals
+        li
+          | Complex date ranges like
+          ul
+            li Yesterday
+            li The day so far
+            li This day last week
+
+    .medium-6.columns
+      a class="gallary-image" href="/assets/img/features/timepicker.png" title="Timepicker" data-gallery="1"
+        img src="/assets/img/features/timepicker.png" alt="Timepicker"
