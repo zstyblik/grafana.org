@@ -20,7 +20,7 @@ $alert-color: #f04124;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
 $info-color: #a0d3e8;
-$white-text-color: #EFEFEF;
+$white-text-color: #FFFFFF;
 
 $grafana-top-nav-bg: rgba(0, 0, 0, 0.6);
 $topbar-bg: transparent;
@@ -34,8 +34,8 @@ $topbar-link-color-active: #fff;
 $topbar-link-color-active-hover: #fff;
 $topbar-link-weight: 500; // was normal TRW
 $topbar-link-font-size: rem-calc(14); // was 16 so that it didn't wrap at smaller screen sizes TRW
-$topbar-link-hover-lightness: 10%; // Darken by 10%
-$topbar-link-bg-hover: #333;
+$topbar-link-hover-lightness: 5%; // Darken by 10%
+$topbar-link-bg-hover: #222;
 $topbar-link-bg-active: transparent;
 $topbar-link-bg-active-hover: scale-color($topbar-link-bg-hover, $lightness: 10%);
 $topbar-link-padding: 15px; // was 18 so that it didn't wrap at smaller screen sizes TRW
