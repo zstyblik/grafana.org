@@ -163,6 +163,3 @@ DEPENDENCIES
   ruby18_source_location
   slim (~> 3.0.6)
   therubyracer
-
-BUNDLED WITH
-   1.10.6
