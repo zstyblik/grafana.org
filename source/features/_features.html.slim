@@ -85,6 +85,7 @@ section.features.image-shadows
   .row.padding-bottom-medium.padding-top-medium
     .medium-6.columns.feature-highlight
       h2#elasticsearch Elasticsearch Support
+      blockquote This feature is only available in upcoming v2.5
       ul
         li Rich query editor with automatic property name lookup
         li Extract many types of metrics from documents like: Avg, Min, Max, Percentiles, Std Dev, etc.
@@ -104,10 +105,10 @@ section.features.image-shadows
         |  time series store. Use these variables in your metric queries to create
         |  generic and reusable dashboards.
       ul
-        li Set variable values via URL
         li Use variables in metric queries
         li Use variables in panel titles
         li Use variables in function parameters
+        li Set variable values via URL
 
     .medium-6.columns
       a class="gallary-image" href="/assets/img/features/templating_ex1.png" title="Templating" data-gallery="1"
@@ -196,11 +197,17 @@ section.features.image-shadows
 
   .row.padding-bottom-medium.padding-top-medium
     .medium-6.columns.feature-highlight.right
-      h2#mixdata Mix Data Sources
+      h2#plugins Many data soures & plugins
+      p
+        | All data sources in Grafana are using the same data source plugin API.
+        |  Many are officially supported and included
+        |  in the standard releases. Some require manual installation.
+
       ul
         li Add how many data sources you want
         li Mix different data sources on the same dashboard
-        li Mix different data sources in the same graph
+        li Mix different data sources in the same graph (only in v2.5)
+        li Add custom data sources
 
     .medium-6.columns
       a class="gallary-image" href="/assets/img/features/mixed_data.png" title="Mix data sources on the same dashboard or in the same graph!" data-gallery="1"
@@ -227,6 +234,7 @@ section.features.image-shadows
   .row.padding-bottom-medium.padding-top-medium
     .medium-6.columns.feature-highlight.right
       h2#cloudwatch Cloudwatch Support
+      blockquote This feature is only available in upcoming v2.5
       ul
         li Rich editor with auto completion for metric names and namespaces
         li Templating queries for generic dashboards
