@@ -10,13 +10,13 @@ We are pleased to announce that Grafana 2.5 is now released!
 
 ## Release highlights
 We're excited about this release, and want to share some of the highlights. This release includes many
-fixes and enhancements to all areas of Grafana, like new Data Sources, new and improved time picker, user invites, panel
+fixes and enhancements to all areas of Grafana, like new Data Sources, a new and improved timepicker, user invites, panel
 resize handles and improved InfluxDB and OpenTSDB support.
 
-### New time picker
+### New time range controls
 <img src="/assets/img/features/timepicker.png" alt="New Time picker">
 
-A new time picker with room for more quick ranges as well as new types of relative ranges, like `Today`,
+A new timepicker with room for more quick ranges as well as new types of relative ranges, like `Today`,
 `The day so far` and `This day last week`. Also an improved time & calendar picker that now works
 correctly in UTC mode.
 
@@ -25,11 +25,11 @@ correctly in UTC mode.
 <img src="/assets/img/features/elasticsearch_metrics_ex1.png" alt="Elasticsearch example">
 <br>
 
-This release brings a fully featured query editor for Elasticsearch. You will now be able to vizualize
+This release brings a fully featured query editor for Elasticsearch. You will now be able to visualize
 logs or any kind of data stored in Elasticserarch. The query editor allows you to build both simple
 and complex queries for logs or metrics.
 
-- Extract many types of metrics from documents like
+- Compute metrics from your documents, supported Elasticsearch aggregations:
   - Count, Avg, Min, Max, Sum
   - Percentiles, Std Dev, etc.
 - Group by multiple terms or filters
@@ -64,9 +64,9 @@ stored in Prometheus.
 
 In previous releases you have been able to mix different data sources on the same dashboard. In v2.5 you
 will be able to mix then on the same graph! You can enable this by selecting the built in `-- Mixed --` data source.
-When selected this will allow you to specify data source on a per query basis. This will allow you
+When selected this will allow you to specify data source on a per query basis. This will, for example, allow you
 to plot metrics from different Graphite servers on the same Graph or plot data from Elasticsearch alongside
-data from Prometheus.
+data from Prometheus. Mixing different data sources on the same graph works for any data source, even custom ones.
 
 ### Panel Resize handles
 <img src="/assets/img/features/panel_resize.gif" alt="">
@@ -93,13 +93,13 @@ This version also brings some new features for user management.
 - Admin page for all organizations (remove / edit)
 
 ### Breaking changes
-There has been some changes to the data source plugin API. If you are using a custom plugin check that there is an update for it before you upgrade. Also
+There have been some changes to the data source plugin API. If you are using a custom plugin check that there is an update for it before you upgrade. Also
 the new time picker does not currenty support custom quick ranges like the last one did. This will likey be added in a
 future release.
 
 ### Changelog
 For a detailed list and link to github issues for everything included in the 2.5 release please
-view the [CHANGELOG.md]("https://github.com/grafana/grafana/blob/master/CHANGELOG.md") file.
+view the [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md) file.
 
 - - -
 
