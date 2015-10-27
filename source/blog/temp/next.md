@@ -6,7 +6,7 @@ published_on: October 28, 2015
 
 We are pleased to announce that Grafana 2.5 is now released!
 
-<a href="http://grafana.org/download/" target="_blank">Download Grafana 2.5 now</a>
+### <a href="http://grafana.org/download">Download Grafana 2.5 now</a>
 
 ## Release highlights
 We're excited about this release, and want to share some of the highlights. This release includes many
@@ -78,8 +78,8 @@ This release adds resize handles to the the bottom right corners of panels makin
 This version also brings some new features for user management.
 
 - Organization admins can now invite new users (via email or manually via invite link)
-- Users can signup using invite and get automatically added to invited organization
-- User signup can (if enabled) contain contian an email verification step.
+- Users can signup using invite link and get automatically added to invited organization
+- User signup can (if enabled) contian an email verification step.
 - Check out [#2353](https://github.com/grafana/grafana/issues/2353) for more info.
 
 ### Miscellaneous improvements
@@ -93,5 +93,21 @@ This version also brings some new features for user management.
 
 ### Breaking changes
 There has been some changes to the data source plugin API. If you are using a custom plugin check that there is an update for it before you upgrade. Also
-the new time picker does not currenty support custom quick ranges like the last one did. This will likey be added in a 2.6 release.
+the new time picker does not currenty support custom quick ranges like the last one did. This will likey be added in a
+future release.
+
+### Changelog
+For a detailed list and link to github issues for everything included in the 2.5 release please
+view the [CHANGELOG.md]("https://github.com/grafana/grafana/blob/master/CHANGELOG.md") file.
+
+- - -
+
+### <a href="http://grafana.org/download">Download Grafana 2.5 now</a>
+
+#### Thanks to project sponsors
+* [Squarespace](http://www.squarespace.com)
+* [Dreamhost](http://www.dreamhost.com)
+* [Demonware](http://www.demonware.net)
+* [Mediamath](https://developer.mediamath.com/OpenSource)
+
 
