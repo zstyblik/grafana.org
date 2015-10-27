@@ -17,7 +17,7 @@ resize handles and improved InfluxDB and OpenTSDB support.
 <img src="/assets/img/features/timepicker.png" alt="New Time picker">
 
 A new time picker with room for more quick ranges as well as new types of relative ranges, like `Today`,
-`The day so far` and `This day last week`. Also an improved time & calendar that now works
+`The day so far` and `This day last week`. Also an improved time & calendar picker that now works
 correctly in UTC mode.
 
 ### Elasticsearch
@@ -25,15 +25,16 @@ correctly in UTC mode.
 <img src="/assets/img/features/elasticsearch_metrics_ex1.png" alt="Elasticsearch example">
 <br>
 
-This release brings fully featured query editor for Elasticsearch. You will now be able to vizualize
-logs or any kind of data stored in Elasticserarch. The elasticsearch query editor
-allows you to build both simple and complex queries for logs or metrics.
+This release brings a fully featured query editor for Elasticsearch. You will now be able to vizualize
+logs or any kind of data stored in Elasticserarch. The query editor allows you to build both simple
+and complex queries for logs or metrics.
 
 - Extract many types of metrics from documents like
   - Count, Avg, Min, Max, Sum
   - Percentiles, Std Dev, etc.
 - Group by multiple terms or filters
   - Specify group by options like Top 5 based on Avg @value
+- Auto completion for field names
 - Query only relevant indicies based on time pattern
 - Alias patterns for short readable series names
 
@@ -79,7 +80,7 @@ This version also brings some new features for user management.
 
 - Organization admins can now invite new users (via email or manually via invite link)
 - Users can signup using invite link and get automatically added to invited organization
-- User signup can (if enabled) contian an email verification step.
+- User signup workflow can (if enabled) contain an email verification step.
 - Check out [#2353](https://github.com/grafana/grafana/issues/2353) for more info.
 
 ### Miscellaneous improvements
