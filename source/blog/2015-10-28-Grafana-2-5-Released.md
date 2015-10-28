@@ -117,6 +117,7 @@ priority will be a table panel and more ways to visualize metrics.
 #### <a href="http://grafana.org/download">Download Grafana 2.5 now</a>
 
 #### Thanks to project sponsors
+* [Raintank](http://raintank.io)
 * [Squarespace](http://www.squarespace.com)
 * [Dreamhost](http://www.dreamhost.com)
 * [Demonware](http://www.demonware.net)
