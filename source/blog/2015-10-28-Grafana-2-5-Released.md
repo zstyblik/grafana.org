@@ -4,15 +4,17 @@ author: Torkel Ödegaard
 published_on: October 28, 2015
 ---
 
-We are pleased to announce that Grafana 2.5 is now released!
+## Release highlights
+<br>
+<img class="no-shadow" src="/assets/img/blog/grafana_2_5_graphic.png" alt="New Time picker">
 
-#### <a href="http://grafana.org/download">Download Grafana 2.5 now</a>
+### <a href="/download">Download Grafana 2.5 now</a>
 <hr>
 
-## Release highlights
 This is an exciting release, and we want to share some of the highlights. The release includes many
-fixes and enhancements to all areas of Grafana, like new Data Sources, a new and improved timepicker, user invites, panel
-resize handles and improved InfluxDB and OpenTSDB support.
+fixes and enhancements to all areas of Grafana, like new Data Sources, a new and improved timepicker,
+user invites, panel resize handles and improved InfluxDB and OpenTSDB support, LDAP improvements, Graph
+panel units.
 
 ### New time range controls
 <img src="/assets/img/features/timepicker.png" alt="New Time picker">
