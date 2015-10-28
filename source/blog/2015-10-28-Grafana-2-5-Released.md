@@ -8,8 +8,9 @@ published_on: October 28, 2015
 <br>
 <img class="no-shadow" src="/assets/img/blog/grafana_2_5_graphic.png" alt="New Time picker">
 
-### <a href="/download">Download Grafana 2.5 now</a>
-<hr>
+<div class="text-center">
+  <a class="button secondary radius hollow" href="/download">Download Grafana 2.5 now</a>
+</div>
 
 This is an exciting release, and we want to share some of the highlights. The release includes many
 fixes and enhancements to all areas of Grafana, like new Data Sources, a new and improved timepicker,
