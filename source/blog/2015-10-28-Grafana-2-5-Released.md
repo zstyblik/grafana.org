@@ -108,7 +108,7 @@ view the [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG
 ### What's next for Grafana?
 If this release does not excite you then maybe the next one will. Starting next week work on integrating
 alerting into Grafana, in a non-intrusive and composable way, will begin. We have already spent a lot of
-time discussing this feature with the Grafana user community, done UI mocks, etc. You can join the
+time discussing this feature with the Grafana user community, done UI mock ups, etc. You can join the
 discussion and view mocks ups at [Issue #2209](https://github.com/grafana/grafana/issues/2209). Another top
 priority will be a table panel and more ways to visualize metrics.
 
