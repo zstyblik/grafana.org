@@ -6,10 +6,11 @@ published_on: October 28, 2015
 
 We are pleased to announce that Grafana 2.5 is now released!
 
-### <a href="http://grafana.org/download">Download Grafana 2.5 now</a>
+#### <a href="http://grafana.org/download">Download Grafana 2.5 now</a>
+<hr>
 
 ## Release highlights
-We're excited about this release, and want to share some of the highlights. This release includes many
+This is an exciting release, and we want to share some of the highlights. The release includes many
 fixes and enhancements to all areas of Grafana, like new Data Sources, a new and improved timepicker, user invites, panel
 resize handles and improved InfluxDB and OpenTSDB support.
 
@@ -35,7 +36,7 @@ and complex queries for logs or metrics.
 - Group by multiple terms or filters
   - Specify group by options like Top 5 based on Avg @value
 - Auto completion for field names
-- Query only relevant indicies based on time pattern
+- Query only relevant indices based on time pattern
 - Alias patterns for short readable series names
 
 Try the new Elasticsearch query editor on the [play.grafana.org](http://play.grafana.org/dashboard/db/elasticsearch-metrics) site.
@@ -63,7 +64,7 @@ stored in Prometheus.
 <img src="/assets/img/features/mixed_data.png" alt="Mix data sources in the same dashboard or in the same graph!">
 
 In previous releases you have been able to mix different data sources on the same dashboard. In v2.5 you
-will be able to mix then on the same graph! You can enable this by selecting the built in `-- Mixed --` data source.
+will be able to mix them on the same graph! You can enable this by selecting the built in `-- Mixed --` data source.
 When selected this will allow you to specify data source on a per query basis. This will, for example, allow you
 to plot metrics from different Graphite servers on the same Graph or plot data from Elasticsearch alongside
 data from Prometheus. Mixing different data sources on the same graph works for any data source, even custom ones.
@@ -94,16 +95,23 @@ This version also brings some new features for user management.
 
 ### Breaking changes
 There have been some changes to the data source plugin API. If you are using a custom plugin check that there is an update for it before you upgrade. Also
-the new time picker does not currenty support custom quick ranges like the last one did. This will likey be added in a
+the new time picker does not currently support custom quick ranges like the last one did. This will likely be added in a
 future release.
 
 ### Changelog
 For a detailed list and link to github issues for everything included in the 2.5 release please
 view the [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md) file.
 
+### What's next for Grafana?
+If this release does not excite you then maybe the next one will. Starting next week work on integrating
+alerting into Grafana, in a non-intrusive and composable way, will begin. We have already spent a lot of
+time discussing this feature with the Grafana user community, done UI mocks, etc. You can join the
+discussion and view mocks ups at [Issue #2209](https://github.com/grafana/grafana/issues/2209). Another top
+priority will be a table panel and more ways to visualize metrics.
+
 - - -
 
-### <a href="http://grafana.org/download">Download Grafana 2.5 now</a>
+#### <a href="http://grafana.org/download">Download Grafana 2.5 now</a>
 
 #### Thanks to project sponsors
 * [Squarespace](http://www.squarespace.com)
