@@ -9,7 +9,7 @@ published_on: October 28, 2015
 <img class="no-shadow" src="/assets/img/blog/grafana_2_5_graphic.png" alt="New Time picker">
 
 <div class="text-center">
-  <a class="button secondary radius hollow" href="/download">Download Grafana 2.5 now</a>
+  <a class="button primary radius" href="/download">Download Grafana 2.5 now</a>
 </div>
 
 This is an exciting release, and we want to share some of the highlights. The release includes many
