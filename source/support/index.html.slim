@@ -144,12 +144,56 @@ title: Support Plans
         th.blank width="5"
         th.large.prod-col $4,000/year
         th.large.pro-col $10,000/year
-        th.large.enterprise-col $25,000/year
+        th.large.enterprise-col <a href="#" data-reveal-id="supporPlanModal">Contact Us</a>
 
   br
   .row
     .medium-12.columns
-      h3 To sign up for a plan, or build your own custom support plan, please <a href="#">get in touch</a>.
+      h3.text-center To sign up for a plan, or build your own custom support plan, please <a href="#" data-reveal-id="supporPlanModal" class="button secondary radius hollow">sign up now</a>
+
+  .row
+    .medium-12.columns
+      .reveal-modal.medium#supporPlanModal data-reveal="true" aria-labelledby="modalTitle" aria-hidden="true" role="dialog"
+        h3#modalTitle Grafana Support Plans
+        p Please fill in the information below, and we'll be in touch shortly. All fields are required.
+        
+
+        form.inline-form action="#" method="post" id="" name=""          
+          fieldset
+            .row
+              .medium-6.columns                
+                    input.callout-cta type="text" placeholder="First Name" name="FNAME" id="mce-FNAME" required="true"
+              .medium-6.columns                      
+                    input.callout-cta type="text" placeholder="Last Name" name="LNAME" id="mce-LNAME" required="true"
+              .medium-12.columns                      
+                    input.callout-cta type="text" placeholder="Company" name="COMPANY" id="mce-COMPANY" required="true"
+                    input.callout-cta type="email" placeholder="e-mail address" name="EMAIL" id="mce-EMAIL" required="true"
+                    p 
+                      strong Select a plan:
+              .x-large-3.columns                   
+                    input type="radio" name="PLAN"
+                      span.small.text-muted Developer
+              .x-large-3.columns   
+                    input type="radio" name="PLAN" checked="true"
+                      span.small.Text-muted Production
+              .x-large-3.columns   
+                    input type="radio" name="PLAN"
+                      span.small.Text-muted Professional
+              .x-large-3.columns   
+                    input type="radio" name="PLAN"
+                      span.small.Text-muted Enterprise
+              .x-medium-12.columns   
+                    br
+                    br
+                    button.button.primary.radius type="submit" data-reveal-id="thankYouModal" value="Submit" name="subscribe" id="mc-embedded-subscribe" Submit
+            a.close-reveal-modal aria-label="Close" &#215;
+
+  .row
+    .medium-12.columns
+      .reveal-modal.medium#thankYouModal data-reveal="true" aria-labelledby="thankYouModalTitle" aria-hidden="true" role="dialog"
+        h3#thankYouModalTitle.text-center Thank you for inquiring about a Grafana support plan
+        p.text-center We'll be in touch shortly.  
+        a.close-reveal-modal aria-label="Close" &#215;        
   
   br
   .row
