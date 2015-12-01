@@ -9,8 +9,6 @@ with_layout :docs do
   page "/docs/*"
 end
 
-page "/graphing.html", :layout => false
-
 page "/blog/*", :layout => :article
 page "/blog/index.html", :layout => :layout
 
