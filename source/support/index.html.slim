@@ -158,36 +158,38 @@ title: Support Plans
         p Please fill in the information below, and we'll be in touch shortly. All fields are required.
         
 
-        form.inline-form action="#" method="post" id="" name=""          
-          fieldset
-            .row
-              .medium-6.columns                
-                    input.callout-cta type="text" placeholder="First Name" name="FNAME" id="mce-FNAME" required="true"
-              .medium-6.columns                      
-                    input.callout-cta type="text" placeholder="Last Name" name="LNAME" id="mce-LNAME" required="true"
-              .medium-12.columns                      
-                    input.callout-cta type="text" placeholder="Company" name="COMPANY" id="mce-COMPANY" required="true"
-                    input.callout-cta type="email" placeholder="e-mail address" name="EMAIL" id="mce-EMAIL" required="true"
-                    p 
-                      strong Select a plan:
-              .x-large-3.columns                   
-                    input type="radio" name="PLAN"
-                      span.small.text-muted Developer
-              .x-large-3.columns   
-                    input type="radio" name="PLAN" checked="true"
-                      span.small.Text-muted Production
-              .x-large-3.columns   
-                    input type="radio" name="PLAN"
-                      span.small.Text-muted Professional
-              .x-large-3.columns   
-                    input type="radio" name="PLAN"
-                      span.small.Text-muted Enterprise
-              .x-medium-12.columns   
-                    br
-                    br
-                    button.button.primary.radius type="submit" data-reveal-id="thankYouModal" value="Submit" name="subscribe" id="mc-embedded-subscribe" Submit
-            a.close-reveal-modal aria-label="Close" &#215;
+        / form.inline-form action="#" method="post" id="" name=""          
+        /   fieldset
+        /     .row
+        /       .medium-6.columns                
+        /             input.callout-cta type="text" placeholder="First Name" name="FNAME" id="mce-FNAME" required="true"
+        /       .medium-6.columns                      
+        /             input.callout-cta type="text" placeholder="Last Name" name="LNAME" id="mce-LNAME" required="true"
+        /       .medium-12.columns                      
+        /             input.callout-cta type="text" placeholder="Company" name="COMPANY" id="mce-COMPANY" required="true"
+        /             input.callout-cta type="email" placeholder="e-mail address" name="EMAIL" id="mce-EMAIL" required="true"
+        /             p 
+        /               strong Select a plan:
+        /       .x-large-3.columns                   
+        /             input type="radio" name="PLAN"
+        /               span.small.text-muted Developer
+        /       .x-large-3.columns   
+        /             input type="radio" name="PLAN" checked="true"
+        /               span.small.Text-muted Production
+        /       .x-large-3.columns   
+        /             input type="radio" name="PLAN"
+        /               span.small.Text-muted Professional
+        /       .x-large-3.columns   
+        /             input type="radio" name="PLAN"
+        /               span.small.Text-muted Enterprise
+        /       .x-medium-12.columns   
+        /             br
+        /             br
+        /             button.button.primary.radius type="submit" data-reveal-id="thankYouModal" value="Submit" name="subscribe" id="mc-embedded-subscribe" Submit
+        /     a.close-reveal-modal aria-label="Close" &#215;
 
+        = partial "layouts/support-form"
+        a.close-reveal-modal aria-label="Close" &#215;
   .row
     .medium-12.columns
       .reveal-modal.medium#thankYouModal data-reveal="true" aria-labelledby="thankYouModalTitle" aria-hidden="true" role="dialog"
