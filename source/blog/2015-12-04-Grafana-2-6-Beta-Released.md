@@ -4,10 +4,10 @@ author: Torkel Ödegaard
 published_on: December 4, 2015
 ---
 
-## Release information
+## Release highlights
 
-This release adds a new panel, the top requested **Table Panel**
-is finally here! The reason for the beta release status is because the release also
+This release adds a new panel, namely the top requested **Table Panel**. Yes it is
+finally here! The reason for the beta release status is because the release also
 includes a new and more powerful InfluxDB query editor.  This new editor works very
 differently from the previous one and requires more feedback and testing
 before a stable release can be made.
@@ -16,8 +16,9 @@ before a stable release can be made.
   <a class="button secondary radius" href="/download">Download Grafana 2.6 beta now</a>
 </div>
 
+
 The main documentation pages has yet to be updated with information about how to use
-the new table panel and InfluxDB editor so for now refer to this blog for guidance.
+the new table panel and the new InfluxDB editor so for now refer to this blog post for guidance.
 
 ### Table Panel
 
@@ -70,15 +71,15 @@ you want to show in the table.
 
 #### Elasticsearch aggregations
 
-You can also make Elasticsearch aggregation queries without a `Date Histogram`. This allows you
+You can also make Elasticsearch aggregation queries without a `Date Histogram`. This allows you to
 use Elasticsearch metric aggregations to get accurate aggregations for the selected time range.
 
 <img src="/assets/img/blog/v2.6/elastic_aggregations.png">
 
-#### InfluxDB Editor
-The new InfluxDB editor supports nested functions so you can use with queries that use the `derivative` function.
+### The New InfluxDB Editor
+The new InfluxDB editor is a lot more flexible and powerful. It supports nested functions, like `derivative`.
 It also uses the same technique as the Graphite query editor in that it presents nested functions as chain of function
-transformations.
+transformations. It tries to simplify and unify the complicated nature of InfluxDB's query language.
 
 <img src="/assets/img/blog/v2.6/influxdb_editor_v3.gif">
 
@@ -93,6 +94,9 @@ in combination with the new Table panel to show raw log data stored in InfluxDB.
 ### Changelog
 For a detailed list and link to github issues for everything included in the 2.6 release please
 view the [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md) file.
+
+<a href="/download">Download Grafana 2.6 beta now</a> <br><br>
+<a href="http://play.grafana.org/dashboard/db/new-features-in-v2-6">Demo dashboard for Grafana 2.6 features</a>
 
 - - -
 
