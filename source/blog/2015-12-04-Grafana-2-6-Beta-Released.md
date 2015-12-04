@@ -76,6 +76,12 @@ use Elasticsearch metric aggregations to get accurate aggregations for the selec
 
 <img src="/assets/img/blog/v2.6/elastic_aggregations.png">
 
+#### Annotations
+
+The table can also show any annotations you have enabled in the dashboard.
+
+<img src="/assets/img/blog/v2.6/table_annotations.png">
+
 ### The New InfluxDB Editor
 The new InfluxDB editor is a lot more flexible and powerful. It supports nested functions, like `derivative`.
 It also uses the same technique as the Graphite query editor in that it presents nested functions as chain of function
