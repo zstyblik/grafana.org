@@ -6,6 +6,8 @@ published_on: December 4, 2015
 
 ## Release highlights
 
+<img src="/assets/img/blog/v2.6/header.png" class="no-shadow">
+
 This release adds a new panel, namely the top requested **Table Panel**. Yes it is
 finally here! The reason for the beta release status is because the release also
 includes a new and more powerful InfluxDB query editor.  This new editor works very
