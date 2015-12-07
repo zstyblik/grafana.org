@@ -19,7 +19,7 @@ before a stable release can be made.
 </div>
 
 
-The main documentation pages has yet to be updated with information about how to use
+The main documentation pages have yet to be updated with information about how to use
 the new table panel and the new InfluxDB editor so for now refer to this blog post for guidance.
 
 ### Table Panel
@@ -36,10 +36,10 @@ Where `Metric` is the name of the time series.
 
 #### Table Transform
 Above you see the options tab for the **Table Panel**. The most important option is the `To Table Transform`.
-This options controls how the result of the metric/data query is turned into a table.
+This option controls how the result of the metric/data query is turned into a table.
 
 #### Column Styles
-The column styles allow you control how dates and numbers are formated.
+The column styles allow you control how dates and numbers are formatted.
 
 ### Time series to columns
 This transform allows you to take multiple time series and group them by time. Which will result in a `Time` column
@@ -51,13 +51,13 @@ In the screenshot above you can see how the same time series query as in the pre
 a different table by changing the `To Table Transform` to  `Time series to columns`.
 
 ### Time series to aggregations
-This transform works very similar to the legend values in the Graph panel. Each series gets its own row. In Options
-tab you can using the Columns plus button to select which aggregations you want.
+This transform works very similar to the legend values in the Graph panel. Each series gets its own row. In the Options
+tab you can select which aggregations you want using the plus button the Columns section.
 
 <img src="/assets/img/blog/v2.6/table_ts_to_aggregations.png">
 
-You have to think how accurate the aggregations will be. It depends on what aggregation is used in the time series query,
-how many data points is fetched, etc. The time series aggregations is calculated by Grafana after aggregation is performed
+You have to think about how accurate the aggregations will be. It depends on what aggregation is used in the time series query,
+how many data points are fetched, etc. The time series aggregations are calculated by Grafana after aggregation is performed
 by the time series database.
 
 #### Raw logs queries
