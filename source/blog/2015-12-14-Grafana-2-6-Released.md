@@ -3,7 +3,7 @@ title: Grafana 2.6.0 Released
 author: Torkel Ödegaard
 published_on: December 14, 2015
 ---
-We are proud to announce the release of v2.6.0 stable release. This release includes a new [Table panel](http://docs.grafana.org/reference/table_panel),
+We are proud to announce the v2.6.0 stable release. This release includes a new [Table panel](http://docs.grafana.org/reference/table_panel),
 an example of which you can see below.
 
 <img src="/assets/img/features/table-panel.png">
