@@ -6,7 +6,7 @@ redirect: http://docs.grafana.org/datasources/graphite
 # Graphite
 
 Grafana has an advanced graphite query editor that lets you quickly navigate the metric space, add functions.
-Change function paramaters and much more. The editor cannot handle all types of queries yet.
+Change function parameters and much more. The editor cannot handle all types of queries yet.
 To switch to a regular text box click the pen icon to the right.
 
 ## Navigate metric segments

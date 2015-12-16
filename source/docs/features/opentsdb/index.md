@@ -100,7 +100,7 @@ Open a graph in edit mode by click the title.
 ![](opentsdb/editor_v1.png)
 
 For details on opentsdb metric queries
-checkout the offical [OpenTSDB documentation](http://opentsdb.net/docs/build/html/index.html)
+checkout the official [OpenTSDB documentation](http://opentsdb.net/docs/build/html/index.html)
 
 
 
