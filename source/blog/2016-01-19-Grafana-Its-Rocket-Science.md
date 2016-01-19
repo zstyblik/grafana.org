@@ -6,7 +6,7 @@ published_on: January 19, 2016
 
 <img src="/assets/img/v2/rocket_science_twitter.png">
 
-At raintank, all our software is open source. We haven’t talked much about how the whole stack will fit together (more on that soon…), but starting with <a href="http://www.grafana.org" target="_blank">Grafana</a>, every <a href="https://github.com/raintank/litmus-plugin" target="_blank">piece</a> <a href="https://github.com/raintank/raintank-metric" target="_blank">of</a> <a href="https://github.com/raintank/raintank-probe" target="_blank">it</a> is being developed in the open.
+At <a href="http://raintank.io" target="_blank">raintank</a>, all our software is open source. We haven’t talked much about how the whole stack will fit together (more on that soon…), but starting with <a href="http://www.grafana.org" target="_blank">Grafana</a>, every <a href="https://github.com/raintank/litmus-plugin" target="_blank">piece</a> <a href="https://github.com/raintank/raintank-metric" target="_blank">of</a> <a href="https://github.com/raintank/raintank-probe" target="_blank">it</a> is being developed in the open.
 
 Our core revenue model is OpenSaaS: We couple our software with optional hosted services that we provide. These services are also powered by software that is open source.
 
