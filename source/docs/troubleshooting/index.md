@@ -12,7 +12,7 @@ opening a new github issue or asking a question in #grafana on freenode.
 - [Only blank white page](#only-blank-white-page)
 
 ### General connection issues
-When setting up Grafana for the first time you might experiance issues with Grafana being unable to query Graphite, OpenTSDB or InfluxDB.
+When setting up Grafana for the first time you might experience issues with Grafana being unable to query Graphite, OpenTSDB or InfluxDB.
 You might not be able to get metric name completion or the graph might show an error like this:
 
 ![](docs/graph_timestore_error.png)
@@ -24,7 +24,7 @@ very little information. The best way to troubleshoot these issues is use
 ![](docs/toubleshooting_chrome_dev_tools.png)
 
 There are two important tabs in the chrome dev tools, ``Network`` and ``Console``. Console will show you javascript errors and HTTP
-request errors. In the Network tab you will be able to identifiy the request that failed and review request and response parameters.
+request errors. In the Network tab you will be able to identify the request that failed and review request and response parameters.
 This information will be of great help in finding the cause of the error. If you are unable to solve the issue, even after reading
 the remainder of this troubleshooting guide, you may open a [github support issue](https://github.com/grafana/grafana/issues).
 Before you do that please search the existing closed or open issues. Also if you need to create a support issue,

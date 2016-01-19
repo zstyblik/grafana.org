@@ -12,7 +12,7 @@ The main panel for in Grafana is simply named Graph. It provides a very rich set
 ### Axes, Grid & Legend options
 ![](docs/graph_axes_grid_options.png)
 
-**Legens values**
+**Legends values**
 
 Check ``Include Values`` under legend styles.
 

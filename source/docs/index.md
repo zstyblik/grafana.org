@@ -6,7 +6,7 @@ redirect: http://docs.grafana.org/installation
 # Installation
 
 Grafana is a frontend for [Graphite](http://graphite.readthedocs.org/en/latest/), [InfluxDB](http://influxdb.org)
-and [OpenTSDB](http://opentsdb.net) with powerfull visualization features for time series data.
+and [OpenTSDB](http://opentsdb.net) with powerful visualization features for time series data.
 You will need either a Graphite, InfluxDB or OpenTSDB server for Grafana to be of any use.
 
 ## Download
@@ -54,8 +54,8 @@ datasources: {
   },
 },
 ```
-In the above example you see two InfluxDB datasources, one for metrics and a seperate used for dashboard storage. You can use the same InfluxDB
-database for both. But it is probably a good idea to keep them seperate. The InfluxDB databases need to exist, grafana does not create
+In the above example you see two InfluxDB datasources, one for metrics and a separate used for dashboard storage. You can use the same InfluxDB
+database for both. But it is probably a good idea to keep them separate. The InfluxDB databases need to exist, grafana does not create
 them.
 
 ### Graphite & Elasticsearch setup example
@@ -133,7 +133,7 @@ admin: {
   password: ''
 },
 
-// Add your own custom pannels
+// Add your own custom panels
 plugins: {
   panels: []
 }
@@ -154,7 +154,7 @@ Header set Access-Control-Allow-Headers "origin, authorization, accept"
 Note that using `"*"` leaves your graphite instance quite open so you might want to consider
 using `"http://my.grafana.com"` in place of `"*"`
 
-If your Graphite web is proteced by basic authentication, you have to enable the HTTP verb OPTIONS. Take note that
+If your Graphite web is protected by basic authentication, you have to enable the HTTP verb OPTIONS. Take note that
 when using basic auth **Access-Control-Allow-Origin** must not be set to a wildcard, also the header
 **Access-Control-Allow-Credentials** must be specified. This looks like the following for Apache:
 
