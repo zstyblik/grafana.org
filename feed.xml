@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Grafana Blog</title>
+  <subtitle>Blog posts on Grafana, Metrics, Graphite, Monitoring, Build measure learn</subtitle>
+  <id>http://grafana.org/blog</id>
+  <link href="http://grafana.org/blog"/>
+  <link href="http://grafana.org/feed.xml" rel="self"/>
+  <updated>2016-01-19T01:00:00+01:00</updated>
+  <author>
+    <name>Grafana</name>
+  </author>
+  <entry>
+    <title>Grafana- It's Rocket Science</title>
+    <link rel="alternate" href="http://grafana.org/blog/2016/01/19/Grafana-Its-Rocket-Science.html"/>
+    <id>http://grafana.org/blog/2016/01/19/Grafana-Its-Rocket-Science.html</id>
+    <published>2016-01-19T01:00:00+01:00</published>
+    <updated>2016-02-19T16:11:55+01:00</updated>
+    <author>
+      <name>Raj Dutt</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="/assets/img/v2/rocket_science_twitter.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;At &lt;a href="http://raintank.io" target="_blank"&gt;raintank&lt;/a&gt;, all our software is open source. We haven’t talked much about how the whole stack will fit together (more on that soon…), but starting with &lt;a href="http://www.grafana.org" target="_blank"&gt;Grafana&lt;/a&gt;, every &lt;a href="https://github.com/raintank/litmus-plugin" target="_blank"&gt;piece&lt;/a&gt; &lt;a href="https://github.com/raintank/raintank-metric" target="_blank"&gt;of&lt;/a&gt; &lt;a href="https://github.com/raintank/raintank-probe" target="_blank"&gt;it&lt;/a&gt; is being developed in the open.&lt;/p&gt;
+
+&lt;p&gt;Our core revenue model is OpenSaaS: We couple our software with optional hosted services that we provide. These services are also powered by software that is open source.&lt;/p&gt;
+
+&lt;p&gt;Most of our users will simply choose to download our open source software, and won&amp;rsquo;t pay us anything. Many will choose to host our stack with another provider.&lt;/p&gt;
+
+&lt;p&gt;That may sound alarming to a potential raintank investor, but it’s actually totally OK, and expected. Not only does open source help us create much better software, but if done right it gives us the most amazing distribution channel that money can’t buy.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s hard to keep up with the awesome ways that Grafana is being used, let alone by whom. Difficulty identifying  your users and successes isn’t an issue most software or SaaS companies face, but it’s pretty endemic in open source. It&amp;rsquo;s something that we&amp;rsquo;re focusing on improving this year at raintank.&lt;/p&gt;
+
+&lt;p&gt;In many situations, we find out that someone is using Grafana in the most indirect ways: a tweet, a job posting that mentions it, a blog post, an issue filed, a PR, or sometimes even a thank you note.&lt;/p&gt;
+
+&lt;p&gt;It’s always a thrill to find out when someone cool is finding value in your software. One of the biggest thrills so far came a few days ago, when our very own Dieter Plaetinck noticed  Grafana on a screen at the SpaceX Launch Control Center during their recent Falcon 9 launch:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/v2/grafana-spotted.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;strong&gt;Watch &lt;a href="https://youtu.be/ANv5UfZsvZQ"&gt;The Falcon has landed&lt;/a&gt;&lt;/strong&gt;
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/ANv5UfZsvZQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;A bunch of us at raintank are huge fans of SpaceX, and follow the launches regularly. We’d love to learn more about what they&amp;rsquo;re doing with Grafana (and have already contacted them). &lt;/p&gt;
+
+&lt;p&gt;In the meantime, knowing that they’ve gotten some small value out of Grafana, and it&amp;rsquo;s up on screen visualizing their measurement data, is just an awesome feeling. &lt;/p&gt;
+
+&lt;p&gt;Onwards and upwards, open source, Grafana, and SpaceX!&lt;/p&gt;
+
+&lt;div style="font-size:75%"&gt;&lt;em&gt;Main photo courtesy of NASA&lt;/em&gt;&lt;/div&gt;
+ 
+
+&lt;h4 id="thanks-to-project-sponsors"&gt;Thanks to project sponsors&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://raintank.io"&gt;Raintank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.squarespace.com"&gt;Squarespace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.dreamhost.com"&gt;Dreamhost&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.demonware.net"&gt;Demonware&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developer.mediamath.com/OpenSource"&gt;Mediamath&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Grafana 2.6.0 Released</title>
+    <link rel="alternate" href="http://grafana.org/blog/2015/12/14/Grafana-2-6-Released.html"/>
+    <id>http://grafana.org/blog/2015/12/14/Grafana-2-6-Released.html</id>
+    <published>2015-12-14T01:00:00+01:00</published>
+    <updated>2016-02-19T16:11:55+01:00</updated>
+    <author>
+      <name>Torkel Ödegaard</name>
+    </author>
+    <content type="html">&lt;p&gt;We are proud to announce the v2.6.0 stable release. This release includes a new &lt;a href="http://docs.grafana.org/reference/table_panel"&gt;Table panel&lt;/a&gt;,
+an example of which you can see below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/features/table-panel.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;This new flexible panel enables multiple ways for visualizing time series and logs in a tabular format. The release also includes a new InfluxDB query editor,
+support for Elasticsearch pipeline aggregations, support for multiple Cloudwatch credentials and a ton of minor
+fixes and improvements.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href="http://docs.grafana.org/guides/whats-new-in-v2-6"&gt;What&amp;rsquo;s New In Grafana v2.6&lt;/a&gt; article
+for more info on new features. There is also a &lt;a href="http://play.grafana.org/dashboard/db/new-features-in-v2-6"&gt;Demo dashboard&lt;/a&gt;
+at the demo site where you can play with the new panel and InfluxDB editor.&lt;/p&gt;
+
+&lt;div class="text-center"&gt;
+  &lt;a class="button secondary radius" href="/download"&gt;Download Grafana 2.6 now&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Upgrading from any previous 2.x version is safe, dashboards are backward compatible.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://docs.grafana.org/installation/debian/"&gt;Installing on Debian / Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.grafana.org/installation/rpm/"&gt;Installing on RPM-based Linux (CentOS, Fedora, OpenSuse, RedHat)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.grafana.org/installation/docker/"&gt;Installing via Docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changelog"&gt;Changelog&lt;/h3&gt;
+
+&lt;p&gt;For a detailed list and link to github issues for everything included in the 2.6 release please
+view the &lt;a href="https://github.com/grafana/grafana/blob/master/CHANGELOG.md"&gt;CHANGELOG.md&lt;/a&gt; file.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="thanks-to-project-sponsors"&gt;Thanks to project sponsors&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://raintank.io"&gt;Raintank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.squarespace.com"&gt;Squarespace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.dreamhost.com"&gt;Dreamhost&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.demonware.net"&gt;Demonware&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developer.mediamath.com/OpenSource"&gt;Mediamath&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Grafana 2.6 Beta Released</title>
+    <link rel="alternate" href="http://grafana.org/blog/2015/12/04/Grafana-2-6-Beta-Released.html"/>
+    <id>http://grafana.org/blog/2015/12/04/Grafana-2-6-Beta-Released.html</id>
+    <published>2015-12-04T01:00:00+01:00</published>
+    <updated>2016-02-19T16:11:55+01:00</updated>
+    <author>
+      <name>Torkel Ödegaard</name>
+    </author>
+    <content type="html">&lt;h2 id="release-highlights"&gt;Release highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/header.png" class="no-shadow"&gt;&lt;/p&gt;
+
+&lt;p&gt;This release adds a new panel, namely the top requested &lt;strong&gt;Table Panel&lt;/strong&gt;. Yes it is
+finally here! The reason for the beta release status is because the release also
+includes a new and more powerful InfluxDB query editor.  This new editor works very
+differently from the previous one and requires more feedback and testing
+before a stable release can be made.&lt;/p&gt;
+
+&lt;div class="text-center"&gt;
+  &lt;a class="button secondary radius" href="/download"&gt;Download Grafana 2.6 beta now&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The main documentation pages have yet to be updated with information about how to use
+the new table panel and the new InfluxDB editor so for now refer to this blog post for guidance.&lt;/p&gt;
+
+&lt;h3 id="table-panel"&gt;Table Panel&lt;/h3&gt;
+
+&lt;p&gt;The new table panel is very flexible, supporting both multiple modes for time series as well as for
+table, annotation and raw JSON data. It also provides date formating and value formating and coloring options.&lt;/p&gt;
+
+&lt;h4 id="time-series-to-rows"&gt;Time series to rows&lt;/h4&gt;
+
+&lt;p&gt;In the most simple mode you can turn time series to rows. This means you get a &lt;code class="prettyprint"&gt;Time&lt;/code&gt;, &lt;code class="prettyprint"&gt;Metric&lt;/code&gt; and a &lt;code class="prettyprint"&gt;Value&lt;/code&gt; column.
+Where &lt;code class="prettyprint"&gt;Metric&lt;/code&gt; is the name of the time series.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_ts_to_rows.png"&gt;&lt;/p&gt;
+
+&lt;h4 id="table-transform"&gt;Table Transform&lt;/h4&gt;
+
+&lt;p&gt;Above you see the options tab for the &lt;strong&gt;Table Panel&lt;/strong&gt;. The most important option is the &lt;code class="prettyprint"&gt;To Table Transform&lt;/code&gt;.
+This option controls how the result of the metric/data query is turned into a table.&lt;/p&gt;
+
+&lt;h4 id="column-styles"&gt;Column Styles&lt;/h4&gt;
+
+&lt;p&gt;The column styles allow you control how dates and numbers are formatted.&lt;/p&gt;
+
+&lt;h3 id="time-series-to-columns"&gt;Time series to columns&lt;/h3&gt;
+
+&lt;p&gt;This transform allows you to take multiple time series and group them by time. Which will result in a &lt;code class="prettyprint"&gt;Time&lt;/code&gt; column
+and a column for each time series.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_ts_to_columns.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;In the screenshot above you can see how the same time series query as in the previous example can be transformed into
+a different table by changing the &lt;code class="prettyprint"&gt;To Table Transform&lt;/code&gt; to  &lt;code class="prettyprint"&gt;Time series to columns&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id="time-series-to-aggregations"&gt;Time series to aggregations&lt;/h3&gt;
+
+&lt;p&gt;This transform works very similar to the legend values in the Graph panel. Each series gets its own row. In the Options
+tab you can select which aggregations you want using the plus button the Columns section.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_ts_to_aggregations.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;You have to think about how accurate the aggregations will be. It depends on what aggregation is used in the time series query,
+how many data points are fetched, etc. The time series aggregations are calculated by Grafana after aggregation is performed
+by the time series database.&lt;/p&gt;
+
+&lt;h4 id="raw-logs-queries"&gt;Raw logs queries&lt;/h4&gt;
+
+&lt;p&gt;If you want to show documents from Elasticsearch pick &lt;code class="prettyprint"&gt;Raw Document&lt;/code&gt; as the first metric.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/elastic_raw_doc.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;This in combination with the &lt;code class="prettyprint"&gt;JSON Data&lt;/code&gt; table transform will allow you to pick which fields in the document
+you want to show in the table.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_json_data.png"&gt;&lt;/p&gt;
+
+&lt;h4 id="elasticsearch-aggregations"&gt;Elasticsearch aggregations&lt;/h4&gt;
+
+&lt;p&gt;You can also make Elasticsearch aggregation queries without a &lt;code class="prettyprint"&gt;Date Histogram&lt;/code&gt;. This allows you to
+use Elasticsearch metric aggregations to get accurate aggregations for the selected time range.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/elastic_aggregations.png"&gt;&lt;/p&gt;
+
+&lt;h4 id="annotations"&gt;Annotations&lt;/h4&gt;
+
+&lt;p&gt;The table can also show any annotations you have enabled in the dashboard.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_annotations.png"&gt;&lt;/p&gt;
+
+&lt;h3 id="the-new-influxdb-editor"&gt;The New InfluxDB Editor&lt;/h3&gt;
+
+&lt;p&gt;The new InfluxDB editor is a lot more flexible and powerful. It supports nested functions, like &lt;code class="prettyprint"&gt;derivative&lt;/code&gt;.
+It also uses the same technique as the Graphite query editor in that it presents nested functions as chain of function
+transformations. It tries to simplify and unify the complicated nature of InfluxDB&amp;rsquo;s query language.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/influxdb_editor_v3.gif"&gt;&lt;/p&gt;
+
+&lt;p&gt;The new editor also allows you to remove group by time and select &lt;code class="prettyprint"&gt;raw&lt;/code&gt; table data. Which is very useful
+in combination with the new Table panel to show raw log data stored in InfluxDB.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_influxdb_logs.png"&gt;&lt;/p&gt;
+
+&lt;h3 id="breaking-changes"&gt;Breaking changes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Elasticsearch&lt;/strong&gt;: Manual json edited queries are not supported any more (They very barely worked in 2.5)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changelog"&gt;Changelog&lt;/h3&gt;
+
+&lt;p&gt;For a detailed list and link to github issues for everything included in the 2.6 release please
+view the &lt;a href="https://github.com/grafana/grafana/blob/master/CHANGELOG.md"&gt;CHANGELOG.md&lt;/a&gt; file.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="/download"&gt;Download Grafana 2.6 beta now&lt;/a&gt; &lt;br&gt;&lt;br&gt;
+&lt;a href="http://play.grafana.org/dashboard/db/new-features-in-v2-6"&gt;Demo dashboard for Grafana 2.6 features&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="download-grafana-2-6-beta-now"&gt;&lt;a href="http://grafana.org/download"&gt;Download Grafana 2.6 beta now&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id="thanks-to-project-sponsors"&gt;Thanks to project sponsors&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://raintank.io"&gt;Raintank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.squarespace.com"&gt;Squarespace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.dreamhost.com"&gt;Dreamhost&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.demonware.net"&gt;Demonware&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developer.mediamath.com/OpenSource"&gt;Mediamath&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Grafana 2.5 Released</title>
+    <link rel="alternate" href="http://grafana.org/blog/2015/10/28/Grafana-2-5-Released.html"/>
+    <id>http://grafana.org/blog/2015/10/28/Grafana-2-5-Released.html</id>
+    <published>2015-10-28T01:00:00+01:00</published>
+    <updated>2016-02-19T16:11:55+01:00</updated>
+    <author>
+      <name>Torkel Ödegaard</name>
+    </author>
+    <content type="html">&lt;h2 id="release-highlights"&gt;Release highlights&lt;/h2&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;img class="no-shadow" src="/assets/img/blog/grafana_2_5_graphic.png" alt="New Time picker"&gt;&lt;/p&gt;
+
+&lt;div class="text-center"&gt;
+  &lt;a class="button primary radius" href="/download"&gt;Download Grafana 2.5 now&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is an exciting release, and we want to share some of the highlights. The release includes many
+fixes and enhancements to all areas of Grafana, like new Data Sources, a new and improved timepicker,
+user invites, panel resize handles and improved InfluxDB and OpenTSDB support, LDAP improvements, Graph
+panel units.&lt;/p&gt;
+
+&lt;h3 id="new-time-range-controls"&gt;New time range controls&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/features/timepicker.png" alt="New Time picker"&gt;&lt;/p&gt;
+
+&lt;p&gt;A new timepicker with room for more quick ranges as well as new types of relative ranges, like &lt;code class="prettyprint"&gt;Today&lt;/code&gt;,
+&lt;code class="prettyprint"&gt;The day so far&lt;/code&gt; and &lt;code class="prettyprint"&gt;This day last week&lt;/code&gt;. Also an improved time &amp;amp; calendar picker that now works
+correctly in UTC mode.&lt;/p&gt;
+
+&lt;h3 id="elasticsearch"&gt;Elasticsearch&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/features/elasticsearch_metrics_ex1.png" alt="Elasticsearch example"&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;This release brings a fully featured query editor for Elasticsearch. You will now be able to visualize
+logs or any kind of data stored in Elasticserarch. The query editor allows you to build both simple
+and complex queries for logs or metrics.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compute metrics from your documents, supported Elasticsearch aggregations:
+
+&lt;ul&gt;
+&lt;li&gt;Count, Avg, Min, Max, Sum&lt;/li&gt;
+&lt;li&gt;Percentiles, Std Dev, etc.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Group by multiple terms or filters
+
+&lt;ul&gt;
+&lt;li&gt;Specify group by options like Top 5 based on Avg @value&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Auto completion for field names&lt;/li&gt;
+&lt;li&gt;Query only relevant indices based on time pattern&lt;/li&gt;
+&lt;li&gt;Alias patterns for short readable series names&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Try the new Elasticsearch query editor on the &lt;a href="http://play.grafana.org/dashboard/db/elasticsearch-metrics"&gt;play.grafana.org&lt;/a&gt; site.&lt;/p&gt;
+
+&lt;h3 id="cloudwatch"&gt;CloudWatch&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/features/cloudwatch.png" alt="Cloudwatch editor"&gt;&lt;/p&gt;
+
+&lt;p&gt;Grafana 2.5 ships with a new CloudWatch datasource that will allow you to query and visualize CloudWatch
+metrics directly from Grafana.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rich editor with auto completion for metric names, namespaces and dimensions&lt;/li&gt;
+&lt;li&gt;Templating queries for generic dashboards&lt;/li&gt;
+&lt;li&gt;Alias patterns for short readable series names&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="prometheus"&gt;Prometheus&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/features/prometheus_editor.png" alt="Prometheus editor"&gt;&lt;/p&gt;
+
+&lt;p&gt;Grafana 2.5 ships with a new Prometheus datasource that will allow you to query and visualize data
+stored in Prometheus.&lt;/p&gt;
+
+&lt;h3 id="mix-different-data-sources"&gt;Mix different data sources&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/features/mixed_data.png" alt="Mix data sources in the same dashboard or in the same graph!"&gt;&lt;/p&gt;
+
+&lt;p&gt;In previous releases you have been able to mix different data sources on the same dashboard. In v2.5 you
+will be able to mix them on the same graph! You can enable this by selecting the built in &lt;code class="prettyprint"&gt;-- Mixed --&lt;/code&gt; data source.
+When selected this will allow you to specify data source on a per query basis. This will, for example, allow you
+to plot metrics from different Graphite servers on the same Graph or plot data from Elasticsearch alongside
+data from Prometheus. Mixing different data sources on the same graph works for any data source, even custom ones.&lt;/p&gt;
+
+&lt;h3 id="panel-resize-handles"&gt;Panel Resize handles&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/features/panel_resize.gif" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;This release adds resize handles to the the bottom right corners of panels making is easy to resize both width and height.&lt;/p&gt;
+
+&lt;h3 id="user-invites"&gt;User invites&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/features/org_invite.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;This version also brings some new features for user management.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Organization admins can now invite new users (via email or manually via invite link)&lt;/li&gt;
+&lt;li&gt;Users can signup using invite link and get automatically added to invited organization&lt;/li&gt;
+&lt;li&gt;User signup workflow can (if enabled) contain an email verification step.&lt;/li&gt;
+&lt;li&gt;Check out &lt;a href="https://github.com/grafana/grafana/issues/2353"&gt;#2353&lt;/a&gt; for more info.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="miscellaneous-improvements"&gt;Miscellaneous improvements&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;InfluxDB query editor now supports math and AS expressions&lt;/li&gt;
+&lt;li&gt;InfluxDB query editor now supports custom group by interval&lt;/li&gt;
+&lt;li&gt;Panel drilldown link is easier to reach&lt;/li&gt;
+&lt;li&gt;LDAP improvements (can now search for group membership if your LDAP server does not support memberOf attribute)&lt;/li&gt;
+&lt;li&gt;More units for graph and singlestat panel (Length, Volume, Temperature, Pressure, Currency)&lt;/li&gt;
+&lt;li&gt;Admin page for all organizations (remove / edit)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="breaking-changes"&gt;Breaking changes&lt;/h3&gt;
+
+&lt;p&gt;There have been some changes to the data source plugin API. If you are using a custom plugin check that there is an update for it before you upgrade. Also
+the new time picker does not currently support custom quick ranges like the last one did. This will likely be added in a
+future release.&lt;/p&gt;
+
+&lt;h3 id="changelog"&gt;Changelog&lt;/h3&gt;
+
+&lt;p&gt;For a detailed list and link to github issues for everything included in the 2.5 release please
+view the &lt;a href="https://github.com/grafana/grafana/blob/master/CHANGELOG.md"&gt;CHANGELOG.md&lt;/a&gt; file.&lt;/p&gt;
+
+&lt;h3 id="what-39-s-next-for-grafana"&gt;What&amp;rsquo;s next for Grafana?&lt;/h3&gt;
+
+&lt;p&gt;If this release does not excite you then maybe the next one will. Starting next week work on integrating
+alerting into Grafana, in a non-intrusive and composable way, will begin. We have already spent a lot of
+time discussing this feature with the Grafana user community, done UI mock ups, etc. You can join the
+discussion and view mocks ups at &lt;a href="https://github.com/grafana/grafana/issues/2209"&gt;Issue #2209&lt;/a&gt;. Another top
+priority will be a table panel and more ways to visualize metrics.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id="download-grafana-2-5-now"&gt;&lt;a href="http://grafana.org/download"&gt;Download Grafana 2.5 now&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id="thanks-to-project-sponsors"&gt;Thanks to project sponsors&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://raintank.io"&gt;Raintank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.squarespace.com"&gt;Squarespace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.dreamhost.com"&gt;Dreamhost&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.demonware.net"&gt;Demonware&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developer.mediamath.com/OpenSource"&gt;Mediamath&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Grafana 2.1 Released</title>
+    <link rel="alternate" href="http://grafana.org/blog/2015/08/04/Grafana-2-1-Released.html"/>
+    <id>http://grafana.org/blog/2015/08/04/Grafana-2-1-Released.html</id>
+    <published>2015-08-04T02:00:00+02:00</published>
+    <updated>2016-02-19T16:11:55+01:00</updated>
+    <author>
+      <name>Torkel Ödegaard</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img class="no-shadow" src="/assets/img/blog/new-in-grafana-v2-1.png" alt="what's new in Grafana 2.1"/&gt;&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ve been working to implement many of the features you&amp;rsquo;ve requested since the release of 2.0, and are
+excited to announce the release of Grafana 2.1 today. We recommend that all Grafana users upgrade to this release.
+Grafana 2.1 brings improvements in three core areas: dashboarding, authentication, and data sources.
+As with every Grafana release, there is a whole slew of new features, enhancements, and bug fixes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://grafana.org/download/" target="_blank"&gt;Download Grafana 2.1 now&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;re excited about this release, and want to share some of the highlights:&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="more-dynamic-dashboards"&gt;More Dynamic Dashboards&lt;/h2&gt;
+
+&lt;p&gt;The Templating system is one of the most powerful and well-used features of Grafana.
+The 2.1 release brings numerous improvements that make dashboards more dynamic than ever before.&lt;/p&gt;
+
+&lt;h3 id="multi-value-template-variables"&gt;Multi-Value Template Variables&lt;/h3&gt;
+
+&lt;p&gt;A template variable with Multi-Value enabled allows for the selection of multiple values at the same time.
+These variables can then be used in any panel to make them more dynamic, and to give you the perfect view of your data.
+Multi-Value variables is also enabling the new &lt;code class="prettyprint"&gt;row repeat&lt;/code&gt; and &lt;code class="prettyprint"&gt;panel repeat&lt;/code&gt; feature described below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title="Multi-Value Select" alt="Multi-Value Select" src="/assets/img/blog/multi-select.gif" /&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3 id="repeating-rows-and-panels"&gt;Repeating Rows and Panels&lt;/h3&gt;
+
+&lt;p&gt;It’s now possible to create a Dashboard that automatically adds (or removes) both rows and panels based
+on selected variable values. Any row or any panel can be configured to repeat (duplicate itself) based
+on a multi-value template variable.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img title="Repeating Rows and Panels" alt="Repeating Rows and Panels" src="/assets/img/blog/panel-row-repeat.gif" /&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3 id="dashboard-links-amp-navigation"&gt;Dashboard Links &amp;amp; Navigation&lt;/h3&gt;
+
+&lt;p&gt;To support better navigation between dashboards, it&amp;rsquo;s now possible to create custom and dynamic links from individual
+panels to appropriate Dashboards. You also have the ability to create flexible top-level links on any
+given Dashboard thanks to the new Dashboard navigation bar feature.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title="Dashboard Links" alt="Dashboard Links" src="/assets/img/blog/dash_links.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dashboard links can be added under dashboard settings. Either defined as static URLs with a custom icon or as dynamic
+dashboard links or dropdowns based on custom dashboard search query. These links appear in the same
+row under the top menu where template variables appear.&lt;/p&gt;
+
+&lt;p&gt;&lt;hr&gt;&lt;/p&gt;
+
+&lt;h3 id="better-local-dashboard-support"&gt;Better local Dashboard support&lt;/h3&gt;
+
+&lt;p&gt;Grafana can now index Dashboards saved locally as JSON from a given directory. These file based dashboards
+will appear in the regular dashboard search along regular DB dashboards.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; Saving local dashboards back the folder is not supported; this feature is meant for statically generated JSON dashboards.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="new-authentication-options"&gt;New Authentication Options&lt;/h2&gt;
+
+&lt;p&gt;New authentication methods add numerous options to manage users, roles and organizations.&lt;/p&gt;
+
+&lt;h3 id="ldap-support"&gt;LDAP support&lt;/h3&gt;
+
+&lt;p&gt;This highly requested feature now allows your Grafana users to login with their LDAP credentials.
+You can also specify mappings between LDAP group memberships and Grafana Organization user roles.&lt;/p&gt;
+
+&lt;h3 id="basic-auth-support"&gt;Basic Auth Support&lt;/h3&gt;
+
+&lt;p&gt;You can now authenticate against the Grafana API utilizing a simple username and password with basic HTTP authentication.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; This can be useful for provisioning and config management systems that need
+to utilize the API without having to create an API key.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="auth-proxy-support"&gt;Auth Proxy Support&lt;/h3&gt;
+
+&lt;p&gt;You can now authenticate utilizing a header (eg. X-Authenticated-User, or X-WEBAUTH-USER)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; this can be useful in situations with reverse proxies.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="new-read-only-editor-user-role"&gt;New “Read-only Editor” User Role&lt;/h3&gt;
+
+&lt;p&gt;There is a new User role available in this version of Grafana: “Read-only Editor”. This role behaves just
+like the Viewer role does in Grafana 2.0.  That is you can edit graphs and queries but not save dashboards.
+The Viewer role has been modified in Grafana 2.1 so that users assigned this role can no longer edit panels.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="data-source-improvements"&gt;Data source Improvements&lt;/h2&gt;
+
+&lt;h3 id="influxdb-0-9-support"&gt;InfluxDB 0.9 Support&lt;/h3&gt;
+
+&lt;p&gt;Grafana 2.1 now comes with full support for InfluxDB 0.9. There is a new query editor designed from scratch
+for the new features InfluxDB 0.9 enables.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title="InfluxDB Editor" alt="InfluxDB Editor" src="/assets/img/blog/influx_09_editor_anim.gif" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h3 id="opentsdb-improvements"&gt;OpenTSDB Improvements&lt;/h3&gt;
+
+&lt;p&gt;Grafana OpenTSDB data source now supports template variable values queries. This means you can create
+template variables that fetches the values from OpenTSDB (for example metric names, tag names, or tag values).
+The query editor is also enhanced to limiting tags by metric.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; OpenTSDB config option tsd.core.meta.enable_realtime_ts must enabled for OpenTSDB lookup api)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="new-data-source-kairosdb"&gt;New Data Source: KairosDB&lt;/h3&gt;
+
+&lt;p&gt;The Cassandra backed time series database KairosDB is now supported in Grafana out of the box. Thank you to
+&lt;a href="https://github.com/masaori335" target="_blank"&gt;masaori335&lt;/a&gt; for his hard work in getting it to this point. Also thanks
+to &lt;a href="https://github.com/rdettai"&gt;Remi Dettai&lt;/a&gt; for the initial implementation of the KairosDB data source plugin.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id="panel-improvements"&gt;Panel Improvements&lt;/h2&gt;
+
+&lt;p&gt;Grafana 2.1 gives you even more flexibility customizing how individual panels render.
+Overriding the colors of specific series using regular expressions, changing how series stack,
+and allowing string values will help you better understand your data at a glance.&lt;/p&gt;
+
+&lt;h3 id="graph-panel"&gt;Graph Panel&lt;/h3&gt;
+
+&lt;p&gt;Define series color using regex rule. This is useful when you have templated graphs with series names
+that change depending selected template variables. Using a regex style override rule you could
+for example make all series that contain the word &lt;strong&gt;CPU&lt;/strong&gt; &lt;code class="prettyprint"&gt;red&lt;/code&gt; and assigned to the second y axis.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title="Define series color using regex rule" alt="Define series color using regex rule" src="/assets/img/blog/regex_color_override.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;New series style override, negative-y transform and stack groups. Negative y tranform is
+very useful if you want to plot a series on the negative y scale without affecting the legend values like min or max or
+the values shown in the hover tooltip.&lt;/p&gt;
+
+&lt;p&gt;&lt;img title="Negative-y Transform" alt="Negative-y Transform" src="/assets/img/blog/negative-y.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img title="Negative-y Transform" alt="Negative-y Transform" src="/assets/img/blog/negative-y-form.png" /&gt;&lt;/p&gt;
+
+&lt;h3 id="singlestat-panel"&gt;Singlestat Panel&lt;/h3&gt;
+
+&lt;p&gt;Now support string values. Useful for time series database like InfluxDB that supports
+string values.&lt;/p&gt;
+
+&lt;h3 id="changelog"&gt;Changelog&lt;/h3&gt;
+
+&lt;p&gt;For a detailed list and link to github issues for everything included in the 2.1 release please
+view the &lt;a href="&amp;quot;https://github.com/grafana/grafana/blob/master/CHANGELOG.md&amp;quot;"&gt;CHANGELOG.md&lt;/a&gt; file.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3 id="download-grafana-2-1-now"&gt;&lt;a href="http://grafana.org/download"&gt;Download Grafana 2.1 now&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id="demo-dashboard-for-grafana-2-1-features"&gt;&lt;a href="http://play.grafana.org/dashboard/db/new-features-in-v2-1"&gt;Demo dashboard for Grafana 2.1 features&lt;/a&gt;&lt;/h3&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id="thanks-to-project-sponsors"&gt;Thanks to project sponsors&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.squarespace.com"&gt;Squarespace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.dreamhost.com"&gt;Dreamhost&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.demonware.net"&gt;Demonware&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developer.mediamath.com/OpenSource"&gt;Mediamath&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="subscribe-to-project-updates"&gt;Subscribe to project updates&lt;/h2&gt;
+
+&lt;section class="newsletter"&gt;
+  &lt;form action="http://grafana.us8.list-manage.com/subscribe/post?u=2aeb5711db2aececc990be536&amp;amp;id=5585d37ecc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"&gt;
+    &lt;row class="collapse"&gt;
+      &lt;div class="medium-10 columns"&gt;
+        &lt;input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"&gt;
+      &lt;/div&gt;
+      &lt;div class="medium-2 columns"&gt;
+        &lt;input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button postfix"&gt;
+      &lt;/div&gt;
+    &lt;/row&gt;
+  &lt;/form&gt;
+&lt;/section&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Grafana 2.0 Released</title>
+    <link rel="alternate" href="http://grafana.org/blog/2015/04/20/Grafana-2-Released.html"/>
+    <id>http://grafana.org/blog/2015/04/20/Grafana-2-Released.html</id>
+    <published>2015-04-20T02:00:00+02:00</published>
+    <updated>2016-02-19T16:11:55+01:00</updated>
+    <author>
+      <name>Torkel Ödegaard</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="/assets/img/blog/grafana_2_stable_post.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Grafana 2.0 stable is now released and available for download.&lt;/p&gt;
+
+&lt;p&gt;We provide &lt;code class="prettyprint"&gt;deb&lt;/code&gt;, &lt;code class="prettyprint"&gt;rpm&lt;/code&gt; and generic binary tar packages for download as well as APT and YUM
+repositories. If your platform is not included, check the &lt;a href="http://docs.grafana.org/v2.0/project/building_from_source/"&gt;Building from source&lt;/a&gt;
+guide.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/download"&gt;Download page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.grafana.org/installation/debian/"&gt;Installing on Debian / Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.grafana.org/installation/rpm/"&gt;Installing on RPM-based Linux (CentOS, Fedora, OpenSuse, RedHat)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.grafana.org/installation/docker/"&gt;Installing via Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.grafana.org/v2.0/installation/migrating_to2/"&gt;Migrating from 1.x to 2.x&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="what-39-s-new-in-grafana-v2-0"&gt;What&amp;rsquo;s New in Grafana v2.0&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Read the &lt;a href="http://docs.grafana.org/guides/whats-new-in-v2/"&gt;What&amp;rsquo;s new In Grafana 2.0&lt;/a&gt; article&lt;/li&gt;
+&lt;li&gt;Try the updated &lt;a href="http://play.grafana.org"&gt;demo site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Watch the screencast &lt;a href="https://www.youtube.com/watch?v=FC13uhFRsVw&amp;amp;list=PLDGkOdUX1Ujo3wHw9-z5Vo12YLqXRjzg2&amp;amp;index=3"&gt;Whats new in Grafana 2.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="new-grafana-screencast-episodes"&gt;New Grafana screencast episodes&lt;/h2&gt;
+
+&lt;p&gt;To accompany this release there are now 5 new screencast episodes.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=FC13uhFRsVw&amp;amp;list=PLDGkOdUX1Ujo3wHw9-z5Vo12YLqXRjzg2&amp;amp;index=3"&gt;Episode 3 - What&amp;rsquo;s New In Grafana 2.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=JY22EBOR9hQ&amp;amp;list=PLDGkOdUX1Ujo3wHw9-z5Vo12YLqXRjzg2&amp;amp;index=4"&gt;Episode 4 - Installation &amp;amp; Configuration on Ubuntu / Debian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=E-gMFv84FE8&amp;amp;index=5&amp;amp;list=PLDGkOdUX1Ujo3wHw9-z5Vo12YLqXRjzg2"&gt;Episode 5 - Installation &amp;amp; Configuration on Redhat / Centos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=9ZCMVNxUf6s&amp;amp;index=6&amp;amp;list=PLDGkOdUX1Ujo3wHw9-z5Vo12YLqXRjzg20"&gt;Episode 6 - Adding data sources, users &amp;amp; organizations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=sKNZMtoSHN4&amp;amp;list=PLDGkOdUX1Ujo3wHw9-z5Vo12YLqXRjzg2&amp;amp;index=7"&gt;Episode 7 - Beginners guide to building dashboards&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="thanks-to-project-sponsors"&gt;Thanks to project sponsors&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.squarespace.com"&gt;Squarespace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.dreamhost.com"&gt;Dreamhost&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.demonware.net"&gt;Demonware&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developer.mediamath.com/OpenSource"&gt;Mediamath&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;section class="newsletter"&gt;
+  &lt;form action="http://grafana.us8.list-manage.com/subscribe/post?u=2aeb5711db2aececc990be536&amp;amp;id=5585d37ecc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"&gt;
+    &lt;row class="collapse"&gt;
+      &lt;div class="medium-10 columns"&gt;
+        &lt;input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"&gt;
+      &lt;/div&gt;
+      &lt;div class="medium-2 columns"&gt;
+        &lt;input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button postfix"&gt;
+      &lt;/div&gt;
+    &lt;/row&gt;
+  &lt;/form&gt;
+&lt;/section&gt;
+</content>
+  </entry>
+</feed>
