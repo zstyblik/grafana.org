@@ -1,7 +1,7 @@
 ---
 title: Graphite-api + Grafana + StatsD - Stack Setup Guide
 author: Torkel Ödegaard
-published_on: April 20, 2015
+published_on: April 20, 2016
 ---
 
 This lengthy article will guide you through install, configuration and getting started for the amazing metric
