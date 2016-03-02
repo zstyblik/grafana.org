@@ -14,4 +14,4 @@
   }]
 }
 !*/
-define(["Modernizr","testStyles"],function(t,e){e("#modernizr { width: 50vw; }",function(e){var n=parseInt(window.innerWidth/2,10),i=parseInt((window.getComputedStyle?getComputedStyle(e,null):e.currentStyle).width,10);t.addTest("cssvwunit",i==n)})});
+define(["Modernizr","testStyles"],function(e,t){t("#modernizr { width: 50vw; }",function(t){var n=parseInt(window.innerWidth/2,10),r=parseInt((window.getComputedStyle?getComputedStyle(t,null):t.currentStyle).width,10);e.addTest("cssvwunit",r==n)})});
