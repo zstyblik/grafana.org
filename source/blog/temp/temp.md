@@ -12,22 +12,23 @@ persisted playlists, a revamped plugin system and many small improvements.
 
   <br>
   <span>
-    Check out the <a href="http://play.grafana.org)">Play Site</a> to try Grafana 3.0 right now.
+    Check out the <a href="http://play.grafana.org" target="_blank">Play Site</a> to try Grafana 3.0 right now.
   </span>
 </div>
 
 <hr>
 
 ## Release Highlights
-Make no mistake this is a big release and a significant milestone for the Grafana project. The last release Grafana v2.6 was released 3 months ago and
-in that time we have been very busy (>1300 commits). Most of the work that has been done in this release is non visible architectural changes and refactorings
-(more on that later).
+Make no mistake this is a big release and a significant milestone for the Grafana project. The last release (v2.6) was
+released over 3 months ago and since then we have been very busy (>1300 commits). Most of the work that has been done
+in this release are non visible architectural changes and refactorings (more on that later).
 
-Grafana's popularity is continuing to grow exponentially as is the number of feature requests and requests to integrate new
+Grafana's popularity is continuing to grow exponentially as are the number of feature requests and requests for new
 data sources and visualizations. Every software project, especially open source, risks getting bogged down in feature creep.
-It's hard to say no to pull requests and feature requests. There is always someone you disappoint by closing a PR or issue.
+It's hard to say no to pull requests and feature requests. There is always someone you disappoint by closing pull a request or issue.
+But it's very important to say no and keep the core of Grafana focused on maintainable.
 
-One way to solve this problem is better extensibility and plugin support. This way users can extend Grafana with custom plugins instead
+One way to solve this problem is by having good extensibility and plugin support. This way users can extend Grafana with custom plugins instead
 of having all features maintained and included in the core.
 
 ### Plugins
@@ -43,7 +44,7 @@ You can install plugins easily with the grafana-cli tool that ships with Grafana
 grafana-cli install pie-chart
 ```
 
-Plugins can now be installed to a directory outside the main Grafana install location. By default in `/var/lib/grafana/plugins`. You
+Plugins can now be installed to a directory outside the main Grafana install location. By default to `/var/lib/grafana/plugins`. You
 can also install plugins from any directory if you specify them in grafana.ini like this:
 
 ```ini
@@ -52,6 +53,7 @@ path = /home/torkel/dev/plugins/datasource-plugin-kairosdb
 ```
 
 ### Grafana.net
+TODO
 
 ### Persisted Playlists
 In Grafana 3.0 you can save dashboard playlists. You can start a playlist by using the playlist url (or clicking start from the list view).
@@ -65,17 +67,26 @@ Another enhancement is that you can now make dynamic playlists by adding dashboa
 
 <img src="/assets/img/v3/playlists.png">
 
-### UX
-Grafana's success stems a lot from it's focus on good looking and usable UI. This is a process that requires
-continuous and time consuming work and is something that is never done. Grafana 3.0 has a polished and updated
-UI that not only looks better but also has a number of usability improvements. The sidemenu now works as
-a dropdown (but you can pin it to the side). The Org/Profile sidemenu item has been combined and is now
+### UI Improvements
+Grafana's success stems a lot from it's focus on good looking and usable UI. Polishing and improving the user
+experience requires hard and continuous work. Your never finished, there there is always something
+that can be improved or tweaked. Grafana 3.0 has a polished and updated UI that not only looks better
+but also has a number of usability improvements. The sidemenu now works as
+a dropdown that you can pin it to the side. The Org / Profile / Sign out sidemenu links has been combined and is now
 an on hover slide out menu. Improve forms and page layout and hundred other UI refinements.
 
 <img src="/assets/img/v3/menu.gif">
 
 New look for settings views in dashboard:
 <img src="/assets/img/v3/dashboard_settings.png">
+
+Check out the <a href="http://play.grafana.org" target="_blank">Play Site</a> to get a feel some of the UI changes.
+
+### Annotation improvements
+Grafana 3.0 includes annotation support for Prometheus and an updated annotation popover that now makes
+it possible to hover onto the annotation and click links in the annotation text.
+
+<img src="/assets/img/v3/annotation_links.gif">
 
 ### InfluxDB Policy Selection
 You can now select InfluxDB policy from the query editor.
@@ -86,7 +97,7 @@ A lot of the work that has gone into Grafana 3.0 are architectural changes to th
 The new system is using a cleaner method of Panel inheritance and more robust Angular practices (Isolated scopes). A lot of the code base
 has also been migrated to ES6 and Typescript and in the process gotten some cleanup and refactoring. The styling system has seen a
 massive update and cleanup. Grafana 1.x and 2.x was built on a very shaky and old style foundation based on Bootstrap 2.3 followed by a Bootswatch dark
-theme followed by other overrides. All off that has been removed and consolidated, and migrated to a custom sass based style foundation.
+theme followed by many custom overrides. All off that has been removed and consolidated, and migrated to a custom sass based style foundation.
 
 #### Alerting
 Thanks to the focus on improving extensibility and addressing technical dept in Grafana 3.0 the alerting feature has been pushed to a future release.
