@@ -24,4 +24,4 @@
   ]
 }
 !*/
-define(["Modernizr","createElement"],function(e,t){e.addTest("csspointerevents",function(){var e=t("a").style;return e.cssText="pointer-events:auto","auto"===e.pointerEvents})});
+define(["Modernizr","createElement"],function(t,e){t.addTest("csspointerevents",function(){var t=e("a").style;return t.cssText="pointer-events:auto","auto"===t.pointerEvents})});
