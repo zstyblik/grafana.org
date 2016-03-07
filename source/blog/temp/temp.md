@@ -70,7 +70,7 @@ Another enhancement is that you can now make dynamic playlists by adding dashboa
 
 ### UI Improvements
 Grafana's success stems a lot from it's focus on good looking and usable UI. Polishing and improving the user
-experience requires hard and continuous work. Your never finished, there there is always something
+experience requires hard and continuous work. Your never finished, there is always something
 that can be improved or tweaked. Grafana 3.0 has a polished and updated UI that not only looks better
 but also has a number of usability improvements. The sidemenu now works as
 a dropdown that you can pin it to the side. The Org / Profile / Sign out sidemenu links has been combined and is now
