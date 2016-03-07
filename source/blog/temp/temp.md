@@ -74,7 +74,7 @@ experience requires hard and continuous work. Your never finished, there is alwa
 that can be improved or tweaked. Grafana 3.0 has a polished and updated UI that not only looks better
 but also has a number of usability improvements. The sidemenu now works as
 a dropdown that you can pin it to the side. The Org / Profile / Sign out sidemenu links has been combined and is now
-an on hover slide out menu. Improve forms and page layout and hundred other UI refinements.
+an on hover slide out menu. Improved forms and page layout and hundred other UI refinements.
 
 <img src="/assets/img/v3/menu.gif">
 
@@ -101,10 +101,10 @@ massive update and cleanup. Grafana 1.x and 2.x was built on a very shaky and ol
 theme followed by many custom overrides. All off that has been removed and consolidated, and migrated to a custom sass based style foundation.
 
 #### Alerting
-Thanks to the focus on improving extensibility and addressing technical dept in Grafana 3.0 the alerting feature has been pushed to a future release.
+Due to the focus on improving extensibility and addressing technical dept in Grafana 3.0 the alerting feature has been pushed to a future release.
 If this was the main feature you were waiting for I can understand your disappointment. We felt that, long term wise, it was more
 important to make sure that Grafana's code base remains modern and of high quality, and supports good extensibility so as not to suffer
-too much feature creep. We have not forgotten about Alerting and hope to start working on it again soon.
+too much feature creep. We have not forgotten about alerting and hope to start working on it again soon.
 
 ### Breaking changes
 
