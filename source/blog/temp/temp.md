@@ -19,7 +19,7 @@ persisted playlists, a revamped plugin system and many small improvements.
 <hr>
 
 ## Release Highlights
-Make no mistake this is a big release and a significant milestone for the Grafana project. The last release (v2.6) was
+Make no mistake: this is a big release and a significant milestone for the Grafana project. The last release (v2.6) was
 released over 3 months ago and since then we have been very busy (>1300 commits). Most of the work that has been done
 in this release are non visible architectural changes and refactorings (more on that later).
 
@@ -57,7 +57,7 @@ TODO
 
 ### Persisted Playlists
 In Grafana 3.0 you can save dashboard playlists. You can start a playlist by using the playlist url (or clicking start from the list view).
-If you change a playlist while it is running it will automatically update after it has cycled through all it's dashboards.
+If you change a playlist while it is running it will automatically update after it has cycled through all its dashboards.
 This is incredibly powerful as it allows you to remote control Grafana. If you have a big TV display showing Grafana in
 your company Lobby, create a playlist named Lobby and start it on the computer connected to the Lobby TV. You can now
 change the Lobby playlist and have the dashboards shown in the Lobby update accordingly. The playlist does not even
@@ -68,19 +68,19 @@ Another enhancement is that you can now make dynamic playlists by adding dashboa
 <img src="/assets/img/v3/playlists.png">
 
 ### UI Improvements
-Grafana's success stems a lot from it's focus on good looking and usable UI. Polishing and improving the user
-experience requires hard and continuous work. Your never finished, there there is always something
+Grafana's success stems a lot from its focus a on good looking and usable UI. Polishing and improving the user
+experience requires hard and continuous work. There is always something
 that can be improved or tweaked. Grafana 3.0 has a polished and updated UI that not only looks better
-but also has a number of usability improvements. The sidemenu now works as
-a dropdown that you can pin it to the side. The Org / Profile / Sign out sidemenu links has been combined and is now
-an on hover slide out menu. Improve forms and page layout and hundred other UI refinements.
+but also has a number of usability improvements. The side menu now works as
+a dropdown that you can pin to the side. The Org / Profile / Sign out side menu links have been combined into
+an on hover slide out menu. It also comes with improved forms and page layout and about a hundred other UI refinements.
 
 <img src="/assets/img/v3/menu.gif">
 
 New look for settings views in dashboard:
 <img src="/assets/img/v3/dashboard_settings.png">
 
-Check out the <a href="http://play.grafana.org" target="_blank">Play Site</a> to get a feel some of the UI changes.
+Check out the <a href="http://play.grafana.org" target="_blank">Play Site</a> to get a feel for some of the UI changes.
 
 ### Annotation improvements
 Grafana 3.0 includes annotation support for Prometheus and an updated annotation popover that now makes
@@ -89,25 +89,25 @@ it possible to hover onto the annotation and click links in the annotation text.
 <img src="/assets/img/v3/annotation_links.gif">
 
 ### InfluxDB Policy Selection
-You can now select InfluxDB policy from the query editor.
+You can now select the InfluxDB policy from the query editor.
 <img src="/assets/img/v3/influxdb_policy.png">
 
 ### Technical Updates & Code Clean Up
 A lot of the work that has gone into Grafana 3.0 are architectural changes to the plugin system to make it more future proof and less brittle.
 The new system is using a cleaner method of Panel inheritance and more robust Angular practices (Isolated scopes). A lot of the code base
 has also been migrated to ES6 and Typescript and in the process gotten some cleanup and refactoring. The styling system has seen a
-massive update and cleanup. Grafana 1.x and 2.x was built on a very shaky and old style foundation based on Bootstrap 2.3 followed by a Bootswatch dark
+massive update and cleanup. Grafana 1.x and 2.x were built on a very shaky and old style foundation based on Bootstrap 2.3 followed by a Bootswatch dark
 theme followed by many custom overrides. All off that has been removed and consolidated, and migrated to a custom sass based style foundation.
 
 #### Alerting
-Thanks to the focus on improving extensibility and addressing technical dept in Grafana 3.0 the alerting feature has been pushed to a future release.
+Thanks to the focus on improving extensibility and addressing technical depth in Grafana 3.0 the alerting feature has been pushed to a future release.
 If this was the main feature you were waiting for I can understand your disappointment. We felt that, long term wise, it was more
 important to make sure that Grafana's code base remains modern and of high quality, and supports good extensibility so as not to suffer
 too much feature creep. We have not forgotten about Alerting and hope to start working on it again soon.
 
 ### Breaking changes
 
-Dashboards from v2.6 are be compatible, no manual updates should be necessary.
+Dashboards from v2.6 are compatible, no manual updates should be necessary.
 
 * Plugin API: The plugin api has changed so if you are using a custom data source (or panel) they need to be updated as well.
 * InfluxDB 0.8: This data source is no longer included in releases, you can still install manually: [github.com/grafana/datasource-plugin-influxdb-08](https://github.com/grafana/datasource-plugin-influxdb-08)
