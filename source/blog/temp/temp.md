@@ -100,7 +100,7 @@ massive update and cleanup. Grafana 1.x and 2.x were built on a very shaky and o
 theme followed by many custom overrides. All off that has been removed and consolidated, and migrated to a custom sass based style foundation.
 
 #### Alerting
-Thanks to the focus on improving extensibility and addressing technical depth in Grafana 3.0 the alerting feature has been pushed to a future release.
+Thanks to the focus on improving extensibility and addressing technical debt in Grafana 3.0 the alerting feature has been pushed to a future release.
 If this was the main feature you were waiting for I can understand your disappointment. We felt that, long term wise, it was more
 important to make sure that Grafana's code base remains modern and of high quality, and supports good extensibility so as not to suffer
 too much feature creep. We have not forgotten about Alerting and hope to start working on it again soon.
