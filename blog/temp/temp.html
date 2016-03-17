@@ -14,17 +14,16 @@ persisted playlists, a revamped plugin system and many small improvements.</p>
 
 <h2 id="release-highlights">Release Highlights</h2>
 
-<p>Make no mistake this is a big release and a significant milestone for the Grafana project. The last release (v2.6) was
+<p>Make no mistake: this is a big release and a significant milestone for the Grafana project. The last release (v2.6) was
 released over 3 months ago and since then we have been very busy (&gt;1300 commits). Most of the work that has been done
 in this release are non visible architectural changes and refactorings (more on that later).</p>
 
 <p>Grafana&rsquo;s popularity is continuing to grow exponentially as are the number of feature requests and requests for new
 data sources and visualizations. Every software project, especially open source, risks getting bogged down in feature creep.
 It&rsquo;s hard to say no to pull requests and feature requests. There is always someone you disappoint by closing pull a request or issue.
-But we feel it is very important to say no in order to keep the core of Grafana focused and maintainable.</p>
+But it&rsquo;s very important to say no and keep the core of Grafana focused on maintainable.</p>
 
-<p>One way to alleviate the problem of feature creep and the pain of having to say no to new feature submissions is by
-having good extensibility and plugin support. This way users can extend Grafana with custom plugins instead
+<p>One way to solve this problem is by having good extensibility and plugin support. This way users can extend Grafana with custom plugins instead
 of having all features maintained and included in the core.</p>
 
 <h3 id="plugins">Plugins</h3>
@@ -53,7 +52,7 @@ can also install plugins from any directory if you specify them in grafana.ini l
 <h3 id="persisted-playlists">Persisted Playlists</h3>
 
 <p>In Grafana 3.0 you can save dashboard playlists. You can start a playlist by using the playlist url (or clicking start from the list view).
-If you change a playlist while it is running it will automatically update after it has cycled through all it&rsquo;s dashboards.
+If you change a playlist while it is running it will automatically update after it has cycled through all its dashboards.
 This is incredibly powerful as it allows you to remote control Grafana. If you have a big TV display showing Grafana in
 your company Lobby, create a playlist named Lobby and start it on the computer connected to the Lobby TV. You can now
 change the Lobby playlist and have the dashboards shown in the Lobby update accordingly. The playlist does not even
@@ -65,19 +64,19 @@ have to contain multiple dashboards, you can use this feature to reload the whol
 
 <h3 id="ui-improvements">UI Improvements</h3>
 
-<p>Grafana&rsquo;s success stems a lot from it&rsquo;s focus on good looking and usable UI. Polishing and improving the user
-experience requires hard and continuous work. Your never finished, there is always something
+<p>Grafana&rsquo;s success stems a lot from its focus a on good looking and usable UI. Polishing and improving the user
+experience requires hard and continuous work. There is always something
 that can be improved or tweaked. Grafana 3.0 has a polished and updated UI that not only looks better
-but also has a number of usability improvements. The sidemenu now works as
-a dropdown that you can pin it to the side. The Org / Profile / Sign out sidemenu links has been combined and is now
-an on hover slide out menu. Improved forms and page layout and hundred other UI refinements.</p>
+but also has a number of usability improvements. The side menu now works as
+a dropdown that you can pin to the side. The Org / Profile / Sign out side menu links have been combined into
+an on hover slide out menu. It also comes with improved forms and page layout and about a hundred other UI refinements.</p>
 
 <p><img src="/assets/img/v3/menu.gif"></p>
 
 <p>New look for settings views in dashboard:
 <img src="/assets/img/v3/dashboard_settings.png"></p>
 
-<p>Check out the <a href="http://play.grafana.org" target="_blank">Play Site</a> to get a feel some of the UI changes.</p>
+<p>Check out the <a href="http://play.grafana.org" target="_blank">Play Site</a> to get a feel for some of the UI changes.</p>
 
 <h3 id="annotation-improvements">Annotation improvements</h3>
 
@@ -88,7 +87,7 @@ it possible to hover onto the annotation and click links in the annotation text.
 
 <h3 id="influxdb-policy-selection">InfluxDB Policy Selection</h3>
 
-<p>You can now select InfluxDB policy from the query editor.
+<p>You can now select the InfluxDB policy from the query editor.
 <img src="/assets/img/v3/influxdb_policy.png"></p>
 
 <h3 id="technical-updates-amp-code-clean-up">Technical Updates &amp; Code Clean Up</h3>
@@ -96,19 +95,19 @@ it possible to hover onto the annotation and click links in the annotation text.
 <p>A lot of the work that has gone into Grafana 3.0 are architectural changes to the plugin system to make it more future proof and less brittle.
 The new system is using a cleaner method of Panel inheritance and more robust Angular practices (Isolated scopes). A lot of the code base
 has also been migrated to ES6 and Typescript and in the process gotten some cleanup and refactoring. The styling system has seen a
-massive update and cleanup. Grafana 1.x and 2.x was built on a very shaky and old style foundation based on Bootstrap 2.3 followed by a Bootswatch dark
+massive update and cleanup. Grafana 1.x and 2.x were built on a very shaky and old style foundation based on Bootstrap 2.3 followed by a Bootswatch dark
 theme followed by many custom overrides. All off that has been removed and consolidated, and migrated to a custom sass based style foundation.</p>
 
 <h4 id="alerting">Alerting</h4>
 
-<p>Due to the focus on improving extensibility and addressing technical dept in Grafana 3.0 the alerting feature has been pushed to a future release.
+<p>Thanks to the focus on improving extensibility and addressing technical debt in Grafana 3.0 the alerting feature has been pushed to a future release.
 If this was the main feature you were waiting for I can understand your disappointment. We felt that, long term wise, it was more
 important to make sure that Grafana&rsquo;s code base remains modern and of high quality, and supports good extensibility so as not to suffer
-too much feature creep. We have not forgotten about alerting and hope to start working on it again soon.</p>
+too much feature creep. We have not forgotten about Alerting and hope to start working on it again soon.</p>
 
 <h3 id="breaking-changes">Breaking changes</h3>
 
-<p>Dashboards from v2.6 are be compatible, no manual updates should be necessary.</p>
+<p>Dashboards from v2.6 are compatible, no manual updates should be necessary.</p>
 
 <ul>
 <li>Plugin API: The plugin api has changed so if you are using a custom data source (or panel) they need to be updated as well.</li>
