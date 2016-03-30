@@ -35,17 +35,18 @@ direct support, bug fixes, and training from the core Grafana team.
 With the popularity of Grafana continuing to accelerate, it has been
 challenging to keep up with all the requests for new features, new
 panels, new data sources, and new functionality. Saying “no” so often
-has been frustrating, especially with an open source project with such
+has been frustrating, especially for an open source project with such
 a vibrant community.
 
 The team felt that it was time to dramatically improve extensibility
 through plugin support. Grafana 3.0 comes with a completely revamped
 plugin SDK / API.
 
-We’ve refactored our **Data Source** plugin architecture, and added
-two new plugin types. **Panel** plugins allow you to add new panel
-types for your Dashboards. Grafana now also supports **App** plugins,
-which are a bundle of **Panels** plugins, *Data Sources** plugins,
+We’ve refactored our **Data Source** plugin architecture and added
+two new plugin types: 
+
+* **Panel** plugins let you add new panel types for your Dashboards.
+* **App** plugins bundle **Panels** plugins, **Data Sources** plugins,
 Dashbords, and Grafana **Pages**. Apps are a great way to provide an
 entire experience right within Grafana.
 
@@ -75,8 +76,8 @@ and sign up for an account</a> in the meantime.
 
 ### grafana-cli
 
-Grafana 3.0 comes with a new command like tool called grafana-cli. You
-can easily install plugins from Grafna.net with this tool. For
+Grafana 3.0 comes with a new command line tool called grafana-cli. You
+can easily install plugins from Grafana.net with it. For
 example:
 
 
@@ -95,7 +96,7 @@ You can now save Playlists, and start them by using a Playlist URL. If
 you update a running Playlist, it will update after its next cycle.
 
 This is powerful as it allows you to remote control Grafana. If you
-have a big TV display showing Grafana in your company Lobby, create a
+have a big TV display showing Grafana in your company lobby, create a
 playlist named Lobby, and start it on the computer connected to the
 Lobby TV.
 
@@ -163,11 +164,11 @@ You can now select the InfluxDB policy from the query editor.
 
 #### OpenTSDB
 
-OpenTSDB 2.2 is better supported. Now supports millisecond precision.
+OpenTSDB 2.2 is better supported and now supports millisecond precision.
 
 ### Improved code, and reduced technical debt
 
-The styling system has seen a massive update and cleaned up. Grafana 1.x
+The styling system has seen a massive update and clean-up. Grafana 1.x
 and 2.x were built on a shaky and old style foundation based on
 Bootstrap 2.3, followed by a Bootswatch dark theme, followed by many
 custom overrides. This has been completely removed, and we have
@@ -206,10 +207,10 @@ variable is interpolated.
 data source (or panel) they need to be updated as well.
 
 * InfluxDB 0.8: This data source is no longer included in releases,
-you can still install manually from www.grafana.net
+you can still install manually from [Grafana.net](http://grafana.net)
 
 * KairosDB: This data source has also no longer shipped with Grafana,
-you can install it manually from www.grafana.net
+you can install it manually from [Grafana.net](http://grafana.net)
 
 ### CHANGELOG
 
