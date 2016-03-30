@@ -1,17 +1,15 @@
 ---
-title: Grafana 3.0.0-beta1 Released
+title: Grafana 3.0 Beta Released
 author: Torkel Ödegaard
 published_on: March 31, 2016
 ---
 
-Today is the day! We are pleased to announce that Grafana v3.0.0-beta1
-is released along with a preview of [Grafana.net](http://grafana.net)!
+Today is the day! We are pleased to announce that Grafana 3.0 beta
+is released along with a preview of [Grafana.net](http://grafana.net)! Since our last release
+approximately 3 months ago, we’ve been extremely busy. This is the biggest
+update to Grafana ever, with over 1500 commits by over 30 contributors.
 
-Since our last release approximately 3 months ago, we’ve been
-extremely busy. This is our biggest update ever, with over 1500
-commits by over 30 contributors.
-
-Read on below to learn more about what’s new in 3.0.
+Read on below to learn more about what’s new in 3.0 or:
 
 <div class="text-center">
 <a class="button secondary radius" href="/download">Download Grafana 3.0</a>.
@@ -23,7 +21,7 @@ Read on below to learn more about what’s new in 3.0.
 
 ### Commercial Support
 
-Commercial Support subscriptions for Grafana are now <a href=>generally available.</a>
+Commercial Support subscriptions for Grafana are now [generally available]("http://grafana.net/support/plans/").
 
 Raintank is committed to a 100% open-source strategy for Grafana. We
 do not want to go down the “open core” route. If your organization
@@ -43,7 +41,7 @@ through plugin support. Grafana 3.0 comes with a completely revamped
 plugin SDK / API.
 
 We’ve refactored our **Data Source** plugin architecture and added
-two new plugin types: 
+two new plugin types:
 
 * **Panel** plugins let you add new panel types for your Dashboards.
 * **App** plugins bundle **Panels** plugins, **Data Sources** plugins,
@@ -161,6 +159,8 @@ The Prometheus Data Source now supports annotations.
 
 You can now select the InfluxDB policy from the query editor.
 <img src="/assets/img/v3/influxdb_policy.png">
+
+Grafana 3.0 also comes with support for InfluxDB 0.11.
 
 #### OpenTSDB
 
