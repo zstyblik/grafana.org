@@ -28,19 +28,22 @@ direct support, bug fixes, and training from the core Grafana team.</p>
 <p>With the popularity of Grafana continuing to accelerate, it has been
 challenging to keep up with all the requests for new features, new
 panels, new data sources, and new functionality. Saying “no” so often
-has been frustrating, especially with an open source project with such
+has been frustrating, especially for an open source project with such
 a vibrant community.</p>
 
 <p>The team felt that it was time to dramatically improve extensibility
 through plugin support. Grafana 3.0 comes with a completely revamped
 plugin SDK / API.</p>
 
-<p>We’ve refactored our <strong>Data Source</strong> plugin architecture, and added
-two new plugin types. <strong>Panel</strong> plugins allow you to add new panel
-types for your Dashboards. Grafana now also supports <strong>App</strong> plugins,
-which are a bundle of <strong>Panels</strong> plugins, <em>Data Sources</em>* plugins,
-Dashbords, and Grafana <strong>Pages</strong>. Apps are a great way to provide an
-entire experience right within Grafana.</p>
+<p>We’ve refactored our <strong>Data Source</strong> plugin architecture and added
+two new plugin types: </p>
+
+<ul>
+<li><strong>Panel</strong> plugins let you add new panel types for your Dashboards.</li>
+<li><strong>App</strong> plugins bundle <strong>Panels</strong> plugins, <strong>Data Sources</strong> plugins,
+Dashboards, and Grafana <strong>Pages</strong>. Apps are a great way to provide an
+entire experience right within Grafana.</li>
+</ul>
 
 <h3 id="grafana-net">Grafana.net</h3>
 
@@ -67,8 +70,8 @@ and sign up for an account</a> in the meantime.</p>
 
 <h3 id="grafana-cli">grafana-cli</h3>
 
-<p>Grafana 3.0 comes with a new command like tool called grafana-cli. You
-can easily install plugins from Grafna.net with this tool. For
+<p>Grafana 3.0 comes with a new command line tool called grafana-cli. You
+can easily install plugins from Grafana.net with it. For
 example:</p>
 <pre class="highlight plaintext"><code>grafana-cli install grafana-pie-chart-panel
 </code></pre>
@@ -84,7 +87,7 @@ panel can show these on your home dashboard.</p>
 you update a running Playlist, it will update after its next cycle.</p>
 
 <p>This is powerful as it allows you to remote control Grafana. If you
-have a big TV display showing Grafana in your company Lobby, create a
+have a big TV display showing Grafana in your company lobby, create a
 playlist named Lobby, and start it on the computer connected to the
 Lobby TV.</p>
 
@@ -95,7 +98,7 @@ the Lobby update accordingly, automatically.</p>
 can use this feature to reload the whole Dashboard (and Grafana)
 periodically and remotely.</p>
 
-<p>You can also make Playlists dynamic by using Dashboad <strong>tags</strong> to
+<p>You can also make Playlists dynamic by using Dashboard <strong>tags</strong> to
 define the Playlist.</p>
 
 <p><img src="/assets/img/v3/playlist.png"></p>
@@ -152,11 +155,11 @@ of improvements in this release. Here are some highlights:</p>
 
 <h4 id="opentsdb">OpenTSDB</h4>
 
-<p>OpenTSDB 2.2 is better supported. Now supports millisecond precision.</p>
+<p>OpenTSDB 2.2 is better supported and now supports millisecond precision.</p>
 
 <h3 id="improved-code-and-reduced-technical-debt">Improved code, and reduced technical debt</h3>
 
-<p>The styling system has seen a massive update and cleaned up. Grafana 1.x
+<p>The styling system has seen a massive update and clean-up. Grafana 1.x
 and 2.x were built on a shaky and old style foundation based on
 Bootstrap 2.3, followed by a Bootswatch dark theme, followed by many
 custom overrides. This has been completely removed, and we have
@@ -188,16 +191,16 @@ released, we will be circling back on Alerting.</p>
 be some edge case scenarios where dashboards using templating could stop working.
 If that is the case just enter the edit view for the template variable and hit Update button.
 This is due to a simplification of the variable format system where template variables are
-now stored without any formating (glob/regex/etc), this is done on the fly when the
+now stored without any formatting (glob/regex/etc), this is done on the fly when the
 variable is interpolated.</p>
 
 <ul>
 <li><p>Plugin API: The plugin API has changed so if you are using a custom
 data source (or panel) they need to be updated as well.</p></li>
 <li><p>InfluxDB 0.8: This data source is no longer included in releases,
-you can still install manually from www.grafana.net</p></li>
+you can still install manually from <a href="http://grafana.net">Grafana.net</a></p></li>
 <li><p>KairosDB: This data source has also no longer shipped with Grafana,
-you can install it manually from www.grafana.net</p></li>
+you can install it manually from <a href="http://grafana.net">Grafana.net</a></p></li>
 </ul>
 
 <h3 id="changelog">CHANGELOG</h3>
