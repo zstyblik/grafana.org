@@ -47,7 +47,7 @@ two new plugin types:
 
 * **Panel** plugins let you add new panel types for your Dashboards.
 * **App** plugins bundle **Panels** plugins, **Data Sources** plugins,
-Dashbords, and Grafana **Pages**. Apps are a great way to provide an
+Dashboards, and Grafana **Pages**. Apps are a great way to provide an
 entire experience right within Grafana.
 
 ### Grafana.net
@@ -107,7 +107,7 @@ The playlist does not even have to contain multiple Dashboards; you
 can use this feature to reload the whole Dashboard (and Grafana)
 periodically and remotely.
 
-You can also make Playlists dynamic by using Dashboad **tags** to
+You can also make Playlists dynamic by using Dashboard **tags** to
 define the Playlist.
 
 <img src="/assets/img/v3/playlist.png">
@@ -200,7 +200,7 @@ Dashboards from v2.6 are compatible; no manual updates should be necessary. Ther
 be some edge case scenarios where dashboards using templating could stop working.
 If that is the case just enter the edit view for the template variable and hit Update button.
 This is due to a simplification of the variable format system where template variables are
-now stored without any formating (glob/regex/etc), this is done on the fly when the
+now stored without any formatting (glob/regex/etc), this is done on the fly when the
 variable is interpolated.
 
 * Plugin API: The plugin API has changed so if you are using a custom
