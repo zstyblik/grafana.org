@@ -1,0 +1,1 @@
+define(function(){return function(e,t){for(var n=[];e;e=e.nextSibling)1===e.nodeType&&e!==t&&n.push(e);return n}});

@@ -1,132 +1,211 @@
-<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><title>Grafana - Grafana 3.0.0-beta1 Released</title><meta content="Torkel Ödegaard" name="author" /><meta content="width=device-width, initial-scale=1" name="viewport" /><meta content="The leading graph and dashboard builder for visualizing time series metrics." name="description" /><meta content="Grafana, Graphite, Dashboard, InfluxDB, OpenTSDB, Elasticsearch, Metrics, Editor, Composer, Analytics, Graphana, Prometheus" name="keywords" /><link href="/assets/img/fav32.png" rel="icon" /><link href="/assets/stylesheets/all.css" rel="stylesheet" /><link href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" /><script src="/assets/javascripts/all.js"></script><meta content="Grafana 3.0.0-beta1 Released" property="og:title" /><meta content="Grafana.org" property="og:site_name" /><meta content="website" property="og:type" /><meta content="http://grafana.org/assets/img/docs/nice_dashboard.png" property="og:image" /></head><body class="blog blog_temp blog_temp_temp"><section class="nav"><div class="row"><nav class="top-bar" data-topbar="1"><ul class="title-area"><li class="name"><a href="/"><img class="no-shadow" height="35" src="/assets/img/logo_new_transparent_200x46.png" width="150px" /></a></li><li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li></ul><section class="top-bar-section"><ul class="right"><li><a href="/features/">Features</a></li><li><a href="http://docs.grafana.org">Docs</a></li><li><a href="/community/">Community</a></li><li><a href="/blog/">Blog</a></li><li class="has-form"><a class="button" href="http://play.grafana.org" id="top-bar-demo-button" target="_blank">Live Demo</a></li><li><a href="https://github.com/grafana/grafana" target="_blank" title="Go to github repository"><i class="fa fa-fw fa-github"></i></a</li><li class="has-form"><a class="button" href="/download" id="top-bar-button">Download</a></li></ul></section></nav></div></section><section class="main"><main><div class="page-header"><div class="page-header-bg"></div><div class="row"><div class="large-12 columns"><h1>Grafana 3.0.0-beta1 Released</h1></div></div><div class="row"><div class="small-9 columns"><h5 class="subheader">Published: March 9, 2016 by Torkel Ödegaard</h5><p id="twitter"><a class="twitter-share-button" data-via="grafana" href="https://twitter.com/share"></a></p><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div class="small-3 columns"></div></div></div><div class="page-content row"><div class="large-9 columns image-shadows"><br /><p>We are proud to announce the release of Grafana v3.0.0-beta1. It&rsquo;s a major release that includes a more polished UX,
-persisted playlists, a revamped plugin system and many small improvements.</p>
+<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><title>Grafana - Grafana 3.0.0-beta1 Released</title><meta content="Torkel Ödegaard" name="author" /><meta content="width=device-width, initial-scale=1" name="viewport" /><meta content="The leading graph and dashboard builder for visualizing time series metrics." name="description" /><meta content="Grafana, Graphite, Dashboard, InfluxDB, OpenTSDB, Elasticsearch, Metrics, Editor, Composer, Analytics, Graphana, Prometheus" name="keywords" /><link href="/assets/img/fav32.png" rel="icon" /><link href="/assets/stylesheets/all.css" rel="stylesheet" /><link href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" /><script src="/assets/javascripts/all.js"></script><meta content="Grafana 3.0.0-beta1 Released" property="og:title" /><meta content="Grafana.org" property="og:site_name" /><meta content="website" property="og:type" /><meta content="http://grafana.org/assets/img/docs/nice_dashboard.png" property="og:image" /></head><body class="blog blog_temp blog_temp_temp"><section class="nav"><div class="row"><nav class="top-bar" data-topbar="1"><ul class="title-area"><li class="name"><a href="/"><img class="no-shadow" height="35" src="/assets/img/logo_new_transparent_200x46.png" width="150px" /></a></li><li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li></ul><section class="top-bar-section"><ul class="right"><li><a href="/features/">Features</a></li><li><a href="http://docs.grafana.org">Docs</a></li><li><a href="/community/">Community</a></li><li><a href="/blog/">Blog</a></li><li class="has-form"><a class="button" href="http://play.grafana.org" id="top-bar-demo-button" target="_blank">Live Demo</a></li><li><a href="https://github.com/grafana/grafana" target="_blank" title="Go to github repository"><i class="fa fa-fw fa-github"></i></a</li><li class="has-form"><a class="button" href="/download" id="top-bar-button">Download</a></li></ul></section></nav></div></section><section class="main"><main><div class="page-header"><div class="page-header-bg"></div><div class="row"><div class="large-12 columns"><h1>Grafana 3.0.0-beta1 Released</h1></div></div><div class="row"><div class="small-9 columns"><h5 class="subheader">Published: March 31, 2016 by Torkel Ödegaard</h5><p id="twitter"><a class="twitter-share-button" data-via="grafana" href="https://twitter.com/share"></a></p><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><div class="small-3 columns"></div></div></div><div class="page-content row"><div class="large-9 columns image-shadows"><br /><p>Today is the day! We are pleased to announce that Grafana v3.0.0-beta1
+is released along with a preview of <a href="http://grafana.net">Grafana.net</a>!</p>
+
+<p>Since our last release approximately 3 months ago, we’ve been
+extremely busy. This is our biggest update ever, with over 1500
+commits by over 30 contributors.</p>
+
+<p>Read on below to learn more about what’s new in 3.0.</p>
 
 <div class="text-center">
-  <a class="button secondary radius" href="/download">Download Grafana 3.0</a>
-
-  <br>
-  <span>
-    Check out the <a href="http://play.grafana.org" target="_blank">Play Site</a> to try Grafana 3.0 right now.
-  </span>
+<a class="button secondary radius" href="/download">Download Grafana 3.0</a>.
+<a class="button primary radius" href="http://play.grafana.org" target="_blank">Live Demo</a>.
 </div>
-
-<p><hr></p>
 
 <h2 id="release-highlights">Release Highlights</h2>
 
-<p>Make no mistake: this is a big release and a significant milestone for the Grafana project. The last release (v2.6) was
-released over 3 months ago and since then we have been very busy (&gt;1300 commits). Most of the work that has been done
-in this release are non visible architectural changes and refactorings (more on that later).</p>
+<h3 id="commercial-support">Commercial Support</h3>
 
-<p>Grafana&rsquo;s popularity is continuing to grow exponentially as are the number of feature requests and requests for new
-data sources and visualizations. Every software project, especially open source, risks getting bogged down in feature creep.
-It&rsquo;s hard to say no to pull requests and feature requests. There is always someone you disappoint by closing pull a request or issue.
-But it&rsquo;s very important to say no and keep the core of Grafana focused on maintainable.</p>
+<p>Commercial Support subscriptions for Grafana are now <a href=>generally available.</a></p>
 
-<p>One way to solve this problem is by having good extensibility and plugin support. This way users can extend Grafana with custom plugins instead
-of having all features maintained and included in the core.</p>
+<p>Raintank is committed to a 100% open-source strategy for Grafana. We
+do not want to go down the “open core” route. If your organization
+finds Grafana valuable, please consider purchasing a subscription. Get
+direct support, bug fixes, and training from the core Grafana team.</p>
 
 <h3 id="plugins">Plugins</h3>
 
-<p>Grafana 3.0 comes with an improved plugin SDK / API that is much cleaner and easier to use than in previous version. Beside <strong>Data Source</strong>
-plugins, Grafana 3.0 also adds two new plugin types. <strong>Panel</strong> plugins allow you to add new panel types for your
-dashboards. The new plugin type <strong>App</strong> are bundles of <strong>Panels</strong> and <strong>Data Sources</strong> plugins as well as <strong>Dashboards</strong> and new Grafana <strong>Pages</strong>.
-App plugins will enable new types integrations and we are very excited to announce some of the Apps you will be able to add to your Grafana.</p>
+<p>With the popularity of Grafana continuing to accelerate, it has been
+challenging to keep up with all the requests for new features, new
+panels, new data sources, and new functionality. Saying “no” so often
+has been frustrating, especially with an open source project with such
+a vibrant community.</p>
 
-<h4 id="grafana-cli">grafana-cli</h4>
+<p>The team felt that it was time to dramatically improve extensibility
+through plugin support. Grafana 3.0 comes with a completely revamped
+plugin SDK / API.</p>
 
-<p>You can install plugins easily with the grafana-cli tool that ships with Grafana.</p>
-<pre class="highlight plaintext"><code>grafana-cli install pie-chart
-</code></pre>
-
-<p>Plugins can now be installed to a directory outside the main Grafana install location. By default to <code class="prettyprint">/var/lib/grafana/plugins</code>. You
-can also install plugins from any directory if you specify them in grafana.ini like this:</p>
-<pre class="highlight ini"><code><span class="nn">[plugin.kairosdb]</span>
-<span class="py">path</span> <span class="p">=</span> <span class="s">/home/torkel/dev/plugins/datasource-plugin-kairosdb</span>
-</code></pre>
+<p>We’ve refactored our <strong>Data Source</strong> plugin architecture, and added
+two new plugin types. <strong>Panel</strong> plugins allow you to add new panel
+types for your Dashboards. Grafana now also supports <strong>App</strong> plugins,
+which are a bundle of <strong>Panels</strong> plugins, <em>Data Sources</em>* plugins,
+Dashbords, and Grafana <strong>Pages</strong>. Apps are a great way to provide an
+entire experience right within Grafana.</p>
 
 <h3 id="grafana-net">Grafana.net</h3>
 
-<p>TODO</p>
+<p><img src="/assets/img/blog/v3.0/grafana_net_tour.png"></p>
 
-<h3 id="persisted-playlists">Persisted Playlists</h3>
+<p>A preview of <a href="http://grafana.net">Grafana.net</a> is launching along with this release. We
+think it’s the perfect compliment to Grafana.</p>
 
-<p>In Grafana 3.0 you can save dashboard playlists. You can start a playlist by using the playlist url (or clicking start from the list view).
-If you change a playlist while it is running it will automatically update after it has cycled through all its dashboards.
-This is incredibly powerful as it allows you to remote control Grafana. If you have a big TV display showing Grafana in
-your company Lobby, create a playlist named Lobby and start it on the computer connected to the Lobby TV. You can now
-change the Lobby playlist and have the dashboards shown in the Lobby update accordingly. The playlist does not even
-have to contain multiple dashboards, you can use this feature to reload the whole dashboard (and Grafana) periodically.</p>
+<p>Grafana.net currently offers a central repository where the community
+can come together to discover and share plugins (Data Sources, Panels,
+Apps) and Dashboards for Grafana 3.0 and above.</p>
 
-<p>Another enhancement is that you can now make dynamic playlists by adding dashboard <strong>tags</strong> to the play list.</p>
+<p>We are also working on a hosted Graphite-compatible Data Source that
+will be optimized for use with Grafana. It’ll be easy to combine your
+existing Data Source(s) with this OpenSaaS option.</p>
 
-<p><img src="/assets/img/v3/playlists.png"></p>
+<p>Finally, Grafana.net will also be a hub to manage all your Grafana
+instances. You’ll be able to monitor their health and availability,
+perform Dashboard backups, and more.</p>
 
-<h3 id="ui-improvements">UI Improvements</h3>
+<p>Grafana.net will officially launch along with the stable version of
+Grafana 3.0, but <a href=http://www.grafana.net>check out the preview
+and sign up for an account</a> in the meantime.</p>
 
-<p>Grafana&rsquo;s success stems a lot from its focus a on good looking and usable UI. Polishing and improving the user
-experience requires hard and continuous work. There is always something
-that can be improved or tweaked. Grafana 3.0 has a polished and updated UI that not only looks better
-but also has a number of usability improvements. The side menu now works as
-a dropdown that you can pin to the side. The Org / Profile / Sign out side menu links have been combined into
-an on hover slide out menu. It also comes with improved forms and page layout and about a hundred other UI refinements.</p>
+<h3 id="grafana-cli">grafana-cli</h3>
+
+<p>Grafana 3.0 comes with a new command like tool called grafana-cli. You
+can easily install plugins from Grafna.net with this tool. For
+example:</p>
+<pre class="highlight plaintext"><code>grafana-cli install grafana-pie-chart-panel
+</code></pre>
+
+<h3 id="improved-personalization">Improved Personalization</h3>
+
+<p>Grafana will track recently viewed Dashboards. The dashboard list
+panel can show these on your home dashboard.</p>
+
+<h3 id="improved-playlists">Improved Playlists</h3>
+
+<p>You can now save Playlists, and start them by using a Playlist URL. If
+you update a running Playlist, it will update after its next cycle.</p>
+
+<p>This is powerful as it allows you to remote control Grafana. If you
+have a big TV display showing Grafana in your company Lobby, create a
+playlist named Lobby, and start it on the computer connected to the
+Lobby TV.</p>
+
+<p>You can now change the Lobby playlist and have the dashboards shown in
+the Lobby update accordingly, automatically.</p>
+
+<p>The playlist does not even have to contain multiple Dashboards; you
+can use this feature to reload the whole Dashboard (and Grafana)
+periodically and remotely.</p>
+
+<p>You can also make Playlists dynamic by using Dashboad <strong>tags</strong> to
+define the Playlist.</p>
+
+<p><img src="/assets/img/v3/playlist.png"></p>
+
+<h3 id="improved-ui">Improved UI</h3>
+
+<p>We’ve always tried to focus on a good looking, usable, and responsive
+UI. We’ve continued to pay a lot of attention to these areas in this
+release.</p>
+
+<p>Grafana 3.0 has a dramatically updated UI that not only looks better
+but also has a number of usability improvements. The side menu now
+works as a dropdown that you can pin to the side. The Organization /
+Profile / Sign out side menu links have been combined into an on hover
+slide out menu.</p>
+
+<p>In addition, all the forms and the layouts of all pages have been
+updated to look and flow better, and be much more consistent. There
+are literally hundreds of UI improvements and refinements.</p>
+
+<p>Here’s the new side menu in action:</p>
 
 <p><img src="/assets/img/v3/menu.gif"></p>
 
-<p>New look for settings views in dashboard:
-<img src="/assets/img/v3/dashboard_settings.png"></p>
+<p>And here&rsquo;s the new look for Dashboard settings:</p>
 
-<p>Check out the <a href="http://play.grafana.org" target="_blank">Play Site</a> to get a feel for some of the UI changes.</p>
+<p><img src="/assets/img/v3/dashboard_settings.png"></p>
 
-<h3 id="annotation-improvements">Annotation improvements</h3>
+<p>Check out the <a href="http://play.grafana.org" target="_blank">Play
+Site</a> to get a feel for some of the UI changes.</p>
 
-<p>Grafana 3.0 includes annotation support for Prometheus and an updated annotation popover that now makes
-it possible to hover onto the annotation and click links in the annotation text.</p>
+<h3 id="improved-annotations">Improved Annotations</h3>
+
+<p>It is now possible to define a link in each annotation. You can hover
+over the link and click the annotation text. This feature is very
+useful for linking to particular commits or tickets where more
+detailed information can be presented to the user.</p>
 
 <p><img src="/assets/img/v3/annotation_links.gif"></p>
 
-<h3 id="influxdb-policy-selection">InfluxDB Policy Selection</h3>
+<h3 id="prometheus-influxdb-and-opentsdb-improvements">Prometheus, InfluxDB, and OpenTSDB improvements</h3>
+
+<p>All three of these popular included Data Sources have seen a variety
+of improvements in this release. Here are some highlights:</p>
+
+<h4 id="prometheus">Prometheus</h4>
+
+<p>The Prometheus Data Source now supports annotations.</p>
+
+<h4 id="influxdb">InfluxDB</h4>
 
 <p>You can now select the InfluxDB policy from the query editor.
 <img src="/assets/img/v3/influxdb_policy.png"></p>
 
-<h3 id="technical-updates-amp-code-clean-up">Technical Updates &amp; Code Clean Up</h3>
+<h4 id="opentsdb">OpenTSDB</h4>
 
-<p>A lot of the work that has gone into Grafana 3.0 are architectural changes to the plugin system to make it more future proof and less brittle.
-The new system is using a cleaner method of Panel inheritance and more robust Angular practices (Isolated scopes). A lot of the code base
-has also been migrated to ES6 and Typescript and in the process gotten some cleanup and refactoring. The styling system has seen a
-massive update and cleanup. Grafana 1.x and 2.x were built on a very shaky and old style foundation based on Bootstrap 2.3 followed by a Bootswatch dark
-theme followed by many custom overrides. All off that has been removed and consolidated, and migrated to a custom sass based style foundation.</p>
+<p>OpenTSDB 2.2 is better supported. Now supports millisecond precision.</p>
 
-<h4 id="alerting">Alerting</h4>
+<h3 id="improved-code-and-reduced-technical-debt">Improved code, and reduced technical debt</h3>
 
-<p>Thanks to the focus on improving extensibility and addressing technical debt in Grafana 3.0 the alerting feature has been pushed to a future release.
-If this was the main feature you were waiting for I can understand your disappointment. We felt that, long term wise, it was more
-important to make sure that Grafana&rsquo;s code base remains modern and of high quality, and supports good extensibility so as not to suffer
-too much feature creep. We have not forgotten about Alerting and hope to start working on it again soon.</p>
+<p>The styling system has seen a massive update and cleaned up. Grafana 1.x
+and 2.x were built on a shaky and old style foundation based on
+Bootstrap 2.3, followed by a Bootswatch dark theme, followed by many
+custom overrides. This has been completely removed, and we have
+switched to a modern and custom SASS based style foundation. In
+addition, much of the code has been migrated to ES6 and Typescript.</p>
+
+<p>These changes dramatically improve the maintainability  of the code
+going forward.</p>
+
+<h4 id="where-s-alerting">Where’s alerting?</h4>
+
+<p>We are aware that many of you are waiting for the alerting feature,
+and regrettably it didn’t make it into this beta.</p>
+
+<p>While we understand that many are disappointed, and anxious to get
+alerting in Grafana, the team strongly felt that improving
+extensibility and addressing technical debt were more important in the
+short term, and will give us a stronger base to build alerting on top
+of. We have spent a lot of effort making sure that the code base
+remains modern and of high quality.</p>
+
+<p>We did not take this decision lightly, and hope that our users
+understand the logic behind our choice. Once Grafana 3.0 stable is
+released, we will be circling back on Alerting.</p>
 
 <h3 id="breaking-changes">Breaking changes</h3>
 
-<p>Dashboards from v2.6 are compatible, no manual updates should be necessary.</p>
+<p>Dashboards from v2.6 are compatible; no manual updates should be necessary. There could
+be some edge case scenarios where dashboards using templating could stop working.
+If that is the case just enter the edit view for the template variable and hit Update button.
+This is due to a simplification of the variable format system where template variables are
+now stored without any formating (glob/regex/etc), this is done on the fly when the
+variable is interpolated.</p>
 
 <ul>
-<li>Plugin API: The plugin api has changed so if you are using a custom data source (or panel) they need to be updated as well.</li>
-<li>InfluxDB 0.8: This data source is no longer included in releases, you can still install manually: <a href="https://github.com/grafana/datasource-plugin-influxdb-08">github.com/grafana/datasource-plugin-influxdb-08</a></li>
-<li>KairosDB: This data source has also no longer shipped with Grafana, you can install it manually: <a href="https://github.com/grafana/datasource-plugin-kairosdb">github.com/grafana/datasource-plugin-kairosdb</a></li>
+<li><p>Plugin API: The plugin API has changed so if you are using a custom
+data source (or panel) they need to be updated as well.</p></li>
+<li><p>InfluxDB 0.8: This data source is no longer included in releases,
+you can still install manually from www.grafana.net</p></li>
+<li><p>KairosDB: This data source has also no longer shipped with Grafana,
+you can install it manually from www.grafana.net</p></li>
 </ul>
 
-<p><hr></p>
+<h3 id="changelog">CHANGELOG</h3>
 
-<p>Check out the <a href="http://play.grafana.org">Demo Site</a> to try Grafana 3.0 right now.</p>
-
-<div class="text-center">
-  <a class="button secondary radius" href="/download">Download Grafana 3.0 now</a>
-</div>
-
-<h3 id="changelog">Changelog</h3>
-
-<p>For a detailed list and link to github issues for everything included in the 3.0 release please
-view the <a href="https://github.com/grafana/grafana/blob/master/CHANGELOG.md">CHANGELOG.md</a> file.</p>
+<p>For a detailed list and link to github issues for everything included
+in the 3.0 release please view the
+<a href="https://github.com/grafana/grafana/blob/master/CHANGELOG.md">CHANGELOG.md</a>
+file.</p>
 <hr style="margin-top:30px; margin-bottom:30px"/>
 <div id="disqus_thread"></div>
 <script type="text/javascript">

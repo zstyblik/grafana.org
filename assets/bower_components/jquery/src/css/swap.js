@@ -1,1 +1,0 @@
-define(["../core"],function(e){return e.swap=function(e,t,n,r){var i,o,a={};for(o in t)a[o]=e.style[o],e.style[o]=t[o];i=n.apply(e,r||[]);for(o in t)e.style[o]=a[o];return i},e.swap});

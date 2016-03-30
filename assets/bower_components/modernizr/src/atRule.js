@@ -1,0 +1,1 @@
+define(["ModernizrProto","cssomPrefixes"],function(e,t){var n=function(e){var n,r=t.length,i=window.CSSRule;if("undefined"==typeof i)return void 0;if(!e)return!1;if(e=e.replace(/^@/,""),n=e.replace(/-/g,"_").toUpperCase()+"_RULE",n in i)return"@"+e;for(var o=0;r>o;o++){var A=t[o],a=A.toUpperCase()+"_"+n;if(a in i)return"@-"+A.toLowerCase()+"-"+e}return!1};return e.atRule=n,n});
