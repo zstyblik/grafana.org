@@ -55,6 +55,66 @@ title: Download
 .row
 
   .columns.medium-12.download-release-heading
+    h3 Grafana v3.0.0-beta1 (2016-03-31)
+
+  .columns.medium-12.download-links-wrapper
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta11459429091_amd64.deb" data-download-button="grafana_3.0.0-beta1.deb"
+      i.fa.fa-download
+      |  DEB (Ubuntu / Debian 64bit)
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta11459429091.x86_64.rpm" data-download-button="3.0.0-beta1.rpm"
+      i.fa.fa-download
+      |  RPM (Fedora / RHEL  64bit)
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta11459429091.linux-x64.tar.gz" data-download-button="3.0.0-beta1.linux.tar"
+      i.fa.fa-download
+      |  Binary TAR (Linux 64bit)
+    a.download-link href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-3.0.0-beta11459429091.windows-x64.zip" data-download-button="3.0.0-beta1.windows.zip"
+      i.fa.fa-download
+      |  Binary ZIP (Windows 64bit)
+
+.row
+  .columns.large-12.markdown.download-release-details
+    markdown:
+      For full details read the [Grafana 3.0 Beta Release](/blog/2016/03/31/grafana-3-0-beta-released.html) blog post.
+      <br>
+
+      #### Highlights
+      - Massive UI improvements and polish
+      - Redesigned plugin architecture and SDK
+      - Grafana-cli command line tool shipped with grafana, installs plugins
+      - Persisted dashboard playlists
+      - New plugin types, Apps, and Panels.
+      - New platform site built around Grafana at [Grafana.net](https://grafana.net)
+        - Plugin repository
+        - More stuff coming soon (Hosted, On Prem Grafana Monitoring and Backups)
+      - Annotation popovers can contain clickable links
+      - Support for InfluxDB 0.11
+      - [Full changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+
+      #### Breaking changes
+
+      * Dashboards from v2.6 are fully compatible; no manual updates should be necessary. There could
+      be some edge case scenarios where dashboards using templating could stop working.
+      If that is the case just enter the edit view for the template variable and hit Update button.
+      This is due to a simplification of the variable format system where template variables are
+      now stored without any formatting (glob/regex/etc), this is done on the fly when the
+      variable is interpolated.
+
+      * Plugin API: The plugin API has changed so if you are using a custom
+      data source (or panel) they need to be updated as well.
+
+      * InfluxDB 0.8: This data source is no longer included in releases,
+      you can still install manually from [Grafana.net](http://grafana.net)
+
+      * KairosDB: This data source has also no longer shipped with Grafana,
+      you can install it manually from [Grafana.net](http://grafana.net)
+
+= partial "layouts/_newsletter"
+br
+br
+
+.row
+
+  .columns.medium-12.download-release-heading
     h3 Grafana v2.6.0 (2015-12-14)
 
   .columns.medium-12.download-links-wrapper
@@ -84,10 +144,6 @@ title: Download
       - New InfluxDB Query Editor
       - Multiple Cloudwatch credentials
       - [Full changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
-
-= partial "layouts/_newsletter"
-br
-br
 
 .row
 

@@ -109,9 +109,9 @@ $code-color: scale-color($body-font-color, $lightness: 15%);
 $code-font-family: $font-family-monospace;
 $code-font-weight: $font-weight-normal;
 $code-background-color: $silver;
-$code-border-size: 0px;
+$code-border-size: 1px;
 $code-border-style: solid;
-$code-border-color: scale-color($code-background-color, $lightness: -6%);
+$code-border-color: #BBD9F5;
 $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
 // We use these to style blockquotes
