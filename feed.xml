@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://grafana.org/blog/2016/03/31/grafana-3-0-beta-released.html"/>
     <id>http://grafana.org/blog/2016/03/31/grafana-3-0-beta-released.html</id>
     <published>2016-03-30T17:00:00-07:00</published>
-    <updated>2016-03-31T06:43:37-07:00</updated>
+    <updated>2016-03-31T09:56:42-07:00</updated>
     <author>
       <name>Torkel Ödegaard</name>
     </author>
@@ -34,7 +34,7 @@ update to Grafana ever, with over 1500 commits by over 30 contributors.&lt;/p&gt
 
 &lt;h3 id="commercial-support"&gt;Commercial Support&lt;/h3&gt;
 
-&lt;p&gt;Commercial Support subscriptions for Grafana are now &lt;a href="&amp;quot;http://grafana.net/support/plans/&amp;quot;"&gt;generally available&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Commercial Support subscriptions for Grafana are now &lt;a href="https://grafana.net/support/plans/"&gt;generally available&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Raintank is committed to a 100% open-source strategy for Grafana. We
 do not want to go down the “open core” route. If your organization
