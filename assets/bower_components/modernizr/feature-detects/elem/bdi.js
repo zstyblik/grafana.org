@@ -8,4 +8,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement","docElement"],function(e,t,n){e.addTest("bdi",function(){var e=t("div"),o=t("bdi");o.innerHTML="&#1573;",e.appendChild(o),n.appendChild(e);var r="rtl"===(window.getComputedStyle?getComputedStyle(o,null):o.currentStyle).direction;return n.removeChild(e),r})});
+define(["Modernizr","createElement","docElement"],function(e,t,n){e.addTest("bdi",function(){var e=t("div"),r=t("bdi");r.innerHTML="&#1573;",e.appendChild(r),n.appendChild(e);var o="rtl"===(window.getComputedStyle?getComputedStyle(r,null):r.currentStyle).direction;return n.removeChild(e),o})});

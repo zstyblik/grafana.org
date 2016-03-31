@@ -1,1 +1,1 @@
-define(["ModernizrProto","testPropsAll","cssToDOM","atRule"],function(e,t,n,r){var i=e.prefixed=function(e,i,o){return 0===e.indexOf("@")?r(e):(-1!=e.indexOf("-")&&(e=n(e)),i?t(e,i,o):t(e,"pfx"))};return i});
+define(["ModernizrProto","testPropsAll","cssToDOM","atRule"],function(e,t,n,i){var r=e.prefixed=function(e,r,o){return 0===e.indexOf("@")?i(e):(-1!=e.indexOf("-")&&(e=n(e)),r?t(e,r,o):t(e,"pfx"))};return r});

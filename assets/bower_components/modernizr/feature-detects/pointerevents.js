@@ -14,4 +14,4 @@
   "polyfills": ["handjs"]
 }
 !*/
-define(["Modernizr","domPrefixes","hasEvent"],function(e,n,t){e.addTest("pointerevents",function(){var o=!1,r=n.length;for(o=e.hasEvent("pointerdown");r--&&!o;)t(n[r]+"pointerdown")&&(o=!0);return o})});
+define(["Modernizr","domPrefixes","hasEvent"],function(e,t,n){e.addTest("pointerevents",function(){var r=!1,o=t.length;for(r=e.hasEvent("pointerdown");o--&&!r;)n(t[o]+"pointerdown")&&(r=!0);return r})});

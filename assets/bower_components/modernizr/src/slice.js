@@ -1,1 +1,1 @@
-define(["classes"],function(e){var t=e.slice;return t});
+define(["classes"],function(A){var e=A.slice;return e});

@@ -6,4 +6,4 @@
   "tags": ["es6"]
 }
 !*/
-define(["Modernizr"],function(e){e.addTest("generators",function(){try{new Function("function* test() {}")()}catch(e){return!1}return!0})});
+define(["Modernizr"],function(A){A.addTest("generators",function(){try{new Function("function* test() {}")()}catch(A){return!1}return!0})});

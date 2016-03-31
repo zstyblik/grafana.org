@@ -1,1 +1,1 @@
-define(["isSVG"],function(e){function A(){return"function"!=typeof document.createElement?document.createElement(arguments[0]):e?document.createElementNS.call(document,"http://www.w3.org/2000/svg",arguments[0]):document.createElement.apply(document,arguments)}return A});
+define(["isSVG"],function(A){function e(){return"function"!=typeof document.createElement?document.createElement(arguments[0]):A?document.createElementNS.call(document,"http://www.w3.org/2000/svg",arguments[0]):document.createElement.apply(document,arguments)}return e});

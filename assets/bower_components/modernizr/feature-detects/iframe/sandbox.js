@@ -12,4 +12,4 @@
   "knownBugs": [ "False-positive on Firefox < 29" ]
 }
 !*/
-define(["Modernizr","createElement"],function(e,n){e.addTest("sandbox","sandbox"in n("iframe"))});
+define(["Modernizr","createElement"],function(e,t){e.addTest("sandbox","sandbox"in t("iframe"))});

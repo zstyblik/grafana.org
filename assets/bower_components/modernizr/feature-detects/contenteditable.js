@@ -9,4 +9,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement","docElement"],function(e,n,t){e.addTest("contenteditable",function(){if("contentEditable"in t){var e=n("div");return e.contentEditable=!0,"true"===e.contentEditable}})});
+define(["Modernizr","createElement","docElement"],function(e,t,n){e.addTest("contenteditable",function(){if("contentEditable"in n){var e=t("div");return e.contentEditable=!0,"true"===e.contentEditable}})});
