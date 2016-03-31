@@ -21,7 +21,7 @@ Read on below to learn more about what’s new in 3.0 or:
 
 ### Commercial Support
 
-Commercial Support subscriptions for Grafana are now [generally available]("http://grafana.net/support/plans/").
+Commercial Support subscriptions for Grafana are now [generally available](https://grafana.net/support/plans/).
 
 Raintank is committed to a 100% open-source strategy for Grafana. We
 do not want to go down the “open core” route. If your organization
