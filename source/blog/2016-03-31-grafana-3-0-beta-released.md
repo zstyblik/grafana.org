@@ -83,10 +83,11 @@ example:
 grafana-cli install grafana-pie-chart-panel
 ```
 
-### Improved Personalization
+### Personalization & Preferences
 
-Grafana will track recently viewed Dashboards. The dashboard list
-panel can show these on your home dashboard.
+The home dashboard, timezone and theme can now be customized on Organization
+and user Profile level. Grafana can also track recently viewed dashboards, which
+can then be displayed in the dashboard list panel.
 
 ### Improved Playlists
 

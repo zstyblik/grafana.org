@@ -55,19 +55,19 @@ title: Download
 .row
 
   .columns.medium-12.download-release-heading
-    h3 Grafana v3.0.0-beta1 (2016-03-31)
+    h3 Grafana v3.0.0-beta2 (2016-04-04)
 
   .columns.medium-12.download-links-wrapper
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta11459429091_amd64.deb" data-download-button="grafana_3.0.0-beta1.deb"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta21459801392_amd64.deb" data-download-button="grafana_3.0.0-beta1.deb"
       i.fa.fa-download
       |  DEB (Ubuntu / Debian 64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta11459429091.x86_64.rpm" data-download-button="3.0.0-beta1.rpm"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta21459801392.x86_64.rpm" data-download-button="3.0.0-beta1.rpm"
       i.fa.fa-download
       |  RPM (Fedora / RHEL  64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta11459429091.linux-x64.tar.gz" data-download-button="3.0.0-beta1.linux.tar"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta21459801392.linux-x64.tar.gz" data-download-button="3.0.0-beta1.linux.tar"
       i.fa.fa-download
       |  Binary TAR (Linux 64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-3.0.0-beta1.windows-x64.zip" data-download-button="3.0.0-beta1.windows.zip"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-3.0.0-beta2.windows-x64.zip" data-download-button="3.0.0-beta1.windows.zip"
       i.fa.fa-download
       |  Binary ZIP (Windows 64bit)
 
@@ -77,20 +77,30 @@ title: Download
       For full details read the [Grafana 3.0 Beta Release](/blog/2016/03/31/grafana-3-0-beta-released.html) blog post.
       <br>
 
-      #### Highlights
-      - Massive UI improvements and polish
-      - Redesigned plugin architecture and SDK
-      - Grafana-cli command line tool shipped with grafana, installs plugins
-      - Persisted dashboard playlists
-      - New plugin types, Apps, and Panels.
-      - New platform site built around Grafana at [Grafana.net](https://grafana.net)
+      ### 3.0 Highlights
+      - **Big UI** improvements and polish
+      - **Redesigned** plugin architecture and SDK
+      - **Grafana-cli* command line tool shipped with grafana, installs plugins
+      - **Persisted** dashboard playlists
+      - **Preferences** like home dashboard, timezone and theme on org and user level
+      - **New** plugin types, Apps, and Panels.
+      - **New** platform site built around Grafana at [Grafana.net](https://grafana.net)
         - Plugin repository
         - More stuff coming soon (Hosted, On Prem Grafana Monitoring and Backups)
-      - Annotation popovers can contain clickable links
-      - Support for InfluxDB 0.11
+      - **Annotation** popovers can contain clickable links
+      - **Support** for InfluxDB 0.11
       - [Full changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
 
-      #### Breaking changes
+      ### Bugfixes between beta1 and beta2
+
+      * **Dashboard**: Fixed dashboard panel layout for mobile devices, fixes [#4529](https://github.com/grafana/grafana/issues/4529)
+      * **Table Panel**: Fixed issue with table panel sort, fixes [#4532](https://github.com/grafana/grafana/issues/4532)
+      * **Page Load Crash**: A Datasource with null jsonData would make Grafana fail to load page, fixes [#4536](https://github.com/grafana/grafana/issues/4536)
+      * **Metrics tab**: Fix for missing datasource name in datasource selector, fixes [#4540](https://github.com/grafana/grafana/issues/4540)
+      * **Graph**: Fix legend in table mode with series on right-y axis, fixes [#4551](https://github.com/grafana/grafana/issues/4551), [#1145](https://github.com/grafana/grafana/issues/1145)
+      * **Password**: Password reset link/page did not work, fixes [#4542](https://github.com/grafana/grafana/issues/4542)
+
+      ### Breaking changes
 
       * Dashboards from v2.6 are fully compatible; no manual updates should be necessary. There could
       be some edge case scenarios where dashboards using templating could stop working.
