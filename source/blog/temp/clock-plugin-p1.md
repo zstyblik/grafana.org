@@ -30,7 +30,7 @@ We're going to start simple. Version one of our clock plugin will not be configu
 
 ## Setup Grafana
 
-To build a plugin I would recommend you set up the development environment for Grafana. [Follow the instructions here.](http://docs.grafana.org/project/building_from_source/). General instructions for plugin development [can be found here](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/development.md).
+To build a plugin I would recommend you set up the development environment for Grafana. [Follow the instructions here.](http://docs.grafana.org/project/building_from_source/). General instructions for plugin development [can be found here](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/development.md)
 
 ## Getting started
 
