@@ -13,4 +13,4 @@
   }]
 }
 !*/
-define(["Modernizr","testAllProps"],function(A,e){A.addTest("preserve3d",e("transformStyle","preserve-3d"))});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("preserve3d",t("transformStyle","preserve-3d"))});

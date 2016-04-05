@@ -17,4 +17,4 @@
   ]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("svg",!!document.createElementNS&&!!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)});
+define(["Modernizr"],function(e){e.addTest("svg",!!document.createElementNS&&!!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)});

@@ -1,1 +1,1 @@
-define(["../var/document"],function(e){function t(t,n){n=n||e;var r=n.createElement("script");r.text=t,n.head.appendChild(r).parentNode.removeChild(r)}return t});
+define(["../var/document"],function(t){function e(e,n){n=n||t;var i=n.createElement("script");i.text=e,n.head.appendChild(i).parentNode.removeChild(i)}return e});

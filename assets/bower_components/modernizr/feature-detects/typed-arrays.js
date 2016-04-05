@@ -15,4 +15,4 @@
   "polyfills": ["joshuabell-polyfill"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("typedarrays","ArrayBuffer"in window)});
+define(["Modernizr"],function(e){e.addTest("typedarrays","ArrayBuffer"in window)});

@@ -13,4 +13,4 @@
   }]
 }
 !*/
-define(["Modernizr","testAllProps"],function(A,e){A.addTest("appearance",e("appearance"))});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("appearance",t("appearance"))});

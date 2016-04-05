@@ -1,1 +1,1 @@
-define(["ModernizrProto","injectElementWithStyles"],function(e,t){var n=e.testStyles=t;return n});
+define(["ModernizrProto","injectElementWithStyles"],function(t,e){var n=t.testStyles=e;return n});

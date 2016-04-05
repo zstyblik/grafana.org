@@ -9,4 +9,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement"],function(A,e){A.addTest("capture","capture"in e("input"))});
+define(["Modernizr","createElement"],function(t,e){t.addTest("capture","capture"in e("input"))});

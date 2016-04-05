@@ -14,4 +14,4 @@
   ]
 }
 !*/
-define(["Modernizr","prefixed"],function(A,e){var t=e("crypto",window);A.addTest("crypto",!!e("subtle",t))});
+define(["Modernizr","prefixed"],function(e,t){var n=t("crypto",window);e.addTest("crypto",!!t("subtle",n))});

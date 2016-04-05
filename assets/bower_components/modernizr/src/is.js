@@ -1,1 +1,1 @@
-define(function(){function A(A,e){return typeof A===e}return A});
+define(function(){function t(t,e){return typeof t===e}return t});

@@ -7,4 +7,4 @@
   "builderAliases": ["css_mediaqueries"]
 }
 !*/
-define(["Modernizr","mq"],function(A,e){A.addTest("mediaqueries",e("only all"))});
+define(["Modernizr","mq"],function(e,t){e.addTest("mediaqueries",t("only all"))});

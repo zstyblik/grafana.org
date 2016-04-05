@@ -12,4 +12,4 @@
     }]
 }
 !*/
-define(["Modernizr","createElement"],function(A,e){A.addTest("srcset","srcset"in e("img"))});
+define(["Modernizr","createElement"],function(e,t){e.addTest("srcset","srcset"in t("img"))});

@@ -12,4 +12,4 @@
   "polyfills": ["mathjax"]
 }
 !*/
-define(["Modernizr","testStyles"],function(A,e){A.addTest("mathml",function(){var A;return e("#modernizr{position:absolute;display:inline-block}",function(e){e.innerHTML+="<math><mfrac><mi>xx</mi><mi>yy</mi></mfrac></math>",A=e.offsetHeight>e.offsetWidth}),A})});
+define(["Modernizr","testStyles"],function(t,e){t.addTest("mathml",function(){var t;return e("#modernizr{position:absolute;display:inline-block}",function(e){e.innerHTML+="<math><mfrac><mi>xx</mi><mi>yy</mi></mfrac></math>",t=e.offsetHeight>e.offsetWidth}),t})});

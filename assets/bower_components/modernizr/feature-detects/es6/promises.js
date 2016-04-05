@@ -18,4 +18,4 @@
   }]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("promises",function(){return"Promise"in window&&"resolve"in window.Promise&&"reject"in window.Promise&&"all"in window.Promise&&"race"in window.Promise&&function(){var A;return new window.Promise(function(e){A=e}),"function"==typeof A}()})});
+define(["Modernizr"],function(t){t.addTest("promises",function(){return"Promise"in window&&"resolve"in window.Promise&&"reject"in window.Promise&&"all"in window.Promise&&"race"in window.Promise&&function(){var t;return new window.Promise(function(e){t=e}),"function"==typeof t}()})});

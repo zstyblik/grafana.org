@@ -9,4 +9,4 @@
   }]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("xhrresponsetype",function(){if("undefined"==typeof XMLHttpRequest)return!1;var A=new XMLHttpRequest;return A.open("get","/",!0),"response"in A}())});
+define(["Modernizr"],function(t){t.addTest("xhrresponsetype",function(){if("undefined"==typeof XMLHttpRequest)return!1;var t=new XMLHttpRequest;return t.open("get","/",!0),"response"in t}())});

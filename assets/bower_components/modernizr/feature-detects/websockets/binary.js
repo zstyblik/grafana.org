@@ -6,4 +6,4 @@
   "builderAliases": ["websockets_binary"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("websocketsbinary",function(){var A,e="https:"==location.protocol?"wss":"ws";if("WebSocket"in window){if(A="binaryType"in WebSocket.prototype)return A;try{return!!new WebSocket(e+"://.").binaryType}catch(t){}}return!1})});
+define(["Modernizr"],function(t){t.addTest("websocketsbinary",function(){var t,e="https:"==location.protocol?"wss":"ws";if("WebSocket"in window){if(t="binaryType"in WebSocket.prototype)return t;try{return!!new WebSocket(e+"://.").binaryType}catch(n){}}return!1})});

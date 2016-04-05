@@ -12,4 +12,4 @@
   "tags": ["es6"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("es6object",!!(Object.assign&&Object.is&&Object.setPrototypeOf))});
+define(["Modernizr"],function(t){t.addTest("es6object",!!(Object.assign&&Object.is&&Object.setPrototypeOf))});

@@ -1,1 +1,1 @@
-define(function(){function e(e,t){return!!~(""+e).indexOf(t)}return e});
+define(function(){function t(t,e){return!!~(""+t).indexOf(e)}return t});

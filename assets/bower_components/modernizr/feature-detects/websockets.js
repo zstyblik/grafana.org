@@ -24,4 +24,4 @@
   ]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("websockets","WebSocket"in window&&2===window.WebSocket.CLOSING)});
+define(["Modernizr"],function(e){e.addTest("websockets","WebSocket"in window&&2===window.WebSocket.CLOSING)});

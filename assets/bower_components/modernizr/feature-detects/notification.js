@@ -20,4 +20,4 @@
   "polyfills": ["desktop-notify", "html5-notifications"]
 }
 !*/
-define(["Modernizr"],function(e){e.addTest("notification",function(){if(!window.Notification||!window.Notification.requestPermission)return!1;if("granted"===window.Notification.permission)return!0;try{new window.Notification("")}catch(e){if("TypeError"===e.name)return!1}return!0})});
+define(["Modernizr"],function(t){t.addTest("notification",function(){if(!window.Notification||!window.Notification.requestPermission)return!1;if("granted"===window.Notification.permission)return!0;try{new window.Notification("")}catch(t){if("TypeError"===t.name)return!1}return!0})});

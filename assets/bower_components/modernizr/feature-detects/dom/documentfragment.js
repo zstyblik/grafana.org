@@ -17,4 +17,4 @@
   "tags": []
 }
 !*/
-define(["Modernizr","docElement"],function(A,e){A.addTest("documentfragment",function(){return"createDocumentFragment"in document&&"appendChild"in e})});
+define(["Modernizr","docElement"],function(e,t){e.addTest("documentfragment",function(){return"createDocumentFragment"in document&&"appendChild"in t})});

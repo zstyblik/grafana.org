@@ -15,4 +15,4 @@
   "polyfills": ["matchmediajs"]
 }
 !*/
-define(["Modernizr","prefixed"],function(A,e){A.addTest("matchmedia",!!e("matchMedia",window))});
+define(["Modernizr","prefixed"],function(e,t){e.addTest("matchmedia",!!t("matchMedia",window))});

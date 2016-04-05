@@ -13,4 +13,4 @@
   "tags": ["es5"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("es5undefined",function(){var A,e;try{e=window.undefined,window.undefined=12345,A="undefined"==typeof window.undefined,window.undefined=e}catch(t){return!1}return A})});
+define(["Modernizr"],function(e){e.addTest("es5undefined",function(){var e,t;try{t=window.undefined,window.undefined=12345,e="undefined"==typeof window.undefined,window.undefined=t}catch(n){return!1}return e})});

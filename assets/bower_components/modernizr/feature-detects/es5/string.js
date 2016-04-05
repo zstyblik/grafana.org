@@ -11,4 +11,4 @@
   "tags": ["es5"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("es5string",function(){return!(!String.prototype||!String.prototype.trim)})});
+define(["Modernizr"],function(e){e.addTest("es5string",function(){return!(!String.prototype||!String.prototype.trim)})});

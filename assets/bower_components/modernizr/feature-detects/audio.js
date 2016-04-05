@@ -5,4 +5,4 @@
   "tags" : ["html5", "audio", "media"]
 }
 !*/
-define(["Modernizr","createElement"],function(A,e){A.addTest("audio",function(){var A=e("audio"),t=!1;try{(t=!!A.canPlayType)&&(t=new Boolean(t),t.ogg=A.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/,""),t.mp3=A.canPlayType('audio/mpeg; codecs="mp3"').replace(/^no$/,""),t.opus=A.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/,""),t.wav=A.canPlayType('audio/wav; codecs="1"').replace(/^no$/,""),t.m4a=(A.canPlayType("audio/x-m4a;")||A.canPlayType("audio/aac;")).replace(/^no$/,""))}catch(n){}return t})});
+define(["Modernizr","createElement"],function(e,t){e.addTest("audio",function(){var e=t("audio"),n=!1;try{(n=!!e.canPlayType)&&(n=new Boolean(n),n.ogg=e.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/,""),n.mp3=e.canPlayType('audio/mpeg; codecs="mp3"').replace(/^no$/,""),n.opus=e.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/,""),n.wav=e.canPlayType('audio/wav; codecs="1"').replace(/^no$/,""),n.m4a=(e.canPlayType("audio/x-m4a;")||e.canPlayType("audio/aac;")).replace(/^no$/,""))}catch(i){}return n})});

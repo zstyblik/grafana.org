@@ -9,4 +9,4 @@
   }]
 }
 !*/
-define(["Modernizr","prefixed"],function(A,e){A.addTest("dart",!!e("startDart",navigator))});
+define(["Modernizr","prefixed"],function(e,t){e.addTest("dart",!!t("startDart",navigator))});

@@ -1,1 +1,1 @@
-define(["../../core"],function(e){return function(t,n,r){for(var i=[],o=void 0!==r;(t=t[n])&&9!==t.nodeType;)if(1===t.nodeType){if(o&&e(t).is(r))break;i.push(t)}return i}});
+define(["../../core"],function(t){return function(e,n,i){for(var r=[],o=void 0!==i;(e=e[n])&&9!==e.nodeType;)if(1===e.nodeType){if(o&&t(e).is(i))break;r.push(e)}return r}});

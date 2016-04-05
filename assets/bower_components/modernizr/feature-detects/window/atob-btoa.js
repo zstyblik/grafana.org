@@ -16,4 +16,4 @@
   "polyfills": ["base64js"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("atobbtoa","atob"in window&&"btoa"in window,{aliases:["atob-btoa"]})});
+define(["Modernizr"],function(e){e.addTest("atobbtoa","atob"in window&&"btoa"in window,{aliases:["atob-btoa"]})});

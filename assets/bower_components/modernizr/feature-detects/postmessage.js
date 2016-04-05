@@ -10,4 +10,4 @@
   "polyfills": ["easyxdm", "postmessage-jquery"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("postmessage","postMessage"in window)});
+define(["Modernizr"],function(e){e.addTest("postmessage","postMessage"in window)});

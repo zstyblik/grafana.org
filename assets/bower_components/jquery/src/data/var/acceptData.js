@@ -1,1 +1,1 @@
-define(function(){return function(e){return 1===e.nodeType||9===e.nodeType||!+e.nodeType}});
+define(function(){return function(t){return 1===t.nodeType||9===t.nodeType||!+t.nodeType}});

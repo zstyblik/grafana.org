@@ -6,4 +6,4 @@
   "tags": ["css"]
 }
 !*/
-define(["Modernizr","createElement","prefixes"],function(A,e,t){A.addTest("opacity",function(){var A=e("a").style;return A.cssText=t.join("opacity:.55;"),/^0.55$/.test(A.opacity)})});
+define(["Modernizr","createElement","prefixes"],function(e,t,n){e.addTest("opacity",function(){var e=t("a").style;return e.cssText=n.join("opacity:.55;"),/^0.55$/.test(e.opacity)})});

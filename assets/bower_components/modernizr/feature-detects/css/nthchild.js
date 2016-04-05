@@ -18,4 +18,4 @@
   "warnings": ["Known false negative in Safari 3.1 and Safari 3.2.2"]
 }
 !*/
-define(["Modernizr","testStyles"],function(A,e){e("#modernizr div {width:1px} #modernizr div:nth-child(2n) {width:2px;}",function(e){for(var t=e.getElementsByTagName("div"),n=!0,i=0;5>i;i++)n=n&&t[i].offsetWidth===i%2+1;A.addTest("nthchild",n)},5)});
+define(["Modernizr","testStyles"],function(e,t){t("#modernizr div {width:1px} #modernizr div:nth-child(2n) {width:2px;}",function(t){for(var n=t.getElementsByTagName("div"),i=!0,r=0;5>r;r++)i=i&&n[r].offsetWidth===r%2+1;e.addTest("nthchild",i)},5)});

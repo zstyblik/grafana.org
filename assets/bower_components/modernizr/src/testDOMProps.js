@@ -1,1 +1,1 @@
-define(["is","fnBind"],function(e,t){function n(n,r,i){var o;for(var a in n)if(n[a]in r)return i===!1?n[a]:(o=r[n[a]],e(o,"function")?t(o,i||r):o);return!1}return n});
+define(["is","fnBind"],function(t,e){function n(n,i,r){var o;for(var s in n)if(n[s]in i)return r===!1?n[s]:(o=i[n[s]],t(o,"function")?e(o,r||i):o);return!1}return n});

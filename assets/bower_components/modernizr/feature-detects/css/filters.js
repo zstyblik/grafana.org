@@ -12,4 +12,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement","prefixes","testAllProps","test/css/supports"],function(A,e,t,n){A.addTest("cssfilters",function(){if(A.supports)return n("filter","blur(2px)");var i=e("a");return i.style.cssText=t.join("filter:blur(2px); "),!!i.style.length&&(void 0===document.documentMode||document.documentMode>9)})});
+define(["Modernizr","createElement","prefixes","testAllProps","test/css/supports"],function(e,t,n,i){e.addTest("cssfilters",function(){if(e.supports)return i("filter","blur(2px)");var r=t("a");return r.style.cssText=n.join("filter:blur(2px); "),!!r.style.length&&(void 0===document.documentMode||document.documentMode>9)})});

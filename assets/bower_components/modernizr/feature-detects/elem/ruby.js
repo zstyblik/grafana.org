@@ -12,4 +12,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement","docElement"],function(e,t,n){e.addTest("ruby",function(){function e(e,t){var n;return window.getComputedStyle?n=document.defaultView.getComputedStyle(e,null).getPropertyValue(t):e.currentStyle&&(n=e.currentStyle[t]),n}function r(){n.removeChild(o),o=null,i=null,d=null}var o=t("ruby"),i=t("rt"),d=t("rp"),a="display",c="fontSize";return o.appendChild(d),o.appendChild(i),n.appendChild(o),"none"==e(d,a)||"ruby"==e(o,a)&&"ruby-text"==e(i,a)||"6pt"==e(d,c)&&"6pt"==e(i,c)?(r(),!0):(r(),!1)})});
+define(["Modernizr","createElement","docElement"],function(e,t,n){e.addTest("ruby",function(){function e(e,t){var n;return window.getComputedStyle?n=document.defaultView.getComputedStyle(e,null).getPropertyValue(t):e.currentStyle&&(n=e.currentStyle[t]),n}function i(){n.removeChild(r),r=null,o=null,s=null}var r=t("ruby"),o=t("rt"),s=t("rp"),a="display",u="fontSize";return r.appendChild(s),r.appendChild(o),n.appendChild(r),"none"==e(s,a)||"ruby"==e(r,a)&&"ruby-text"==e(o,a)||"6pt"==e(s,u)&&"6pt"==e(o,u)?(i(),!0):(i(),!1)})});
