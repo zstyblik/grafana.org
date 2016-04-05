@@ -10,4 +10,4 @@
   "knownBugs": ["False positive in Opera 12"]
 }
 !*/
-define(["Modernizr","createElement"],function(e,r){e.addTest("scriptdefer","defer"in r("script"))});
+define(["Modernizr","createElement"],function(e,t){e.addTest("scriptdefer","defer"in t("script"))});
