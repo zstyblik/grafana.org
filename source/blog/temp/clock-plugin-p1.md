@@ -30,19 +30,13 @@ We're going to start simple. Version one of our clock plugin will not be configu
 
 ## Setup Grafana
 
-You can develop Grafana plugins using the official optimized Grafana release packages or running a locally built Grafana development server. It does
-not really matter unless your plugin needs to reference Grafana style variables or you want better exception call stacks when troublshooting
-plugin issues. [Follow the instructions here.](http://docs.grafana.org/project/building_from_source/) to learn how to build Grafana.
-General instructions for plugin development [can be found here](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/development.md)
+You can develop Grafana plugins using the official optimized Grafana release packages or running a locally built Grafana development server. It does not really matter unless your plugin needs to reference Grafana style variables or you want better exception call stacks when troublshooting plugin issues. [Follow the instructions here.](http://docs.grafana.org/project/building_from_source/) to learn how to build Grafana. General instructions for plugin development [can be found here](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/development.md)
 
 ## Getting started
 
-If you are running Grafana from a local development build then the default plugins directory is `<grafana_repo_dir>/data/plugins`.
-If you have grafana installed from a **.deb** or **.rpm** package then the default plugins directory is `/var/lib/grafana/plugins`.
+If you are running Grafana from a local development build then the default plugins directory is `<grafana_repo_dir>/data/plugins`. If you have grafana installed from a **.deb** or **.rpm** package then the default plugins directory is `/var/lib/grafana/plugins`.
 
-After you have created your plugin directory and your plugin.json you need to restart grafana-server and the new plugin will be automatically found and
-registered. When making changes to javascript files you do not need to restart grafana-server, that is only required when you make changes
-to the plugin defintion file (plugin.json).
+After you have created your plugin directory and your plugin.json you need to restart grafana-server and the new plugin will be automatically found and registered. When making changes to javascript files you do not need to restart grafana-server, that is only required when you make changes to the plugin defintion file (plugin.json).
 
 You can can clone one of the example plugins to get started or make one from scratch. If you are used to JavaScript development and have your own set of tools then it's worth doing it yourself otherwise I'd recommend cloning one of the plugins that is similar to one you want to make.
 
