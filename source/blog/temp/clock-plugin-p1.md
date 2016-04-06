@@ -6,7 +6,7 @@ published_on: April 5, 2016
 
 People have been [asking for a Clock Panel in Grafana](https://github.com/grafana/grafana/issues/1693) so I thought I'd give it a try and at the same time show how to build plugins for Grafana.
 
-Grafana 3.0 introduces a new plugin system architecture and these plugins can be shared with everyone through [Grafana.net](https://www.grafana.net). 
+Grafana 3.0 introduces a new plugin system architecture and these plugins can be shared with everyone through [Grafana.net](https://www.grafana.net).
 
 #### TL;DR
 
@@ -21,7 +21,7 @@ There are four different plugin types for Grafana:
 - Apps
 - Panels
 - Dashboards
-  
+
 All datasources and panels are plugins and Grafana comes with a lot of built-in plugins as well as some external ones. Check out the [Grafana documentation for more about them](http://docs.grafana.org/plugins/).
 
 I'm going to focus on the panel plugin. A panel in Grafana is how data is displayed on a dashboard. The main panel in Grafana is the graph panel. They can have a datasource like Graphite providing them with data but they don't have to have one. The clock panel is going to use the current time as its only input. We don't need a datasource for that as we can use JavaScript to fetch the date and time.
@@ -30,12 +30,19 @@ We're going to start simple. Version one of our clock plugin will not be configu
 
 ## Setup Grafana
 
-To build a plugin I would recommend you set up the development environment for Grafana. [Follow the instructions here.](http://docs.grafana.org/project/building_from_source/). General instructions for plugin development [can be found here](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/development.md)
+You can develop Grafana plugins using the official optimized Grafana release packages or running a locally built Grafana development server. It does
+not really matter unless your plugin needs to reference Grafana style variables or you want better exception call stacks when troublshooting
+plugin issues. [Follow the instructions here.](http://docs.grafana.org/project/building_from_source/) to learn how to build Grafana.
+General instructions for plugin development [can be found here](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/development.md)
 
 ## Getting started
 
-This is a bit strange but the easiest way to develop a new plugin is to create it right in the
-data/plugins folder in Grafana. A git repo inside a git repo. This way you have access to everything you need and Grafana will automatically import your plugin. When you make changes to the plugin, you only have to refresh the page on the Grafana site rather than restarting the Grafana server every time to reimport the plugin.
+If you are running Grafana from a local development build then the default plugins directory is `<grafana_repo_dir>/data/plugins`.
+If you have grafana installed from a **.deb** or **.rpm** package then the default plugins directory is `/var/lib/grafana/plugins`.
+
+After you have created your plugin directory and your plugin.json you need to restart grafana-server and the new plugin will be automatically found and
+registered. When making changes to javascript files you do not need to restart grafana-server, that is only required when you make changes
+to the plugin defintion file (plugin.json).
 
 You can can clone one of the example plugins to get started or make one from scratch. If you are used to JavaScript development and have your own set of tools then it's worth doing it yourself otherwise I'd recommend cloning one of the plugins that is similar to one you want to make.
 
@@ -56,7 +63,7 @@ The steps to create a simple plugin are:
 
 For Grafana plugins there are two mandatory files: plugin.json and module.js.
 
-Plugin json is the same concept as the package.json file for an npm package. Grafana scans after the plugin.json file when importing it.
+Plugin json is the same concept as the package.json file for an npm package. Grafana looks for plugin.json files when scanning the plugins directory.
 
 The important fields are the first three, especially the id. The convention for the id is **[github username/org]-[plugin name]-[plugin type]** and it has to be unique.
 
@@ -91,7 +98,8 @@ The module.js file is the starting point for your plugin and the interface to Gr
 -	[SDK file in Grafana](https://github.com/grafana/grafana/blob/master/public/app/plugins/sdk.ts)
 -	[SDK Readme](https://github.com/grafana/grafana/blob/master/public/app/plugins/plugin_api.md)
 
-The module.js file has to export a PanelCtrl or one of its derived classes (MetricsPanelCtrl or QueryCtrl). Our plugin has no backend so we only need a PanelCtrl to be able to interact with Grafana's GUI.
+The module.js file has to export a PanelCtrl or a derived class (for example MetricsPanelCtrl). Our clock plugin does not have any metric queries
+so we only need to inherit from PanelCtrl.
 
 ## 2. Get a simple buildscript running
 
@@ -208,10 +216,9 @@ import moment from 'moment';
 export class ClockCtrl extends PanelCtrl {
   constructor($scope, $injector) {
     super($scope, $injector);
-    this.$scope = $scope;
     this.updateClock();
   }
-  
+
   updateClock() {
     this.time = moment().format('hh:mm:ss');
     this.$timeout(() => { this.updateClock(); }, 1000);
