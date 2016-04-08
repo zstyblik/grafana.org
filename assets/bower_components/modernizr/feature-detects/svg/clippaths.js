@@ -9,4 +9,4 @@
   }]
 }
 !*/
-define(["Modernizr","toStringFn"],function(e,t){e.addTest("svgclippaths",function(){return!!document.createElementNS&&/SVGClipPath/.test(t.call(document.createElementNS("http://www.w3.org/2000/svg","clipPath")))})});
+define(["Modernizr","toStringFn"],function(A,e){A.addTest("svgclippaths",function(){return!!document.createElementNS&&/SVGClipPath/.test(e.call(document.createElementNS("http://www.w3.org/2000/svg","clipPath")))})});

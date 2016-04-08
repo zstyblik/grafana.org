@@ -12,4 +12,4 @@
   }]
 }
 !*/
-define(["Modernizr","testAllProps"],function(e,t){e.addTest("userselect",t("userSelect","none",!0))});
+define(["Modernizr","testAllProps"],function(A,e){A.addTest("userselect",e("userSelect","none",!0))});

@@ -14,4 +14,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement","isSVG"],function(e,t,n){e.addTest("vml",function(){var e,i=t("div"),r=!1;return n||(i.innerHTML='<v:shape id="vml_flag1" adj="1" />',e=i.firstChild,e.style.behavior="url(#default#VML)",r=e?"object"==typeof e.adj:!0),r})});
+define(["Modernizr","createElement","isSVG"],function(e,n,t){e.addTest("vml",function(){var e,r=n("div"),o=!1;return t||(r.innerHTML='<v:shape id="vml_flag1" adj="1" />',e=r.firstChild,e.style.behavior="url(#default#VML)",o=e?"object"==typeof e.adj:!0),o})});

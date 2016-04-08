@@ -15,4 +15,4 @@
   ]
 }
 !*/
-define(["Modernizr","prefixed"],function(e,t){e.addTest("backgroundblendmode",t("backgroundBlendMode","text"))});
+define(["Modernizr","prefixed"],function(A,e){A.addTest("backgroundblendmode",e("backgroundBlendMode","text"))});

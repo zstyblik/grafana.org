@@ -10,4 +10,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement"],function(t,e){t.addTest("seamless","seamless"in e("iframe"))});
+define(["Modernizr","createElement"],function(e,n){e.addTest("seamless","seamless"in n("iframe"))});

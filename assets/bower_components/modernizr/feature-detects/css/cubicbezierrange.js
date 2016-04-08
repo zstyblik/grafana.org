@@ -13,4 +13,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement","prefixes"],function(e,t,n){e.addTest("cubicbezierrange",function(){var e=t("a");return e.style.cssText=n.join("transition-timing-function:cubic-bezier(1,0,0,1.1); "),!!e.style.length})});
+define(["Modernizr","createElement","prefixes"],function(A,e,t){A.addTest("cubicbezierrange",function(){var A=e("a");return A.style.cssText=t.join("transition-timing-function:cubic-bezier(1,0,0,1.1); "),!!A.style.length})});

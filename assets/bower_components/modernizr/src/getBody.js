@@ -1,1 +1,1 @@
-define(["createElement","isSVG"],function(t,e){function n(){var n=document.body;return n||(n=t(e?"svg":"body"),n.fake=!0),n}return n});
+define(["createElement","isSVG"],function(A,e){function t(){var t=document.body;return t||(t=A(e?"svg":"body"),t.fake=!0),t}return t});

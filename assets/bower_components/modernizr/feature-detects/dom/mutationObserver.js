@@ -12,4 +12,4 @@
   }]
 }
 !*/
-define(["Modernizr"],function(e){e.addTest("mutationobserver",!!window.MutationObserver||!!window.WebKitMutationObserver)});
+define(["Modernizr"],function(A){A.addTest("mutationobserver",!!window.MutationObserver||!!window.WebKitMutationObserver)});

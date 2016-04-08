@@ -8,4 +8,4 @@
   "authors": ["@phiggins42"]
 }
 !*/
-define(["Modernizr","createElement"],function(e,t){e.addTest("dataset",function(){var e=t("div");return e.setAttribute("data-a-b","c"),!(!e.dataset||"c"!==e.dataset.aB)})});
+define(["Modernizr","createElement"],function(A,e){A.addTest("dataset",function(){var A=e("div");return A.setAttribute("data-a-b","c"),!(!A.dataset||"c"!==A.dataset.aB)})});

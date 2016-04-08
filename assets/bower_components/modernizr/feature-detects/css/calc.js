@@ -8,4 +8,4 @@
   "authors": ["@calvein"]
 }
 !*/
-define(["Modernizr","createElement","prefixes"],function(e,t,n){e.addTest("csscalc",function(){var e="width:",i="calc(10px);",r=t("a");return r.style.cssText=e+n.join(i+e),!!r.style.length})});
+define(["Modernizr","createElement","prefixes"],function(A,e,t){A.addTest("csscalc",function(){var A="width:",n="calc(10px);",i=e("a");return i.style.cssText=A+t.join(n+A),!!i.style.length})});

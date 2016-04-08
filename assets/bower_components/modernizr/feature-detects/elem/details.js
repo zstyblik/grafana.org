@@ -12,4 +12,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement","docElement","testStyles"],function(e,t,n,i){e.addTest("details",function(){var e,n=t("details");return"open"in n?(i("#modernizr details{display:block}",function(t){t.appendChild(n),n.innerHTML="<summary>a</summary>b",e=n.offsetHeight,n.open=!0,e=e!=n.offsetHeight}),e):!1})});
+define(["Modernizr","createElement","docElement","testStyles"],function(e,n,t,r){e.addTest("details",function(){var e,t=n("details");return"open"in t?(r("#modernizr details{display:block}",function(n){n.appendChild(t),t.innerHTML="<summary>a</summary>b",e=t.offsetHeight,t.open=!0,e=e!=t.offsetHeight}),e):!1})});

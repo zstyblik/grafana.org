@@ -6,4 +6,4 @@
   "tags": ["css"]
 }
 !*/
-define(["Modernizr","testAllProps"],function(e,t){e.addTest("cssreflections",t("boxReflect","above",!0))});
+define(["Modernizr","testAllProps"],function(A,e){A.addTest("cssreflections",e("boxReflect","above",!0))});

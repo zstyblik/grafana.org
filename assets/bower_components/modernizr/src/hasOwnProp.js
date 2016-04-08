@@ -1,1 +1,1 @@
-define(["is"],function(t){var e;return function(){var n={}.hasOwnProperty;e=t(n,"undefined")||t(n.call,"undefined")?function(e,n){return n in e&&t(e.constructor.prototype[n],"undefined")}:function(t,e){return n.call(t,e)}}(),e});
+define(["is"],function(A){var e;return function(){var t={}.hasOwnProperty;e=A(t,"undefined")||A(t.call,"undefined")?function(e,t){return t in e&&A(e.constructor.prototype[t],"undefined")}:function(A,e){return t.call(A,e)}}(),e});

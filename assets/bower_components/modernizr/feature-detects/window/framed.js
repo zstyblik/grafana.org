@@ -6,4 +6,4 @@
   "builderAliases": ["window_framed"]
 }
 !*/
-define(["Modernizr"],function(e){e.addTest("framed",window.location!=top.location)});
+define(["Modernizr"],function(A){A.addTest("framed",window.location!=top.location)});

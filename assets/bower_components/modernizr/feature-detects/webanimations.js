@@ -10,4 +10,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement"],function(e,t){e.addTest("webanimations","animate"in t("div"))});
+define(["Modernizr","createElement"],function(A,e){A.addTest("webanimations","animate"in e("div"))});

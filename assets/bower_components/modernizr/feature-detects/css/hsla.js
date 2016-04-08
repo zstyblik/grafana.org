@@ -6,4 +6,4 @@
   "tags": ["css"]
 }
 !*/
-define(["Modernizr","createElement","contains"],function(e,t,n){e.addTest("hsla",function(){var e=t("a").style;return e.cssText="background-color:hsla(120,40%,100%,.5)",n(e.backgroundColor,"rgba")||n(e.backgroundColor,"hsla")})});
+define(["Modernizr","createElement","contains"],function(A,e,t){A.addTest("hsla",function(){var A=e("a").style;return A.cssText="background-color:hsla(120,40%,100%,.5)",t(A.backgroundColor,"rgba")||t(A.backgroundColor,"hsla")})});

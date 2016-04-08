@@ -16,4 +16,4 @@
   ]
 }
 !*/
-define(["Modernizr"],function(e){e.addTest("localstorage",function(){var e="modernizr";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(t){return!1}})});
+define(["Modernizr"],function(A){A.addTest("localstorage",function(){var A="modernizr";try{return localStorage.setItem(A,A),localStorage.removeItem(A),!0}catch(e){return!1}})});

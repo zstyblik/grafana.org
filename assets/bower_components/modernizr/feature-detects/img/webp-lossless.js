@@ -14,4 +14,4 @@
   }]
 }
 !*/
-define(["Modernizr","addTest"],function(e,t){e.addAsyncTest(function(){var e=new Image;e.onerror=function(){t("webplossless",!1,{aliases:["webp-lossless"]})},e.onload=function(){t("webplossless",1==e.width,{aliases:["webp-lossless"]})},e.src="data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA="})});
+define(["Modernizr","addTest"],function(A,e){A.addAsyncTest(function(){var A=new Image;A.onerror=function(){e("webplossless",!1,{aliases:["webp-lossless"]})},A.onload=function(){e("webplossless",1==A.width,{aliases:["webp-lossless"]})},A.src="data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA="})});
