@@ -99,7 +99,7 @@ The SDK contains three different plugin classes for us to use: PanelCtrl, Metric
 
 ## 2. Get a simple buildscript running
 
-I'm preparing for a grunt build at a later stage so the module.js file is placed in the src subfolder and later on we will have a dist folder. Grafana has a convention that it mounts the dist folder automatically if it exists.
+I'm preparing for a grunt build at a later stage so the module.js file is placed in the src subfolder and later on we will have a dist folder. Grafana has a convention that it loads the code from the dist folder if it exists and will then ignore our src folder.
 
 ### Setting up grunt with babel
 
