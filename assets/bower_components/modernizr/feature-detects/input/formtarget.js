@@ -15,4 +15,4 @@
   ]
 }
 !*/
-define(["Modernizr","createElement"],function(t,e){t.addTest("inputformtarget",!!("formtarget"in e("input")),{aliases:["input-formtarget"]})});
+define(["Modernizr","createElement"],function(e,t){e.addTest("inputformtarget",!!("formtarget"in t("input")),{aliases:["input-formtarget"]})});

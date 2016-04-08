@@ -5,10 +5,297 @@
   <id>http://grafana.org/blog</id>
   <link href="http://grafana.org/blog"/>
   <link href="http://grafana.org/feed.xml" rel="self"/>
-  <updated>2016-03-31T02:00:00+02:00</updated>
+  <updated>2016-04-08T02:00:00+02:00</updated>
   <author>
     <name>Grafana</name>
   </author>
+  <entry>
+    <title>Timing is Everything. Writing the Clock Panel Plugin for Grafana 3.0</title>
+    <link rel="alternate" href="http://grafana.org/blog/2016/04/08/clock-plugin-p1.html"/>
+    <id>http://grafana.org/blog/2016/04/08/clock-plugin-p1.html</id>
+    <published>2016-04-08T02:00:00+02:00</published>
+    <updated>2016-04-08T10:32:06+02:00</updated>
+    <author>
+      <name>Daniel Lee</name>
+    </author>
+    <content type="html">&lt;p&gt;People have been &lt;a href="https://github.com/grafana/grafana/issues/1693"&gt;asking for a Clock Panel in Grafana&lt;/a&gt; so I thought I&amp;rsquo;d give it a try and at the same time show how to build plugins for Grafana.&lt;/p&gt;
+
+&lt;p&gt;Grafana 3.0 introduces a new plugin system architecture and these plugins can be shared with everyone through &lt;a href="https://www.grafana.net"&gt;Grafana.net&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id="tl-dr"&gt;TL;DR&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If you just want a clock panel for Grafana then the &lt;a href="https://grafana.net/plugins/grafana-clock-panel"&gt;finished Clock Panel plugin is here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Check out the current version of the &lt;a href="https://github.com/grafana/clock-panel"&gt;code on GitHub here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/clock_panel_screenshot.png" /&gt;&lt;/p&gt;
+
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;There are four different plugin types for Grafana:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Datasources&lt;/li&gt;
+&lt;li&gt;Apps&lt;/li&gt;
+&lt;li&gt;Panels&lt;/li&gt;
+&lt;li&gt;Dashboards&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All datasources and panels are plugins and Grafana comes with a lot of built-in plugins as well as some external ones. Check out the &lt;a href="http://docs.grafana.org/plugins/"&gt;Grafana documentation for more about them&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m going to focus on the panel plugin. A panel in Grafana is how data is displayed on a dashboard. The main panel in Grafana is the graph panel. They can have a datasource like Graphite providing them with data but they don&amp;rsquo;t have to have one. The clock panel is going to use the current time as its only input. We don&amp;rsquo;t need a datasource for that as we can use JavaScript to fetch the date and time.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;re going to start simple. Version one of our clock plugin will not be configurable. It just shows the current time.&lt;/p&gt;
+
+&lt;h2 id="setup-grafana"&gt;Setup Grafana&lt;/h2&gt;
+
+&lt;p&gt;You can develop Grafana plugins using the official optimized Grafana release packages or running a locally built Grafana development server. It does not really matter unless your plugin needs to reference Grafana style variables or you want better exception call stacks when troubleshooting plugin issues. &lt;a href="http://docs.grafana.org/project/building_from_source/"&gt;Follow the instructions here&lt;/a&gt; to learn how to build Grafana. General instructions for plugin development &lt;a href="https://github.com/grafana/grafana/blob/master/docs/sources/plugins/development.md"&gt;can be found here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id="getting-started"&gt;Getting started&lt;/h2&gt;
+
+&lt;p&gt;This may sound strange but the easiest way to develop a new plugin is to create it directly in Grafana&amp;rsquo;s plugin directory. If you are running Grafana from a local development build then the default plugins directory is &lt;code class="prettyprint"&gt;&amp;lt;grafana_repo_dir&amp;gt;/data/plugins&lt;/code&gt;. If you have grafana installed from a &lt;strong&gt;.deb&lt;/strong&gt; or &lt;strong&gt;.rpm&lt;/strong&gt; package then the default plugins directory is &lt;code class="prettyprint"&gt;/var/lib/grafana/plugins&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;After you have created your plugin directory and your plugin.json (more on what that is below) you need to restart grafana-server and the new plugin will be automatically found and registered. When making changes to javascript files you do not need to restart grafana-server, that is only required when you make changes to the plugin definition file (plugin.json).&lt;/p&gt;
+
+&lt;p&gt;You can can clone one of the example plugins to get started or make one from scratch. If you are used to JavaScript development and have your own set of tools then it&amp;rsquo;s worth doing it yourself, otherwise I&amp;rsquo;d recommend cloning one of the plugins that is similar to one you want to make.&lt;/p&gt;
+
+&lt;h3 id="technology-choices"&gt;Technology Choices&lt;/h3&gt;
+
+&lt;p&gt;Grafana is built with Angular and the plugins interact with Angular too so that choice is already made. I will be writing it in the latest ES6 syntax so I need Babel to transpile that to ES5 JavaScript. I choose Grunt for the build script.&lt;/p&gt;
+
+&lt;h3 id="5-simple-steps"&gt;5 Simple Steps&lt;/h3&gt;
+
+&lt;p&gt;The steps to create a simple plugin are:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Set up the boilerplate files (most of these are the same for any JavaScript project)&lt;/li&gt;
+&lt;li&gt;Get a simple buildscript running&lt;/li&gt;
+&lt;li&gt;Write some plugin JavaScript&lt;/li&gt;
+&lt;li&gt;Style the plugin&lt;/li&gt;
+&lt;li&gt;Publish the plugin&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id="1-plugin-boilerplate"&gt;1. Plugin Boilerplate&lt;/h2&gt;
+
+&lt;p&gt;For Grafana plugins there are two mandatory files: plugin.json and module.js.&lt;/p&gt;
+
+&lt;p&gt;Plugin json is the same concept as the package.json file for an npm package. Grafana looks for plugin.json files when scanning the plugins directory.&lt;/p&gt;
+
+&lt;p&gt;The important fields are the first three, especially the id. The convention for the id is &lt;strong&gt;[github username/org]-[plugin name]-[plugin type]&lt;/strong&gt; and it has to be unique.&lt;/p&gt;
+
+&lt;p&gt;Minimal plugin.json:&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"panel"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"name"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"Clock"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"id"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"grafana-clock-panel"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+  &lt;span class="s2"&gt;"info"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s2"&gt;"description"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"Clock panel for grafana"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;"author"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="s2"&gt;"name"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"Raintank Inc."&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="s2"&gt;"url"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"http://raintank.io"&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s2"&gt;"keywords"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"clock"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"panel"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="s2"&gt;"version"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"1.0.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;"updated"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"2015-03-24"&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+
+  &lt;span class="s2"&gt;"dependencies"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s2"&gt;"grafanaVersion"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"3.x.x"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;"plugins"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The module.js file is the starting point for your plugin and the interface to Grafana. The Grafana SDK is quite small so far and can be found here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  &lt;a href="https://github.com/grafana/grafana/blob/master/public/app/plugins/sdk.ts"&gt;SDK file in Grafana&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  &lt;a href="https://github.com/grafana/grafana/blob/master/public/app/plugins/plugin_api.md"&gt;SDK Readme&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The SDK contains three different plugin classes for us to use: PanelCtrl, MetricsPanelCtrl and QueryCtrl. In our case, the module.js file should export one of these. Our clock plugin does not have any metric queries so we only need to inherit from PanelCtrl.&lt;/p&gt;
+
+&lt;h2 id="2-get-a-simple-buildscript-running"&gt;2. Get a simple buildscript running&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m preparing for a grunt build at a later stage so the module.js file is placed in the src subfolder and later on we will have a dist folder. Grafana has a convention that it loads the code from the dist folder if it exists and will then ignore our src folder.&lt;/p&gt;
+
+&lt;h3 id="setting-up-grunt-with-babel"&gt;Setting up grunt with babel&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create a git repo with git init and create a .gitignore file.&lt;/li&gt;
+&lt;li&gt;Add a license, I&amp;rsquo;m using MIT.&lt;/li&gt;
+&lt;li&gt;Create a README.md file.&lt;/li&gt;
+&lt;li&gt;Create a package.json using npm init so we can install npm packages.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;npm install with the following dev dependencies or something similar:&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="s2"&gt;"devDependencies"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="s2"&gt;"grunt"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"~0.4.5"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"babel"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"~6.5.1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"grunt-babel"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"~6.0.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"grunt-contrib-copy"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"~0.8.2"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"grunt-contrib-watch"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"^0.6.1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"grunt-contrib-uglify"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"~0.11.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"grunt-systemjs-builder"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"^0.2.5"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"load-grunt-tasks"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"~3.2.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"grunt-execute"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"~0.2.2"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"grunt-contrib-clean"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"~0.6.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"babel-plugin-transform-es2015-modules-systemjs"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"^6.5.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"babel-preset-es2015"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"^6.5.0"&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I am using Lodash and Moment JS. Both of these are already included in Grafana so an npm install is all that is needed so I can build locally. If I want to use an external library that is not included in Grafana then I need to add it to the source code. This is how I installed them:&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;npm install moment --save
+npm install lodash --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lodash is a useful utility library. Moment js is excellent for formatting dates and times. Exactly what we need!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Setup grunt. I am using the following Gruntfile.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;grunt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+  &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'load-grunt-tasks'&lt;/span&gt;&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="nx"&gt;grunt&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+  &lt;span class="nx"&gt;grunt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;loadNpmTasks&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'grunt-execute'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="nx"&gt;grunt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;loadNpmTasks&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'grunt-contrib-clean'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+  &lt;span class="nx"&gt;grunt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;initConfig&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+
+    &lt;span class="na"&gt;clean&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"dist"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+
+    &lt;span class="na"&gt;copy&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="na"&gt;src_to_dist&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;cwd&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'src'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;expand&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'**/*'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'!**/*.js'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'!**/*.scss'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+        &lt;span class="na"&gt;dest&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'dist'&lt;/span&gt;
+      &lt;span class="p"&gt;},&lt;/span&gt;
+      &lt;span class="na"&gt;pluginDef&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;expand&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="s1"&gt;'plugin.json'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'README.md'&lt;/span&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+        &lt;span class="na"&gt;dest&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'dist'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt;
+
+    &lt;span class="na"&gt;watch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="na"&gt;rebuild_all&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;files&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'src/**/*'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'plugin.json'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+        &lt;span class="na"&gt;tasks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'default'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+        &lt;span class="na"&gt;options&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="na"&gt;spawn&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+      &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt;
+
+    &lt;span class="na"&gt;babel&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="na"&gt;options&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;sourceMap&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;presets&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"es2015"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+        &lt;span class="na"&gt;plugins&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'transform-es2015-modules-systemjs'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"transform-es2015-for-of"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+      &lt;span class="p"&gt;},&lt;/span&gt;
+      &lt;span class="na"&gt;dist&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;files&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[{&lt;/span&gt;
+          &lt;span class="na"&gt;cwd&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'src'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+          &lt;span class="na"&gt;expand&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+          &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'*.js'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+          &lt;span class="na"&gt;dest&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'dist'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+          &lt;span class="na"&gt;ext&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s1"&gt;'.js'&lt;/span&gt;
+        &lt;span class="p"&gt;}]&lt;/span&gt;
+      &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt;
+
+  &lt;span class="p"&gt;});&lt;/span&gt;
+
+  &lt;span class="nx"&gt;grunt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;registerTask&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'default'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'clean'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'copy:src_to_dist'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'copy:pluginDef'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'babel'&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t know Grunt then you can learn all about it &lt;a href="http://gruntjs.com"&gt;here on their site&lt;/a&gt;. Feel free to write your own Gulp (or whatever&amp;rsquo;s trendy) build script.&lt;/p&gt;
+
+&lt;h2 id="3-write-some-plugin-javascript"&gt;3. Write some plugin JavaScript&lt;/h2&gt;
+
+&lt;p&gt;Create a clock_ctrl.js file that will hold most of our plugin&amp;rsquo;s code. This ctrl file is imported into module.js and exported as PanelCtrl. The module.js is very simple and looks like this:&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;ClockCtrl&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s1"&gt;'./clock_ctrl'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;ClockCtrl&lt;/span&gt; &lt;span class="nx"&gt;as&lt;/span&gt; &lt;span class="nx"&gt;PanelCtrl&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Write a little bit of code in the Clock controller to show the current time (we&amp;rsquo;ll add date later). I am using Moment.js to be able to format dates properly. $timeout is the Angular version of setTimeout. It updates the view every second.&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;PanelCtrl&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s1"&gt;'app/plugins/sdk'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;moment&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s1"&gt;'moment'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;ClockCtrl&lt;/span&gt; &lt;span class="kr"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;PanelCtrl&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$scope&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;$injector&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$scope&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;$injector&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;updateClock&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+
+  &lt;span class="nx"&gt;updateClock&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;moment&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'hh:mm:ss'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;$timeout&lt;/span&gt;&lt;span class="p"&gt;(()&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;updateClock&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="nx"&gt;ClockCtrl&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;templateUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'module.html'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I am using a template file named module.html and it is a standard Angular template. It is really simple at this stage:&lt;/p&gt;
+&lt;pre class="highlight html"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;{{ctrl.time}}&lt;span class="nt"&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And that&amp;rsquo;s &lt;a href="https://github.com/grafana/clock-panel/commit/6a9d0d625e3757582ce30f0b5c7e784a2b0e978b"&gt;the first commit&lt;/a&gt;! A working, albeit very basic panel plugin for Grafana.&lt;/p&gt;
+
+&lt;p&gt;Run grunt to get everything compiled and copied over to the dist folder. Then refresh Grafana and try to add a new panel. The new Clock Panel should be available in the list.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/clock_panel_add.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;But we&amp;rsquo;re not finished yet. It looks very plain and off center at the moment. We need to style it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/clock_panel_unstyled.png" /&gt;&lt;/p&gt;
+
+&lt;h2 id="4-style-the-plugin"&gt;4. Style the plugin&lt;/h2&gt;
+
+&lt;p&gt;There are two ways to to style a plugin:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use Grafana&amp;rsquo;s css.&lt;/li&gt;
+&lt;li&gt;Import your own css.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We will import our own css. How you do this depends on your level of ambition. If you are not changing any colors then we just do a normal import. However if you want to add your own colors then it would be best to create two versions, one for the dark theme and one for the light theme. &lt;a href="https://github.com/raintank/worldping-app/tree/master/src/sass"&gt;Check out the worldPing app&lt;/a&gt; for an example of using Sass to create the two themes.&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="s1"&gt;'./css/clock-panel.css!'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can get the panel height from the ctrl object and use that to set the height for the clock panel outer div in the template by setting:&lt;/p&gt;
+&lt;pre class="highlight html"&gt;&lt;code&gt;style="height: {{ctrl.height}}px;"
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now the first version of the clock panel plugin is finished and preparations made to take it further. &lt;a href="https://github.com/grafana/clock-panel"&gt;Check out the code on GitHub&lt;/a&gt; if you want to contribute or make your own plugin.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/clock_panel_styled.png" /&gt;&lt;/p&gt;
+
+&lt;h2 id="5-publish-the-plugin"&gt;5. Publish the plugin&lt;/h2&gt;
+
+&lt;p&gt;If you want to share your plugin with others then you can publish it on Grafana.net. This means it can be installed with the Grafana CLI tool like this:&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;grafana-cli plugins install grafana-clock-panel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To publish a plugin, create an account on Grafana.net and then talk to the Grafana developers on Slack who will help you with the last step. &lt;a href="https://grafana.net/getting-started"&gt;Instructions for publishing can be found on Grafana.net.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the next post, we will look at how to make the clock customizable. I want to be able to choose date and time format, 12/24 hour clock, customizable colors, font sizes and more. It should be easy to make it do countdowns too.&lt;/p&gt;
+
+&lt;h3 id="references"&gt;References:&lt;/h3&gt;
+
+&lt;p&gt;I used the following plugins for inspiration:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/grafana/example-app"&gt;Example App&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/grafana/piechart-panel"&gt;Piechart Panel&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/raintank/worldping-app"&gt;worldPing App&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>Grafana 3.0 Beta Released</title>
     <link rel="alternate" href="http://grafana.org/blog/2016/03/31/grafana-3-0-beta-released.html"/>
@@ -620,206 +907,6 @@ priority will be a table panel and more ways to visualize metrics.&lt;/p&gt;
 &lt;li&gt;&lt;a href="http://www.demonware.net"&gt;Demonware&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://developer.mediamath.com/OpenSource"&gt;Mediamath&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Grafana 2.1 Released</title>
-    <link rel="alternate" href="http://grafana.org/blog/2015/08/04/Grafana-2-1-Released.html"/>
-    <id>http://grafana.org/blog/2015/08/04/Grafana-2-1-Released.html</id>
-    <published>2015-08-04T02:00:00+02:00</published>
-    <updated>2016-04-05T17:32:36+02:00</updated>
-    <author>
-      <name>Torkel Ödegaard</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;img class="no-shadow" src="/assets/img/blog/new-in-grafana-v2-1.png" alt="what's new in Grafana 2.1"/&gt;&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;ve been working to implement many of the features you&amp;rsquo;ve requested since the release of 2.0, and are
-excited to announce the release of Grafana 2.1 today. We recommend that all Grafana users upgrade to this release.
-Grafana 2.1 brings improvements in three core areas: dashboarding, authentication, and data sources.
-As with every Grafana release, there is a whole slew of new features, enhancements, and bug fixes.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://grafana.org/download/" target="_blank"&gt;Download Grafana 2.1 now&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;re excited about this release, and want to share some of the highlights:&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id="more-dynamic-dashboards"&gt;More Dynamic Dashboards&lt;/h2&gt;
-
-&lt;p&gt;The Templating system is one of the most powerful and well-used features of Grafana.
-The 2.1 release brings numerous improvements that make dashboards more dynamic than ever before.&lt;/p&gt;
-
-&lt;h3 id="multi-value-template-variables"&gt;Multi-Value Template Variables&lt;/h3&gt;
-
-&lt;p&gt;A template variable with Multi-Value enabled allows for the selection of multiple values at the same time.
-These variables can then be used in any panel to make them more dynamic, and to give you the perfect view of your data.
-Multi-Value variables is also enabling the new &lt;code class="prettyprint"&gt;row repeat&lt;/code&gt; and &lt;code class="prettyprint"&gt;panel repeat&lt;/code&gt; feature described below.&lt;/p&gt;
-
-&lt;p&gt;&lt;img title="Multi-Value Select" alt="Multi-Value Select" src="/assets/img/blog/multi-select.gif" /&gt;
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h3 id="repeating-rows-and-panels"&gt;Repeating Rows and Panels&lt;/h3&gt;
-
-&lt;p&gt;It’s now possible to create a Dashboard that automatically adds (or removes) both rows and panels based
-on selected variable values. Any row or any panel can be configured to repeat (duplicate itself) based
-on a multi-value template variable.&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img title="Repeating Rows and Panels" alt="Repeating Rows and Panels" src="/assets/img/blog/panel-row-repeat.gif" /&gt;
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h3 id="dashboard-links-amp-navigation"&gt;Dashboard Links &amp;amp; Navigation&lt;/h3&gt;
-
-&lt;p&gt;To support better navigation between dashboards, it&amp;rsquo;s now possible to create custom and dynamic links from individual
-panels to appropriate Dashboards. You also have the ability to create flexible top-level links on any
-given Dashboard thanks to the new Dashboard navigation bar feature.&lt;/p&gt;
-
-&lt;p&gt;&lt;img title="Dashboard Links" alt="Dashboard Links" src="/assets/img/blog/dash_links.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Dashboard links can be added under dashboard settings. Either defined as static URLs with a custom icon or as dynamic
-dashboard links or dropdowns based on custom dashboard search query. These links appear in the same
-row under the top menu where template variables appear.&lt;/p&gt;
-
-&lt;p&gt;&lt;hr&gt;&lt;/p&gt;
-
-&lt;h3 id="better-local-dashboard-support"&gt;Better local Dashboard support&lt;/h3&gt;
-
-&lt;p&gt;Grafana can now index Dashboards saved locally as JSON from a given directory. These file based dashboards
-will appear in the regular dashboard search along regular DB dashboards.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; Saving local dashboards back the folder is not supported; this feature is meant for statically generated JSON dashboards.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id="new-authentication-options"&gt;New Authentication Options&lt;/h2&gt;
-
-&lt;p&gt;New authentication methods add numerous options to manage users, roles and organizations.&lt;/p&gt;
-
-&lt;h3 id="ldap-support"&gt;LDAP support&lt;/h3&gt;
-
-&lt;p&gt;This highly requested feature now allows your Grafana users to login with their LDAP credentials.
-You can also specify mappings between LDAP group memberships and Grafana Organization user roles.&lt;/p&gt;
-
-&lt;h3 id="basic-auth-support"&gt;Basic Auth Support&lt;/h3&gt;
-
-&lt;p&gt;You can now authenticate against the Grafana API utilizing a simple username and password with basic HTTP authentication.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; This can be useful for provisioning and config management systems that need
-to utilize the API without having to create an API key.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="auth-proxy-support"&gt;Auth Proxy Support&lt;/h3&gt;
-
-&lt;p&gt;You can now authenticate utilizing a header (eg. X-Authenticated-User, or X-WEBAUTH-USER)&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; this can be useful in situations with reverse proxies.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="new-read-only-editor-user-role"&gt;New “Read-only Editor” User Role&lt;/h3&gt;
-
-&lt;p&gt;There is a new User role available in this version of Grafana: “Read-only Editor”. This role behaves just
-like the Viewer role does in Grafana 2.0.  That is you can edit graphs and queries but not save dashboards.
-The Viewer role has been modified in Grafana 2.1 so that users assigned this role can no longer edit panels.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id="data-source-improvements"&gt;Data source Improvements&lt;/h2&gt;
-
-&lt;h3 id="influxdb-0-9-support"&gt;InfluxDB 0.9 Support&lt;/h3&gt;
-
-&lt;p&gt;Grafana 2.1 now comes with full support for InfluxDB 0.9. There is a new query editor designed from scratch
-for the new features InfluxDB 0.9 enables.&lt;/p&gt;
-
-&lt;p&gt;&lt;img title="InfluxDB Editor" alt="InfluxDB Editor" src="/assets/img/blog/influx_09_editor_anim.gif" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h3 id="opentsdb-improvements"&gt;OpenTSDB Improvements&lt;/h3&gt;
-
-&lt;p&gt;Grafana OpenTSDB data source now supports template variable values queries. This means you can create
-template variables that fetches the values from OpenTSDB (for example metric names, tag names, or tag values).
-The query editor is also enhanced to limiting tags by metric.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/strong&gt; OpenTSDB config option tsd.core.meta.enable_realtime_ts must enabled for OpenTSDB lookup api)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="new-data-source-kairosdb"&gt;New Data Source: KairosDB&lt;/h3&gt;
-
-&lt;p&gt;The Cassandra backed time series database KairosDB is now supported in Grafana out of the box. Thank you to
-&lt;a href="https://github.com/masaori335" target="_blank"&gt;masaori335&lt;/a&gt; for his hard work in getting it to this point. Also thanks
-to &lt;a href="https://github.com/rdettai"&gt;Remi Dettai&lt;/a&gt; for the initial implementation of the KairosDB data source plugin.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id="panel-improvements"&gt;Panel Improvements&lt;/h2&gt;
-
-&lt;p&gt;Grafana 2.1 gives you even more flexibility customizing how individual panels render.
-Overriding the colors of specific series using regular expressions, changing how series stack,
-and allowing string values will help you better understand your data at a glance.&lt;/p&gt;
-
-&lt;h3 id="graph-panel"&gt;Graph Panel&lt;/h3&gt;
-
-&lt;p&gt;Define series color using regex rule. This is useful when you have templated graphs with series names
-that change depending selected template variables. Using a regex style override rule you could
-for example make all series that contain the word &lt;strong&gt;CPU&lt;/strong&gt; &lt;code class="prettyprint"&gt;red&lt;/code&gt; and assigned to the second y axis.&lt;/p&gt;
-
-&lt;p&gt;&lt;img title="Define series color using regex rule" alt="Define series color using regex rule" src="/assets/img/blog/regex_color_override.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;New series style override, negative-y transform and stack groups. Negative y tranform is
-very useful if you want to plot a series on the negative y scale without affecting the legend values like min or max or
-the values shown in the hover tooltip.&lt;/p&gt;
-
-&lt;p&gt;&lt;img title="Negative-y Transform" alt="Negative-y Transform" src="/assets/img/blog/negative-y.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img title="Negative-y Transform" alt="Negative-y Transform" src="/assets/img/blog/negative-y-form.png" /&gt;&lt;/p&gt;
-
-&lt;h3 id="singlestat-panel"&gt;Singlestat Panel&lt;/h3&gt;
-
-&lt;p&gt;Now support string values. Useful for time series database like InfluxDB that supports
-string values.&lt;/p&gt;
-
-&lt;h3 id="changelog"&gt;Changelog&lt;/h3&gt;
-
-&lt;p&gt;For a detailed list and link to github issues for everything included in the 2.1 release please
-view the &lt;a href="&amp;quot;https://github.com/grafana/grafana/blob/master/CHANGELOG.md&amp;quot;"&gt;CHANGELOG.md&lt;/a&gt; file.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h3 id="download-grafana-2-1-now"&gt;&lt;a href="http://grafana.org/download"&gt;Download Grafana 2.1 now&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id="demo-dashboard-for-grafana-2-1-features"&gt;&lt;a href="http://play.grafana.org/dashboard/db/new-features-in-v2-1"&gt;Demo dashboard for Grafana 2.1 features&lt;/a&gt;&lt;/h3&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h2 id="thanks-to-project-sponsors"&gt;Thanks to project sponsors&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.squarespace.com"&gt;Squarespace&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.dreamhost.com"&gt;Dreamhost&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.demonware.net"&gt;Demonware&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://developer.mediamath.com/OpenSource"&gt;Mediamath&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="subscribe-to-project-updates"&gt;Subscribe to project updates&lt;/h2&gt;
-
-&lt;section class="newsletter"&gt;
-  &lt;form action="http://grafana.us8.list-manage.com/subscribe/post?u=2aeb5711db2aececc990be536&amp;amp;id=5585d37ecc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"&gt;
-    &lt;row class="collapse"&gt;
-      &lt;div class="medium-10 columns"&gt;
-        &lt;input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"&gt;
-      &lt;/div&gt;
-      &lt;div class="medium-2 columns"&gt;
-        &lt;input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button postfix"&gt;
-      &lt;/div&gt;
-    &lt;/row&gt;
-  &lt;/form&gt;
-&lt;/section&gt;
 </content>
   </entry>
 </feed>
