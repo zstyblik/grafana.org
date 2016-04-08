@@ -1,7 +1,7 @@
 ---
-title: Writing Grafana 3.0 Plugins - Clock Panel
+title: Timing is Everything. Writing the Clock Panel Plugin for Grafana 3.0
 author: Daniel Lee
-published_on: April 5, 2016
+published_on: April 8, 2016
 ---
 
 People have been [asking for a Clock Panel in Grafana](https://github.com/grafana/grafana/issues/1693) so I thought I'd give it a try and at the same time show how to build plugins for Grafana.
@@ -12,6 +12,8 @@ Grafana 3.0 introduces a new plugin system architecture and these plugins can b
 
 - If you just want a clock panel for Grafana then the [finished Clock Panel plugin is here](https://grafana.net/plugins/grafana-clock-panel).
 - Check out the current version of the [code on GitHub here](https://github.com/grafana/clock-panel).
+
+![](blog/clock_panel_screenshot.png)
 
 ## Introduction
 
@@ -30,21 +32,21 @@ We're going to start simple. Version one of our clock plugin will not be configu
 
 ## Setup Grafana
 
-You can develop Grafana plugins using the official optimized Grafana release packages or running a locally built Grafana development server. It does not really matter unless your plugin needs to reference Grafana style variables or you want better exception call stacks when troublshooting plugin issues. [Follow the instructions here.](http://docs.grafana.org/project/building_from_source/) to learn how to build Grafana. General instructions for plugin development [can be found here](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/development.md)
+You can develop Grafana plugins using the official optimized Grafana release packages or running a locally built Grafana development server. It does not really matter unless your plugin needs to reference Grafana style variables or you want better exception call stacks when troubleshooting plugin issues. [Follow the instructions here](http://docs.grafana.org/project/building_from_source/) to learn how to build Grafana. General instructions for plugin development [can be found here](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/development.md).
 
 ## Getting started
 
-If you are running Grafana from a local development build then the default plugins directory is `<grafana_repo_dir>/data/plugins`. If you have grafana installed from a **.deb** or **.rpm** package then the default plugins directory is `/var/lib/grafana/plugins`.
+This may sound strange but the easiest way to develop a new plugin is to create it directly in Grafana's plugin directory. If you are running Grafana from a local development build then the default plugins directory is `<grafana_repo_dir>/data/plugins`. If you have grafana installed from a **.deb** or **.rpm** package then the default plugins directory is `/var/lib/grafana/plugins`.
 
-After you have created your plugin directory and your plugin.json you need to restart grafana-server and the new plugin will be automatically found and registered. When making changes to javascript files you do not need to restart grafana-server, that is only required when you make changes to the plugin defintion file (plugin.json).
+After you have created your plugin directory and your plugin.json (more on what that is below) you need to restart grafana-server and the new plugin will be automatically found and registered. When making changes to javascript files you do not need to restart grafana-server, that is only required when you make changes to the plugin definition file (plugin.json).
 
-You can can clone one of the example plugins to get started or make one from scratch. If you are used to JavaScript development and have your own set of tools then it's worth doing it yourself otherwise I'd recommend cloning one of the plugins that is similar to one you want to make.
+You can can clone one of the example plugins to get started or make one from scratch. If you are used to JavaScript development and have your own set of tools then it's worth doing it yourself, otherwise I'd recommend cloning one of the plugins that is similar to one you want to make.
 
 ### Technology Choices
 
 Grafana is built with Angular and the plugins interact with Angular too so that choice is already made. I will be writing it in the latest ES6 syntax so I need Babel to transpile that to ES5 JavaScript. I choose Grunt for the build script.
 
-### 4 Simple Steps
+### 5 Simple Steps
 
 The steps to create a simple plugin are:
 
@@ -52,6 +54,7 @@ The steps to create a simple plugin are:
 2. Get a simple buildscript running
 3. Write some plugin JavaScript
 4. Style the plugin
+5. Publish the plugin
 
 ## 1. Plugin Boilerplate
 
@@ -92,14 +95,11 @@ The module.js file is the starting point for your plugin and the interface to Gr
 -	[SDK file in Grafana](https://github.com/grafana/grafana/blob/master/public/app/plugins/sdk.ts)
 -	[SDK Readme](https://github.com/grafana/grafana/blob/master/public/app/plugins/plugin_api.md)
 
-The module.js file has to export a PanelCtrl or a derived class (for example MetricsPanelCtrl). Our clock plugin does not have any metric queries
-so we only need to inherit from PanelCtrl.
+The SDK contains three different plugin classes for us to use: PanelCtrl, MetricsPanelCtrl and QueryCtrl. In our case, the module.js file should export one of these. Our clock plugin does not have any metric queries so we only need to inherit from PanelCtrl.
 
 ## 2. Get a simple buildscript running
 
 I'm preparing for a grunt build at a later stage so the module.js file is placed in the src subfolder and later on we will have a dist folder. Grafana has a convention that it mounts the dist folder automatically if it exists.
-
-[More info on plugin panels can be found here.](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/panels.md)
 
 ### Setting up grunt with babel
 
@@ -109,24 +109,31 @@ I'm preparing for a grunt build at a later stage so the module.js file is placed
 4. Create a package.json using npm init so we can install npm packages.
 5. npm install with the following dev dependencies or something similar:
 
-```javascript
-"devDependencies": {
-  "grunt": "~0.4.5",
-  "babel": "~6.5.1",
-  "grunt-babel": "~6.0.0",
-  "grunt-contrib-copy": "~0.8.2",
-  "grunt-contrib-watch": "^0.6.1",
-  "grunt-contrib-uglify": "~0.11.0",
-  "grunt-systemjs-builder": "^0.2.5",
-  "load-grunt-tasks": "~3.2.0",
-  "grunt-execute": "~0.2.2",
-  "grunt-contrib-clean": "~0.6.0",
-  "babel-plugin-transform-es2015-modules-systemjs": "^6.5.0",
-  "babel-preset-es2015": "^6.5.0"
-}
-```
+    ```javascript
+    "devDependencies": {
+      "grunt": "~0.4.5",
+      "babel": "~6.5.1",
+      "grunt-babel": "~6.0.0",
+      "grunt-contrib-copy": "~0.8.2",
+      "grunt-contrib-watch": "^0.6.1",
+      "grunt-contrib-uglify": "~0.11.0",
+      "grunt-systemjs-builder": "^0.2.5",
+      "load-grunt-tasks": "~3.2.0",
+      "grunt-execute": "~0.2.2",
+      "grunt-contrib-clean": "~0.6.0",
+      "babel-plugin-transform-es2015-modules-systemjs": "^6.5.0",
+      "babel-preset-es2015": "^6.5.0"
+    }
+    ```
 
-I am using lodash and moment as well which I installed with npm install and the --save flag.
+    I am using Lodash and Moment JS. Both of these are already included in Grafana so an npm install is all that is needed so I can build locally. If I want to use an external library that is not included in Grafana then I need to add it to the source code. This is how I installed them:
+
+    ```shell
+    npm install moment --save
+    npm install lodash --save
+    ```
+    
+    Lodash is a useful utility library. Moment js is excellent for formatting dates and times. Exactly what we need!
 
 6. Setup grunt. I am using the following Gruntfile.
 
@@ -191,7 +198,7 @@ If you don't know Grunt then you can learn all about it [here on their site](htt
 
 ## 3. Write some plugin JavaScript
 
-Create a clock_ctrl.js file that will hold most of our plugin's code. This ctrl file is imported into module.js and exported as PanelCtrl like this:
+Create a clock_ctrl.js file that will hold most of our plugin's code. This ctrl file is imported into module.js and exported as PanelCtrl. The module.js is very simple and looks like this:
 
 ```javascript
 import {ClockCtrl} from './clock_ctrl';
@@ -201,7 +208,7 @@ export {
 };
 ```
 
-Write a little bit of code in the Clock controller to show the current time (we'll add date later). I am using Moment.js to be able to format dates properly. $timeout is the Angular version of setTimeout. It updates the view after every second.
+Write a little bit of code in the Clock controller to show the current time (we'll add date later). I am using Moment.js to be able to format dates properly. $timeout is the Angular version of setTimeout. It updates the view every second.
 
 ```javascript
 import {PanelCtrl} from 'app/plugins/sdk';
@@ -261,7 +268,18 @@ Now the first version of the clock panel plugin is finished and preparations mad
 
 ![](blog/clock_panel_styled.png)
 
-In the next post, we will look at how to make it customizable. I want to be able to choose date and time format, 12/24 hour clock, customizable colors, font sizes and more. It should be easy to make it do countdowns too.
+## 5. Publish the plugin
+
+If you want to share your plugin with others then you can publish it on Grafana.net. This means it can be installed with the Grafana CLI tool like this:
+
+```shell
+grafana-cli plugins install grafana-clock-panel
+```
+
+To publish a plugin, create an account on Grafana.net and then talk to the Grafana developers on Slack who will help you with the last step. [Instructions for publishing can be found on Grafana.net.](https://grafana.net/getting-started)
+
+In the next post, we will look at how to make the clock customizable. I want to be able to choose date and time format, 12/24 hour clock, customizable colors, font sizes and more. It should be easy to make it do countdowns too.
+
 
 ### References:
 
