@@ -11,4 +11,4 @@
   }]
 }
 !*/
-define(["Modernizr","docElement"],function(A,e){A.addTest("classlist","classList"in e)});
+define(["Modernizr","docElement"],function(e,t){e.addTest("classlist","classList"in t)});

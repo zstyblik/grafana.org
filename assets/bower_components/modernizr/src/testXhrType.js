@@ -1,1 +1,1 @@
-define(function(){var e=function(e){if("undefined"==typeof XMLHttpRequest)return!1;var t=new XMLHttpRequest;t.open("get","/",!0);try{t.responseType=e}catch(n){return!1}return"response"in t&&t.responseType==e};return e});
+define(function(){var t=function(t){if("undefined"==typeof XMLHttpRequest)return!1;var e=new XMLHttpRequest;e.open("get","/",!0);try{e.responseType=t}catch(n){return!1}return"response"in e&&e.responseType==t};return t});

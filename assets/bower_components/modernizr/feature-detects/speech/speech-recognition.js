@@ -16,4 +16,4 @@
   "tags": ["input", "speech"]
 }
 !*/
-define(["Modernizr","prefixed"],function(A,e){A.addTest("speechrecognition",!!e("SpeechRecognition",window))});
+define(["Modernizr","prefixed"],function(t,e){t.addTest("speechrecognition",!!e("SpeechRecognition",window))});

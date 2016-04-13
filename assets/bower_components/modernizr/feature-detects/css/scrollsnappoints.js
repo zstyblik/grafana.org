@@ -12,4 +12,4 @@
   "polyfills": ["scrollsnap"]
 }
 !*/
-define(["Modernizr","testAllProps"],function(A,e){A.addTest("scrollsnappoints",e("scrollSnapType"))});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("scrollsnappoints",t("scrollSnapType"))});

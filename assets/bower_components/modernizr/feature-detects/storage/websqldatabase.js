@@ -6,4 +6,4 @@
   "tags": ["storage"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("websqldatabase","openDatabase"in window)});
+define(["Modernizr"],function(e){e.addTest("websqldatabase","openDatabase"in window)});

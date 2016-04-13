@@ -14,4 +14,4 @@
   "polyfills": ["eventlistener"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("customevent","CustomEvent"in window&&"function"==typeof window.CustomEvent)});
+define(["Modernizr"],function(t){t.addTest("customevent","CustomEvent"in window&&"function"==typeof window.CustomEvent)});

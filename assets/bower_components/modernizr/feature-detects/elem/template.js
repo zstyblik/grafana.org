@@ -12,4 +12,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement"],function(e,n){e.addTest("template","content"in n("template"))});
+define(["Modernizr","createElement"],function(e,t){e.addTest("template","content"in t("template"))});

@@ -10,4 +10,4 @@
   }]
 }
 !*/
-define(["Modernizr","testAllProps"],function(A,e){A.addTest("flexboxlegacy",e("boxDirection","reverse",!0))});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("flexboxlegacy",t("boxDirection","reverse",!0))});

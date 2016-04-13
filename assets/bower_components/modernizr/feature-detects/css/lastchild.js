@@ -11,4 +11,4 @@
   }]
 }
 !*/
-define(["Modernizr","testStyles"],function(A,e){e("#modernizr div {width:100px} #modernizr :last-child{width:200px;display:block}",function(e){A.addTest("lastchild",e.lastChild.offsetWidth>e.firstChild.offsetWidth)},2)});
+define(["Modernizr","testStyles"],function(e,t){t("#modernizr div {width:100px} #modernizr :last-child{width:200px;display:block}",function(t){e.addTest("lastchild",t.lastChild.offsetWidth>t.firstChild.offsetWidth)},2)});

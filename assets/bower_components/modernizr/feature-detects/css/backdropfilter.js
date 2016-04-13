@@ -20,4 +20,4 @@
   ]
 }
 !*/
-define(["Modernizr","testAllProps"],function(A,e){A.addTest("backdropfilter",e("backdropFilter"))});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("backdropfilter",t("backdropFilter"))});

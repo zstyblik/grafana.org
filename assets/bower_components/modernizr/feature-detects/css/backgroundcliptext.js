@@ -20,4 +20,4 @@
   ]
 }
 !*/
-define(["Modernizr","testAllProps"],function(A,e){A.addTest("backgroundcliptext",function(){return e("backgroundClip","text")})});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("backgroundcliptext",function(){return t("backgroundClip","text")})});

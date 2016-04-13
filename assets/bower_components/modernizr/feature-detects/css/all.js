@@ -8,4 +8,4 @@
   }]
 }
 !*/
-define(["Modernizr","docElement"],function(A,e){A.addTest("cssall","all"in e.style)});
+define(["Modernizr","docElement"],function(e,t){e.addTest("cssall","all"in t.style)});
