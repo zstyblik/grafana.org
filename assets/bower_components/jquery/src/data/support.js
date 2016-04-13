@@ -1,1 +1,1 @@
-define(["../var/document","../var/support"],function(t,e){return function(){var n=t.createElement("div");e.deleteExpando=!0;try{delete n.test}catch(i){e.deleteExpando=!1}n=null}(),e});
+define(["../var/document","../var/support"],function(e,t){return function(){var n=e.createElement("div");t.deleteExpando=!0;try{delete n.test}catch(r){t.deleteExpando=!1}n=null}(),t});

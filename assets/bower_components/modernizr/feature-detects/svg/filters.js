@@ -12,4 +12,4 @@
   }]
 }
 !*/
-define(["Modernizr"],function(e){e.addTest("svgfilters",function(){var e=!1;try{e="SVGFEColorMatrixElement"in window&&2==SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE}catch(t){}return e})});
+define(["Modernizr"],function(A){A.addTest("svgfilters",function(){var A=!1;try{A="SVGFEColorMatrixElement"in window&&2==SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE}catch(e){}return A})});

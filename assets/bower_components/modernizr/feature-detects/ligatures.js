@@ -9,4 +9,4 @@
   }]
 }
 !*/
-define(["Modernizr","testAllProps"],function(e,t){e.addTest("ligatures",t("fontFeatureSettings",'"liga" 1'))});
+define(["Modernizr","testAllProps"],function(e,n){e.addTest("ligatures",n("fontFeatureSettings",'"liga" 1'))});

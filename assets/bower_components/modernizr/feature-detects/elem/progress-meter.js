@@ -8,4 +8,4 @@
   "authors": ["Stefan Wallin"]
 }
 !*/
-define(["Modernizr","createElement"],function(e,t){e.addTest("progressbar",void 0!==t("progress").max),e.addTest("meter",void 0!==t("meter").max)});
+define(["Modernizr","createElement"],function(e,n){e.addTest("progressbar",void 0!==n("progress").max),e.addTest("meter",void 0!==n("meter").max)});

@@ -6,4 +6,4 @@
   "polyfills": ["joshuabell-polyfill", "cupcake", "sessionstorage"]
 }
 !*/
-define(["Modernizr"],function(e){e.addTest("sessionstorage",function(){var e="modernizr";try{return sessionStorage.setItem(e,e),sessionStorage.removeItem(e),!0}catch(t){return!1}})});
+define(["Modernizr"],function(A){A.addTest("sessionstorage",function(){var A="modernizr";try{return sessionStorage.setItem(A,A),sessionStorage.removeItem(A),!0}catch(e){return!1}})});

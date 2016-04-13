@@ -8,4 +8,4 @@
   }]
 }
 !*/
-define(["Modernizr"],function(e){e.addTest("serviceworker","serviceWorker"in navigator)});
+define(["Modernizr"],function(A){A.addTest("serviceworker","serviceWorker"in navigator)});

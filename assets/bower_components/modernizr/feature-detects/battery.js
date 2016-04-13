@@ -12,4 +12,4 @@
   }]
 }
 !*/
-define(["Modernizr","prefixed"],function(t,e){t.addTest("batteryapi",!!e("battery",navigator),{aliases:["battery-api"]})});
+define(["Modernizr","prefixed"],function(A,e){A.addTest("batteryapi",!!e("battery",navigator),{aliases:["battery-api"]})});

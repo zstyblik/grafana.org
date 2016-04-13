@@ -17,4 +17,4 @@
   "polyfills": ["visibilityjs", "visiblyjs", "jquery-visibility"]
 }
 !*/
-define(["Modernizr","prefixed"],function(e,t){e.addTest("pagevisibility",!!t("hidden",document,!1))});
+define(["Modernizr","prefixed"],function(A,e){A.addTest("pagevisibility",!!e("hidden",document,!1))});

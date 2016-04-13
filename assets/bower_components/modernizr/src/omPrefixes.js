@@ -1,1 +1,1 @@
-define(function(){var t="Moz O ms Webkit";return t});
+define(function(){var A="Moz O ms Webkit";return A});

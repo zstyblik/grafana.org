@@ -1,1 +1,1 @@
-define(["../core"],function(t){function e(e,n){var i="undefined"!=typeof e.getElementsByTagName?e.getElementsByTagName(n||"*"):"undefined"!=typeof e.querySelectorAll?e.querySelectorAll(n||"*"):[];return void 0===n||n&&t.nodeName(e,n)?t.merge([e],i):i}return e});
+define(["../core"],function(e){function t(t,n){var r="undefined"!=typeof t.getElementsByTagName?t.getElementsByTagName(n||"*"):"undefined"!=typeof t.querySelectorAll?t.querySelectorAll(n||"*"):[];return void 0===n||n&&e.nodeName(t,n)?e.merge([t],r):r}return t});

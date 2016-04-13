@@ -17,4 +17,4 @@
   ]
 }
 !*/
-define(["Modernizr","hasEvent"],function(e,t){e.addTest("hashchange",function(){return t("hashchange",window)===!1?!1:void 0===document.documentMode||document.documentMode>7})});
+define(["Modernizr","hasEvent"],function(e,n){e.addTest("hashchange",function(){return n("hashchange",window)===!1?!1:void 0===document.documentMode||document.documentMode>7})});

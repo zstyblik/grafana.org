@@ -6,4 +6,4 @@
   "builderAliases": ["forms_placeholder"]
 }
 !*/
-define(["Modernizr","createElement"],function(t,e){t.addTest("placeholder","placeholder"in e("input")&&"placeholder"in e("textarea"))});
+define(["Modernizr","createElement"],function(A,e){A.addTest("placeholder","placeholder"in e("input")&&"placeholder"in e("textarea"))});

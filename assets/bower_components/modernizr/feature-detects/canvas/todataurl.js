@@ -11,4 +11,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement","test/canvas"],function(e,t){var n=t("canvas");e.addTest("todataurljpeg",function(){return!!e.canvas&&0===n.toDataURL("image/jpeg").indexOf("data:image/jpeg")}),e.addTest("todataurlpng",function(){return!!e.canvas&&0===n.toDataURL("image/png").indexOf("data:image/png")}),e.addTest("todataurlwebp",function(){var t=!1;try{t=!!e.canvas&&0===n.toDataURL("image/webp").indexOf("data:image/webp")}catch(i){}return t})});
+define(["Modernizr","createElement","test/canvas"],function(A,e){var t=e("canvas");A.addTest("todataurljpeg",function(){return!!A.canvas&&0===t.toDataURL("image/jpeg").indexOf("data:image/jpeg")}),A.addTest("todataurlpng",function(){return!!A.canvas&&0===t.toDataURL("image/png").indexOf("data:image/png")}),A.addTest("todataurlwebp",function(){var e=!1;try{e=!!A.canvas&&0===t.toDataURL("image/webp").indexOf("data:image/webp")}catch(n){}return e})});

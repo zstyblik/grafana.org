@@ -14,4 +14,4 @@
   "authors": ["Ron Waldon (@jokeyrhyme)"]
 }
 !*/
-define(["Modernizr","createElement"],function(e,t){e.addTest("unknownelements",function(){var e=t("a");return e.innerHTML="<xyz></xyz>",1===e.childNodes.length})});
+define(["Modernizr","createElement"],function(e,n){e.addTest("unknownelements",function(){var e=n("a");return e.innerHTML="<xyz></xyz>",1===e.childNodes.length})});

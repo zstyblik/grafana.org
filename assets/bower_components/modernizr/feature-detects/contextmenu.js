@@ -13,4 +13,4 @@
   "polyfills": ["jquery-contextmenu"]
 }
 !*/
-define(["Modernizr","docElement"],function(e,t){e.addTest("contextmenu","contextMenu"in t&&"HTMLMenuItemElement"in window)});
+define(["Modernizr","docElement"],function(A,e){A.addTest("contextmenu","contextMenu"in e&&"HTMLMenuItemElement"in window)});

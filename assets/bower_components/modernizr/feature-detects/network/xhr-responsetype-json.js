@@ -12,4 +12,4 @@
   }]
 }
 !*/
-define(["Modernizr","testXhrType"],function(t,e){t.addTest("xhrresponsetypejson",e("json"))});
+define(["Modernizr","testXhrType"],function(A,e){A.addTest("xhrresponsetypejson",e("json"))});

@@ -8,4 +8,4 @@
   }]
 }
 !*/
-define(["Modernizr","createElement"],function(e,t){e.addTest("imgcrossorigin","crossOrigin"in t("img"))});
+define(["Modernizr","createElement"],function(A,e){A.addTest("imgcrossorigin","crossOrigin"in e("img"))});

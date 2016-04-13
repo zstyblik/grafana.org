@@ -15,4 +15,4 @@
   }]
 }
 !*/
-define(["Modernizr","addTest"],function(e,t){e.addAsyncTest(function(){var e=new Image;e.onerror=function(){t("webpanimation",!1,{aliases:["webp-animation"]})},e.onload=function(){t("webpanimation",1==e.width,{aliases:["webp-animation"]})},e.src="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"})});
+define(["Modernizr","addTest"],function(A,e){A.addAsyncTest(function(){var A=new Image;A.onerror=function(){e("webpanimation",!1,{aliases:["webp-animation"]})},A.onload=function(){e("webpanimation",1==A.width,{aliases:["webp-animation"]})},A.src="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"})});
