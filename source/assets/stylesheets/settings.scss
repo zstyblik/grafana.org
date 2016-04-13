@@ -53,7 +53,7 @@ $topbar-bg: transparent;
 $topbar-dropdown-bg: transparent;
 $topbar-dropdown-bg: transparent;
 
-$topbar-height: 80px;
+$topbar-height: 80px; // was 80px TRW
 $topbar-link-color: #fff;
 $topbar-link-color-hover: #fff;
 $topbar-link-color-active: #fff;
@@ -65,7 +65,6 @@ $topbar-link-bg-hover: #222;
 $topbar-link-bg-active: transparent;
 $topbar-link-bg-active-hover: scale-color($topbar-link-bg-hover, $lightness: 10%);
 $topbar-link-padding: 15px; // was 18 so that it didn't wrap at smaller screen sizes TRW
-
 
 // $topbar-link-font-family: $body-font-family;
 $topbar-button-font-size: 1.75rem;

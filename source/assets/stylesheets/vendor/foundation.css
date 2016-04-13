@@ -1341,7 +1341,7 @@ meta.foundation-mq-topbar {
   transition: left 300ms ease-out; }
   .top-bar-section ul {
     width: 100%;
-    height: auto;
+    height: 20px;
     display: block;
     background: #333333;
     font-size: 16px;
@@ -1356,8 +1356,7 @@ meta.foundation-mq-topbar {
     display: block;
     width: 100%;
     color: white;
-    padding: 12px 0 12px 0;
-    padding-left: 15px;
+    padding: 12px 0 12px 15px;
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 0.8125rem;
     font-weight: normal;
