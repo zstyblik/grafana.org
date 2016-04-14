@@ -55,19 +55,19 @@ title: Download
 .row
 
   .columns.medium-12.download-release-heading
-    h3 Grafana v3.0.0-beta3 (2016-04-12)
+    h3 Grafana v3.0.0-beta4 (2016-04-13)
 
   .columns.medium-12.download-links-wrapper
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta31460467884_amd64.deb" data-download-button="grafana_3.0.0-beta3.deb"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta41460581169_amd64.deb" data-download-button="grafana_3.0.0.deb"
       i.fa.fa-download
       |  DEB (Ubuntu / Debian 64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta31460467884.x86_64.rpm" data-download-button="3.0.0-beta1.rpm"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta41460581169.x86_64.rpm" data-download-button="3.0.0.rpm"
       i.fa.fa-download
       |  RPM (Fedora / RHEL  64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta31460467884.linux-x64.tar.gz" data-download-button="3.0.0-beta3.linux.tar"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta41460581169.linux-x64.tar.gz" data-download-button="3.0.0.linux.tar"
       i.fa.fa-download
       |  Binary TAR (Linux 64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-3.0.0-beta3.windows-x64.zip" data-download-button="3.0.0-beta3.windows.zip"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-3.0.0-beta4.windows-x64.zip" data-download-button="3.0.0.windows.zip"
       i.fa.fa-download
       |  Binary ZIP (Windows 64bit)
 
@@ -91,9 +91,15 @@ title: Download
       - **Support** for InfluxDB 0.11
       - [Full changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
 
+      ### Bug fixes between beta3 and beta4
+
+      * **Home dashboard**: Fixed issue with permission denied error on home dashboard, fixes [#4686](https://github.com/grafana/grafana/issues/4686)
+      * **Templating**: Fixed issue templating variables that use regex extraction, fixes [#4672](https://github.com/grafana/grafana/issues/4672)
+
       ### Bugfixes between beta2 and beta3
+
         * **InfluxDB**: Changed multi query encoding to work with InfluxDB 0.11 & 0.12, closes [#4533](https://github.com/grafana/grafana/issues/4533)
-        * **Postgres**: Fixed page render crash when using postgres, fixes [#4558](https://github.com/grafana/grafana/issues/4558)
+        * **Postgres**: Fixed page render crash when using postgres, fixes [#4559](https://github.com/grafana/grafana/issues/4558)
         * **Table panel**: Fixed table panel bug when trying to show annotations in table panel, fixes [#4563](https://github.com/grafana/grafana/issues/4563)
         * **App Config**: Fixed app config issue showing content of other app config, fixes [#4575](https://github.com/grafana/grafana/issues/4575)
         * **Graph Panel**: Fixed legend option max not updating, fixes [#4601](https://github.com/grafana/grafana/issues/4601)
