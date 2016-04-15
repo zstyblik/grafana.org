@@ -12,4 +12,4 @@
   "builderAliases": ["es5_strictmode"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("strictmode",function(){"use strict";return!this}())});
+define(["Modernizr"],function(e){e.addTest("strictmode",function(){"use strict";return!this}())});

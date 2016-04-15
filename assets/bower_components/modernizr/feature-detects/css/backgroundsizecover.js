@@ -10,4 +10,4 @@
   }]
 }
 !*/
-define(["Modernizr","testAllProps"],function(A,e){A.addTest("bgsizecover",e("backgroundSize","cover"))});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("bgsizecover",t("backgroundSize","cover"))});

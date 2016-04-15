@@ -14,4 +14,4 @@
   }]
 }
 !*/
-define(["Modernizr","testAllProps"],function(A,e){A.addTest("bgpositionxy",function(){return e("backgroundPositionX","3px",!0)&&e("backgroundPositionY","5px",!0)})});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("bgpositionxy",function(){return t("backgroundPositionX","3px",!0)&&t("backgroundPositionY","5px",!0)})});

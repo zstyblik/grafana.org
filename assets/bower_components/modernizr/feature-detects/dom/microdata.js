@@ -10,4 +10,4 @@
   }]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("microdata","getItems"in document)});
+define(["Modernizr"],function(e){e.addTest("microdata","getItems"in document)});

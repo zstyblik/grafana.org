@@ -11,4 +11,4 @@
   "tags": ["es5"]
 }
 !*/
-define(["Modernizr","test/es5/array","test/es5/date","test/es5/function","test/es5/object","test/es5/strictmode","test/es5/string","test/json","test/es5/syntax","test/es5/undefined"],function(A){A.addTest("es5",function(){return!!(A.es5array&&A.es5date&&A.es5function&&A.es5object&&A.strictmode&&A.es5string&&A.json&&A.es5syntax&&A.es5undefined)})});
+define(["Modernizr","test/es5/array","test/es5/date","test/es5/function","test/es5/object","test/es5/strictmode","test/es5/string","test/json","test/es5/syntax","test/es5/undefined"],function(e){e.addTest("es5",function(){return!!(e.es5array&&e.es5date&&e.es5function&&e.es5object&&e.strictmode&&e.es5string&&e.json&&e.es5syntax&&e.es5undefined)})});

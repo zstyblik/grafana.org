@@ -12,4 +12,4 @@
   "tags": ["es6"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("es6string",!!(String.fromCodePoint&&String.raw&&String.prototype.codePointAt&&String.prototype.repeat&&String.prototype.startsWith&&String.prototype.endsWith&&String.prototype.contains))});
+define(["Modernizr"],function(t){t.addTest("es6string",!!(String.fromCodePoint&&String.raw&&String.prototype.codePointAt&&String.prototype.repeat&&String.prototype.startsWith&&String.prototype.endsWith&&String.prototype.contains))});

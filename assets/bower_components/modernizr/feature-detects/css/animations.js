@@ -12,4 +12,4 @@
   }]
 }
 !*/
-define(["Modernizr","testAllProps"],function(A,e){A.addTest("cssanimations",e("animationName","a",!0))});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("cssanimations",t("animationName","a",!0))});

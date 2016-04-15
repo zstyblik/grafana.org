@@ -10,4 +10,4 @@
   "polyfills": ["json2"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("json","JSON"in window&&"parse"in JSON&&"stringify"in JSON)});
+define(["Modernizr"],function(e){e.addTest("json","JSON"in window&&"parse"in JSON&&"stringify"in JSON)});

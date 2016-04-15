@@ -15,4 +15,4 @@
   "polyfills": []
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("customprotocolhandler",function(){if(!navigator.registerProtocolHandler)return!1;try{navigator.registerProtocolHandler("thisShouldFail")}catch(A){return A instanceof TypeError}return!1})});
+define(["Modernizr"],function(e){e.addTest("customprotocolhandler",function(){if(!navigator.registerProtocolHandler)return!1;try{navigator.registerProtocolHandler("thisShouldFail")}catch(e){return e instanceof TypeError}return!1})});

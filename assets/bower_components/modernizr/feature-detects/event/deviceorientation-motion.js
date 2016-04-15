@@ -18,4 +18,4 @@
   "builderAliases": ["event_deviceorientation_motion"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("devicemotion","DeviceMotionEvent"in window),A.addTest("deviceorientation","DeviceOrientationEvent"in window)});
+define(["Modernizr"],function(t){t.addTest("devicemotion","DeviceMotionEvent"in window),t.addTest("deviceorientation","DeviceOrientationEvent"in window)});

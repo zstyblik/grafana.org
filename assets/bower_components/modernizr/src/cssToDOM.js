@@ -1,1 +1,1 @@
-define(function(){function e(e){return e.replace(/([a-z])-([a-z])/g,function(e,t,n){return t+n.toUpperCase()}).replace(/^-/,"")}return e});
+define(function(){function t(t){return t.replace(/([a-z])-([a-z])/g,function(t,e,n){return e+n.toUpperCase()}).replace(/^-/,"")}return t});

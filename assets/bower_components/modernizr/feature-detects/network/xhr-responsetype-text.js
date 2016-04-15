@@ -9,4 +9,4 @@
   }]
 }
 !*/
-define(["Modernizr","testXhrType"],function(A,e){A.addTest("xhrresponsetypetext",e("text"))});
+define(["Modernizr","testXhrType"],function(t,e){t.addTest("xhrresponsetypetext",e("text"))});

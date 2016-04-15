@@ -13,4 +13,4 @@
   "polyfills": ["scoped-styles"]
 }
 !*/
-define(["Modernizr","createElement"],function(A,e){A.addTest("stylescoped","scoped"in e("style"))});
+define(["Modernizr","createElement"],function(e,t){e.addTest("stylescoped","scoped"in t("style"))});

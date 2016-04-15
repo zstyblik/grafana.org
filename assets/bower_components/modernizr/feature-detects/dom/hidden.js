@@ -14,4 +14,4 @@
   "authors": ["Ron Waldon (@jokeyrhyme)"]
 }
 !*/
-define(["Modernizr","createElement"],function(A,e){A.addTest("hidden","hidden"in e("a"))});
+define(["Modernizr","createElement"],function(e,t){e.addTest("hidden","hidden"in t("a"))});

@@ -14,4 +14,4 @@
   "tags": ["events", "proximity"]
 }
 !*/
-define(["Modernizr","addTest"],function(A,e){A.addAsyncTest(function(){function A(){clearTimeout(t),window.removeEventListener("deviceproximity",A),e("proximity",!0)}var t,n=300;"ondeviceproximity"in window&&"onuserproximity"in window?(window.addEventListener("deviceproximity",A),t=setTimeout(function(){window.removeEventListener("deviceproximity",A),e("proximity",!1)},n)):e("proximity",!1)})});
+define(["Modernizr","addTest"],function(e,t){e.addAsyncTest(function(){function e(){clearTimeout(n),window.removeEventListener("deviceproximity",e),t("proximity",!0)}var n,i=300;"ondeviceproximity"in window&&"onuserproximity"in window?(window.addEventListener("deviceproximity",e),n=setTimeout(function(){window.removeEventListener("deviceproximity",e),t("proximity",!1)},i)):t("proximity",!1)})});

@@ -12,4 +12,4 @@
   ]
 }
 !*/
-define(["Modernizr","testAllProps"],function(A,e){A.addTest("flexwrap",e("flexWrap","wrap",!0))});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("flexwrap",t("flexWrap","wrap",!0))});

@@ -8,4 +8,4 @@
   }]
 }
 !*/
-define(["Modernizr","hasEvent"],function(A,e){A.addTest("ambientlight",e("devicelight",window))});
+define(["Modernizr","hasEvent"],function(t,e){t.addTest("ambientlight",e("devicelight",window))});

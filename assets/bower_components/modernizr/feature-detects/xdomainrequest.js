@@ -15,4 +15,4 @@
   }]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("xdomainrequest","XDomainRequest"in window)});
+define(["Modernizr"],function(e){e.addTest("xdomainrequest","XDomainRequest"in window)});

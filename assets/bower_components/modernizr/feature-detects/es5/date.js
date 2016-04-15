@@ -11,4 +11,4 @@
   "tags": ["es5"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("es5date",function(){var A="2013-04-12T06:06:37.307Z",e=!1;try{e=!!Date.parse(A)}catch(t){}return!!(Date.now&&Date.prototype&&Date.prototype.toISOString&&Date.prototype.toJSON&&e)})});
+define(["Modernizr"],function(e){e.addTest("es5date",function(){var e="2013-04-12T06:06:37.307Z",t=!1;try{t=!!Date.parse(e)}catch(n){}return!!(Date.now&&Date.prototype&&Date.prototype.toISOString&&Date.prototype.toJSON&&t)})});

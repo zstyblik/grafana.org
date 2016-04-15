@@ -14,4 +14,4 @@
   }]
 }
 !*/
-define(["Modernizr","testAllProps"],function(A,e){A.addTest("cssresize",e("resize","both",!0))});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("cssresize",t("resize","both",!0))});

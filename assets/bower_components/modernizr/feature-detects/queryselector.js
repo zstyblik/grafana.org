@@ -12,4 +12,4 @@
   "polyfills": ["css-selector-engine"]
 }
 !*/
-define(["Modernizr"],function(A){A.addTest("queryselector","querySelector"in document&&"querySelectorAll"in document)});
+define(["Modernizr"],function(e){e.addTest("queryselector","querySelector"in document&&"querySelectorAll"in document)});

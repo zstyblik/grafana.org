@@ -12,4 +12,4 @@
   }]
 }
 !*/
-define(["Modernizr","testStyles"],function(A,e){A.addTest("hairline",function(){return e("#modernizr {border:.5px solid transparent}",function(A){return 1===A.offsetHeight})})});
+define(["Modernizr","testStyles"],function(e,t){e.addTest("hairline",function(){return t("#modernizr {border:.5px solid transparent}",function(e){return 1===e.offsetHeight})})});
