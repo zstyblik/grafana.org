@@ -1,7 +1,7 @@
 ---
 title: Timing is Everything. Editor Mode in Grafana 3.0 for the Clock Panel Plugin
 author: Daniel Lee
-published_on: April 5, 2016
+published_on: April 15, 2016
 ---
 
 In [part 1](http://grafana.org/blog/2016/04/08/clock-plugin-p1.html), I wrote a simple Clock Plugin. However, it's too simple to be usable for most people. In this post, I will show how to make this plugin customizable and at the same time explain more about how plugins can hook into Grafana. To make the clock panel more usable, we should be able to:

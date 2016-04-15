@@ -278,7 +278,7 @@ grafana-cli plugins install grafana-clock-panel
 
 To publish a plugin, create an account on Grafana.net and then talk to the Grafana developers on Slack who will help you with the last step. [Instructions for publishing can be found on Grafana.net.](https://grafana.net/getting-started)
 
-In the next post, we will look at how to make the clock customizable. I want to be able to choose date and time format, 12/24 hour clock, customizable colors, font sizes and more. It should be easy to make it do countdowns too.
+In the [next post](http://grafana.org/blog/2016/04/15/clock-plugin-p2.html), we will look at how to make the clock customizable. I want to be able to choose date and time format, 12/24 hour clock, customizable colors, font sizes and more. It should be easy to make it do countdowns too.
 
 
 ### References:
