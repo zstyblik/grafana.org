@@ -11,7 +11,7 @@ In [part 1](http://grafana.org/blog/2016/04/08/clock-plugin-p1.html), I wrote a 
 - set the font size
 - set date/time formats 
 
-Then after that we'll add some more features, time zones and countdowns would be useful additions.
+Then after that we'll add some more features. Support for time zones and a countdown would be useful additions.
 
 ## Defaults
 
@@ -49,7 +49,7 @@ constructor($scope, $injector) {
 }
 ```
 
-The Lodash function defaults sets the default only if the value is not already set. 
+The Lodash function defaults, which is called in the code above: `_.defaults`, sets a default value only if the value is not already set. 
 
 We can now use these fields in our controller or module.html template:
 
