@@ -74,8 +74,7 @@ this.events.on('init-edit-mode', this.onInitEditMode.bind(this));
 Then we need to create a function called onInitEditMode. The tab is added by calling the controller function, addEditorTab. This function has two parameters; the tab name and the path to a html template for our new editor tab. It can be a bit tricky to figure out the path, the path name will be based on the id that is specified in the plugin.json file. In this case our plugin id is **grafana-clock-panel**. We need to create a new Angular template which we will call editor.html.
 
 ```javascript
-initEditMode() {
-  super.initEditMode();
+onInitEditMode() {
   this.addEditorTab('Options', 'public/plugins/grafana-clock-panel/editor.html', 2);
 }
 ```
@@ -94,10 +93,8 @@ Then each pair, label and field is wrapped in a div with a gf-form class.
 
 ```html
 <div class="gf-form">
-  <span class="gf-form-label width-8">
-    <strong>Font Size</strong>
-  </span>
-  <input type="text" class="input-small gf-form-input width-4" ng-model="ctrl.panel.fontSize" ng-change="ctrl.render()" ng-model-onblur>
+  <label class="gf-form-label width-8">Font Size</label>
+  <input type="text" class="gf-form-input width-4" ng-model="ctrl.panel.fontSize" ng-change="ctrl.render()" ng-model-onblur>
 </div>
 ```
 
