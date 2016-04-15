@@ -60,8 +60,7 @@
 </code></pre>
 
 <p>Then we need to create a function called onInitEditMode. The tab is added by calling the controller function, addEditorTab. This function has two parameters; the tab name and the path to a html template for our new editor tab. It can be a bit tricky to figure out the path, the path name will be based on the id that is specified in the plugin.json file. In this case our plugin id is <strong>grafana-clock-panel</strong>. We need to create a new Angular template which we will call editor.html.</p>
-<pre class="highlight javascript"><code><span class="nx">initEditMode</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">super</span><span class="p">.</span><span class="nx">initEditMode</span><span class="p">();</span>
+<pre class="highlight javascript"><code><span class="nx">onInitEditMode</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">addEditorTab</span><span class="p">(</span><span class="s1">'Options'</span><span class="p">,</span> <span class="s1">'public/plugins/grafana-clock-panel/editor.html'</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre>
@@ -76,10 +75,8 @@
 
 <p>Then each pair, label and field is wrapped in a div with a gf-form class.</p>
 <pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gf-form"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"gf-form-label width-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;strong&gt;</span>Font Size<span class="nt">&lt;/strong&gt;</span>
-  <span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"input-small gf-form-input width-4"</span> <span class="na">ng-model=</span><span class="s">"ctrl.panel.fontSize"</span> <span class="na">ng-change=</span><span class="s">"ctrl.render()"</span> <span class="na">ng-model-onblur</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"gf-form-label width-8"</span><span class="nt">&gt;</span>Font Size<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"gf-form-input width-4"</span> <span class="na">ng-model=</span><span class="s">"ctrl.panel.fontSize"</span> <span class="na">ng-change=</span><span class="s">"ctrl.render()"</span> <span class="na">ng-model-onblur</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre>
 
