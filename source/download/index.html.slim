@@ -55,19 +55,19 @@ title: Download
 .row
 
   .columns.medium-12.download-release-heading
-    h3 Grafana v3.0.0-beta4 (2016-04-13)
+    h3 Grafana v3.0.0-beta5 (2016-04-15)
 
   .columns.medium-12.download-links-wrapper
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta41460581169_amd64.deb" data-download-button="grafana_3.0.0.deb"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta51460725904_amd64.deb" data-download-button="grafana_3.0.0.deb"
       i.fa.fa-download
       |  DEB (Ubuntu / Debian 64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta41460581169.x86_64.rpm" data-download-button="3.0.0.rpm"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta51460725904.x86_64.rpm" data-download-button="3.0.0.rpm"
       i.fa.fa-download
       |  RPM (Fedora / RHEL  64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta41460581169.linux-x64.tar.gz" data-download-button="3.0.0.linux.tar"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta51460725904.linux-x64.tar.gz" data-download-button="3.0.0.linux.tar"
       i.fa.fa-download
       |  Binary TAR (Linux 64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-3.0.0-beta4.windows-x64.zip" data-download-button="3.0.0.windows.zip"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-3.0.0-beta5.windows-x64.zip" data-download-button="3.0.0.windows.zip"
       i.fa.fa-download
       |  Binary ZIP (Windows 64bit)
 
@@ -90,6 +90,12 @@ title: Download
       - **Annotation** popovers can contain clickable links
       - **Support** for InfluxDB 0.11
       - [Full changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+
+      ### Bug fixes in beta5
+
+        * **grafana-cli**: Fixed issue grafana-cli tool, did not detect the right plugin dir, fixes [#4723](https://github.com/grafana/grafana/issues/4723)
+        * **Graph**: Fixed issue with light theme text color issue in tooltip, fixes [#4702](https://github.com/grafana/grafana/issues/4702)
+        * **Snapshot**: Fixed issue with empty snapshots, fixes [#4706](https://github.com/grafana/grafana/issues/4706)
 
       ### Bug fixes between beta3 and beta4
 
