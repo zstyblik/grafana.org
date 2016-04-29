@@ -8,6 +8,7 @@
 @import "modules/tsdb-list"
 @import "modules/testimonial"
 @import "modules/community"
+@import "modules/meta-topbar"
 @import "modules/topbar"
 @import "modules/page_header"
 @import "modules/page_footer"
@@ -38,7 +39,7 @@ h1
 ul.title-area
   li.name
     img
-      margin: 20px 0 0 20px
+      margin: 26px 0 0 20px
 
 section.nav
   position: absolute
@@ -76,15 +77,20 @@ section.main
   line-height: 1.2
 
 pre
-  background-color: #c0c0c0
+  background-color: #FCFCFC !important
   padding: 10px
   margin-bottom: 20px
+  border: 1px solid rgba(255, 113, 0, 0.5)
+  border-radius: 4px
   code
     padding: 0
     border: none
     background-color: transparent
     color: #333
     font-weight: 100
+
+.code
+  border-radius: 2px
 
 .padding-top-medium
   padding-top: 20px

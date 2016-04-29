@@ -5,15 +5,19 @@ section.nav
       ul.title-area
         li.name
           a href="/"
-            img src="/assets/img/logo_new_transparent_200x46.png" class="no-shadow" width="150px" height="35"
+            img src="/assets/img/logo_new_transparent_200x48.png" class="no-shadow" width="180px"
         li.toggle-topbar.menu-icon
           a href="#"
             span
-
+      section.meta-top-bar-section
+        ul
+          li= link_to "Docs", "http://docs.grafana.org"
+          li= link_to "Support", "/support/"
+          li= link_to "Plugins", "http://grafana.net/plugins"
+          li= link_to "Hosting", "/hosting/"      
       section.top-bar-section
         ul.right
           li= link_to "Features", "/features/"
-          li= link_to "Docs", "http://docs.grafana.org"
           li= link_to "Community", "/community/"
           li= link_to "Blog", "/blog/"
           li.has-form
@@ -25,4 +29,3 @@ section.nav
 
           li.has-form
             a.button#top-bar-button href="/download" Download
-

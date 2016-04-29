@@ -53,7 +53,7 @@ $topbar-bg: transparent;
 $topbar-dropdown-bg: transparent;
 $topbar-dropdown-bg: transparent;
 
-$topbar-height: 80px;
+$topbar-height: 80px; // was 80px TRW
 $topbar-link-color: #fff;
 $topbar-link-color-hover: #fff;
 $topbar-link-color-active: #fff;
@@ -65,7 +65,6 @@ $topbar-link-bg-hover: #222;
 $topbar-link-bg-active: transparent;
 $topbar-link-bg-active-hover: scale-color($topbar-link-bg-hover, $lightness: 10%);
 $topbar-link-padding: 15px; // was 18 so that it didn't wrap at smaller screen sizes TRW
-
 
 // $topbar-link-font-family: $body-font-family;
 $topbar-button-font-size: 1.75rem;
@@ -109,9 +108,9 @@ $code-color: scale-color($body-font-color, $lightness: 15%);
 $code-font-family: $font-family-monospace;
 $code-font-weight: $font-weight-normal;
 $code-background-color: $silver;
-$code-border-size: 0px;
+$code-border-size: 1px;
 $code-border-style: solid;
-$code-border-color: scale-color($code-background-color, $lightness: -6%);
+$code-border-color: #BBD9F5;
 $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
 // We use these to style blockquotes

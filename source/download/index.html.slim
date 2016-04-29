@@ -55,6 +55,100 @@ title: Download
 .row
 
   .columns.medium-12.download-release-heading
+    h3 Grafana v3.0.0-beta5 (2016-04-15)
+
+  .columns.medium-12.download-links-wrapper
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta51460725904_amd64.deb" data-download-button="grafana_3.0.0.deb"
+      i.fa.fa-download
+      |  DEB (Ubuntu / Debian 64bit)
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta51460725904.x86_64.rpm" data-download-button="3.0.0.rpm"
+      i.fa.fa-download
+      |  RPM (Fedora / RHEL  64bit)
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta51460725904.linux-x64.tar.gz" data-download-button="3.0.0.linux.tar"
+      i.fa.fa-download
+      |  Binary TAR (Linux 64bit)
+    a.download-link href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-3.0.0-beta5.windows-x64.zip" data-download-button="3.0.0.windows.zip"
+      i.fa.fa-download
+      |  Binary ZIP (Windows 64bit)
+
+.row
+  .columns.large-12.markdown.download-release-details
+    markdown:
+      For full details read the [Grafana 3.0 Beta Release](/blog/2016/03/31/grafana-3-0-beta-released.html) blog post.
+      <br>
+
+      ### 3.0 Highlights
+      - **Big UI** improvements and polish
+      - **Redesigned** plugin architecture and SDK
+      - **Grafana-cli* command line tool shipped with grafana, installs plugins
+      - **Persisted** dashboard playlists
+      - **Preferences** like home dashboard, timezone and theme on org and user level
+      - **New** plugin types, Apps, and Panels.
+      - **New** platform site built around Grafana at [Grafana.net](https://grafana.net)
+        - Plugin repository
+        - More stuff coming soon (Hosted, On Prem Grafana Monitoring and Backups)
+      - **Annotation** popovers can contain clickable links
+      - **Support** for InfluxDB 0.11
+      - [Full changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+
+      ### Bug fixes in beta5
+
+        * **grafana-cli**: Fixed issue grafana-cli tool, did not detect the right plugin dir, fixes [#4723](https://github.com/grafana/grafana/issues/4723)
+        * **Graph**: Fixed issue with light theme text color issue in tooltip, fixes [#4702](https://github.com/grafana/grafana/issues/4702)
+        * **Snapshot**: Fixed issue with empty snapshots, fixes [#4706](https://github.com/grafana/grafana/issues/4706)
+
+      ### Bug fixes between beta3 and beta4
+
+      * **Home dashboard**: Fixed issue with permission denied error on home dashboard, fixes [#4686](https://github.com/grafana/grafana/issues/4686)
+      * **Templating**: Fixed issue templating variables that use regex extraction, fixes [#4672](https://github.com/grafana/grafana/issues/4672)
+
+      ### Bugfixes between beta2 and beta3
+
+        * **InfluxDB**: Changed multi query encoding to work with InfluxDB 0.11 & 0.12, closes [#4533](https://github.com/grafana/grafana/issues/4533)
+        * **Postgres**: Fixed page render crash when using postgres, fixes [#4559](https://github.com/grafana/grafana/issues/4558)
+        * **Table panel**: Fixed table panel bug when trying to show annotations in table panel, fixes [#4563](https://github.com/grafana/grafana/issues/4563)
+        * **App Config**: Fixed app config issue showing content of other app config, fixes [#4575](https://github.com/grafana/grafana/issues/4575)
+        * **Graph Panel**: Fixed legend option max not updating, fixes [#4601](https://github.com/grafana/grafana/issues/4601)
+        * **Graph Panel**: Fixed issue where newly added graph panels shared same axes config, fixes [#4582](https://github.com/grafana/grafana/issues/4582)
+        * **Graph Panel**: Fixed issue with axis labels overlapping Y-axis, fixes [#4626](https://github.com/grafana/grafana/issues/4626)
+        * **InfluxDB**: Fixed issue with templating query containing template variable, fixes [#4602](https://github.com/grafana/grafana/issues/4602)
+        * **Graph Panel**: Fixed issue with hiding series and stacking, fixes [#4557](https://github.com/grafana/grafana/issues/4557)
+        * **Graph Panel**: Fixed issue with legend height in table mode with few series, affected iframe embedding as well, fixes [#4640](https://github.com/grafana/grafana/issues/4640)
+
+      ### Bugfixes between beta1 and beta2
+
+      * **Dashboard**: Fixed dashboard panel layout for mobile devices, fixes [#4529](https://github.com/grafana/grafana/issues/4529)
+      * **Table Panel**: Fixed issue with table panel sort, fixes [#4532](https://github.com/grafana/grafana/issues/4532)
+      * **Page Load Crash**: A Datasource with null jsonData would make Grafana fail to load page, fixes [#4536](https://github.com/grafana/grafana/issues/4536)
+      * **Metrics tab**: Fix for missing datasource name in datasource selector, fixes [#4540](https://github.com/grafana/grafana/issues/4540)
+      * **Graph**: Fix legend in table mode with series on right-y axis, fixes [#4551](https://github.com/grafana/grafana/issues/4551), [#1145](https://github.com/grafana/grafana/issues/1145)
+      * **Password**: Password reset link/page did not work, fixes [#4542](https://github.com/grafana/grafana/issues/4542)
+
+      ### Breaking changes
+
+      * Dashboards from v2.6 are fully compatible; no manual updates should be necessary. There could
+      be some edge case scenarios where dashboards using templating could stop working.
+      If that is the case just enter the edit view for the template variable and hit Update button.
+      This is due to a simplification of the variable format system where template variables are
+      now stored without any formatting (glob/regex/etc), this is done on the fly when the
+      variable is interpolated.
+
+      * Plugin API: The plugin API has changed so if you are using a custom
+      data source (or panel) they need to be updated as well.
+
+      * InfluxDB 0.8: This data source is no longer included in releases,
+      you can still install manually from [Grafana.net](http://grafana.net)
+
+      * KairosDB: This data source has also no longer shipped with Grafana,
+      you can install it manually from [Grafana.net](http://grafana.net)
+
+= partial "layouts/_newsletter"
+br
+br
+
+.row
+
+  .columns.medium-12.download-release-heading
     h3 Grafana v2.6.0 (2015-12-14)
 
   .columns.medium-12.download-links-wrapper
@@ -84,10 +178,6 @@ title: Download
       - New InfluxDB Query Editor
       - Multiple Cloudwatch credentials
       - [Full changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
-
-= partial "layouts/_newsletter"
-br
-br
 
 .row
 
