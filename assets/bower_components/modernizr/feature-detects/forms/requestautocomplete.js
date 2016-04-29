@@ -5,8 +5,8 @@
   "tags": ["form", "forms", "requestAutocomplete", "payments"],
   "notes": [{
     "name": "WHATWG proposed spec",
-    "href": "https://wiki.whatwg.org/wiki/RequestAutocomplete"
+    "href": "http://wiki.whatwg.org/wiki/RequestAutocomplete"
   }]
 }
 !*/
-define(["Modernizr","createElement","prefixed"],function(t,e,n){t.addTest("requestautocomplete",!!n("requestAutocomplete",e("form")))});
+define(["Modernizr","createElement","prefixed"],function(e,t,n){e.addTest("requestautocomplete",!!n("requestAutocomplete",t("form")))});

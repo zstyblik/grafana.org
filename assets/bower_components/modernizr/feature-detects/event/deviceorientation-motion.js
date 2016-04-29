@@ -5,7 +5,7 @@
   "caniuse": "deviceorientation",
   "notes": [{
     "name": "W3C Editor's Draft",
-    "href": "http://w3c.github.io/deviceorientation/spec-source-orientation.html"
+    "href": "http://dev.w3.org/geo/api/spec-source-orientation.html"
   },{
     "name": "Implementation by iOS Safari (Orientation)",
     "href": "http://goo.gl/fhce3"
@@ -18,4 +18,4 @@
   "builderAliases": ["event_deviceorientation_motion"]
 }
 !*/
-define(["Modernizr"],function(t){t.addTest("devicemotion","DeviceMotionEvent"in window),t.addTest("deviceorientation","DeviceOrientationEvent"in window)});
+define(["Modernizr"],function(e){e.addTest("devicemotion","DeviceMotionEvent"in window),e.addTest("deviceorientation","DeviceOrientationEvent"in window)});

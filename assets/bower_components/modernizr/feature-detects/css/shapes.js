@@ -5,14 +5,14 @@
   "tags": ["css"],
   "notes": [{
     "name": "CSS Shapes W3C specification",
-    "href": "https://www.w3.org/TR/css-shapes"
+    "href": "http://www.w3.org/TR/css-shapes"
   },{
     "name": "Examples from Adobe",
-    "href": "http://webplatform.adobe.com/shapes/"
+    "href": "http://html.adobe.com/webplatform/layout/shapes"
   }, {
     "name": "Samples showcasing uses of Shapes",
     "href": "http://codepen.io/collection/qFesk"
   }]
 }
 !*/
-define(["Modernizr","testAllProps"],function(e,t){e.addTest("shapes",t("shapeOutside","content-box",!0))});
+define(["Modernizr","testAllProps"],function(t,e){t.addTest("shapes",e("shapeOutside","content-box",!0))});

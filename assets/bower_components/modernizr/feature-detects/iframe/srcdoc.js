@@ -6,8 +6,8 @@
   "builderAliases": ["iframe_srcdoc"],
   "notes": [{
     "name": "WhatWG Spec",
-    "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-srcdoc"
+    "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#attr-iframe-srcdoc"
   }]
 }
 !*/
-define(["Modernizr","createElement"],function(t,e){t.addTest("srcdoc","srcdoc"in e("iframe"))});
+define(["Modernizr","createElement"],function(e,t){e.addTest("srcdoc","srcdoc"in t("iframe"))});

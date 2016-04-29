@@ -1,1 +1,0 @@
-define(["../var/document","../var/support"],function(t,e){return e.createHTMLDocument=function(){var e=t.implementation.createHTMLDocument("").body;return e.innerHTML="<form></form><form></form>",2===e.childNodes.length}(),e});

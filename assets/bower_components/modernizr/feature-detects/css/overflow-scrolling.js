@@ -7,8 +7,8 @@
   "warnings": ["Introduced in iOS5b2. API is subject to change."],
   "notes": [{
     "name": "Article on iOS overflow scrolling",
-    "href": "https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/"
+    "href": "http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/"
   }]
 }
 !*/
-define(["Modernizr","testAllProps"],function(e,t){e.addTest("overflowscrolling",t("overflowScrolling","touch",!0))});
+define(["Modernizr","testAllProps"],function(t,e){t.addTest("overflowscrolling",e("overflowScrolling","touch",!0))});

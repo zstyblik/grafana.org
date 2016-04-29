@@ -5,8 +5,8 @@
   "tags": ["network"],
   "notes": [{
     "name": "XMLHttpRequest Living Standard",
-    "href": "https://xhr.spec.whatwg.org/#the-responsetype-attribute"
+    "href": "http://xhr.spec.whatwg.org/#the-responsetype-attribute"
   }]
 }
 !*/
-define(["Modernizr","testXhrType"],function(t,e){t.addTest("xhrresponsetypetext",e("text"))});
+define(["Modernizr","testXhrType"],function(e,t){e.addTest("xhrresponsetypetext",t("text"))});

@@ -6,11 +6,11 @@
   "authors": ["Calvin Webster"],
   "notes": [{
     "name": "Wufoo demo",
-    "href": "https://www.wufoo.com/html5/types/5-search.html?"
+    "href": "http://www.wufoo.com/html5/types/5-search.html?"
   }, {
     "name": "CSS Tricks",
-    "href": "https://css-tricks.com/webkit-html5-search-inputs/"
+    "href": "http://css-tricks.com/webkit-html5-search-inputs/"
   }]
 }
 !*/
-define(["Modernizr","hasEvent"],function(t,e){t.addTest("inputsearchevent",e("search"))});
+define(["Modernizr","hasEvent"],function(e,t){e.addTest("inputsearchevent",t("search"))});

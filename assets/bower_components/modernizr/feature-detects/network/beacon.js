@@ -13,4 +13,4 @@
   "authors": ["Cătălin Mariș"]
 }
 !*/
-define(["Modernizr"],function(t){t.addTest("beacon","sendBeacon"in navigator)});
+define(["Modernizr"],function(e){e.addTest("beacon","sendBeacon"in navigator)});

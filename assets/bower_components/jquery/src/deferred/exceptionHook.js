@@ -1,1 +1,0 @@
-define(["../core","../deferred"],function(t){var e=/^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;t.Deferred.exceptionHook=function(t,n){window.console&&window.console.warn&&t&&e.test(t.name)&&window.console.warn("jQuery.Deferred exception: "+t.message,n)}});

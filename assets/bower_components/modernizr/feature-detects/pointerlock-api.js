@@ -9,4 +9,4 @@
   "builderAliases": ["pointerlock_api"]
 }
 !*/
-define(["Modernizr","prefixed"],function(t,e){t.addTest("pointerlock",!!e("exitPointerLock",document))});
+define(["Modernizr","prefixed"],function(e,t){e.addTest("pointerlock",!!t("exitPointerLock",document))});

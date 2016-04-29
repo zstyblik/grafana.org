@@ -5,10 +5,10 @@
   "caniuse": "bloburls",
   "notes": [{
     "name": "W3C Working Draft",
-    "href": "https://www.w3.org/TR/FileAPI/#creating-revoking"
+    "href": "http://www.w3.org/TR/FileAPI/#creating-revoking"
   }],
   "tags": ["file", "url"],
   "authors": ["Ron Waldon (@jokeyrhyme)"]
 }
 !*/
-define(["Modernizr","prefixed"],function(t,e){var n=e("URL",window,!1);n=n&&window[n],t.addTest("bloburls",n&&"revokeObjectURL"in n&&"createObjectURL"in n)});
+define(["Modernizr","prefixed"],function(e,t){var n=t("URL",window,!1);n=n&&window[n],e.addTest("bloburls",n&&"revokeObjectURL"in n&&"createObjectURL"in n)});

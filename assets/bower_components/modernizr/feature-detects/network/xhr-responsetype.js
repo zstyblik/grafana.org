@@ -5,8 +5,8 @@
   "tags": ["network"],
   "notes": [{
     "name": "XMLHttpRequest Living Standard",
-    "href": "https://xhr.spec.whatwg.org/#the-responsetype-attribute"
+    "href": "http://xhr.spec.whatwg.org/#the-responsetype-attribute"
   }]
 }
 !*/
-define(["Modernizr"],function(t){t.addTest("xhrresponsetype",function(){if("undefined"==typeof XMLHttpRequest)return!1;var t=new XMLHttpRequest;return t.open("get","/",!0),"response"in t}())});
+define(["Modernizr"],function(e){e.addTest("xhrresponsetype",function(){if("undefined"==typeof XMLHttpRequest)return!1;var e=new XMLHttpRequest;return e.open("get","/",!0),"response"in e}())});

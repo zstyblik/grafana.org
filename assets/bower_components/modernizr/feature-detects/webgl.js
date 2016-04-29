@@ -7,4 +7,4 @@
   "polyfills": ["jebgl", "cwebgl", "iewebgl"]
 }
 !*/
-define(["Modernizr","createElement"],function(t,e){t.addTest("webgl",function(){var t=e("canvas"),n="probablySupportsContext"in t?"probablySupportsContext":"supportsContext";return n in t?t[n]("webgl")||t[n]("experimental-webgl"):"WebGLRenderingContext"in window})});
+define(["Modernizr","createElement"],function(e,t){e.addTest("webgl",function(){var e=t("canvas"),n="probablySupportsContext"in e?"probablySupportsContext":"supportsContext";return n in e?e[n]("webgl")||e[n]("experimental-webgl"):"WebGLRenderingContext"in window})});

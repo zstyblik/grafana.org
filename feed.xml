@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://grafana.org/blog/2016/04/15/clock-plugin-p2.html"/>
     <id>http://grafana.org/blog/2016/04/15/clock-plugin-p2.html</id>
     <published>2016-04-15T02:00:00+02:00</published>
-    <updated>2016-04-15T17:04:35+02:00</updated>
+    <updated>2016-04-29T11:05:43+02:00</updated>
     <author>
       <name>Daniel Lee</name>
     </author>
@@ -186,7 +186,7 @@
     <link rel="alternate" href="http://grafana.org/blog/2016/04/08/clock-plugin-p1.html"/>
     <id>http://grafana.org/blog/2016/04/08/clock-plugin-p1.html</id>
     <published>2016-04-08T02:00:00+02:00</published>
-    <updated>2016-04-15T17:06:16+02:00</updated>
+    <updated>2016-04-29T11:05:43+02:00</updated>
     <author>
       <name>Daniel Lee</name>
     </author>
@@ -473,7 +473,7 @@ npm install lodash --save
     <link rel="alternate" href="http://grafana.org/blog/2016/03/31/grafana-3-0-beta-released.html"/>
     <id>http://grafana.org/blog/2016/03/31/grafana-3-0-beta-released.html</id>
     <published>2016-03-31T02:00:00+02:00</published>
-    <updated>2016-04-05T17:32:36+02:00</updated>
+    <updated>2016-04-29T11:05:43+02:00</updated>
     <author>
       <name>Torkel Ödegaard</name>
     </author>
@@ -696,7 +696,7 @@ file.&lt;/p&gt;
     <link rel="alternate" href="http://grafana.org/blog/2016/01/19/Grafana-Its-Rocket-Science.html"/>
     <id>http://grafana.org/blog/2016/01/19/Grafana-Its-Rocket-Science.html</id>
     <published>2016-01-19T01:00:00+01:00</published>
-    <updated>2016-04-05T17:32:36+02:00</updated>
+    <updated>2016-02-19T16:11:55+01:00</updated>
     <author>
       <name>Raj Dutt</name>
     </author>
@@ -747,7 +747,7 @@ file.&lt;/p&gt;
     <link rel="alternate" href="http://grafana.org/blog/2015/12/14/Grafana-2-6-Released.html"/>
     <id>http://grafana.org/blog/2015/12/14/Grafana-2-6-Released.html</id>
     <published>2015-12-14T01:00:00+01:00</published>
-    <updated>2016-04-05T17:32:36+02:00</updated>
+    <updated>2016-02-19T16:11:55+01:00</updated>
     <author>
       <name>Torkel Ödegaard</name>
     </author>
@@ -799,7 +799,7 @@ view the &lt;a href="https://github.com/grafana/grafana/blob/master/CHANGELOG.md
     <link rel="alternate" href="http://grafana.org/blog/2015/12/04/Grafana-2-6-Beta-Released.html"/>
     <id>http://grafana.org/blog/2015/12/04/Grafana-2-6-Beta-Released.html</id>
     <published>2015-12-04T01:00:00+01:00</published>
-    <updated>2016-04-05T17:32:36+02:00</updated>
+    <updated>2016-02-19T16:11:55+01:00</updated>
     <author>
       <name>Torkel Ödegaard</name>
     </author>

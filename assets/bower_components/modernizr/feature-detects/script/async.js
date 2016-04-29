@@ -8,4 +8,4 @@
   "authors": ["Theodoor van Donge"]
 }
 !*/
-define(["Modernizr","createElement"],function(e,n){e.addTest("scriptasync","async"in n("script"))});
+define(["Modernizr","createElement"],function(e,t){e.addTest("scriptasync","async"in t("script"))});

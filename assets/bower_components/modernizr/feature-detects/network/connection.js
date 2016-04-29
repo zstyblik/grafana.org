@@ -6,4 +6,4 @@
   "builderAliases": ["network_connection"]
 }
 !*/
-define(["Modernizr"],function(t){t.addTest("lowbandwidth",function(){var t=navigator.connection||{type:0};return 3==t.type||4==t.type||/^[23]g$/.test(t.type)})});
+define(["Modernizr"],function(e){e.addTest("lowbandwidth",function(){var e=navigator.connection||{type:0};return 3==e.type||4==e.type||/^[23]g$/.test(e.type)})});

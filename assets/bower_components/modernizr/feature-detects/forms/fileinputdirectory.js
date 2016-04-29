@@ -6,4 +6,4 @@
   "tags": ["file", "input", "attribute"]
 }
 !*/
-define(["Modernizr","createElement","domPrefixes"],function(t,e,n){t.addTest("fileinputdirectory",function(){var t=e("input"),i="directory";if(t.type="file",i in t)return!0;for(var r=0,o=n.length;o>r;r++)if(n[r]+i in t)return!0;return!1})});
+define(["Modernizr","createElement","domPrefixes"],function(e,t,n){e.addTest("fileinputdirectory",function(){var e=t("input"),i="directory";if(e.type="file",i in e)return!0;for(var r=0,o=n.length;o>r;r++)if(n[r]+i in e)return!0;return!1})});

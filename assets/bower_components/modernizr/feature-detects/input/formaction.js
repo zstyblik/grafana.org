@@ -5,14 +5,14 @@
   "aliases": ["input-formaction"],
   "notes": [{
     "name": "WHATWG Spec",
-    "href": "https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formaction"
+    "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#attr-fs-formaction"
   }, {
     "name": "Wufoo demo",
-    "href": "https://www.wufoo.com/html5/attributes/13-formaction.html"
+    "href": "http://www.wufoo.com/html5/attributes/13-formaction.html"
   }],
   "polyfills": [
     "webshims"
   ]
 }
 !*/
-define(["Modernizr","createElement"],function(t,e){t.addTest("inputformaction",!!("formAction"in e("input")),{aliases:["input-formaction"]})});
+define(["Modernizr","createElement"],function(e,t){e.addTest("inputformaction",!!("formAction"in t("input")),{aliases:["input-formaction"]})});

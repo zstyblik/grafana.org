@@ -4,7 +4,7 @@
   "property": "es6number",
   "notes": [{
     "name": "unofficial ECMAScript 6 draft specification",
-    "href": "https://people.mozilla.org/~jorendorff/es6-draft.html"
+    "href": "http://people.mozilla.org/~jorendorff/es6-draft.html"
   }],
   "polyfills": ["es6shim"],
   "authors": ["Ron Waldon (@jokeyrhyme)"],
@@ -12,4 +12,4 @@
   "tags": ["es6"]
 }
 !*/
-define(["Modernizr"],function(t){t.addTest("es6number",!!(Number.isFinite&&Number.isInteger&&Number.isSafeInteger&&Number.isNaN&&Number.parseInt&&Number.parseFloat&&Number.isInteger(Number.MAX_SAFE_INTEGER)&&Number.isInteger(Number.MIN_SAFE_INTEGER)&&Number.isFinite(Number.EPSILON)))});
+define(["Modernizr"],function(e){e.addTest("es6number",!!(Number.isFinite&&Number.isInteger&&Number.isSafeInteger&&Number.isNaN&&Number.parseInt&&Number.parseFloat&&Number.isInteger(Number.MAX_SAFE_INTEGER)&&Number.isInteger(Number.MIN_SAFE_INTEGER)&&Number.isFinite(Number.EPSILON)))});

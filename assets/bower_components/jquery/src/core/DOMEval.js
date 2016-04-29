@@ -1,1 +1,0 @@
-define(["../var/document"],function(t){function e(e,n){n=n||t;var i=n.createElement("script");i.text=e,n.head.appendChild(i).parentNode.removeChild(i)}return e});

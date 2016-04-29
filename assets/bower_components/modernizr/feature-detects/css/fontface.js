@@ -5,8 +5,8 @@
   "authors": ["Diego Perini", "Mat Marquis"],
   "tags": ["css"],
   "knownBugs": [
-    "False Positive: WebOS https://github.com/Modernizr/Modernizr/issues/342",
-    "False Postive: WP7 https://github.com/Modernizr/Modernizr/issues/538"
+    "False Positive: WebOS http://github.com/Modernizr/Modernizr/issues/342",
+    "False Postive: WP7 http://github.com/Modernizr/Modernizr/issues/538"
   ],
   "notes": [{
     "name": "@font-face detection routine by Diego Perini",
@@ -19,11 +19,11 @@
     "href": "https://docs.google.com/spreadsheet/ccc?key=0Ag5_yGvxpINRdHFYeUJPNnZMWUZKR2ItMEpRTXZPdUE#gid=0"
   },{
     "name": "CSS fonts on Android",
-    "href": "https://stackoverflow.com/questions/3200069/css-fonts-on-android"
+    "href": "http://stackoverflow.com/questions/3200069/css-fonts-on-android"
   },{
     "name": "@font-face and Android",
     "href": "http://archivist.incutio.com/viewlist/css-discuss/115960"
   }]
 }
 !*/
-define(["Modernizr","testStyles"],function(e,t){var n=function(){var e=navigator.userAgent,t=e.match(/applewebkit\/([0-9]+)/gi)&&parseFloat(RegExp.$1),n=e.match(/w(eb)?osbrowser/gi),i=e.match(/windows phone/gi)&&e.match(/iemobile\/([0-9])+/gi)&&parseFloat(RegExp.$1)>=9,r=533>t&&e.match(/android/gi);return n||r||i}();n?e.addTest("fontface",!1):t('@font-face {font-family:"font";src:url("https://")}',function(t,n){var i=document.getElementById("smodernizr"),r=i.sheet||i.styleSheet,o=r?r.cssRules&&r.cssRules[0]?r.cssRules[0].cssText:r.cssText||"":"",s=/src/i.test(o)&&0===o.indexOf(n.split(" ")[0]);e.addTest("fontface",s)})});
+define(["Modernizr","testStyles"],function(e,t){var n=function(){var e=navigator.userAgent,t=e.match(/applewebkit\/([0-9]+)/gi)&&parseFloat(RegExp.$1),n=e.match(/w(eb)?osbrowser/gi),s=e.match(/windows phone/gi)&&e.match(/iemobile\/([0-9])+/gi)&&parseFloat(RegExp.$1)>=9,o=533>t&&e.match(/android/gi);return n||o||s}();n?e.addTest("fontface",!1):t('@font-face {font-family:"font";src:url("https://")}',function(t,n){var s=document.getElementById("smodernizr"),o=s.sheet||s.styleSheet,c=o?o.cssRules&&o.cssRules[0]?o.cssRules[0].cssText:o.cssText||"":"",a=/src/i.test(c)&&0===c.indexOf(n.split(" ")[0]);e.addTest("fontface",a)})});

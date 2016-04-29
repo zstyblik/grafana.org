@@ -8,7 +8,7 @@
   "authors": ["Erik Dahlstrom"],
   "notes": [{
     "name": "W3C Spec",
-    "href": "https://www.w3.org/TR/SVG11/filters.html"
+    "href": "http://www.w3.org/TR/SVG11/filters.html"
   }]
 }
 !*/

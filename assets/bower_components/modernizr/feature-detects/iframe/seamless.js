@@ -6,8 +6,8 @@
   "builderAliases": ["iframe_seamless"],
   "notes": [{
     "name": "WhatWG Spec",
-    "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-seamless"
+    "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/the-iframe-element.html#attr-iframe-seamless"
   }]
 }
 !*/
-define(["Modernizr","createElement"],function(t,e){t.addTest("seamless","seamless"in e("iframe"))});
+define(["Modernizr","createElement"],function(e,t){e.addTest("seamless","seamless"in t("iframe"))});

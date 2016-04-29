@@ -5,11 +5,11 @@
   "tags": ["network"],
   "notes": [{
     "name": "XMLHttpRequest Living Standard",
-    "href": "https://xhr.spec.whatwg.org/#the-responsetype-attribute"
+    "href": "http://xhr.spec.whatwg.org/#the-responsetype-attribute"
   },{
     "name": "Explanation of xhr.responseType='json'",
-    "href": "https://mathiasbynens.be/notes/xhr-responsetype-json"
+    "href": "http://mathiasbynens.be/notes/xhr-responsetype-json"
   }]
 }
 !*/
-define(["Modernizr","testXhrType"],function(t,e){t.addTest("xhrresponsetypejson",e("json"))});
+define(["Modernizr","testXhrType"],function(e,t){e.addTest("xhrresponsetypejson",t("json"))});

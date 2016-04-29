@@ -9,4 +9,4 @@
   ]
 }
 !*/
-define(["Modernizr","testAllProps","testStyles","docElement","test/css/supports"],function(e,t,n,i){e.addTest("csstransforms3d",function(){var r=!!t("perspective","1px",!0),o=e._config.usePrefixes;if(r&&(!o||"webkitPerspective"in i.style)){var s,a="#modernizr{width:0;height:0}";e.supports?s="@supports (perspective: 1px)":(s="@media (transform-3d)",o&&(s+=",(-webkit-transform-3d)")),s+="{#modernizr{width:7px;height:18px;margin:0;padding:0;border:0}}",n(a+s,function(e){r=7===e.offsetWidth&&18===e.offsetHeight})}return r})});
+define(["Modernizr","testAllProps","testStyles","docElement","test/css/supports"],function(e,t,s,n){e.addTest("csstransforms3d",function(){var r=!!t("perspective","1px",!0),o=e._config.usePrefixes;if(r&&(!o||"webkitPerspective"in n.style)){var i;e.supports?i="@supports (perspective: 1px)":(i="@media (transform-3d)",o&&(i+=",(-webkit-transform-3d)")),i+="{#modernizr{left:9px;position:absolute;height:5px;margin:0;padding:0;border:0}}",s(i,function(e){r=9===e.offsetLeft&&5===e.offsetHeight})}return r})});

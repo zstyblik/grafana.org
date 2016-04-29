@@ -12,4 +12,4 @@
   "tags": ["input", "speech"]
 }
 !*/
-define(["Modernizr"],function(t){t.addTest("speechsynthesis","SpeechSynthesisUtterance"in window)});
+define(["Modernizr"],function(e){e.addTest("speechsynthesis","SpeechSynthesisUtterance"in window)});
