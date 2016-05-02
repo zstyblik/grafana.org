@@ -55,19 +55,19 @@ title: Download
 .row
 
   .columns.medium-12.download-release-heading
-    h3 Grafana v3.0.0-beta6 (2016-04-29)
+    h3 Grafana v3.0.0-beta7 (2016-05-02)
 
   .columns.medium-12.download-links-wrapper
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta61461918338_amd64.deb" data-download-button="grafana_3.0.0.deb"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana_3.0.0-beta71462173753_amd64.deb" data-download-button="grafana_3.0.0.deb"
       i.fa.fa-download
       |  DEB (Ubuntu / Debian 64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta61461918338.x86_64.rpm" data-download-button="3.0.0.rpm"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta71462173753.x86_64.rpm" data-download-button="3.0.0.rpm"
       i.fa.fa-download
       |  RPM (Fedora / RHEL  64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta61461918338.linux-x64.tar.gz" data-download-button="3.0.0.linux.tar"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/builds/grafana-3.0.0-beta71462173753.linux-x64.tar.gz" data-download-button="3.0.0.linux.tar"
       i.fa.fa-download
       |  Binary TAR (Linux 64bit)
-    a.download-link href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-3.0.0-beta6.windows-x64.zip" data-download-button="3.0.0.windows.zip"
+    a.download-link href="https://grafanarel.s3.amazonaws.com/winbuilds/dist/grafana-3.0.0-beta7.windows-x64.zip" data-download-button="3.0.0.windows.zip"
       i.fa.fa-download
       |  Binary ZIP (Windows 64bit)
 
@@ -92,6 +92,18 @@ title: Download
       - **Support** for InfluxDB 0.11
       - **Templated data source** Easily reuse the same dashboard for multiple data source instances
       - [Full changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+
+      ## Beta7
+
+      ### Bug fixes
+      * **Dashboard title**: Fixed max dashboard title width (media query) for large screens,  fixes [#4859](https://github.com/grafana/grafana/issues/4859)
+      * **Annotations**: Fixed issue with entering annotation edit view, fixes [#4857](https://github.com/grafana/grafana/issues/4857)
+      * **Remove query**: Fixed issue with removing query for data sources without collapsable query editors, fixes [#4856](https://github.com/grafana/grafana/issues/4856)
+      * **Graphite PNG*: Fixed issue graphite png rendering option, fixes [#4864](https://github.com/grafana/grafana/issues/4864)
+      * **InfluxDB**: Fixed issue missing plus group by iconn, fixes [#4862](https://github.com/grafana/grafana/issues/4862)
+
+      ### Enhancements
+      * **InfluxDB**: Added new functions moving_average and difference to query editor, closes [#4698](https://github.com/grafana/grafana/issues/4698)
 
       ## Beta6
 
