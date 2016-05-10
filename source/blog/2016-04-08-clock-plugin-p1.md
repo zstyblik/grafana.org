@@ -132,7 +132,7 @@ I'm preparing for a grunt build at a later stage so the module.js file is placed
     npm install moment --save
     npm install lodash --save
     ```
-    
+
     Lodash is a useful utility library. Moment js is excellent for formatting dates and times. Exactly what we need!
 
 6. Setup grunt. I am using the following Gruntfile.

@@ -49,7 +49,7 @@ constructor($scope, $injector) {
 }
 ```
 
-The Lodash function defaults, which is called in the code above: `_.defaults`, sets a default value only if the value is not already set. 
+The Lodash function defaults, which is called in the code above: `_.defaults`, sets a default value only if the value is not already set.
 
 We can now use these fields in our controller or module.html template:
 
@@ -123,7 +123,7 @@ The color picker (or spectrum picker) is a component that already exists in Graf
 
 ## Editor Tab Finished
 
-And that's it! It really is quite simple to create your own editor tab. To reiterate, this all ties together quite neatly. We specify properties and panel defaults in the constructor for ClockCtrl and these can then be changed in the editor. We don't have to do anything special to save the changes. Grafana takes care of that. 
+And that's it! It really is quite simple to create your own editor tab. To reiterate, this all ties together quite neatly. We specify properties and panel defaults in the constructor for ClockCtrl and these can then be changed in the editor. We don't have to do anything special to save the changes. Grafana takes care of that.
 
 One thing to be aware of  is that panel defaults are used the first time a panel is created to set the initial values of the panel properties. After the panel is saved then the saved value will be used instead. So beware if you update panel defaults they will not automatically update the property in existing panel. For example, if I set the default font size to 60px first and then in version 2 of the plugin change it to 50px, existing panels will still have 60px and only new panels will get the new 50px value.
 
