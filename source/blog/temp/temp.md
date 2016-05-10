@@ -41,10 +41,11 @@ prefer to read then check out the [What's new in Grafana 3.0](http://docs.grafan
 
 ## Commercial Support
 
-We are here to help you succeed with your Grafana projects. [Commercial support subscriptions](https://grafana.net/support/plans) for Grafana are now available. Get
-escalated access to core members of the Grafana development team; we’ll work with you to help you solve any Grafana issue quickly.
-Three tiers of production-level support, with increasing levels of response times and communication channels; pick the one that’s best for you.
-Unlimited incidents are available on every tier.
+We are here to help you succeed with your Grafana projects. [Commercial support subscriptions](https://grafana.net/support/plans) for Grafana are now available. 
+
+- Get escalated access to core members of the Grafana development team; we’ll work with you to help you solve any Grafana issue quickly.
+- Three tiers of production-level support, with increasing levels of response times and communication channels; pick the one that’s best for you.
+- Unlimited incidents are available on every tier.
 
 We are committed to a 100% open-source strategy for Grafana. If your organization finds Grafana valuable, please consider purchasing a subscription. Get direct support, bug fixes, and training from the core Grafana team.
 
