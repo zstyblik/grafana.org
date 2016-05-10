@@ -7,8 +7,7 @@ published_on: May 11, 2016
 Grafana 3.0 Stable is now available for download! Over the past month we've been polishing features,
 fixing bugs and making sure everything is working the way it's supposed to. We've been overwhelmed
 by the excitement and response around this release. See the features below to get a more in-depth
-look at what 3.0 has to offer, and check out what else we've been up to.  Read on below to learn
-more about what’s new in 3.0 or:
+look at what 3.0 has to offer, and check out what else we've been up to.
 
 <div class="text-center">
 <a class="button secondary radius" href="/download">Download Grafana 3.0</a>.
