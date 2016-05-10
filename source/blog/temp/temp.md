@@ -29,7 +29,7 @@ more about what’s new in 3.0 or:
   - Hosted Grafana and Hosted metrics (coming soon)
   - Monitoring and backups of on-prem Grafana (coming soon)
 - **Annotation** popovers can contain clickable links
-- **Support** for InfluxDB 0.11
+- **Support** for InfluxDB 0.11+ (and new functions)
 - **Templated data source** Easily reuse the same dashboard for multiple data source instances
 - [Full changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
 
@@ -38,7 +38,7 @@ more about what’s new in 3.0 or:
 I have recorded a 19 minute long screencast that demos all the major new features in the release. But If you
 prefer to read then check out the [What's new in Grafana 3.0](http://docs.grafana.org/guides/whats-new-in-v3/) article.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mgcJPREl3CU" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%;" height="415" src="https://www.youtube.com/embed/1kJyQKgk_oY" frameborder="0" allowfullscreen></iframe>
 
 ## Commercial Support
 
