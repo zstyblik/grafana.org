@@ -41,7 +41,7 @@
 <span class="p">}</span>
 </code></pre>
 
-<p>The Lodash function defaults, which is called in the code above: <code class="prettyprint">_.defaults</code>, sets a default value only if the value is not already set. </p>
+<p>The Lodash function defaults, which is called in the code above: <code class="prettyprint">_.defaults</code>, sets a default value only if the value is not already set.</p>
 
 <p>We can now use these fields in our controller or module.html template:</p>
 <pre class="highlight html"><code><span class="nt">&lt;h2</span> <span class="na">style=</span><span class="s">"font-size: {{ctrl.panel.fontSize}};"</span><span class="nt">&gt;</span>{{ctrl.time}}<span class="nt">&lt;/h2&gt;</span>
@@ -101,7 +101,7 @@
 
 <h2 id="editor-tab-finished">Editor Tab Finished</h2>
 
-<p>And that&rsquo;s it! It really is quite simple to create your own editor tab. To reiterate, this all ties together quite neatly. We specify properties and panel defaults in the constructor for ClockCtrl and these can then be changed in the editor. We don&rsquo;t have to do anything special to save the changes. Grafana takes care of that. </p>
+<p>And that&rsquo;s it! It really is quite simple to create your own editor tab. To reiterate, this all ties together quite neatly. We specify properties and panel defaults in the constructor for ClockCtrl and these can then be changed in the editor. We don&rsquo;t have to do anything special to save the changes. Grafana takes care of that.</p>
 
 <p>One thing to be aware of  is that panel defaults are used the first time a panel is created to set the initial values of the panel properties. After the panel is saved then the saved value will be used instead. So beware if you update panel defaults they will not automatically update the property in existing panel. For example, if I set the default font size to 60px first and then in version 2 of the plugin change it to 50px, existing panels will still have 60px and only new panels will get the new 50px value.</p>
 
