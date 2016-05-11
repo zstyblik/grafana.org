@@ -28,8 +28,9 @@ look at what 3.0 has to offer, and check out what else we've been up to.
   - Hosted Grafana and Hosted metrics (coming soon)
   - Monitoring and backups of on-prem Grafana (coming soon)
 - **Annotation** popovers can contain clickable links
-- **Support** for InfluxDB 0.11+ (and new functions)
 - **Templated data source** Easily reuse the same dashboard for multiple data source instances
+- **OSX Homebrew support** [Homebrew installation instructions](http://docs.grafana.org/installation/mac/)
+- **Support** for InfluxDB 0.11+ (and new functions)
 - [Full changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
 
 ## Whats new in 3.0 Screencast
