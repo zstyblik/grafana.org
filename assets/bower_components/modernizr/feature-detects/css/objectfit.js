@@ -11,4 +11,4 @@
   }]
 }
 !*/
-define(["Modernizr","prefixed"],function(e,t){e.addTest("objectfit",!!t("objectFit"),{aliases:["object-fit"]})});
+define(["Modernizr","prefixed"],function(t,n){t.addTest("objectfit",!!n("objectFit"),{aliases:["object-fit"]})});

@@ -5,10 +5,162 @@
   <id>http://grafana.org/blog</id>
   <link href="http://grafana.org/blog"/>
   <link href="http://grafana.org/feed.xml" rel="self"/>
-  <updated>2016-04-15T02:00:00+02:00</updated>
+  <updated>2016-05-11T02:00:00+02:00</updated>
   <author>
     <name>Grafana</name>
   </author>
+  <entry>
+    <title>Grafana 3.0 Stable Released</title>
+    <link rel="alternate" href="http://grafana.org/blog/2016/05/11/grafana-3-0-stable-released.html"/>
+    <id>http://grafana.org/blog/2016/05/11/grafana-3-0-stable-released.html</id>
+    <published>2016-05-11T02:00:00+02:00</published>
+    <updated>2016-05-11T10:52:34+02:00</updated>
+    <author>
+      <name>Torkel Ödegaard</name>
+    </author>
+    <content type="html">&lt;p&gt;Grafana 3.0 Stable is now available for download! Over the past month we&amp;rsquo;ve been polishing features,
+fixing bugs and making sure everything is working the way it&amp;rsquo;s supposed to. We&amp;rsquo;ve been overwhelmed
+by the excitement and response around this release. See the features below to get a more in-depth
+look at what 3.0 has to offer, and check out what else we&amp;rsquo;ve been up to.&lt;/p&gt;
+
+&lt;div class="text-center"&gt;
+&lt;a class="button secondary radius" href="/download"&gt;Download Grafana 3.0&lt;/a&gt;.
+&lt;a class="button primary radius" href="http://play.grafana.org" target="_blank"&gt;Live Demo&lt;/a&gt;.
+&lt;/div&gt;
+
+&lt;h2 id="release-highlights"&gt;Release Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Big UI&lt;/strong&gt; improvements and polish&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Redesigned&lt;/strong&gt; plugin architecture and SDK&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Grafana-cli&lt;/strong&gt; command line tool shipped with grafana, installs plugins&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Persisted&lt;/strong&gt; dashboard playlists&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Preferences&lt;/strong&gt; like home dashboard, timezone and theme on org and user level&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New&lt;/strong&gt; plugin types, Apps, and Panels.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New&lt;/strong&gt; platform site built around Grafana at &lt;a href="https://grafana.net"&gt;Grafana.net&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Plugin repository&lt;/li&gt;
+&lt;li&gt;Dashboard repository (coming soon)&lt;/li&gt;
+&lt;li&gt;Hosted Grafana and Hosted metrics (coming soon)&lt;/li&gt;
+&lt;li&gt;Monitoring and backups of on-prem Grafana (coming soon)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Annotation&lt;/strong&gt; popovers can contain clickable links&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Support&lt;/strong&gt; for InfluxDB 0.11+ (and new functions)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Templated data source&lt;/strong&gt; Easily reuse the same dashboard for multiple data source instances&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/grafana/grafana/blob/master/CHANGELOG.md"&gt;Full changelog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="whats-new-in-3-0-screencast"&gt;Whats new in 3.0 Screencast&lt;/h2&gt;
+
+&lt;p&gt;I have recorded a 19 minute long screencast that demos all the major new features in the release. But If you
+prefer to read then check out the &lt;a href="http://docs.grafana.org/guides/whats-new-in-v3/"&gt;What&amp;rsquo;s new in Grafana 3.0&lt;/a&gt; article.&lt;/p&gt;
+
+&lt;iframe style="width: 100%;" height="415" src="https://www.youtube.com/embed/1kJyQKgk_oY" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id="commercial-support"&gt;Commercial Support&lt;/h2&gt;
+
+&lt;p&gt;We are here to help you succeed with your Grafana projects. &lt;a href="https://grafana.net/support/plans"&gt;Commercial support subscriptions&lt;/a&gt; for Grafana are now available. &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Get escalated access to core members of the Grafana development team; we’ll work with you to help you solve any Grafana issue quickly.&lt;/li&gt;
+&lt;li&gt;Three tiers of production-level support, with increasing levels of response times and communication channels; pick the one that’s best for you.&lt;/li&gt;
+&lt;li&gt;Unlimited incidents are available on every tier.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We are committed to a 100% open-source strategy for Grafana. If your organization finds Grafana valuable, please consider purchasing a subscription. Get direct support, bug fixes, and training from the core Grafana team.&lt;/p&gt;
+
+&lt;h2 id="grafana-net"&gt;Grafana.net&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v3.0/grafana_net_tour.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://grafana.net"&gt;Grafana.net&lt;/a&gt; offers a central repository where the community can come together to discover, create and
+share plugins (data sources, panels, apps) and dashboards.&lt;/p&gt;
+
+&lt;p&gt;We are also working on a hosted Graphite-compatible data source that will be optimized for use with Grafana.
+It’ll be easy to combine your existing data source(s) with this OpenSaaS option. Finally, Grafana.net can
+also be a hub to manage all your Grafana instances. You’ll be able to monitor their health and availability,
+perform dashboard backups, and more.&lt;/p&gt;
+
+&lt;h2 id="plugin-showcase"&gt;Plugin showcase&lt;/h2&gt;
+
+&lt;p&gt;Discovering and installing plugins is very quick and easy with Grafana 3.0 and &lt;a href="https://grafana.net"&gt;Grafana.net&lt;/a&gt;. Here
+are a couple that I encourage you try!&lt;/p&gt;
+
+&lt;h4 id="clock-panel"&gt;&lt;a href="https://grafana.net/plugins/grafana-clock-panel"&gt;Clock Panel&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Support&amp;rsquo;s both current time and count down mode.
+&lt;img src="/assets/img/blog/v3.0/clock_panel.png"&gt;&lt;/p&gt;
+
+&lt;h4 id="worldmap-panel"&gt;&lt;a href="https://grafana.net/plugins/grafana-worldmap-panel"&gt;Worldmap Panel&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Worldmap panel that can work with both regular time series (if you have country code in series name) and GeoHash codes
+that you can use with Elasticsearch&amp;rsquo;s GeoHash aggregation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v3.0/worldmap-world.png"&gt;&lt;/p&gt;
+
+&lt;h4 id="pie-chart-panel"&gt;&lt;a href="https://grafana.net/plugins/grafana-piechart-panel"&gt;Pie Chart Panel&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;A simple pie chart panel is now available as an external plugin.
+&lt;img src="/assets/img/blog/v3.0/pie_chart_panel.png"&gt;&lt;/p&gt;
+
+&lt;h4 id="worldping-app"&gt;&lt;a href="https://grafana.net/plugins/raintank-worldping-app"&gt;WorldPing App&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;This is full blown Grafana App that adds new panels, data sources and pages to give
+feature rich global performance monitoring directly from your on-prem Grafana.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v3.0/wP-Screenshot-dash-web.png"&gt;&lt;/p&gt;
+
+&lt;h4 id="zabbix-app"&gt;&lt;a href="https://grafana.net/plugins/alexanderzobnin-zabbix-app"&gt;Zabbix App&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;This app contains the already very pouplar Zabbix data source plugin, 2 dashboards and a triggers panel. It is
+created and maintained by &lt;a href="https://github.com/alexanderzobnin/grafana-zabbix"&gt;Alexander Zobnin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/img/blog/v3.0/zabbix_app.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;Checkout the full list of plugins on &lt;a href="https://grafana.net/plugins"&gt;Grafana.net&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id="upcoming-webinars"&gt;Upcoming webinars&lt;/h2&gt;
+
+&lt;h4 class="null"&gt;&lt;span style="font-size:14px"&gt;&lt;span class="mc-toc-title"&gt;Wednesday, May 18 - 1:00pm EDT&lt;/span&gt;&lt;/span&gt;&lt;/h4&gt;
+
+&lt;h4&gt;&lt;a href="https://attendee.gotowebinar.com/register/3674548443167506178"&gt;Deconstructing the New Plugin Architecture in Grafana.&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Matt Toback will take a deep dive into the new plugin architecture in Grafana 3.0 and how to use Grafana.net to extend your panels, data sources and even introduce new applications.
+&lt;h5&gt;&lt;a href="https://attendee.gotowebinar.com/register/3674548443167506178"&gt;Register Now&lt;/a&gt;&lt;/h5&gt;&lt;/p&gt;
+
+&lt;h4 class="null"&gt;&lt;span style="font-size:14px"&gt;&lt;span class="mc-toc-title"&gt;Wednesday, May 25 - 1:00pm EDT&lt;/span&gt;&lt;/span&gt;&lt;/h4&gt;
+
+&lt;h4&gt;&lt;a href="https://attendee.gotowebinar.com/register/1168326036993997827"&gt;Deconstructing the New Plugin Architecture in Grafana.&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Matt Toback will take a deep dive into the new plugin architecture in Grafana 3.0 and how to use Grafana.net to extend your panels, data sources and even introduce new applications.
+&lt;h5&gt;&lt;a href="https://attendee.gotowebinar.com/register/1168326036993997827"&gt;Register Now&lt;/a&gt;&lt;/h5&gt;&lt;/p&gt;
+
+&lt;h2 id="thanks"&gt;Thanks&lt;/h2&gt;
+
+&lt;p&gt;A big thank you to everyone who helped test and report issues with the beta release.&lt;/p&gt;
+
+&lt;div class=""&gt;
+&lt;a class="button secondary radius" href="/download"&gt;Download Grafana 3.0&lt;/a&gt;.
+&lt;a class="button primary radius" href="http://play.grafana.org" target="_blank"&gt;Live Demo&lt;/a&gt;.
+&lt;/div&gt;
+
+&lt;h4 id="subscribe-to-project-updates"&gt;Subscribe to project updates&lt;/h4&gt;
+
+&lt;section class="newsletter"&gt;
+  &lt;form action="http://grafana.us8.list-manage.com/subscribe/post?u=2aeb5711db2aececc990be536&amp;amp;id=5585d37ecc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"&gt;
+    &lt;row class="collapse"&gt;
+      &lt;div class="medium-10 columns"&gt;
+        &lt;input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address"&gt;
+      &lt;/div&gt;
+      &lt;div class="medium-2 columns"&gt;
+        &lt;input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button postfix"&gt;
+      &lt;/div&gt;
+    &lt;/row&gt;
+  &lt;/form&gt;
+&lt;/section&gt;
+</content>
+  </entry>
   <entry>
     <title>Timing is Everything. Editor Mode in Grafana 3.0 for the Clock Panel Plugin</title>
     <link rel="alternate" href="http://grafana.org/blog/2016/04/15/clock-plugin-p2.html"/>
@@ -782,140 +934,6 @@ at the demo site where you can play with the new panel and InfluxDB editor.&lt;/
 view the &lt;a href="https://github.com/grafana/grafana/blob/master/CHANGELOG.md"&gt;CHANGELOG.md&lt;/a&gt; file.&lt;/p&gt;
 
 &lt;hr&gt;
-
-&lt;h4 id="thanks-to-project-sponsors"&gt;Thanks to project sponsors&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://raintank.io"&gt;Raintank&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.squarespace.com"&gt;Squarespace&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.dreamhost.com"&gt;Dreamhost&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.demonware.net"&gt;Demonware&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://developer.mediamath.com/OpenSource"&gt;Mediamath&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Grafana 2.6 Beta Released</title>
-    <link rel="alternate" href="http://grafana.org/blog/2015/12/04/Grafana-2-6-Beta-Released.html"/>
-    <id>http://grafana.org/blog/2015/12/04/Grafana-2-6-Beta-Released.html</id>
-    <published>2015-12-04T01:00:00+01:00</published>
-    <updated>2016-02-19T16:11:55+01:00</updated>
-    <author>
-      <name>Torkel Ödegaard</name>
-    </author>
-    <content type="html">&lt;h2 id="release-highlights"&gt;Release highlights&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/header.png" class="no-shadow"&gt;&lt;/p&gt;
-
-&lt;p&gt;This release adds a new panel, namely the top requested &lt;strong&gt;Table Panel&lt;/strong&gt;. Yes it is
-finally here! The reason for the beta release status is because the release also
-includes a new and more powerful InfluxDB query editor.  This new editor works very
-differently from the previous one and requires more feedback and testing
-before a stable release can be made.&lt;/p&gt;
-
-&lt;div class="text-center"&gt;
-  &lt;a class="button secondary radius" href="/download"&gt;Download Grafana 2.6 beta now&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The main documentation pages have yet to be updated with information about how to use
-the new table panel and the new InfluxDB editor so for now refer to this blog post for guidance.&lt;/p&gt;
-
-&lt;h3 id="table-panel"&gt;Table Panel&lt;/h3&gt;
-
-&lt;p&gt;The new table panel is very flexible, supporting both multiple modes for time series as well as for
-table, annotation and raw JSON data. It also provides date formating and value formating and coloring options.&lt;/p&gt;
-
-&lt;h4 id="time-series-to-rows"&gt;Time series to rows&lt;/h4&gt;
-
-&lt;p&gt;In the most simple mode you can turn time series to rows. This means you get a &lt;code class="prettyprint"&gt;Time&lt;/code&gt;, &lt;code class="prettyprint"&gt;Metric&lt;/code&gt; and a &lt;code class="prettyprint"&gt;Value&lt;/code&gt; column.
-Where &lt;code class="prettyprint"&gt;Metric&lt;/code&gt; is the name of the time series.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_ts_to_rows.png"&gt;&lt;/p&gt;
-
-&lt;h4 id="table-transform"&gt;Table Transform&lt;/h4&gt;
-
-&lt;p&gt;Above you see the options tab for the &lt;strong&gt;Table Panel&lt;/strong&gt;. The most important option is the &lt;code class="prettyprint"&gt;To Table Transform&lt;/code&gt;.
-This option controls how the result of the metric/data query is turned into a table.&lt;/p&gt;
-
-&lt;h4 id="column-styles"&gt;Column Styles&lt;/h4&gt;
-
-&lt;p&gt;The column styles allow you control how dates and numbers are formatted.&lt;/p&gt;
-
-&lt;h3 id="time-series-to-columns"&gt;Time series to columns&lt;/h3&gt;
-
-&lt;p&gt;This transform allows you to take multiple time series and group them by time. Which will result in a &lt;code class="prettyprint"&gt;Time&lt;/code&gt; column
-and a column for each time series.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_ts_to_columns.png"&gt;&lt;/p&gt;
-
-&lt;p&gt;In the screenshot above you can see how the same time series query as in the previous example can be transformed into
-a different table by changing the &lt;code class="prettyprint"&gt;To Table Transform&lt;/code&gt; to  &lt;code class="prettyprint"&gt;Time series to columns&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id="time-series-to-aggregations"&gt;Time series to aggregations&lt;/h3&gt;
-
-&lt;p&gt;This transform works very similar to the legend values in the Graph panel. Each series gets its own row. In the Options
-tab you can select which aggregations you want using the plus button the Columns section.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_ts_to_aggregations.png"&gt;&lt;/p&gt;
-
-&lt;p&gt;You have to think about how accurate the aggregations will be. It depends on what aggregation is used in the time series query,
-how many data points are fetched, etc. The time series aggregations are calculated by Grafana after aggregation is performed
-by the time series database.&lt;/p&gt;
-
-&lt;h4 id="raw-logs-queries"&gt;Raw logs queries&lt;/h4&gt;
-
-&lt;p&gt;If you want to show documents from Elasticsearch pick &lt;code class="prettyprint"&gt;Raw Document&lt;/code&gt; as the first metric.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/elastic_raw_doc.png"&gt;&lt;/p&gt;
-
-&lt;p&gt;This in combination with the &lt;code class="prettyprint"&gt;JSON Data&lt;/code&gt; table transform will allow you to pick which fields in the document
-you want to show in the table.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_json_data.png"&gt;&lt;/p&gt;
-
-&lt;h4 id="elasticsearch-aggregations"&gt;Elasticsearch aggregations&lt;/h4&gt;
-
-&lt;p&gt;You can also make Elasticsearch aggregation queries without a &lt;code class="prettyprint"&gt;Date Histogram&lt;/code&gt;. This allows you to
-use Elasticsearch metric aggregations to get accurate aggregations for the selected time range.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/elastic_aggregations.png"&gt;&lt;/p&gt;
-
-&lt;h4 id="annotations"&gt;Annotations&lt;/h4&gt;
-
-&lt;p&gt;The table can also show any annotations you have enabled in the dashboard.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_annotations.png"&gt;&lt;/p&gt;
-
-&lt;h3 id="the-new-influxdb-editor"&gt;The New InfluxDB Editor&lt;/h3&gt;
-
-&lt;p&gt;The new InfluxDB editor is a lot more flexible and powerful. It supports nested functions, like &lt;code class="prettyprint"&gt;derivative&lt;/code&gt;.
-It also uses the same technique as the Graphite query editor in that it presents nested functions as chain of function
-transformations. It tries to simplify and unify the complicated nature of InfluxDB&amp;rsquo;s query language.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/influxdb_editor_v3.gif"&gt;&lt;/p&gt;
-
-&lt;p&gt;The new editor also allows you to remove group by time and select &lt;code class="prettyprint"&gt;raw&lt;/code&gt; table data. Which is very useful
-in combination with the new Table panel to show raw log data stored in InfluxDB.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/img/blog/v2.6/table_influxdb_logs.png"&gt;&lt;/p&gt;
-
-&lt;h3 id="breaking-changes"&gt;Breaking changes&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Elasticsearch&lt;/strong&gt;: Manual json edited queries are not supported any more (They very barely worked in 2.5)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id="changelog"&gt;Changelog&lt;/h3&gt;
-
-&lt;p&gt;For a detailed list and link to github issues for everything included in the 2.6 release please
-view the &lt;a href="https://github.com/grafana/grafana/blob/master/CHANGELOG.md"&gt;CHANGELOG.md&lt;/a&gt; file.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="/download"&gt;Download Grafana 2.6 beta now&lt;/a&gt; &lt;br&gt;&lt;br&gt;
-&lt;a href="http://play.grafana.org/dashboard/db/new-features-in-v2-6"&gt;Demo dashboard for Grafana 2.6 features&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id="download-grafana-2-6-beta-now"&gt;&lt;a href="http://grafana.org/download"&gt;Download Grafana 2.6 beta now&lt;/a&gt;&lt;/h4&gt;
 
 &lt;h4 id="thanks-to-project-sponsors"&gt;Thanks to project sponsors&lt;/h4&gt;
 

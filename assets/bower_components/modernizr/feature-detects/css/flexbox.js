@@ -13,4 +13,4 @@
   ]
 }
 !*/
-define(["Modernizr","testAllProps"],function(n,t){n.addTest("flexbox",t("flexBasis","1px",!0))});
+define(["Modernizr","testAllProps"],function(e,t){e.addTest("flexbox",t("flexBasis","1px",!0))});
