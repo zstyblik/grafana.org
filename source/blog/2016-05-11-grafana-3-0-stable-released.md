@@ -70,6 +70,12 @@ are a couple that I encourage you try!
 Support's both current time and count down mode.
 <img src="/assets/img/blog/v3.0/clock_panel.png">
 
+#### [Worldmap Panel](https://grafana.net/plugins/grafana-worldmap-panel)
+Worldmap panel that can work with both regular time series (if you have country code in series name) and GeoHash codes
+that you can use with Elasticsearch's GeoHash aggregation.
+
+<img src="/assets/img/blog/v3.0/worldmap-world.png">
+
 #### [Pie Chart Panel](https://grafana.net/plugins/grafana-piechart-panel)
 A simple pie chart panel is now available as an external plugin.
 <img src="/assets/img/blog/v3.0/pie_chart_panel.png">
