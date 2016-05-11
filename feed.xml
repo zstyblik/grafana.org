@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://grafana.org/blog/2016/05/11/grafana-3-0-stable-released.html"/>
     <id>http://grafana.org/blog/2016/05/11/grafana-3-0-stable-released.html</id>
     <published>2016-05-11T02:00:00+02:00</published>
-    <updated>2016-05-11T10:52:34+02:00</updated>
+    <updated>2016-05-11T11:13:36+02:00</updated>
     <author>
       <name>Torkel Ödegaard</name>
     </author>
@@ -46,8 +46,9 @@ look at what 3.0 has to offer, and check out what else we&amp;rsquo;ve been up t
 &lt;li&gt;Monitoring and backups of on-prem Grafana (coming soon)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Annotation&lt;/strong&gt; popovers can contain clickable links&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Support&lt;/strong&gt; for InfluxDB 0.11+ (and new functions)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Templated data source&lt;/strong&gt; Easily reuse the same dashboard for multiple data source instances&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OSX Homebrew support&lt;/strong&gt; &lt;a href="http://docs.grafana.org/installation/mac/"&gt;Homebrew installation instructions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Support&lt;/strong&gt; for InfluxDB 0.11+ (and new functions)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/grafana/grafana/blob/master/CHANGELOG.md"&gt;Full changelog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
